@@ -25,5 +25,6 @@ def parse(node, array, imageType = 'image'):
         if (array.get('Scale9Height') == None):
             array['Scale9Height'] = 0
 
+        string += "\t%s:setCapInsets({x = %f, y = %f,width = %f, height = %f});\n" % (node, array['Scale9OriginX'], array['Scale9OriginY'], array['Scale9Width'], array['Scale9Height'])
 
     return string
