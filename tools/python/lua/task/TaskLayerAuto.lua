@@ -48,7 +48,6 @@ function TaskLayer:initView()
 	localParams[2].__Name = 'loading1';
 	self:addChild(localParams[2]);
 
-	localParams[3] = LoadingBar:create(''uires/public/sheet_other/other0181.png'', 1, 0.00);
 	localParams[3] = LoadingBar:create('uires/public/sheet_other/other0181.png', 1, 0.00);
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 678.0, height = 18.0});
@@ -905,6 +904,21 @@ function TaskLayer:_back_btn(sender)
     end
 end
 
+
+--@callback:('count', listView)                              --总共cell数量
+--@callback:('size', listView, row)                          --每个cell的尺寸
+--@callback:('delay', listView, row, column, index)          --每个cell上item延时创建的时间
+--@callback:('add', listView, row, column, index, cell)      --添加每个item
+--@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
+--@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
+function TaskLayer:_onAchievementListView(eventName, listView, row, column, index, cell)
+    if self.m_ClickDelegate and self.m_ClickDelegate.onAchievementListView then
+        return self.m_ClickDelegate:onAchievementListView(eventName, listView, row, column, index, cell);
+    end
+    if self.onAchievementListView then
+        return self:onAchievementListView(eventName, listView, row, column, index, cell);
+    end
+end
 
 
 function TaskLayer:_weekPrizeBox2Btn(sender)

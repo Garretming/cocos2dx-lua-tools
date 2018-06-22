@@ -24,9 +24,9 @@ def parse(node, array):
 
             if (array.get('SingleColor') != None): 
                 SingleColor = [255,255,255]
-                    SingleColor[0] = array['SingleColor'].get('R', 255)
-                    SingleColor[1] = array['SingleColor'].get('G', 255)
-                    SingleColor[2] = array['SingleColor'].get('B', 255)
+                SingleColor[0] = array['SingleColor'].get('R', 255)
+                SingleColor[1] = array['SingleColor'].get('G', 255)
+                SingleColor[2] = array['SingleColor'].get('B', 255)
                 
                 if (SingleColor[0] != 255 or SingleColor[1] != 255 or SingleColor[2] != 255): 
                     string += "\t%s:setBackGroundColor({r = %d, g = %d, b = %d});\n" % (node, SingleColor[0], SingleColor[1], SingleColor[2])

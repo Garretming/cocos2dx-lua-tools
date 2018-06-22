@@ -24,6 +24,9 @@ sys.setdefaultencoding("utf-8")
 
 
 def parseAllNodes(array, parent):
+    if array['ctype'] == 'ProjectNodeObjectData':
+        return ''
+        
     GUID = gl.get_value('GUID')
     gl.set_value('GUID', GUID + 1)
 
@@ -117,12 +120,12 @@ for filepath in files:
 
 #     $data = json_decode(file_get_contents($filepath),true);
     if (classType == 'Scene'):
-        classType = 'BaseLayer'
+        classType = 'baselayer'
 
     if (classType == 'Layer'):
-        classType = 'BaseLayer'
+        classType = 'baselayer'
     elif (classType == 'Node'):
-        classType = 'BaseNode'
+        classType = 'basenode'
 
     SyncNode = False
     Mask = False
@@ -138,7 +141,7 @@ for filepath in files:
 
     classType1 = ''
     if (CustomClassName != None and CustomClassName.lower().find('basenode') >= 0):
-        classType1 = 'BaseNode'
+        classType1 = 'basenode'
     if CustomClassName != None and CustomClassName.lower().find('syncnode') >= 0:
         SyncNode = True
     
@@ -220,12 +223,12 @@ function %s:ctor(...)
     if (Mask):
         uiString += "\tself:setBackgroundOpacity(%d);\n" % (maskOpacity)
     
-    if (classType == 'BaseNode' or classType1 == 'BaseNode'):
+    if classType == 'basenode' or classType1 == 'basenode':
         uiString += "\tself:setTouchEnabled(false);\n"
-    elif classType == 'BaseLayer':
+    elif classType == 'baselayer':
         uiString += "\tself:setTouchEnabled(true);\n"
     
-    if classType1 == 'BaseNode':
+    if classType1 == 'basenode':
         uiString += "\tself:setContentSize(WinSize);\n"
     
     uiString += '''

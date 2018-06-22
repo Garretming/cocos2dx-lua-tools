@@ -754,14 +754,6 @@ function MainCityLayer:initView()
 	localParams[60].__Name = 'Node_7#Sprite_14#sprite#text';
 	localParams[58]:addChild(localParams[60]);
 
-	localParams[61]:setAnchorPoint(0.00, 0.00);
-	localParams[61]:setContentSize({width = 1024.0, height = 640.0});
-	localParams[61]:setPosition(0.0, 0.0);
-	self.__children['FileNode_1'] = localParams[61];
-	localParams[61].__children = self.__children;
-	localParams[61].__Name = 'FileNode_1';
-	self:addChild(localParams[61]);
-
 end
 function MainCityLayer:loadImageSync()
 	table.insert(self._textureList, 'Default/Button_Disable.png');
