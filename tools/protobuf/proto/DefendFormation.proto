@@ -1,0 +1,90 @@
+
+// 包,命名空间
+package DefendFormation;
+
+//通用信息
+message msg_monster  //佣兵信息
+{
+	required uint32 id = 1;		//配置表id
+	required uint32 number = 2; 	//佣兵个数,已经上阵的
+	optional uint32 type = 3; //佣兵类型：1.佣兵；2.野怪
+	optional msg_monster_prop prop = 4; // 佣兵属性
+}
+
+// 佣兵属性
+message msg_monster_prop
+{
+	required uint32 attack = 1; // 攻击
+	required uint32 armor = 2;  // 护甲
+	required uint32 hp = 3;     // 血量
+	required uint32 speed = 4;  // 速度
+}
+
+
+//技能信息
+message msg_skill {
+	required uint32 skill_id = 1;           //技能id
+}
+
+
+message msg_formation{
+			optional uint32 formation_id = 1;			//阵容id
+			optional string formation_name = 2;         //阵容名称
+			optional uint32 hero_id = 3;					//职业
+			repeated msg_skill skill_list = 4;			//技能
+			repeated msg_monster use_monster_list = 5;    //佣兵列表，上阵的佣兵
+			required uint32 level_id = 6;       // 据点id
+}
+
+
+//完成选择的阵容
+message finish_formation{
+	message request {
+		required msg_formation formation = 1;		//阵型列表
+		required uint32 ischange = 2;		//0是新阵容，1是修改阵容
+	}
+	
+	//职业选择确定后数据返回（返回的是阵容编辑界面的数据）
+	message response 
+	{
+		required bool is_success = 1;
+		required uint32 formation_id = 2;
+		repeated msg_monster use_monster_list = 3;  //佣兵列表，上阵的佣兵
+		repeated msg_monster unuse_wild_monsters = 4;   //未上阵野怪列表
+		repeated msg_monster unuse_monster_list = 5;        //玩家所有的未上阵佣兵列表
+	}
+}
+
+//预览某据点阵型
+message preview_land_formation{
+	//据点id
+	message request {
+	 	required uint32 level_id = 1;    // 据点id
+	}
+	
+	//阵容信息
+	message response
+	{
+		repeated msg_formation formation = 1;		    //阵型列表
+		repeated msg_monster unuse_wild_monsters = 2;   //未上阵野怪列表
+		repeated msg_monster unuse_monster_list = 3;        //玩家所有的未上阵佣兵列表
+	}
+}
+
+
+//预览指定玩家某据点阵型
+message preview_player_land_formation{
+	//据点id
+	message request {
+	 	required string player_id = 1;   // 玩家id
+	 	required uint32 level_id = 2;    // 据点id
+	}
+	
+	//阵容信息
+	message response
+	{
+		repeated msg_formation formation = 1;		    //阵型列表
+		repeated msg_monster unuse_wild_monsters = 2;   //未上阵野怪列表
+		repeated msg_monster unuse_monster_list = 3;        //玩家所有的未上阵佣兵列表
+	}
+}

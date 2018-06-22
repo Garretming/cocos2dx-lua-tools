@@ -1,0 +1,716 @@
+{
+  "ID": "6520c905-02a0-40f0-aa14-a0088d81556f",
+  "Version": "3.10.0.0",
+  "Name": "InstructionLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 23,
+        "Speed": 1.0,
+        "Timelines": [
+          {
+            "ActionTag": 875733786,
+            "Property": "Scale",
+            "Frames": [
+              {
+                "X": 0.3,
+                "Y": 0.3,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 1.1,
+                "Y": 1.1,
+                "FrameIndex": 20,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 1.0,
+                "Y": 1.0,
+                "FrameIndex": 23,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          }
+        ],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "CustomClassName": "Mask",
+        "UserData": "heroes",
+        "Tag": 692,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_bgframe/bgFrame0066.png",
+              "Plist": "uires/public/sheet_bgframe/sheet.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 81,
+            "Scale9OriginY": 81,
+            "Scale9Width": 84,
+            "Scale9Height": 84,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 512.0,
+              "Y": 320.0
+            },
+            "Scale": {
+              "ScaleX": 0.3,
+              "ScaleY": 0.3
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.3809,
+              "Y": 0.7969
+            },
+            "LeftMargin": 317.0,
+            "RightMargin": 317.0,
+            "TopMargin": 65.0,
+            "BottomMargin": 65.0,
+            "Tag": 693,
+            "Children": [
+              {
+                "FontSize": 18,
+                "LabelText": "生    命：",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "uires/public/ttf/jzy.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "R": 50,
+                  "G": 25,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 39.0,
+                  "Y": 428.4002
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 140,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.1,
+                  "Y": 0.84
+                },
+                "PreSize": {
+                  "X": 0.1692,
+                  "Y": 0.0431
+                },
+                "LeftMargin": 39.0,
+                "RightMargin": 285.0,
+                "TopMargin": 70.5998,
+                "BottomMargin": 417.4002,
+                "Tag": 493,
+                "Children": [
+                  {
+                    "FontSize": 18,
+                    "LabelText": "",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "uires/public/ttf/jzy.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "R": 50,
+                      "G": 25,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 72.6,
+                      "Y": 11.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 1.1,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 72.6,
+                    "RightMargin": -6.6,
+                    "TopMargin": 11.0,
+                    "BottomMargin": 11.0,
+                    "Tag": 494,
+                    "ActionTag": -1010087992,
+                    "Size": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "Name": "desc_txt",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 825512743,
+                "Size": {
+                  "X": 66.0,
+                  "Y": 22.0
+                },
+                "Name": "life_txt",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 18,
+                "LabelText": "攻    击：",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "uires/public/ttf/jzy.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "R": 50,
+                  "G": 25,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 39.0,
+                  "Y": 383.2206
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 140,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.1,
+                  "Y": 0.7514
+                },
+                "PreSize": {
+                  "X": 0.1692,
+                  "Y": 0.0431
+                },
+                "LeftMargin": 39.0,
+                "RightMargin": 285.0,
+                "TopMargin": 115.7794,
+                "BottomMargin": 372.2206,
+                "Tag": 539,
+                "Children": [
+                  {
+                    "FontSize": 18,
+                    "LabelText": "",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "uires/public/ttf/jzy.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "R": 50,
+                      "G": 25,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 72.6,
+                      "Y": 11.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 1.1,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 72.6,
+                    "RightMargin": -6.6,
+                    "TopMargin": 11.0,
+                    "BottomMargin": 11.0,
+                    "Tag": 540,
+                    "ActionTag": -1210954435,
+                    "Size": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "Name": "desc_txt",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -332847781,
+                "Size": {
+                  "X": 66.0,
+                  "Y": 22.0
+                },
+                "Name": "attack_txt",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 18,
+                "LabelText": "护    甲：",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "uires/public/ttf/jzy.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "R": 50,
+                  "G": 25,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 39.0,
+                  "Y": 338.041
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 140,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.1,
+                  "Y": 0.6628
+                },
+                "PreSize": {
+                  "X": 0.1692,
+                  "Y": 0.0431
+                },
+                "LeftMargin": 39.0,
+                "RightMargin": 285.0,
+                "TopMargin": 160.959,
+                "BottomMargin": 327.041,
+                "Tag": 541,
+                "Children": [
+                  {
+                    "FontSize": 18,
+                    "LabelText": "",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "uires/public/ttf/jzy.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "R": 50,
+                      "G": 25,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 72.6,
+                      "Y": 11.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 1.1,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 72.6,
+                    "RightMargin": -6.6,
+                    "TopMargin": 11.0,
+                    "BottomMargin": 11.0,
+                    "Tag": 542,
+                    "ActionTag": -1383320608,
+                    "Size": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "Name": "desc_txt",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -440059974,
+                "Size": {
+                  "X": 66.0,
+                  "Y": 22.0
+                },
+                "Name": "armor_txt",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 18,
+                "LabelText": "速    度：",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "uires/public/ttf/jzy.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "R": 50,
+                  "G": 25,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 39.0,
+                  "Y": 292.8614
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 140,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.1,
+                  "Y": 0.5742
+                },
+                "PreSize": {
+                  "X": 0.1692,
+                  "Y": 0.0431
+                },
+                "LeftMargin": 39.0,
+                "RightMargin": 285.0,
+                "TopMargin": 206.1386,
+                "BottomMargin": 281.8614,
+                "Tag": 543,
+                "Children": [
+                  {
+                    "FontSize": 18,
+                    "LabelText": "",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "uires/public/ttf/jzy.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "R": 50,
+                      "G": 25,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 72.6,
+                      "Y": 11.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 1.1,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 72.6,
+                    "RightMargin": -6.6,
+                    "TopMargin": 11.0,
+                    "BottomMargin": 11.0,
+                    "Tag": 544,
+                    "ActionTag": -1556611751,
+                    "Size": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "Name": "desc_txt",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -1177749615,
+                "Size": {
+                  "X": 66.0,
+                  "Y": 22.0
+                },
+                "Name": "speed_txt",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 18,
+                "LabelText": "智    慧：",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "uires/public/ttf/jzy.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "R": 50,
+                  "G": 25,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 39.0,
+                  "Y": 247.6817
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 140,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.1,
+                  "Y": 0.4857
+                },
+                "PreSize": {
+                  "X": 0.1692,
+                  "Y": 0.0431
+                },
+                "LeftMargin": 39.0,
+                "RightMargin": 285.0,
+                "TopMargin": 251.3184,
+                "BottomMargin": 236.6817,
+                "Tag": 545,
+                "Children": [
+                  {
+                    "FontSize": 18,
+                    "LabelText": "",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "uires/public/ttf/jzy.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "R": 50,
+                      "G": 25,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 72.6,
+                      "Y": 11.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 1.1,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 72.6,
+                    "RightMargin": -6.6,
+                    "TopMargin": 11.0,
+                    "BottomMargin": 11.0,
+                    "Tag": 546,
+                    "ActionTag": -1775038204,
+                    "Size": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "Name": "desc_txt",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -1832487220,
+                "Size": {
+                  "X": 66.0,
+                  "Y": 22.0
+                },
+                "Name": "magic_txt",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 875733786,
+            "Size": {
+              "X": 390.0,
+              "Y": 510.0
+            },
+            "Name": "Bg_img",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1024.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "../uires/public/sheet_bgframe/sheet.plist",
+        "../uires/public/sheet_bgframe/sheet.png",
+        "../uires/public/ttf/jzy.ttf"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

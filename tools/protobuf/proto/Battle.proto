@@ -1,0 +1,381 @@
+
+
+// 包。命名空间
+package Battle;
+
+
+//怪物基础属性
+message msg_monster {
+	required uint32 monster_id = 1;				//怪物的唯一编号
+	optional uint32 monster_tid = 2;	    	//怪物的模版id ，数据库中读取
+	optional uint32 level = 3;					//怪物等级
+	optional uint32 locate = 4;					//怪物的位置 1-12,位置等于0表示还未上阵
+	required uint32 current_hp = 5;		    	//怪物的当前血量
+	required uint32 current_max_hp = 6;	   	 	//怪物的当前最大血量
+	optional uint32 type = 8;					//怪物类型  1.佣兵 2.英雄 
+	optional uint32 team_number = 9;	    	//怪物所属队伍1,2
+	optional uint32 number = 7;					//怪物的数量
+	optional uint32 max_number = 10;			//怪物的最大数量
+	optional uint32 action_index = 11;			//
+	optional bool is_death = 12;				//是否死亡
+}
+
+//英雄技能
+message msg_hero_skill {
+	required uint32 skill_tid = 1;			 	//技能模版id，佣兵技能表中的id
+	required uint32 skill_id = 2;		    	//技能id，唯一编号，
+	required uint32 wait_cd = 3;
+}
+
+
+//队伍信息
+message msg_team {
+	required uint32 team_number = 1;	    	//怪物所属队伍1,2
+	repeated msg_monster monster_list = 2;		//怪物列表
+	required string team_name = 3;				//怪物所属队伍
+	required string rid = 4;					//怪物属于那个角色的  如果是机器人，rid填写"0000"
+	repeated msg_hero_skill skill_list = 5;		//英雄技能列表
+	required uint32 anger = 6;					//怒气
+
+	required uint32 unused_monster = 7;			//未使用的怪物
+	required uint32 max_monster = 8;			//最大怪物
+}
+
+
+
+//特性消息
+message msg_passive {
+	required uint32 passive_id = 1;
+	required uint32 sender_id = 2; //特性触发者
+	optional uint32 time = 3;			//第几段攻击,默认第一段
+}
+
+//buff消息
+message msg_buff {
+	required uint32 buff_id = 1;
+	required uint32 sender_id = 2;  	//buff触发者
+	required uint32 receiver_id = 3;	//buff接受者
+	optional uint32 lasting = 4;		//持续时间
+	optional sint32 hp_change = 5; 	  	//血量变化  >0加血 < 0 扣血
+	optional uint32 time = 6;			//第几段攻击，默认第一段
+	optional bool is_death = 7;			//是否死亡
+
+	optional uint32 passive_id = 8;		//特性id
+	optional uint32 skill_tid = 9;		//技能tid，模版id
+	optional uint32 stack = 10;			//buff叠加层数
+
+	optional bool is_immunity = 11;		//是否免疫，免疫buff(如果为false, 则passive_id，skill_id，lasting必须填写)
+}
+
+
+//伤害列表
+message msg_damage {
+	required uint32 beattacker_id = 1; 	//被攻击者id
+	required uint32 protocted_id = 2;  	//守护着id
+	required sint32 hp_change = 3;	   	//血量变化  >0加血 < 0 扣血
+	required bool is_death = 4;			//是否死亡
+	required bool is_miss = 5;			//是否闪避
+	required bool is_crit = 6;			//是否暴击
+	required uint32 time = 7;			//第几段攻击
+	required bool is_avoid = 9;			//免伤，伤害==0 佣兵技能表中，如果作用效果是6的话，伤害时0，但是并不是免伤
+}
+
+
+
+//攻击消息
+message msg_attack {
+	required uint32 skill_tid = 1;			//技能tid，模版id
+	required uint32 attacker_id = 2;		//攻击者
+	required uint32 target = 3;				//攻击目标
+	required bool is_beat_back = 4;			//反击
+
+	repeated msg_passive passive_list = 5;	//特性列表
+	repeated msg_buff buff_list = 6;		//buff列表
+	repeated msg_damage damage_list = 7;	//伤害列表
+}
+
+
+
+
+//队伍回合消息
+message msg_round_team {
+	required uint32 team_number = 1;	    	//怪物所属队伍1,2
+	required uint32 anger = 2;					//怒气
+	required uint32 unused_monster = 3;			//未使用的怪物
+
+	repeated msg_hero_skill skill_list = 4;
+}
+
+
+
+
+
+//回合消息
+message msg_round {
+	repeated msg_passive passive_list = 1;		//特性列表
+	repeated msg_buff buff_list = 2;				//buff列表 回合开始时的buff(上阵时)
+	repeated msg_buff buff_list_after = 6;			//buff列表 回合结束后的buff(全部攻击后产生的buff)
+
+	repeated msg_monster monster_list = 3;		//卡牌信息
+
+	optional uint32 round = 4;					//回合
+
+	repeated msg_round_team round_team = 5;		//队伍回合消息	
+
+
+}
+
+
+//奖励消息
+message msg_prize{
+	required uint32 item_tid  = 1;			//道具模版id
+	required uint32 item_num = 2;			//数量
+}
+
+
+//战斗结果
+message msg_result {
+	required uint32 team_number = 1;			//胜利的队伍 1，2 等于0表示平局
+
+	repeated msg_prize prize_list = 2;			//奖励列表
+
+	optional uint32 prize_box = 3;				//宝箱奖励
+}
+
+
+//下次行动
+message next_action {
+	message request {
+		required uint32 action_index = 1;			//攻击索引,服务端获取 
+	}
+
+	message response {
+		required uint32 action_index = 1;			//攻击索引，唯一,如果等于0，请求下一回合数据失败
+		repeated msg_attack attack_list = 2;    	//攻击消息
+		optional msg_round round = 3;				//回合消息
+
+		optional msg_result  result = 4;			//战斗结果
+
+		optional bool is_valid_action = 5;			//是否是无效的攻击 如果是true，则直接请求下一回合
+
+		optional bool is_exit_battle  = 6;			//是否退出战斗		
+
+
+		optional msg_round next_round = 7;				//回合消息 是不是本次大回合的最后一个小回合才需要使用，下一个大回合的回合消息
+
+	}
+}
+
+//通知下次行动的数据
+message notify_next_action {
+	required uint32 action_index = 1;			//攻击索引，唯一,如果等于0，请求下一回合数据失败
+	repeated msg_attack attack_list = 2;    	//攻击消息
+	optional msg_round round = 3;				//回合消息
+
+	optional msg_result  result = 4;			//战斗结果
+
+	optional bool is_valid_action = 5;			//是否是无效的攻击 如果是true，则直接请求下一回合
+
+	optional bool is_exit_battle  = 6;			//是否退出战斗		
+
+	optional msg_round next_round = 7;				//回合消息 是不是本次大回合的最后一个小回合才需要使用，下一个大回合的回合消息
+
+}
+
+//匹配战斗
+message match_battle {
+	message request {
+		//tood:
+	}
+	
+	message response {
+		required bool is_success = 1;
+	}
+}
+
+
+//匹配成功
+message notify_start {
+	required bool is_success = 1;
+}
+
+
+//加载完毕
+message battle_ready {
+	message request {
+		//tood:
+	}
+	
+	message response {
+		required bool is_success = 1;
+	}
+}
+
+//通知战斗开始
+message notify_battle_start {
+	required bool is_success = 1;
+}
+
+message msg_role_info {
+	required string rid							= 1;	//角色rid  如果是机器人，rid填写"0000"
+	required uint32 role_lv						= 2;	//角色等级
+	required uint32 level						= 3;	//天梯等级
+}
+
+
+//通知战斗初始数据
+message notify_battle_info {
+	required uint32  battle_kind = 5;			//战斗种类  1天梯 2黄金 3好友 4副本
+	required uint32  battle_type = 6;			//战斗类型 1.pve  2.pvp
+	optional bool battle_offline = 7;			//是否掉线？
+
+	repeated msg_team team_list = 2;				//队伍列表
+	repeated uint32 monster_tid_list = 3;			//怪物模版id列表，用来预加载资源
+	required uint32 action_index = 4;				//攻击索引，唯一
+
+	optional uint32 battle_id = 8;					//战斗id
+	
+	repeated msg_role_info role_info = 9;			//角色附加数据
+}
+
+//开始战斗
+message start_battle {
+	message request {
+		required uint32 battle_id = 1;					//战斗id，如果是pvp,填0
+		required uint32 map_id = 2;						//竞技场地图id，如果是pve，填0
+		repeated uint32 monster_pid_list = 3;			//怪物pid列表
+		required uint32 game_type = 4;					//战斗类型  1.pve  2.pvp 3. pve_test
+	}
+
+	message response {
+		required uint32  battle_kind = 5;			//战斗种类  1天梯 2黄金 3好友 4副本
+		required uint32  battle_type = 6;			//战斗类型 1.pve  2.pvp
+		optional bool battle_offline = 7;			//是否掉线？
+
+		repeated msg_team team_list = 2;				//队伍列表
+		repeated uint32 monster_tid_list = 3;			//怪物模版id列表，用来预加载资源
+		required uint32 action_index = 4;				//攻击索引，唯一
+
+		optional uint32 battle_id = 8;					//战斗id
+	}
+}
+
+
+//手动上阵
+message manual_work {
+
+	message request {
+		required uint32 monster_id = 1;		//怪物的唯一编号
+		required uint32 locate = 2;			//位置
+		required uint32 action_index = 3; 	//攻击索引,服务端获取
+	}
+
+	message response {
+		required bool is_success = 1; 		//是否上阵成功
+		required uint32 monster_id = 2;		//佣兵id
+		required uint32 action_index = 3; 	//攻击索引,实际插入的回合
+		required uint32 anger = 4; 			//上阵怪物所在队伍的怒气值
+		required uint32 locate = 5;			//位置
+	}
+}
+
+
+//通知上阵
+message notify_manual_work {
+	required bool is_success = 1; 		//是否上阵成功
+	required uint32 monster_id = 2;		//佣兵id
+	required uint32 action_index = 3; 	//攻击索引,实际插入的回合
+	required uint32 anger = 4; 			//上阵怪物所在队伍的怒气值
+	required uint32 locate = 5;			//位置
+}
+
+
+
+//使用英雄技能
+message use_hero_skill {
+
+	message request {
+		required uint32 skill_id = 1;		//英雄技能id
+		required uint32 action_index = 2; 	//攻击索引,服务端获取
+		required uint32 locate = 3;			//技能释放位置，如果是直接释放的技能，填写0
+
+	}
+
+	message response {
+		required uint32 anger = 2;					//使用技能后队伍的怒气值
+		required uint32 action_index = 3;			//攻击索引，唯一,如果等于0，请求下一回合数据失败
+		repeated msg_attack attack_list = 4;    	//攻击消息
+		repeated msg_buff buff_list = 6;			//buff列表
+		optional msg_result  result = 5;			//战斗结果
+		required uint32 skill_id = 7;				//英雄技能id
+		required uint32 wait_cd = 8;				//技能技能等待时间
+		required uint32 locate = 9;			//技能释放位置，如果是直接释放的技能，填写0
+	}
+}
+
+//通知使用英雄技能
+message notify_use_hero_skill {
+	required uint32 anger = 2;					//使用技能后队伍的怒气值
+	required uint32 action_index = 3;			//攻击索引，唯一,如果等于0，请求下一回合数据失败
+	repeated msg_attack attack_list = 4;    	//攻击消息
+	repeated msg_buff buff_list = 6;			//buff列表
+	optional msg_result  result = 5;			//战斗结果
+	required uint32 skill_id = 7;				//英雄技能id
+	required uint32 wait_cd = 8;				//技能技能等待时间
+	required uint32 locate = 9;			//技能释放位置，如果是直接释放的技能，填写0
+}
+
+
+//通知战场状态
+message notify_battle_state {
+	repeated msg_buff buff_list = 1;
+	repeated uint32 have_action_list = 2;			//场上行动过的佣兵id列表
+}
+
+//退出战斗
+message exit_battle {
+	message request {
+		optional uint32 code = 1;		//状态码 
+	}
+
+	message response {
+		required bool is_success = 1;
+	}
+}
+
+//gm战斗胜利
+message gm_win_battle {
+	message request {
+	}
+
+	message response {
+		required bool is_success = 1;
+	}
+}
+
+
+//战报单项数据
+message report_item {
+	required string msg_name	= 1;		//消息名称 
+	required string msg_data	= 2;		//消息数据, protobuff格式字串
+}
+
+//战斗回放
+message replay_battle {
+
+	message request {
+		required uint32 report_id	= 1;		//战报id = 战报邮件msg_mail_battle_report的report_id
+	}
+
+	message response {
+		required uint32  battle_kind = 1;		//战斗种类
+		required uint32  battle_type = 2;		//战斗类型 1.pve  2.pvp
+
+		repeated string rname		 = 3;		//双方角色名字
+		repeated string rid			 = 4;		//双方角色id  如果是机器人，rid填写"0000"
+
+		repeated report_item report_list  = 5;	//战报
+	}
+}
+
+

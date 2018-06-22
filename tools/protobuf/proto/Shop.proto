@@ -1,0 +1,49 @@
+package Shop;
+
+
+// 商品信息
+message msg_goods_info{
+    required int32 id = 1;     		// 货物id
+    required int32 count = 2;       // 数量
+}
+
+
+//获取商店货物列表
+message store_goods_list{
+	message request {
+
+	}
+
+	message response {
+		repeated msg_goods_info goods_list = 1;
+	}
+}
+
+message msg_good{
+	required uint32 good_id  = 1;			//物品id
+	required uint32 good_num = 2;			//数量
+}
+
+//购买货物
+message buy_store_goods{
+	message request {
+		required uint32 goods_id = 1;
+		required uint32 goods_count = 2;
+	}
+	message response {
+		required msg_goods_info goods_info = 1;   // 剩余商品
+		required uint32 result = 2;               // 1.成功；2.购买失败；3.货币不足。
+		repeated msg_good list = 3; //返回礼包物品列表
+	}
+}
+
+//更新商店中货物信息
+message update_store_goods{
+	message request {
+
+	}
+
+	message response {
+		repeated msg_goods_info goods_list = 1;
+	}
+}

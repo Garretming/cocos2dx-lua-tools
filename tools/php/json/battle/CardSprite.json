@@ -1,0 +1,477 @@
+{
+  "ID": "c0327300-900e-4eb1-ba3b-0c9555b81de2",
+  "Version": "3.10.0.0",
+  "Name": "CardSprite",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 17,
+        "Speed": 1.0,
+        "ActivedAnimationName": "animation",
+        "Timelines": [
+          {
+            "ActionTag": -1004126824,
+            "Property": "Position",
+            "Frames": [
+              {
+                "X": 66.0,
+                "Y": 130.0,
+                "FrameIndex": 11,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              },
+              {
+                "X": 66.0,
+                "Y": 100.0,
+                "FrameIndex": 17,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": -1004126824,
+            "Property": "VisibleForFrame",
+            "Frames": [
+              {
+                "Value": false,
+                "FrameIndex": 0,
+                "Tween": false,
+                "ctype": "BoolFrameData"
+              },
+              {
+                "Value": true,
+                "FrameIndex": 11,
+                "Tween": false,
+                "ctype": "BoolFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": 1801392851,
+            "Property": "VisibleForFrame",
+            "Frames": [
+              {
+                "Value": false,
+                "FrameIndex": 0,
+                "Tween": false,
+                "ctype": "BoolFrameData"
+              },
+              {
+                "Value": true,
+                "FrameIndex": 11,
+                "Tween": false,
+                "ctype": "BoolFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": -740098481,
+            "Property": "VisibleForFrame",
+            "Frames": [
+              {
+                "Value": false,
+                "FrameIndex": 0,
+                "Tween": false,
+                "ctype": "BoolFrameData"
+              },
+              {
+                "Value": true,
+                "FrameIndex": 11,
+                "Tween": false,
+                "ctype": "BoolFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": -116287736,
+            "Property": "Position",
+            "Frames": [
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              },
+              {
+                "X": 0.0,
+                "Y": 97.0,
+                "FrameIndex": 10,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": -116287736,
+            "Property": "RotationSkew",
+            "Frames": [
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 360.0,
+                "Y": 360.0,
+                "FrameIndex": 10,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": -116287736,
+            "Property": "FrameEvent",
+            "Frames": [
+              {
+                "Value": "show",
+                "FrameIndex": 11,
+                "Tween": false,
+                "ctype": "EventFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          }
+        ],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [
+        {
+          "StartIndex": 0,
+          "EndIndex": 17,
+          "Name": "animation",
+          "ctype": "AnimationInfoData"
+        }
+      ],
+      "ObjectData": {
+        "CustomClassName": "SyncNode",
+        "UserData": "battle/ui",
+        "Tag": 161,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/battle/sheet/bgFrame0129.png",
+              "Plist": "uires/battle/sheet/sheet.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "HorizontalEdge": "LeftEdge",
+            "VerticalEdge": "BottomEdge",
+            "LeftMargin": -66.0,
+            "RightMargin": -66.0,
+            "TopMargin": -66.5,
+            "BottomMargin": -66.5,
+            "UserData": "z=6",
+            "Tag": 162,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Default",
+                  "Path": "Default/Sprite.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 66.0,
+                  "Y": 130.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.9774
+                },
+                "PreSize": {
+                  "X": 0.3485,
+                  "Y": 0.3459
+                },
+                "LeftMargin": 43.0,
+                "RightMargin": 43.0,
+                "TopMargin": -20.0,
+                "BottomMargin": 107.0,
+                "Tag": 163,
+                "FrameEvent": "show",
+                "ActionTag": -1004126824,
+                "Size": {
+                  "X": 46.0,
+                  "Y": 46.0
+                },
+                "VisibleForFrame": false,
+                "Name": "image",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/battle/sheet/other0227.png",
+                  "Plist": "uires/battle/sheet/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5
+                },
+                "Position": {
+                  "X": 66.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.9848,
+                  "Y": 0.5263
+                },
+                "LeftMargin": 1.0,
+                "RightMargin": 1.0,
+                "TopMargin": 63.0,
+                "Tag": 164,
+                "ActionTag": 200941685,
+                "Size": {
+                  "X": 130.0,
+                  "Y": 70.0
+                },
+                "Name": "quality",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_common/btn0043.png",
+                  "Plist": "uires/public/sheet_common/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5
+                },
+                "Position": {
+                  "X": 66.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.2879,
+                  "Y": 0.3158
+                },
+                "VerticalEdge": "BottomEdge",
+                "LeftMargin": 47.0,
+                "RightMargin": 47.0,
+                "TopMargin": 91.0,
+                "Tag": 165,
+                "Children": [
+                  {
+                    "CharWidth": 18,
+                    "CharHeight": 21,
+                    "LabelText": "0",
+                    "StartChar": ".",
+                    "LabelAtlasFileImage_CNB": {
+                      "Type": "Normal",
+                      "Path": "uires/public/font_number/fontImg0022.png",
+                      "Plist": ""
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 19.0,
+                      "Y": 19.0008
+                    },
+                    "Scale": {
+                      "ScaleX": 0.8,
+                      "ScaleY": 0.8
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.4524
+                    },
+                    "PreSize": {
+                      "X": 0.4737,
+                      "Y": 0.5
+                    },
+                    "LeftMargin": 10.0,
+                    "RightMargin": 10.0,
+                    "TopMargin": 12.4992,
+                    "BottomMargin": 8.5008,
+                    "Tag": 166,
+                    "ActionTag": -1724565332,
+                    "Size": {
+                      "X": 18.0,
+                      "Y": 21.0
+                    },
+                    "Name": "value",
+                    "ctype": "TextAtlasObjectData"
+                  }
+                ],
+                "ActionTag": 1801392851,
+                "Size": {
+                  "X": 38.0,
+                  "Y": 42.0
+                },
+                "VisibleForFrame": false,
+                "Name": "anger",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_common/icon0072.png",
+                  "Plist": "uires/public/sheet_common/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.4653,
+                  "ScaleY": 0.5367
+                },
+                "Position": {
+                  "X": 23.8208,
+                  "Y": 41.2489
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1805,
+                  "Y": 0.3101
+                },
+                "PreSize": {
+                  "X": 0.2576,
+                  "Y": 0.2556
+                },
+                "LeftMargin": 8.0006,
+                "RightMargin": 89.9994,
+                "TopMargin": 75.9989,
+                "BottomMargin": 23.0011,
+                "Tag": 167,
+                "ActionTag": -740098481,
+                "Size": {
+                  "X": 34.0,
+                  "Y": 34.0
+                },
+                "VisibleForFrame": false,
+                "Name": "position",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": -116287736,
+            "Size": {
+              "X": 132.0,
+              "Y": 133.0
+            },
+            "Name": "monster",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../Default/Sprite.png",
+        "../uires/battle/sheet/sheet.plist",
+        "../uires/battle/sheet/sheet.png",
+        "../uires/public/font_number/fontImg0022.png",
+        "../uires/public/sheet_common/sheet.plist",
+        "../uires/public/sheet_common/sheet.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

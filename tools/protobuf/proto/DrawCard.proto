@@ -1,0 +1,36 @@
+
+// 包,命名空间
+package DrawCard;
+
+// 奖励
+message msg_prize_info {
+	required uint32 prize_id = 1;
+	required uint32 prize_count = 2;
+}
+
+// 抽卡
+message draw_card {
+	message request {
+		required uint32 draw_type = 1; // 占卜类型:1.佣兵;2.技能书;
+		required uint32 cost_type = 2; // 消耗类型:1.道具;2.钻石;
+	}
+	message response {
+		repeated msg_prize_info prize_list = 1; // 抽卡奖励
+		required uint32 result = 2;  // 抽卡结果：1.成功;2.道具不足;3.道具和钻石不足;
+	}
+}
+
+
+//解锁的佣兵卡组
+message get_unlock_card_list {
+	message request {
+	}
+	message response {
+		repeated uint32 card_list = 1; // 抽卡奖励
+	}
+}
+
+//通知解锁的佣兵卡组
+message notify_unlock_card {
+	required uint32 card_id = 1;
+}

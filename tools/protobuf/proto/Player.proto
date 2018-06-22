@@ -1,0 +1,76 @@
+
+// 包。命名空间
+package Player;
+
+
+
+//公有信息基本信息
+message msg_public  {
+	required string rid									= 1;	//rid
+	required string role_name							= 2;	//角色名
+	required uint32 level								= 4;	//等级
+	required uint32 vip									= 5;	//vip等级
+	required uint32 exp									= 6;	//经验
+	optional uint32 ranking								= 7;	//排名
+}
+
+
+
+
+// 私密信息
+message msg_private {
+	required uint32 game_money							= 1;//游戏金币
+	required uint32 rmb_money							= 2;//点卷
+	required uint32 energy								= 3;//精力(入侵行动值)
+}
+
+
+
+
+
+
+message load_user_info {
+	message request {
+		required string rid = 1;	// 要查看角色id
+	}
+
+	message response {
+		required msg_public pub_info		= 1;	//公开信息可以让对方查看
+		required msg_private pri_info		= 2;	//私人信息不允许对方查阅	
+	}
+}
+
+message update_info {
+	optional uint32 level						= 1;	//等级
+	optional uint32 exp							= 2;	//经验
+	optional uint32 vip							= 3;	//vip等级
+	optional uint32 ranking						= 4;	//排名
+	optional uint32 game_money					= 5;	//游戏币
+	optional uint32 rmb_money					= 6;	//商城币	
+	optional uint32 energy						= 7;	//精力	
+}
+
+
+
+//设置引导
+message set_guide_step {
+	message request {
+		required uint32 step = 1;
+	}
+
+	message response {
+		required bool is_success = 1;
+	}
+
+}
+
+
+//获取引导步骤
+message get_guide_step_list {
+	message request {
+		
+	}
+	message response {
+		required uint32 step = 1;
+	}
+}

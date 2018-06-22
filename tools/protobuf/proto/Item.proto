@@ -1,0 +1,91 @@
+
+// 包。命名空间
+package Item;
+
+message item_template {
+	required uint32 id = 1;   //道具的id
+	required uint32 templateid=2;    //道具的模板id
+	required uint32 num=3;			//道具的叠加数量
+	optional string monsterid=4;	//佣兵id
+	optional uint32 quality=5;      //品质
+	optional uint32 score=6;        //分数
+	optional uint32 lv=7;			//等级
+
+	optional string main_attri=8;		//主属性  格式(1=16;2=18)1攻击、2护甲、3血量、4速度、5智慧
+	optional string extra_attri=9; 	    //额外属性 格式(1=16;2=13;5=6)1攻击、2护甲、3血量、4速度、5智慧
+
+	optional uint32 special_attri=10;   //装备的特殊属性(特性id列表)
+	optional string extra_param=11;	    //扩展参数(用来扩展用的)	
+	optional uint32 heroid = 12;		
+}
+
+message load_backpack_data {
+	//请求道具数据
+	message request {
+	  
+	}
+	
+	//道具数据返回
+	message response 
+	{
+		repeated item_template item_list = 1;   //道具列表		
+	}
+}
+
+message msg_prize{
+	required uint32 item_id  = 1;			//道具id
+	required uint32 item_num = 2;			//数量
+}
+
+message use_item{
+	//请求使用的道具数据
+	message request {
+	 	required uint32 item_id=1; 	//道具id 
+	 	required uint32 num=2;		//使用数量
+	}
+	
+	//返回使用道具数据返回
+	message response 
+	{
+		required bool is_success = 1;
+		repeated msg_prize list = 2; //返回道具列表
+	}	
+}
+
+message sell_item{
+	//请求出售道具数据
+	message request {
+	 	required uint32 item_id=1; 	//道具id 
+	 	required uint32 num=2;		//出售数量
+	}
+	
+	//出信道具数据返回
+	message response 
+	{
+		required bool is_success = 1;
+	}	
+}
+
+
+
+message mix_rune{
+	//合成符文
+	message request {
+		required uint32 item_id=1; //符文id
+		required uint32 num	=2;		//合成后的数量(0:自动合成 非零:合成后的数量)
+	}
+
+	//如果合成成功会返回此消息
+	message response 
+	{
+		required bool is_success = 1;
+	}	
+}
+
+
+
+message sync_item_data
+{
+	repeated item_template update_list	=	1;   //道具更新的将在这里（数量变化）
+	repeated item_template add_list 	= 	2;   //道具添加的在这里
+}

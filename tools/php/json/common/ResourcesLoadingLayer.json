@@ -1,0 +1,236 @@
+{
+  "ID": "3a55dafd-5447-4fa4-b656-8099c5f70677",
+  "Version": "3.10.0.0",
+  "Name": "ResourcesLoadingLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "CustomClassName": "SyncNode_BaseNode",
+        "UserData": "common/ui",
+        "Tag": 98,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "uires/public/bg_img/bgImg0032.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 770,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 512.0,
+              "Y": 320.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.1094,
+              "Y": 1.2
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": -56.0,
+            "RightMargin": -56.0,
+            "TopMargin": -64.0,
+            "BottomMargin": -64.0,
+            "Tag": 6091,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_common/other0180.png",
+                  "Plist": "uires/public/sheet_common/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 568.0,
+                  "Y": 120.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.1563
+                },
+                "PreSize": {
+                  "X": 0.8486,
+                  "Y": 0.0495
+                },
+                "LeftMargin": 86.0,
+                "RightMargin": 86.0,
+                "TopMargin": 629.0,
+                "BottomMargin": 101.0,
+                "Tag": 251,
+                "Children": [
+                  {
+                    "ProgressInfo": 0,
+                    "ImageFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "uires/public/sheet_common/other0179.png",
+                      "Plist": "uires/public/sheet_common/sheet.plist"
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 482.0,
+                      "Y": 19.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.9149,
+                      "Y": 0.6842
+                    },
+                    "LeftMargin": 41.0,
+                    "RightMargin": 41.0,
+                    "TopMargin": 6.0,
+                    "BottomMargin": 6.0,
+                    "Tag": 250,
+                    "ActionTag": -86651830,
+                    "Size": {
+                      "X": 882.0,
+                      "Y": 26.0
+                    },
+                    "Name": "progress",
+                    "ctype": "LoadingBarObjectData"
+                  },
+                  {
+                    "FontSize": 24,
+                    "LabelText": "0%",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "uires/public/ttf/BRITANIC.TTF",
+                      "Plist": ""
+                    },
+                    "OutlineSize": 2,
+                    "OutlineColor": {
+                      "R": 50,
+                      "G": 25,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 482.0,
+                      "Y": 19.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.0394,
+                      "Y": 0.7368
+                    },
+                    "LeftMargin": 463.0,
+                    "RightMargin": 463.0,
+                    "TopMargin": 5.0,
+                    "BottomMargin": 5.0,
+                    "Tag": 252,
+                    "ActionTag": 1280848972,
+                    "Size": {
+                      "X": 38.0,
+                      "Y": 28.0
+                    },
+                    "Name": "value",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 1702340235,
+                "Size": {
+                  "X": 964.0,
+                  "Y": 38.0
+                },
+                "Name": "loading",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": -817855981,
+            "Size": {
+              "X": 1136.0,
+              "Y": 768.0
+            },
+            "Name": "Sprite_1",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1024.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "../uires/public/bg_img/bgImg0032.png",
+        "../uires/public/sheet_common/sheet.plist",
+        "../uires/public/sheet_common/sheet.png",
+        "../uires/public/ttf/BRITANIC.TTF"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

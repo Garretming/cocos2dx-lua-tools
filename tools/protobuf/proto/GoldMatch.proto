@@ -1,0 +1,89 @@
+
+// 包。命名空间
+package GoldMatch;
+
+message msg_formation{
+	required uint32 hero_id = 3;			//职业
+	repeated uint32 skill_list = 4;			//技能
+	repeated uint32 use_monster_list = 5;   //佣兵列表，上阵的佣兵
+}
+
+//角色联赛数据
+message user_data {
+	required uint32 needticket				= 1;	//是否不用购买门票， 0 联赛未开放 1 需要购买 2 不用购买 3 等待领奖
+	required uint32 wintimes				= 2;	//胜利次数
+	required uint32 losetimes				= 3;	//失败次数
+	required msg_formation formation		= 4;	//阵型，包含已经选择好的佣兵数据，
+}
+
+//请求角色联赛数据
+message cmd_user_data {
+	message request {
+	}
+
+	message response {
+		required user_data data = 1;
+	}
+}
+
+//选择数据
+message cmd_select_data {
+	message request {
+		required uint32 select_step			= 1;	//选择数据步骤 1：职业2 技能 3 佣兵
+		optional uint32 hero_id				= 2;	//2个职业选1个
+		repeated uint32 skill_list			= 3;	//3个技能选2个
+		repeated uint32 monster_list		= 4;	//3个佣兵选择2个
+	}
+
+	message response {
+		required uint32 retval				= 1;	//返回结果,0 成功 不为0不成功
+		required uint32 select_step			= 2;	//下一步选择步骤 1：职业2 技能 3 佣兵 4：选择完成
+		repeated uint32 skill_list			= 4;	//3个技能选2个
+		repeated uint32 monster_list		= 5;	//3个佣兵选择2个
+	}
+}
+
+message msg_prize{
+	required uint32 item_id  = 1;			//道具id
+	required uint32 item_num = 2;			//数量
+}
+
+
+//匹配（取消，战斗）
+message cmd_match_action {
+	message request {
+		required uint32 action = 1;	//action = 0：取消匹配 1：请求匹配 2：领奖 3:战斗
+	}
+	
+	message response {
+		required uint32 retval = 1; //返回结果,0 成功 不为0不成功
+		repeated msg_prize list = 2; //领奖返回道具列表
+	}
+}
+
+//客户请求cmd_user_data之后服务器会主动下发notify_select_data
+//通知阵容相关选择数据，客户端据此进入相应界面和设置相关数据，如果进入佣兵选择界面时客户端需要从user_data里的formation读取已选择的佣兵
+message notify_select_data {
+	required uint32 select_step			= 1;	//选择步骤 1：职业 2：技能 3：佣兵 4：已完成选择
+	repeated uint32 hero_id				= 2;	//2个职业选1个
+	repeated uint32 skill_list			= 3;	//3个技能选2个
+	repeated uint32 monster_list		= 4;	//3个佣兵选择2个，
+}
+
+
+//通知匹配成功
+message notify_match {
+	required string role_name			= 1;	//角色名
+	required uint32 role_lv				= 2;	//角色等级
+	required uint32 wintimes			= 3;	//胜利次数
+	required uint32 losetimes			= 4;	//失败次数
+}
+
+
+//角色联赛数据通知
+message notify_user_data {
+	required uint32 needticket			= 1;	//是否不用购买门票， 0 联赛未开放 1 需要购买 2 不用购买 3 等待领奖
+	required uint32 wintimes			= 2;	//胜利次数
+	required uint32 losetimes			= 3;	//失败次数
+}
+

@@ -1,0 +1,246 @@
+{
+  "ID": "3c535850-39b7-45cf-8946-cd103543477b",
+  "Version": "3.10.0.0",
+  "Name": "SystemNode",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "CustomClassName": "BaseTableViewCell_SyncNode",
+        "UserData": "chatting",
+        "Tag": 583,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_bgframe/bgFrame0085.png",
+              "Plist": "uires/public/sheet_bgframe/sheet.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 39,
+            "Scale9OriginY": 13,
+            "Scale9Width": 42,
+            "Scale9Height": 14,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 5.0,
+              "Y": 5.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 5.0,
+            "RightMargin": -565.0,
+            "TopMargin": -55.0,
+            "BottomMargin": 5.0,
+            "Tag": 584,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_other/other0231.png",
+                  "Plist": "uires/public/sheet_other/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 50.0,
+                  "Y": 25.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.0893,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.1143,
+                  "Y": 0.64
+                },
+                "LeftMargin": 18.0,
+                "RightMargin": 478.0,
+                "TopMargin": 9.0,
+                "BottomMargin": 9.0,
+                "Tag": 599,
+                "Children": [
+                  {
+                    "FontSize": 20,
+                    "LabelText": "占卜",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "uires/public/ttf/jtcs.TTF",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "R": 50,
+                      "G": 25,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 32.66,
+                      "Y": 16.6391
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5103,
+                      "Y": 0.52
+                    },
+                    "PreSize": {
+                      "X": 0.6719,
+                      "Y": 0.6875
+                    },
+                    "LeftMargin": 11.16,
+                    "RightMargin": 9.84,
+                    "TopMargin": 4.3609,
+                    "BottomMargin": 5.6391,
+                    "Tag": 600,
+                    "ActionTag": -38951219,
+                    "Size": {
+                      "X": 43.0,
+                      "Y": 22.0
+                    },
+                    "Name": "systemWarnTitle",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 555909102,
+                "Size": {
+                  "X": 64.0,
+                  "Y": 32.0
+                },
+                "Name": "systemWarnImg",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 20,
+                "LabelText": "不移打是   大大是大所大所大所撒大所大",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "uires/public/ttf/jzy.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 100.0,
+                  "Y": 37.5
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.1786,
+                  "Y": 0.75
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.5
+                },
+                "LeftMargin": 100.0,
+                "RightMargin": 460.0,
+                "TopMargin": 12.5,
+                "BottomMargin": 12.5,
+                "UserData": "RichText",
+                "Tag": 601,
+                "ActionTag": -835938783,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 25.0
+                },
+                "Name": "systemWarn",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 585464631,
+            "Size": {
+              "X": 560.0,
+              "Y": 50.0
+            },
+            "Name": "systemWarnbg",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../uires/public/sheet_bgframe/sheet.plist",
+        "../uires/public/sheet_bgframe/sheet.png",
+        "../uires/public/sheet_other/sheet.plist",
+        "../uires/public/sheet_other/sheet.png",
+        "../uires/public/ttf/jtcs.TTF",
+        "../uires/public/ttf/jzy.ttf"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

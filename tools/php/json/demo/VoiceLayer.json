@@ -1,0 +1,501 @@
+{
+  "ID": "15f75bc4-55c7-4429-a3e0-931b19448cff",
+  "Version": "3.10.0.0",
+  "Name": "VoiceLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "UserData": "demo",
+        "Tag": 124,
+        "Children": [
+          {
+            "FontSize": 36,
+            "ButtonText": "登陆",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_common/btn0033.png",
+              "Plist": "uires/public/sheet_common/sheet.plist"
+            },
+            "NormalFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_common/btn0032.png",
+              "Plist": "uires/public/sheet_common/sheet.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 153,
+            "Scale9Height": 46,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 177.5,
+              "Y": 550.5
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1733,
+              "Y": 0.8602
+            },
+            "PreSize": {
+              "X": 0.1787,
+              "Y": 0.1063
+            },
+            "LeftMargin": 86.0,
+            "RightMargin": 755.0,
+            "TopMargin": 55.5,
+            "BottomMargin": 516.5,
+            "CallBackType": "Click",
+            "CallBackName": "onLogin",
+            "Tag": 125,
+            "ActionTag": -1042150168,
+            "Size": {
+              "X": 183.0,
+              "Y": 68.0
+            },
+            "Name": "Button_1",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 36,
+            "ButtonText": "加入房间",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_common/btn0033.png",
+              "Plist": "uires/public/sheet_common/sheet.plist"
+            },
+            "NormalFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_common/btn0032.png",
+              "Plist": "uires/public/sheet_common/sheet.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 153,
+            "Scale9Height": 46,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 176.5,
+              "Y": 462.5
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1724,
+              "Y": 0.7227
+            },
+            "PreSize": {
+              "X": 0.1787,
+              "Y": 0.1063
+            },
+            "LeftMargin": 85.0,
+            "RightMargin": 756.0,
+            "TopMargin": 143.5,
+            "BottomMargin": 428.5,
+            "CallBackType": "Click",
+            "CallBackName": "onJoin",
+            "Tag": 126,
+            "ActionTag": 828287974,
+            "Size": {
+              "X": 183.0,
+              "Y": 68.0
+            },
+            "Name": "Button_1_0",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 36,
+            "ButtonText": "开始录音",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_common/btn0033.png",
+              "Plist": "uires/public/sheet_common/sheet.plist"
+            },
+            "NormalFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_common/btn0032.png",
+              "Plist": "uires/public/sheet_common/sheet.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 153,
+            "Scale9Height": 46,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 177.5,
+              "Y": 363.5
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1733,
+              "Y": 0.568
+            },
+            "PreSize": {
+              "X": 0.1787,
+              "Y": 0.1063
+            },
+            "LeftMargin": 86.0,
+            "RightMargin": 755.0,
+            "TopMargin": 242.5,
+            "BottomMargin": 329.5,
+            "CallBackType": "Click",
+            "CallBackName": "onStart",
+            "Tag": 127,
+            "ActionTag": 429796558,
+            "Size": {
+              "X": 183.0,
+              "Y": 68.0
+            },
+            "Name": "Button_1_0_0",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 36,
+            "ButtonText": "结束录音",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_common/btn0033.png",
+              "Plist": "uires/public/sheet_common/sheet.plist"
+            },
+            "NormalFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_common/btn0032.png",
+              "Plist": "uires/public/sheet_common/sheet.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 153,
+            "Scale9Height": 46,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 183.5,
+              "Y": 276.5
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1792,
+              "Y": 0.432
+            },
+            "PreSize": {
+              "X": 0.1787,
+              "Y": 0.1063
+            },
+            "LeftMargin": 92.0,
+            "RightMargin": 749.0,
+            "TopMargin": 329.5,
+            "BottomMargin": 242.5,
+            "CallBackType": "Click",
+            "CallBackName": "onStop",
+            "Tag": 128,
+            "ActionTag": 1228268156,
+            "Size": {
+              "X": 183.0,
+              "Y": 68.0
+            },
+            "Name": "Button_1_0_0_0",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 36,
+            "ButtonText": "播放录音",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_common/btn0033.png",
+              "Plist": "uires/public/sheet_common/sheet.plist"
+            },
+            "NormalFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_common/btn0032.png",
+              "Plist": "uires/public/sheet_common/sheet.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 153,
+            "Scale9Height": 46,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 183.5,
+              "Y": 183.5
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1792,
+              "Y": 0.2867
+            },
+            "PreSize": {
+              "X": 0.1787,
+              "Y": 0.1063
+            },
+            "LeftMargin": 92.0,
+            "RightMargin": 749.0,
+            "TopMargin": 422.5,
+            "BottomMargin": 149.5,
+            "CallBackType": "Click",
+            "CallBackName": "onPlay",
+            "Tag": 129,
+            "ActionTag": 266712607,
+            "Size": {
+              "X": 183.0,
+              "Y": 68.0
+            },
+            "Name": "Button_1_0_0_0_0",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Press.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_btn/btn0027.png",
+              "Plist": "uires/public/sheet_btn/sheet.plist"
+            },
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 26,
+            "Scale9Height": 34,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 951.0,
+              "Y": 572.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.9287,
+              "Y": 0.8938
+            },
+            "PreSize": {
+              "X": 0.0703,
+              "Y": 0.1125
+            },
+            "HorizontalEdge": "RightEdge",
+            "VerticalEdge": "TopEdge",
+            "LeftMargin": 915.0,
+            "RightMargin": 37.0,
+            "TopMargin": 32.0,
+            "BottomMargin": 536.0,
+            "CallBackType": "Click",
+            "CallBackName": "onClose",
+            "Tag": 143,
+            "ActionTag": 82690213,
+            "Size": {
+              "X": 72.0,
+              "Y": 72.0
+            },
+            "Name": "Button_3",
+            "ctype": "ButtonObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1024.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "../Default/Button_Disable.png",
+        "../Default/Button_Press.png",
+        "../uires/public/sheet_btn/sheet.plist",
+        "../uires/public/sheet_btn/sheet.png",
+        "../uires/public/sheet_common/sheet.plist",
+        "../uires/public/sheet_common/sheet.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

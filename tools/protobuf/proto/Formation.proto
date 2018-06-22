@@ -1,0 +1,113 @@
+
+// 包,命名空间
+package Formation;
+
+//通用信息
+message msg_monster  //佣兵信息
+{
+	required uint32 number = 1; 	//佣兵个数,已经上阵的
+	required uint32 id = 2;		//配置表id
+	optional msg_monster_prop prop = 3; // 佣兵属性
+}
+
+// 佣兵属性
+message msg_monster_prop
+{
+	required uint32 attack = 1; // 攻击
+	required uint32 armor = 2;  // 护甲
+	required uint32 hp = 3;     // 血量
+	required uint32 speed = 4;  // 速度
+}
+
+
+//技能信息
+message msg_skill {
+	required uint32 skill_id = 1;           //技能id
+	optional uint32 skill_level = 2;		//技能等级
+}
+
+
+message msg_formation{
+			optional uint32 formation_id = 1;			//阵容id
+			optional string formation_name = 2;         //阵容名称
+			required uint32 hero_id = 3;				//职业
+			repeated msg_skill skill_list = 4;			//技能
+			repeated msg_monster use_monster_list = 5;  //佣兵列表，上阵的佣兵
+}
+
+
+//完成选择的阵容
+message finish_formation{
+	message request {
+		required msg_formation formation = 1;		//阵型列表
+		required uint32 ischange = 2;		//0是新阵容，1是修改阵容
+	}
+	
+	//职业选择确定后数据返回（返回的是阵容编辑界面的数据）
+	message response 
+	{
+		required bool is_success = 1;
+		required uint32 formation_id = 2;
+		repeated msg_monster use_monster_list = 3;  //佣兵列表，上阵的佣兵
+	}
+}
+
+
+//阵容编辑界面 点击出战
+message fight_state{
+	//出战状态请求数据
+	message request {
+	 	required uint32 formation_id = 1; 	//出战阵容索引
+	}
+	
+	//出战状态数据返回
+	message response 
+	{
+		required bool is_success = 1;
+	}
+}
+
+
+
+//预览阵型
+message preview_formation{
+	//阵容信息
+	message request {
+	 	
+	}
+	
+	//阵容信息
+	message response
+	{
+		required uint32 fight_formation = 1;			//出战阵容的id，没有填写0
+		repeated msg_formation formation_list = 2;		//阵型列表
+	}
+}
+
+//删除阵容，返回阵容编辑界面
+message delete_formation{
+	message request {
+		required uint32 formation_id = 1;			//阵型id
+	}
+
+	
+	message response 
+	{
+		required bool is_success = 1;
+	}	
+}
+
+// 同步未上阵阵容
+message sync_monster_list {
+	repeated msg_monster udpate_monster_list = 1;			//变化的佣兵列表
+}
+
+// 获取所有未上阵佣兵
+message get_monster_list {
+	message request {
+
+	}
+	message response {
+		repeated msg_monster monster_list = 1;    //玩家所有的佣兵列表
+	}
+}

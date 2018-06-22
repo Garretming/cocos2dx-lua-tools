@@ -1,0 +1,2354 @@
+{
+  "ID": "ef44c4fd-32dd-43da-bafd-4dbb71ae108e",
+  "Version": "3.10.0.0",
+  "Name": "HeroesInitLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 20,
+        "Speed": 1.0,
+        "Timelines": [
+          {
+            "ActionTag": -257809827,
+            "Property": "Position",
+            "Frames": [
+              {
+                "X": 0.0,
+                "Y": -103.0,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              },
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 20,
+                "EasingData": {
+                  "Points": [
+                    {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    {
+                      "X": 1.0,
+                      "Y": 1.0
+                    },
+                    {
+                      "X": 1.0,
+                      "Y": 1.0
+                    }
+                  ],
+                  "Type": -1
+                },
+                "ctype": "PointFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": 1541764923,
+            "Property": "Position",
+            "Frames": [
+              {
+                "X": 0.0,
+                "Y": 160.0,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              },
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 20,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          }
+        ],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "UserData": "heroes",
+        "Tag": 128,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "uires/public/bg_img/bgImg0008.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 337,
+            "Scale9OriginY": 211,
+            "Scale9Width": 350,
+            "Scale9Height": 218,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 512.0,
+              "Y": 320.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "Tag": 443,
+            "ActionTag": 82395005,
+            "Size": {
+              "X": 1024.0,
+              "Y": 640.0
+            },
+            "Name": "bg_img",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_btn/btn0057.png",
+              "Plist": "uires/public/sheet_btn/sheet.plist"
+            },
+            "NormalFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_btn/btn0058.png",
+              "Plist": "uires/public/sheet_btn/sheet.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 81,
+            "Scale9Height": 96,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 947.5,
+              "Y": 446.5
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.9253,
+              "Y": 0.6977
+            },
+            "PreSize": {
+              "X": 0.1084,
+              "Y": 0.1828
+            },
+            "HorizontalEdge": "RightEdge",
+            "VerticalEdge": "TopEdge",
+            "LeftMargin": 892.0,
+            "RightMargin": 21.0,
+            "TopMargin": 135.0,
+            "BottomMargin": 388.0,
+            "CallBackType": "Click",
+            "CallBackName": "onTabMenu",
+            "UserData": "z=1,sound=ui_click_page",
+            "Tag": 34,
+            "ActionTag": 1912796201,
+            "Size": {
+              "X": 111.0,
+              "Y": 117.0
+            },
+            "Name": "property_btn",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_btn/btn0059.png",
+              "Plist": "uires/public/sheet_btn/sheet.plist"
+            },
+            "NormalFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_btn/btn0060.png",
+              "Plist": "uires/public/sheet_btn/sheet.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 81,
+            "Scale9Height": 96,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 947.5,
+              "Y": 311.5
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.9253,
+              "Y": 0.4867
+            },
+            "PreSize": {
+              "X": 0.1084,
+              "Y": 0.1828
+            },
+            "HorizontalEdge": "RightEdge",
+            "VerticalEdge": "TopEdge",
+            "LeftMargin": 892.0,
+            "RightMargin": 21.0,
+            "TopMargin": 270.0,
+            "BottomMargin": 253.0,
+            "CallBackType": "Click",
+            "CallBackName": "onTabMenu",
+            "UserData": "z=1,sound=ui_click_page",
+            "Tag": 35,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_other/other0088.png",
+                  "Plist": "uires/public/sheet_other/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 99.9,
+                  "Y": 105.3
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.9,
+                  "Y": 0.9
+                },
+                "PreSize": {
+                  "X": 0.2703,
+                  "Y": 0.2564
+                },
+                "LeftMargin": 84.9,
+                "RightMargin": -3.9,
+                "TopMargin": -3.3,
+                "BottomMargin": 90.3,
+                "Tag": 126,
+                "ActionTag": 2001531159,
+                "Size": {
+                  "X": 30.0,
+                  "Y": 30.0
+                },
+                "Name": "redPoint_sprite",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": -349858258,
+            "Size": {
+              "X": 111.0,
+              "Y": 117.0
+            },
+            "Name": "skill_btn",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_bgframe/bgFrame0052.png",
+              "Plist": "uires/public/sheet_bgframe/sheet.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 60,
+            "Scale9OriginY": 30,
+            "Scale9Width": 180,
+            "Scale9Height": 43,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": -103.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": -0.1609
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 0.1609
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BottomEdge",
+            "TopMargin": 640.0,
+            "BottomMargin": -103.0,
+            "UserData": "z=1,WinWidth",
+            "Tag": 281,
+            "Children": [
+              {
+                "InnerNodeSize": {
+                  "Width": 600,
+                  "Height": 200
+                },
+                "ScrollDirectionType": "Horizontal",
+                "ClipAble": true,
+                "BackColorAlpha": 102,
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "G": 150,
+                  "B": 100
+                },
+                "FirstColor": {
+                  "G": 150,
+                  "B": 100
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 512.0,
+                  "Y": 44.496
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.432
+                },
+                "PreSize": {
+                  "X": 0.5859,
+                  "Y": 0.7767
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "BothEdge",
+                "LeftMargin": 212.0,
+                "RightMargin": 212.0,
+                "TopMargin": 18.504,
+                "BottomMargin": 4.496,
+                "Tag": 282,
+                "ActionTag": 2118609935,
+                "Size": {
+                  "X": 600.0,
+                  "Y": 80.0
+                },
+                "Alpha": 0,
+                "Name": "occupation_scrollView",
+                "ctype": "ScrollViewObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_btn/btn0044.png",
+                  "Plist": "uires/public/sheet_btn/sheet.plist"
+                },
+                "NormalFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_btn/btn0044.png",
+                  "Plist": "uires/public/sheet_btn/sheet.plist"
+                },
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 37,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 96.3584,
+                  "Y": 44.29
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.0941,
+                  "Y": 0.43
+                },
+                "PreSize": {
+                  "X": 0.0527,
+                  "Y": 0.5728
+                },
+                "LeftMargin": 69.3584,
+                "RightMargin": 900.6416,
+                "TopMargin": 29.21,
+                "BottomMargin": 14.79,
+                "CallBackType": "Click",
+                "CallBackName": "onArrowLeft",
+                "UserData": "sound=ui_click_button",
+                "Tag": 725,
+                "ActionTag": 1549954724,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 59.0
+                },
+                "Name": "arrowLeft_btn",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_btn/btn0045.png",
+                  "Plist": "uires/public/sheet_btn/sheet.plist"
+                },
+                "NormalFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_btn/btn0045.png",
+                  "Plist": "uires/public/sheet_btn/sheet.plist"
+                },
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 37,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 928.5632,
+                  "Y": 44.29
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9068,
+                  "Y": 0.43
+                },
+                "PreSize": {
+                  "X": 0.0527,
+                  "Y": 0.5728
+                },
+                "HorizontalEdge": "RightEdge",
+                "VerticalEdge": "BottomEdge",
+                "LeftMargin": 901.5632,
+                "RightMargin": 68.4368,
+                "TopMargin": 29.21,
+                "BottomMargin": 14.79,
+                "CallBackType": "Click",
+                "CallBackName": "onArrowRight",
+                "UserData": "sound=ui_click_button",
+                "Tag": 726,
+                "ActionTag": -354003739,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 59.0
+                },
+                "Name": "arrowRight_btn",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": -257809827,
+            "Size": {
+              "X": 1024.0,
+              "Y": 103.0
+            },
+            "Name": "bottomUnder_img",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 102,
+            "SingleColor": {},
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 160.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.25
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "HorizontalEdge": "LeftEdge",
+            "TopMargin": -160.0,
+            "BottomMargin": 160.0,
+            "UserData": "z=1",
+            "Tag": 512,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_bgframe/bgFrame0051.png",
+                  "Plist": "uires/public/sheet_bgframe/sheet.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 100,
+                "Scale9OriginY": 10,
+                "Scale9Width": 140,
+                "Scale9Height": 13,
+                "AnchorPoint": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 1024.0,
+                  "Y": 640.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 1.0,
+                  "Y": 1.0
+                },
+                "PreSize": {
+                  "X": 0.7813,
+                  "Y": 0.1453
+                },
+                "HorizontalEdge": "RightEdge",
+                "VerticalEdge": "TopEdge",
+                "LeftMargin": 224.0,
+                "BottomMargin": 547.0,
+                "Tag": 463,
+                "ActionTag": 1045266093,
+                "Size": {
+                  "X": 800.0,
+                  "Y": 93.0
+                },
+                "Name": "rightTopUnder_img",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_bgframe/bgFrame0063.png",
+                  "Plist": "uires/public/sheet_bgframe/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": 640.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 1.0
+                },
+                "PreSize": {
+                  "X": 0.5244,
+                  "Y": 0.2562
+                },
+                "HorizontalEdge": "LeftEdge",
+                "VerticalEdge": "TopEdge",
+                "RightMargin": 487.0,
+                "BottomMargin": 476.0,
+                "Tag": 462,
+                "ActionTag": 566107147,
+                "Size": {
+                  "X": 537.0,
+                  "Y": 164.0
+                },
+                "Name": "leftTopUnder_img",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_font/fontImg0062.png",
+                  "Plist": "uires/public/sheet_font/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 243.145,
+                  "Y": 611.2917
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2374,
+                  "Y": 0.9551
+                },
+                "PreSize": {
+                  "X": 0.123,
+                  "Y": 0.0859
+                },
+                "HorizontalEdge": "LeftEdge",
+                "VerticalEdge": "TopEdge",
+                "LeftMargin": 180.145,
+                "RightMargin": 717.855,
+                "TopMargin": 1.2083,
+                "BottomMargin": 583.7917,
+                "Tag": 461,
+                "ActionTag": 1704882032,
+                "Size": {
+                  "X": 126.0,
+                  "Y": 55.0
+                },
+                "Name": "suzerainFont_sprite",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_btn/btn0073.png",
+                  "Plist": "uires/public/sheet_btn/sheet.plist"
+                },
+                "NormalFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_btn/btn0073.png",
+                  "Plist": "uires/public/sheet_btn/sheet.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 86,
+                "Scale9Height": 55,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 68.1659,
+                  "Y": 595.6227
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0666,
+                  "Y": 0.9307
+                },
+                "PreSize": {
+                  "X": 0.1133,
+                  "Y": 0.1203
+                },
+                "HorizontalEdge": "LeftEdge",
+                "VerticalEdge": "TopEdge",
+                "LeftMargin": 10.1659,
+                "RightMargin": 897.8341,
+                "TopMargin": 5.8773,
+                "BottomMargin": 557.1227,
+                "CallBackType": "Click",
+                "CallBackName": "back_btn",
+                "UserData": "sound=ui_click_back",
+                "Tag": 460,
+                "ActionTag": 49602573,
+                "Size": {
+                  "X": 116.0,
+                  "Y": 77.0
+                },
+                "Name": "back_btn",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_bgframe/bgFrame0025.png",
+                  "Plist": "uires/public/sheet_bgframe/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 647.9954,
+                  "Y": 608.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6328,
+                  "Y": 0.95
+                },
+                "PreSize": {
+                  "X": 0.1582,
+                  "Y": 0.0797
+                },
+                "HorizontalEdge": "RightEdge",
+                "VerticalEdge": "TopEdge",
+                "LeftMargin": 566.9954,
+                "RightMargin": 295.0046,
+                "TopMargin": 6.5,
+                "BottomMargin": 582.5,
+                "Tag": 1364,
+                "Children": [
+                  {
+                    "FontSize": 20,
+                    "LabelText": "999999",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "uires/public/ttf/BRITANIC.TTF",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "R": 50,
+                      "G": 25,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 141.7674,
+                      "Y": 32.0211
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8751,
+                      "Y": 0.6279
+                    },
+                    "PreSize": {
+                      "X": 0.463,
+                      "Y": 0.4314
+                    },
+                    "VerticalEdge": "TopEdge",
+                    "LeftMargin": 66.7674,
+                    "RightMargin": 20.2326,
+                    "TopMargin": 7.9789,
+                    "BottomMargin": 21.0211,
+                    "Tag": 1365,
+                    "ActionTag": -977368229,
+                    "Size": {
+                      "X": 75.0,
+                      "Y": 22.0
+                    },
+                    "Name": "value",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "uires/public/sheet_icon/icon0028.png",
+                      "Plist": "uires/public/sheet_icon/sheet.plist"
+                    },
+                    "BlendFunc": {
+                      "Src": 1,
+                      "Dst": 771
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 24.4051,
+                      "Y": 25.3981
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.1506,
+                      "Y": 0.498
+                    },
+                    "PreSize": {
+                      "X": 0.2716,
+                      "Y": 0.8627
+                    },
+                    "LeftMargin": 2.4051,
+                    "RightMargin": 115.5949,
+                    "TopMargin": 3.6019,
+                    "BottomMargin": 3.3981,
+                    "Tag": 1366,
+                    "ActionTag": 1770723233,
+                    "Size": {
+                      "X": 44.0,
+                      "Y": 44.0
+                    },
+                    "Name": "gem_sprite",
+                    "ctype": "SpriteObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "uires/public/sheet_btn/btn0074.png",
+                      "Plist": "uires/public/sheet_btn/sheet.plist"
+                    },
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 5,
+                    "Scale9Height": 15,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 160.8935,
+                      "Y": 31.854
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.9932,
+                      "Y": 0.6246
+                    },
+                    "PreSize": {
+                      "X": 0.216,
+                      "Y": 0.7255
+                    },
+                    "LeftMargin": 143.3935,
+                    "RightMargin": -16.3935,
+                    "TopMargin": 0.646,
+                    "BottomMargin": 13.354,
+                    "Tag": 1367,
+                    "ActionTag": -1774053825,
+                    "Size": {
+                      "X": 35.0,
+                      "Y": 37.0
+                    },
+                    "Name": "gemAdd_btn",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": -15,
+                    "Scale9OriginY": -4,
+                    "Scale9Width": 30,
+                    "Scale9Height": 8,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 156.9112,
+                      "Y": 30.0212
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.9686,
+                      "Y": 0.5887
+                    },
+                    "PreSize": {
+                      "X": 0.3086,
+                      "Y": 0.5882
+                    },
+                    "LeftMargin": 131.9112,
+                    "RightMargin": -19.9112,
+                    "TopMargin": 5.9788,
+                    "BottomMargin": 15.0212,
+                    "CallBackType": "Click",
+                    "CallBackName": "onRMBMoney",
+                    "Tag": 1368,
+                    "ActionTag": 1769928615,
+                    "Size": {
+                      "X": 50.0,
+                      "Y": 30.0
+                    },
+                    "Name": "Button",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": -15,
+                    "Scale9OriginY": -4,
+                    "Scale9Width": 30,
+                    "Scale9Height": 8,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 64.8618,
+                      "Y": 29.5796
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.4004,
+                      "Y": 0.58
+                    },
+                    "PreSize": {
+                      "X": 0.7407,
+                      "Y": 0.5882
+                    },
+                    "LeftMargin": 4.8618,
+                    "RightMargin": 37.1382,
+                    "TopMargin": 6.4204,
+                    "BottomMargin": 14.5796,
+                    "Tag": 1369,
+                    "ActionTag": 1874346767,
+                    "Size": {
+                      "X": 120.0,
+                      "Y": 30.0
+                    },
+                    "Name": "btn_desc",
+                    "ctype": "ButtonObjectData"
+                  }
+                ],
+                "ActionTag": 1239126639,
+                "Size": {
+                  "X": 162.0,
+                  "Y": 51.0
+                },
+                "Name": "rmb_money",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_btn/btn0061.png",
+                  "Plist": "uires/public/sheet_btn/sheet.plist"
+                },
+                "NormalFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_btn/btn0061.png",
+                  "Plist": "uires/public/sheet_btn/sheet.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 28,
+                "Scale9Height": 46,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 985.8547,
+                  "Y": 592.3376
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9627,
+                  "Y": 0.9255
+                },
+                "PreSize": {
+                  "X": 0.0566,
+                  "Y": 0.1063
+                },
+                "HorizontalEdge": "RightEdge",
+                "VerticalEdge": "TopEdge",
+                "LeftMargin": 956.8547,
+                "RightMargin": 9.1453,
+                "TopMargin": 13.6624,
+                "BottomMargin": 558.3376,
+                "CallBackType": "Click",
+                "CallBackName": "help_btn",
+                "UserData": "sound=ui_click_button",
+                "Tag": 458,
+                "Children": [
+                  {
+                    "AnchorPoint": {},
+                    "Position": {
+                      "X": 104.1442,
+                      "Y": 30.5222
+                    },
+                    "Scale": {
+                      "ScaleX": 0.9,
+                      "ScaleY": 0.9
+                    },
+                    "CColor": {},
+                    "IconVisible": true,
+                    "PrePosition": {
+                      "X": 1.7956,
+                      "Y": 0.4489
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 104.1442,
+                    "RightMargin": -46.1442,
+                    "TopMargin": 37.4778,
+                    "BottomMargin": 30.5222,
+                    "Tag": 459,
+                    "ActionTag": -95532223,
+                    "Size": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "Name": "__SELECTED_SCALE",
+                    "ctype": "SingleNodeObjectData"
+                  }
+                ],
+                "ActionTag": 1808785473,
+                "Size": {
+                  "X": 58.0,
+                  "Y": 68.0
+                },
+                "Name": "help_btn",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 459.9808,
+                  "Y": 638.3464
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.4492,
+                  "Y": 0.9974
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "HorizontalEdge": "BothEdge",
+                "VerticalEdge": "TopEdge",
+                "LeftMargin": 459.9808,
+                "RightMargin": 564.0192,
+                "TopMargin": 1.6536,
+                "BottomMargin": 638.3464,
+                "Tag": 513,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "uires/public/sheet_other/other0083.png",
+                      "Plist": "uires/public/sheet_other/sheet.plist"
+                    },
+                    "BlendFunc": {
+                      "Src": 1,
+                      "Dst": 771
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 30.0,
+                      "Y": -39.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": -49.0,
+                    "RightMargin": -109.0,
+                    "TopMargin": 30.0,
+                    "BottomMargin": -48.0,
+                    "Tag": 377,
+                    "Children": [
+                      {
+                        "ProgressInfo": 100,
+                        "ImageFileData": {
+                          "Type": "PlistSubImage",
+                          "Path": "uires/public/sheet_other/other0082.png",
+                          "Plist": "uires/public/sheet_other/sheet.plist"
+                        },
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 79.0,
+                          "Y": 9.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.9557,
+                          "Y": 0.7778
+                        },
+                        "LeftMargin": 3.5,
+                        "RightMargin": 3.5,
+                        "TopMargin": 2.0,
+                        "BottomMargin": 2.0,
+                        "Tag": 137,
+                        "ActionTag": -1083999466,
+                        "Size": {
+                          "X": 151.0,
+                          "Y": 14.0
+                        },
+                        "Name": "exp_loadingBar",
+                        "ctype": "LoadingBarObjectData"
+                      },
+                      {
+                        "CharWidth": 13,
+                        "CharHeight": 19,
+                        "LabelText": "123/456",
+                        "StartChar": ".",
+                        "LabelAtlasFileImage_CNB": {
+                          "Type": "Normal",
+                          "Path": "uires/public/font_number/fontImg0011.png",
+                          "Plist": ""
+                        },
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 79.0,
+                          "Y": 9.0
+                        },
+                        "Scale": {
+                          "ScaleX": 0.6,
+                          "ScaleY": 0.6
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.5759,
+                          "Y": 1.0556
+                        },
+                        "LeftMargin": 33.5,
+                        "RightMargin": 33.5,
+                        "TopMargin": -0.5,
+                        "BottomMargin": -0.5,
+                        "Tag": 376,
+                        "ActionTag": -1176611289,
+                        "Size": {
+                          "X": 91.0,
+                          "Y": 19.0
+                        },
+                        "Name": "value",
+                        "ctype": "TextAtlasObjectData"
+                      }
+                    ],
+                    "ActionTag": -1868573994,
+                    "Size": {
+                      "X": 158.0,
+                      "Y": 18.0
+                    },
+                    "Name": "expUnder_sprite",
+                    "ctype": "SpriteObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "uires/public/sheet_font/fontImg0066.png",
+                      "Plist": "uires/public/sheet_font/sheet.plist"
+                    },
+                    "BlendFunc": {
+                      "Src": 1,
+                      "Dst": 771
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -66.8903,
+                      "Y": -38.766
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": -84.8903,
+                    "RightMargin": 48.8903,
+                    "TopMargin": 30.766,
+                    "BottomMargin": -46.766,
+                    "Tag": 138,
+                    "ActionTag": 1422174855,
+                    "Size": {
+                      "X": 36.0,
+                      "Y": 16.0
+                    },
+                    "Name": "exp_sprite",
+                    "ctype": "SpriteObjectData"
+                  },
+                  {
+                    "FontSize": 20,
+                    "LabelText": "这作死的大鸟",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "uires/public/ttf/jtcs.TTF",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "R": 50,
+                      "G": 25,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -72.5001,
+                      "Y": -14.9907
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 240,
+                      "G": 200,
+                      "B": 60
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": -72.5001,
+                    "RightMargin": -47.4999,
+                    "TopMargin": 4.9907,
+                    "BottomMargin": -24.9907,
+                    "UserData": "RichText",
+                    "Tag": 139,
+                    "ActionTag": -1137763103,
+                    "Size": {
+                      "X": 123.0,
+                      "Y": 22.0
+                    },
+                    "Name": "roleName_txt",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 245208201,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "Node_12",
+                "ctype": "SingleNodeObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_bgframe/bgFrame0025.png",
+                  "Plist": "uires/public/sheet_bgframe/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 647.9968,
+                  "Y": 608.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6328,
+                  "Y": 0.95
+                },
+                "PreSize": {
+                  "X": 0.1582,
+                  "Y": 0.0797
+                },
+                "HorizontalEdge": "RightEdge",
+                "VerticalEdge": "TopEdge",
+                "LeftMargin": 566.9968,
+                "RightMargin": 295.0032,
+                "TopMargin": 6.5,
+                "BottomMargin": 582.5,
+                "Tag": 1126,
+                "Children": [
+                  {
+                    "FontSize": 20,
+                    "LabelText": "999999",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "uires/public/ttf/BRITANIC.TTF",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "R": 50,
+                      "G": 25,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 141.7674,
+                      "Y": 32.0211
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8751,
+                      "Y": 0.6279
+                    },
+                    "PreSize": {
+                      "X": 0.463,
+                      "Y": 0.4314
+                    },
+                    "VerticalEdge": "TopEdge",
+                    "LeftMargin": 66.7674,
+                    "RightMargin": 20.2326,
+                    "TopMargin": 7.9789,
+                    "BottomMargin": 21.0211,
+                    "Tag": 1127,
+                    "ActionTag": -650955838,
+                    "Size": {
+                      "X": 75.0,
+                      "Y": 22.0
+                    },
+                    "Name": "value",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "uires/public/sheet_icon/icon0028.png",
+                      "Plist": "uires/public/sheet_icon/sheet.plist"
+                    },
+                    "BlendFunc": {
+                      "Src": 1,
+                      "Dst": 771
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 24.4051,
+                      "Y": 25.3981
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.1506,
+                      "Y": 0.498
+                    },
+                    "PreSize": {
+                      "X": 0.2716,
+                      "Y": 0.8627
+                    },
+                    "LeftMargin": 2.4051,
+                    "RightMargin": 115.5949,
+                    "TopMargin": 3.6019,
+                    "BottomMargin": 3.3981,
+                    "Tag": 1128,
+                    "ActionTag": -1128561019,
+                    "Size": {
+                      "X": 44.0,
+                      "Y": 44.0
+                    },
+                    "Name": "gem_sprite",
+                    "ctype": "SpriteObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "uires/public/sheet_btn/btn0074.png",
+                      "Plist": "uires/public/sheet_btn/sheet.plist"
+                    },
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 5,
+                    "Scale9Height": 15,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 160.8935,
+                      "Y": 31.854
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.9932,
+                      "Y": 0.6246
+                    },
+                    "PreSize": {
+                      "X": 0.216,
+                      "Y": 0.7255
+                    },
+                    "LeftMargin": 143.3935,
+                    "RightMargin": -16.3935,
+                    "TopMargin": 0.646,
+                    "BottomMargin": 13.354,
+                    "Tag": 1129,
+                    "ActionTag": -737708429,
+                    "Size": {
+                      "X": 35.0,
+                      "Y": 37.0
+                    },
+                    "Name": "gemAdd_btn",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": -15,
+                    "Scale9OriginY": -4,
+                    "Scale9Width": 30,
+                    "Scale9Height": 8,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 156.9112,
+                      "Y": 30.0212
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.9686,
+                      "Y": 0.5887
+                    },
+                    "PreSize": {
+                      "X": 0.3086,
+                      "Y": 0.5882
+                    },
+                    "LeftMargin": 131.9112,
+                    "RightMargin": -19.9112,
+                    "TopMargin": 5.9788,
+                    "BottomMargin": 15.0212,
+                    "CallBackType": "Click",
+                    "CallBackName": "onRMBMoney",
+                    "UserData": "sound=ui_click_button",
+                    "Tag": 1130,
+                    "ActionTag": -428383026,
+                    "Size": {
+                      "X": 50.0,
+                      "Y": 30.0
+                    },
+                    "Name": "Button",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": -15,
+                    "Scale9OriginY": -4,
+                    "Scale9Width": 30,
+                    "Scale9Height": 8,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 64.8618,
+                      "Y": 29.5796
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.4004,
+                      "Y": 0.58
+                    },
+                    "PreSize": {
+                      "X": 0.7407,
+                      "Y": 0.5882
+                    },
+                    "LeftMargin": 4.8618,
+                    "RightMargin": 37.1382,
+                    "TopMargin": 6.4204,
+                    "BottomMargin": 14.5796,
+                    "Tag": 1131,
+                    "ActionTag": -433681060,
+                    "Size": {
+                      "X": 120.0,
+                      "Y": 30.0
+                    },
+                    "Name": "btn_desc",
+                    "ctype": "ButtonObjectData"
+                  }
+                ],
+                "ActionTag": -1338768895,
+                "Size": {
+                  "X": 162.0,
+                  "Y": 51.0
+                },
+                "Name": "rmb_money",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_bgframe/bgFrame0025.png",
+                  "Plist": "uires/public/sheet_bgframe/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 837.9958,
+                  "Y": 608.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8184,
+                  "Y": 0.95
+                },
+                "PreSize": {
+                  "X": 0.1582,
+                  "Y": 0.0797
+                },
+                "HorizontalEdge": "RightEdge",
+                "VerticalEdge": "TopEdge",
+                "LeftMargin": 756.9958,
+                "RightMargin": 105.0042,
+                "TopMargin": 6.5,
+                "BottomMargin": 582.5,
+                "Tag": 1120,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "uires/public/sheet_common/icon0025.png",
+                      "Plist": "uires/public/sheet_common/sheet.plist"
+                    },
+                    "BlendFunc": {
+                      "Src": 1,
+                      "Dst": 771
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 24.7932,
+                      "Y": 24.5688
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.153,
+                      "Y": 0.4817
+                    },
+                    "PreSize": {
+                      "X": 0.2716,
+                      "Y": 0.8627
+                    },
+                    "LeftMargin": 2.7932,
+                    "RightMargin": 115.2068,
+                    "TopMargin": 4.4312,
+                    "BottomMargin": 2.5688,
+                    "Tag": 1121,
+                    "ActionTag": -2054222262,
+                    "Size": {
+                      "X": 44.0,
+                      "Y": 44.0
+                    },
+                    "Name": "coin_sprite",
+                    "ctype": "SpriteObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "PlistSubImage",
+                      "Path": "uires/public/sheet_btn/btn0074.png",
+                      "Plist": "uires/public/sheet_btn/sheet.plist"
+                    },
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 5,
+                    "Scale9Height": 15,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 162.162,
+                      "Y": 31.0211
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 1.001,
+                      "Y": 0.6083
+                    },
+                    "PreSize": {
+                      "X": 0.216,
+                      "Y": 0.7255
+                    },
+                    "LeftMargin": 144.662,
+                    "RightMargin": -17.662,
+                    "TopMargin": 1.4789,
+                    "BottomMargin": 12.5211,
+                    "Tag": 1122,
+                    "ActionTag": -1372015435,
+                    "Size": {
+                      "X": 35.0,
+                      "Y": 37.0
+                    },
+                    "Name": "coinAdd_btn",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 20,
+                    "LabelText": "999999",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "uires/public/ttf/BRITANIC.TTF",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "R": 50,
+                      "G": 25,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 143.9598,
+                      "Y": 30.608
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8886,
+                      "Y": 0.6002
+                    },
+                    "PreSize": {
+                      "X": 0.463,
+                      "Y": 0.4314
+                    },
+                    "LeftMargin": 68.9598,
+                    "RightMargin": 18.0402,
+                    "TopMargin": 9.392,
+                    "BottomMargin": 19.608,
+                    "Tag": 1123,
+                    "ActionTag": -1647752032,
+                    "Size": {
+                      "X": 75.0,
+                      "Y": 22.0
+                    },
+                    "Name": "value",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": -15,
+                    "Scale9OriginY": -4,
+                    "Scale9Width": 30,
+                    "Scale9Height": 8,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 62.8621,
+                      "Y": 30.5797
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.388,
+                      "Y": 0.5996
+                    },
+                    "PreSize": {
+                      "X": 0.7407,
+                      "Y": 0.5882
+                    },
+                    "LeftMargin": 2.8621,
+                    "RightMargin": 39.1379,
+                    "TopMargin": 5.4203,
+                    "BottomMargin": 15.5797,
+                    "Tag": 1124,
+                    "ActionTag": 299822199,
+                    "Size": {
+                      "X": 120.0,
+                      "Y": 30.0
+                    },
+                    "Name": "btn_desc",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Default",
+                      "Path": "Default/Button_Disable.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": -15,
+                    "Scale9OriginY": -4,
+                    "Scale9Width": 30,
+                    "Scale9Height": 8,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 154.9116,
+                      "Y": 31.0213
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.9562,
+                      "Y": 0.6083
+                    },
+                    "PreSize": {
+                      "X": 0.3086,
+                      "Y": 0.5882
+                    },
+                    "LeftMargin": 129.9116,
+                    "RightMargin": -17.9116,
+                    "TopMargin": 4.9787,
+                    "BottomMargin": 16.0213,
+                    "CallBackType": "Click",
+                    "CallBackName": "onGameMoney",
+                    "UserData": "sound=ui_click_button",
+                    "Tag": 1125,
+                    "ActionTag": 987881227,
+                    "Size": {
+                      "X": 50.0,
+                      "Y": 30.0
+                    },
+                    "Name": "Button",
+                    "ctype": "ButtonObjectData"
+                  }
+                ],
+                "ActionTag": -356696952,
+                "Size": {
+                  "X": 162.0,
+                  "Y": 51.0
+                },
+                "Name": "game_money",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": 1541764923,
+            "Size": {
+              "X": 1024.0,
+              "Y": 640.0
+            },
+            "Name": "__FULL_LAYER",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1024.0,
+          "Y": 640.0
+        },
+        "Name": "Layer ",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "../Default/Button_Disable.png",
+        "../uires/public/bg_img/bgImg0008.png",
+        "../uires/public/font_number/fontImg0011.png",
+        "../uires/public/sheet_bgframe/sheet.plist",
+        "../uires/public/sheet_bgframe/sheet.png",
+        "../uires/public/sheet_btn/sheet.plist",
+        "../uires/public/sheet_btn/sheet.png",
+        "../uires/public/sheet_common/sheet.plist",
+        "../uires/public/sheet_common/sheet.png",
+        "../uires/public/sheet_font/sheet.plist",
+        "../uires/public/sheet_font/sheet.png",
+        "../uires/public/sheet_icon/sheet.plist",
+        "../uires/public/sheet_icon/sheet.png",
+        "../uires/public/sheet_other/sheet.plist",
+        "../uires/public/sheet_other/sheet.png",
+        "../uires/public/ttf/BRITANIC.TTF",
+        "../uires/public/ttf/jtcs.TTF"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

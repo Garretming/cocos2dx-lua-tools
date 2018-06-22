@@ -1,0 +1,107 @@
+package Heroes;
+
+//英雄属性信息
+message msg_hero_property {
+	required uint32 atk = 1;               //攻击
+	required uint32 armor = 2;             //护甲
+	required uint32 hp = 3;                //血量
+	required uint32 speed = 4;             //速度
+	required uint32 magic = 5; 			   //智慧
+	required uint32 crit_rate = 6;         //暴击率
+	required uint32 tenacity = 7;          //韧性
+	required uint32 armor_break = 8;       //破甲值
+	required uint32 hit_rate = 9;          //命中率
+	required uint32 dodge_rate = 10;       //闪避率
+	required uint32 crit_double_rate = 11; //暴击倍率
+}
+
+//英雄信息
+message msg_hero {
+	required uint32 heroid = 1;                   //英雄id
+	required msg_hero_property hero_property = 2; //英雄属性
+	repeated msg_skill skill_list = 3;            //技能列表
+}
+
+//技能信息
+message msg_skill {
+	required uint32 skillid = 1;           //技能id
+	required uint32 level = 2;             //等级
+}
+
+//获取英雄列表
+message get_hero_list {
+	message request {
+
+	}
+
+	message response {
+		repeated msg_hero hero_list = 1;   //英雄列表
+	}
+}
+
+//解锁技能
+message unlock_skill {
+	message request {
+		required uint32 heroid = 1;        //英雄id
+		required uint32 skillid = 2;       //技能id
+	}
+	
+	message response {
+		required bool is_success = 1;      //是否解锁成功
+	}
+}
+
+//升级技能
+message upgrade_skill {
+	message request {
+		required uint32 heroid = 1;        //英雄id
+		required uint32 skillid = 2;       //技能id
+	}
+	
+	message response {
+		required bool is_success = 1;      //是否升级成功
+	}
+}
+
+//锻造装备
+message forge_equipment {
+	message request {
+		required uint32 propid = 1;        //装备id(模板id)
+	}
+	
+	message response {
+		required bool is_success = 1;      //是否锻造成功
+		required uint32 propid = 2;        //获得装备的id
+	}
+}
+
+//穿戴/替换装备
+message wear_equipment {
+	message request {
+		required uint32 heroid = 1;        //英雄id
+		required uint32 propid = 2;        //装备id
+		required uint32 target_propid = 3; //目标装备id(英雄身上的装备)
+	}
+	
+	message response {
+		required bool is_success = 1;      //是否穿戴成功
+	}
+}
+
+//卸下装备
+message unwear_equipment {
+	message request {
+		required uint32 heroid = 1;        //英雄id
+		required uint32 propid = 2;        //装备id
+	}
+	
+	message response {
+		required bool is_success = 1;      //是否卸下成功
+	}
+}
+
+//同步英雄
+message sync_hero
+{
+	required msg_hero hero = 1;   	       //英雄信息
+}

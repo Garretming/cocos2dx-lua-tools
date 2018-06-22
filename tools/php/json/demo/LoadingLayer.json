@@ -1,0 +1,378 @@
+{
+  "ID": "4550b04d-1314-4dcb-81ad-dfc99b092dfd",
+  "Version": "3.10.0.0",
+  "Name": "LoadingLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "UserData": "demo",
+        "Tag": 15,
+        "Children": [
+          {
+            "ProgressInfo": 0,
+            "ImageFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_other/other0015.png",
+              "Plist": "uires/public/sheet_other/sheet.plist"
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 350.0,
+              "Y": 600.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.3418,
+              "Y": 0.9375
+            },
+            "PreSize": {
+              "X": 0.5967,
+              "Y": 0.025
+            },
+            "LeftMargin": 44.5,
+            "RightMargin": 368.5,
+            "TopMargin": 32.0,
+            "BottomMargin": 592.0,
+            "Tag": 16,
+            "ActionTag": -537904218,
+            "Size": {
+              "X": 611.0,
+              "Y": 16.0
+            },
+            "Name": "loading1",
+            "ctype": "LoadingBarObjectData"
+          },
+          {
+            "ProgressInfo": 0,
+            "ProgressType": "Right_To_Left",
+            "ImageFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_other/other0015.png",
+              "Plist": "uires/public/sheet_other/sheet.plist"
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 350.0,
+              "Y": 550.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.3418,
+              "Y": 0.8594
+            },
+            "PreSize": {
+              "X": 0.5967,
+              "Y": 0.025
+            },
+            "LeftMargin": 44.5,
+            "RightMargin": 368.5,
+            "TopMargin": 82.0,
+            "BottomMargin": 542.0,
+            "Tag": 102,
+            "ActionTag": 168787082,
+            "Size": {
+              "X": 611.0,
+              "Y": 16.0
+            },
+            "Name": "loading2",
+            "ctype": "LoadingBarObjectData"
+          },
+          {
+            "ProgressInfo": 0,
+            "ProgressType": "Right_To_Left",
+            "ImageFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_bgframe/bgFrame0016.png",
+              "Plist": "uires/public/sheet_bgframe/sheet.plist"
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 200.0,
+              "Y": 400.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1953,
+              "Y": 0.625
+            },
+            "PreSize": {
+              "X": 0.2168,
+              "Y": 0.3469
+            },
+            "LeftMargin": 89.0,
+            "RightMargin": 713.0,
+            "TopMargin": 129.0,
+            "BottomMargin": 289.0,
+            "UserData": "bottom->top",
+            "Tag": 103,
+            "ActionTag": 1333105240,
+            "Size": {
+              "X": 222.0,
+              "Y": 222.0
+            },
+            "Name": "loading3",
+            "ctype": "LoadingBarObjectData"
+          },
+          {
+            "ProgressInfo": 0,
+            "ProgressType": "Right_To_Left",
+            "ImageFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_bgframe/bgFrame0016.png",
+              "Plist": "uires/public/sheet_bgframe/sheet.plist"
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 600.0,
+              "Y": 400.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5859,
+              "Y": 0.625
+            },
+            "PreSize": {
+              "X": 0.2168,
+              "Y": 0.3469
+            },
+            "LeftMargin": 489.0,
+            "RightMargin": 313.0,
+            "TopMargin": 129.0,
+            "BottomMargin": 289.0,
+            "UserData": "top->bottom",
+            "Tag": 104,
+            "ActionTag": -1505050796,
+            "Size": {
+              "X": 222.0,
+              "Y": 222.0
+            },
+            "Name": "loading4",
+            "ctype": "LoadingBarObjectData"
+          },
+          {
+            "ProgressInfo": 0,
+            "ImageFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_bgframe/bgFrame0016.png",
+              "Plist": "uires/public/sheet_bgframe/sheet.plist"
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 200.0,
+              "Y": 150.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1953,
+              "Y": 0.2344
+            },
+            "PreSize": {
+              "X": 0.2168,
+              "Y": 0.3469
+            },
+            "LeftMargin": 89.0,
+            "RightMargin": 713.0,
+            "TopMargin": 379.0,
+            "BottomMargin": 39.0,
+            "UserData": "radial->CW",
+            "Tag": 105,
+            "ActionTag": 1868426624,
+            "Size": {
+              "X": 222.0,
+              "Y": 222.0
+            },
+            "Name": "loading5",
+            "ctype": "LoadingBarObjectData"
+          },
+          {
+            "ProgressInfo": 84,
+            "ProgressType": "Right_To_Left",
+            "ImageFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_bgframe/bgFrame0016.png",
+              "Plist": "uires/public/sheet_bgframe/sheet.plist"
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 600.0,
+              "Y": 150.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5859,
+              "Y": 0.2344
+            },
+            "PreSize": {
+              "X": 0.2168,
+              "Y": 0.3469
+            },
+            "LeftMargin": 489.0,
+            "RightMargin": 313.0,
+            "TopMargin": 379.0,
+            "BottomMargin": 39.0,
+            "UserData": "radial->CCW",
+            "Tag": 106,
+            "ActionTag": -331652793,
+            "Size": {
+              "X": 222.0,
+              "Y": 222.0
+            },
+            "Name": "loading6",
+            "ctype": "LoadingBarObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Press.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_btn/btn0027.png",
+              "Plist": "uires/public/sheet_btn/sheet.plist"
+            },
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 42,
+            "Scale9Height": 50,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 951.0,
+              "Y": 572.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.9287,
+              "Y": 0.8938
+            },
+            "PreSize": {
+              "X": 0.0703,
+              "Y": 0.1125
+            },
+            "HorizontalEdge": "RightEdge",
+            "VerticalEdge": "TopEdge",
+            "LeftMargin": 915.0,
+            "RightMargin": 37.0,
+            "TopMargin": 32.0,
+            "BottomMargin": 536.0,
+            "CallBackType": "Click",
+            "CallBackName": "onClose",
+            "Tag": 107,
+            "ActionTag": -15842790,
+            "Size": {
+              "X": 72.0,
+              "Y": 72.0
+            },
+            "Name": "Button_3",
+            "ctype": "ButtonObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1024.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "../Default/Button_Disable.png",
+        "../Default/Button_Press.png",
+        "../uires/public/sheet_bgframe/sheet.plist",
+        "../uires/public/sheet_bgframe/sheet.png",
+        "../uires/public/sheet_btn/sheet.plist",
+        "../uires/public/sheet_btn/sheet.png",
+        "../uires/public/sheet_other/sheet.plist",
+        "../uires/public/sheet_other/sheet.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

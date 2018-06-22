@@ -1,0 +1,168 @@
+package Monster;
+
+//佣兵属性信息
+message msg_monster_property {
+	required uint32 atk = 1;               				//攻击
+	required uint32 armor = 2;             				//护甲
+	required uint32 hp = 3;                				//血量
+	required uint32 speed = 4;             				//速度
+}
+
+//佣兵信息
+message msg_monster {
+	required uint32 monsterid = 1;                   	//佣兵id
+	required uint32 level = 2;                   		//等级
+	required uint32 count = 3;                   		//数量
+	required uint32 status = 4;							//状态(0未解锁,1已解锁)
+	required uint32 employ_count = 5;					//可雇佣数量(每日重置)
+	required msg_monster_property monster_property = 6; //佣兵属性
+}
+
+//获取佣兵列表
+message get_monster_list {
+	message request {
+
+	}
+
+	message response {
+		repeated msg_monster monster_list = 1;   		//佣兵列表
+	}
+}
+
+//解锁佣兵
+//message unlock_monster {
+//	message request {
+//	 	required uint32 monsterid = 1; 					//佣兵id
+//	}
+	
+//	message response 
+//	{
+//		required bool is_success = 1;      				//是否解锁成功
+//	}	
+//}
+
+//雇佣佣兵
+message employ_monster {
+	message request {
+	 	required uint32 monsterid = 1; 					//佣兵id
+	 	required uint32 count = 2;						//数量
+	}
+	
+	message response 
+	{
+		required bool is_success = 1;      				//是否雇佣成功
+	}	
+}
+
+//升级佣兵
+message upgrade_monster {
+	message request {
+	 	required uint32 monsterid = 1; 					//佣兵id
+	}
+	
+	message response 
+	{
+		required bool is_success = 1;      				//是否升级成功
+	}	
+}
+
+//同步佣兵
+message sync_monster
+{
+	required msg_monster monster = 1;   	       		//佣兵信息
+}
+
+//////////////////////////////////////////////////////////
+
+//合成符文
+//message merge_rune{
+//	message request {
+//		required uint32 propid = 1;        				//符文id
+//	}
+	
+//	message response 
+//	{
+//		required bool is_success = 1;      				//是否合成成功
+//	}	
+//}
+
+//装备符文
+message dress_rune {
+	message request {
+	 	required uint32 monsterid = 1; 					//佣兵id
+		required uint32 propid = 2;        				//符文id
+	}
+	
+	message response 
+	{
+		required bool is_success = 1;      				//是否装备成功
+	}	
+}
+
+//卸下符文
+message undress_rune {
+	message request {
+	 	required uint32 monsterid = 1; 					//佣兵id
+		required uint32 propid = 2;        				//符文id
+	}
+	
+	message response 
+	{
+		required bool is_success = 1;      				//是否卸下成功
+	}	
+}
+
+//////////////////////////////////////////////////////////
+
+//佣兵评论信息
+message msg_monster_comment {
+	required uint32 id = 1;                   			//评论id
+	required string name = 2;                   		//角色名
+	required string comment = 3;						//评论
+	required uint32 click = 4;							//点赞数
+	required uint32 isclick = 5;						//是否点赞(0未点赞,1已点赞)
+	required uint32 time = 6;							//评论时间
+}
+
+//获取佣兵评论列表
+message get_monster_comment_list {
+	message request {
+	 	required uint32 monsterid = 1; 					//佣兵id
+	}
+
+	message response {
+		repeated msg_monster_comment comment_list = 1;	//评论列表
+	}
+}
+
+//评论佣兵
+message comment_monster {
+	message request {
+	 	required uint32 monsterid = 1; 					//佣兵id
+	 	required string comment = 2; 					//评论
+	}
+	
+	message response 
+	{
+		required bool is_success = 1;      				//是否评论成功
+	 	required uint32 commentid = 2; 					//评论id
+	}	
+}
+
+//点赞评论
+message click_comment {
+	message request {
+	 	required uint32 commentid = 1; 					//评论id
+	}
+	
+	message response 
+	{
+		required bool is_success = 1;      				//是否点赞成功
+	}	
+}
+
+//同步评论
+message sync_monster_comment
+{
+	required msg_monster_comment comment = 1;   	    //评论信息
+}

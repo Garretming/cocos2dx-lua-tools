@@ -1,0 +1,629 @@
+{
+  "ID": "4e3176af-cf4d-4868-8d18-8e73d402a1ab",
+  "Version": "3.10.0.0",
+  "Name": "WorkMercenaryNode",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "CustomClassName": "SyncNode",
+        "UserData": "formation",
+        "Tag": 472,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_bgframe/bgFrame0094.png",
+              "Plist": "uires/public/sheet_bgframe/sheet.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 111.08,
+              "Y": 26.62
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 0.08,
+            "RightMargin": -222.08,
+            "TopMargin": -54.12,
+            "BottomMargin": -0.88,
+            "Tag": 463,
+            "ActionTag": -1801625846,
+            "Size": {
+              "X": 222.0,
+              "Y": 55.0
+            },
+            "Name": "w_m_btn2",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_bgframe/bgFrame0094.png",
+              "Plist": "uires/public/sheet_bgframe/sheet.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 111.08,
+              "Y": 26.62
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 0.08,
+            "RightMargin": -222.08,
+            "TopMargin": -54.12,
+            "BottomMargin": -0.88,
+            "Tag": 480,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_other/other0076.png",
+                  "Plist": "uires/public/sheet_other/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 191.5345,
+                  "Y": 28.1996
+                },
+                "Scale": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8628,
+                  "Y": 0.5127
+                },
+                "PreSize": {
+                  "X": 0.464,
+                  "Y": 1.8727
+                },
+                "LeftMargin": 140.0345,
+                "RightMargin": -21.0345,
+                "TopMargin": -24.6996,
+                "BottomMargin": -23.3004,
+                "Tag": 487,
+                "ActionTag": 441453315,
+                "Size": {
+                  "X": 103.0,
+                  "Y": 103.0
+                },
+                "Name": "lock",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FontSize": 20,
+                "LabelText": "10级解锁",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "uires/public/ttf/jtcs.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 108.5203,
+                  "Y": 28.2408
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4888,
+                  "Y": 0.5135
+                },
+                "PreSize": {
+                  "X": 0.3739,
+                  "Y": 0.3636
+                },
+                "LeftMargin": 67.0203,
+                "RightMargin": 71.9797,
+                "TopMargin": 16.7592,
+                "BottomMargin": 18.2408,
+                "Tag": 488,
+                "ActionTag": 80668109,
+                "Size": {
+                  "X": 83.0,
+                  "Y": 20.0
+                },
+                "Name": "role_level_hint",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 561121669,
+            "Size": {
+              "X": 222.0,
+              "Y": 55.0
+            },
+            "Name": "w_m_btn3",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_bgframe/bgFrame0089.png",
+              "Plist": "uires/public/sheet_bgframe/sheet.plist"
+            },
+            "NormalFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_bgframe/bgFrame0089.png",
+              "Plist": "uires/public/sheet_bgframe/sheet.plist"
+            },
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 192,
+            "Scale9Height": 33,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 111.0,
+              "Y": 26.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "RightMargin": -222.0,
+            "TopMargin": -53.5,
+            "BottomMargin": -1.5,
+            "CallBackType": "Click",
+            "CallBackName": "demountMonster",
+            "UserData": "sound=ui_click_back",
+            "Tag": 474,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet/dragon001.png",
+                  "Plist": "uires/public/sheet/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 28.2048,
+                  "Y": 27.9483
+                },
+                "Scale": {
+                  "ScaleX": 0.48,
+                  "ScaleY": 0.48
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.127,
+                  "Y": 0.5082
+                },
+                "PreSize": {
+                  "X": 0.5495,
+                  "Y": 2.2182
+                },
+                "LeftMargin": -32.7952,
+                "RightMargin": 132.7952,
+                "TopMargin": -33.9483,
+                "BottomMargin": -33.0517,
+                "Tag": 502,
+                "ActionTag": 1112350252,
+                "Size": {
+                  "X": 122.0,
+                  "Y": 122.0
+                },
+                "Name": "head",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_common/btn0043.png",
+                  "Plist": "uires/public/sheet_common/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 10.1038,
+                  "Y": 45.2004
+                },
+                "Scale": {
+                  "ScaleX": 0.6,
+                  "ScaleY": 0.6
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0455,
+                  "Y": 0.8218
+                },
+                "PreSize": {
+                  "X": 0.1712,
+                  "Y": 0.7636
+                },
+                "LeftMargin": -8.8962,
+                "RightMargin": 192.8962,
+                "TopMargin": -11.2004,
+                "BottomMargin": 24.2004,
+                "Tag": 476,
+                "Children": [
+                  {
+                    "FontSize": 24,
+                    "LabelText": "9",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "uires/public/ttf/BRITANIC.TTF",
+                      "Plist": ""
+                    },
+                    "OutlineSize": 2,
+                    "OutlineColor": {
+                      "R": 50,
+                      "G": 25,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 18.652,
+                      "Y": 18.0023
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.4908,
+                      "Y": 0.4286
+                    },
+                    "PreSize": {
+                      "X": 0.5,
+                      "Y": 0.6667
+                    },
+                    "LeftMargin": 9.152,
+                    "RightMargin": 9.848,
+                    "TopMargin": 9.9977,
+                    "BottomMargin": 4.0023,
+                    "Tag": 477,
+                    "ActionTag": -757459569,
+                    "Size": {
+                      "X": 19.0,
+                      "Y": 28.0
+                    },
+                    "Name": "m_gas_num",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -1587324723,
+                "Size": {
+                  "X": 38.0,
+                  "Y": 42.0
+                },
+                "Name": "m_gas",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_icon/icon0056.png",
+                  "Plist": "uires/public/sheet_icon/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 194.5372,
+                  "Y": 27.8568
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8763,
+                  "Y": 0.5065
+                },
+                "PreSize": {
+                  "X": 0.1712,
+                  "Y": 0.6909
+                },
+                "LeftMargin": 175.5372,
+                "RightMargin": 8.4628,
+                "TopMargin": 8.1432,
+                "BottomMargin": 8.8568,
+                "UserData": "z=3",
+                "Tag": 478,
+                "ActionTag": 1546696240,
+                "Size": {
+                  "X": 38.0,
+                  "Y": 38.0
+                },
+                "Name": "profession",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FontSize": 20,
+                "LabelText": "9",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "uires/public/ttf/BRITANIC.TTF",
+                  "Plist": ""
+                },
+                "OutlineSize": 2,
+                "OutlineColor": {
+                  "R": 50,
+                  "G": 25,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 113.7759,
+                  "Y": 14.1722
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5125,
+                  "Y": 0.2577
+                },
+                "PreSize": {
+                  "X": 0.0721,
+                  "Y": 0.4364
+                },
+                "LeftMargin": 105.7759,
+                "RightMargin": 100.2241,
+                "TopMargin": 28.8278,
+                "BottomMargin": 2.1722,
+                "Tag": 479,
+                "ActionTag": -168860405,
+                "Size": {
+                  "X": 16.0,
+                  "Y": 24.0
+                },
+                "Name": "m_level",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 20,
+                "LabelText": "佣兵佣兵",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "uires/public/ttf/jtcs.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "R": 50,
+                  "G": 25,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 111.7581,
+                  "Y": 37.5626
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 240,
+                  "B": 155
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5034,
+                  "Y": 0.683
+                },
+                "PreSize": {
+                  "X": 0.3784,
+                  "Y": 0.4
+                },
+                "LeftMargin": 69.7581,
+                "RightMargin": 68.2419,
+                "TopMargin": 6.4374,
+                "BottomMargin": 26.5626,
+                "Tag": 480,
+                "ActionTag": 1307511535,
+                "Size": {
+                  "X": 84.0,
+                  "Y": 22.0
+                },
+                "Name": "m_name",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 172159282,
+            "Size": {
+              "X": 222.0,
+              "Y": 55.0
+            },
+            "Name": "w_m_btn1",
+            "ctype": "ButtonObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../Default/Button_Disable.png",
+        "../uires/public/sheet/sheet.plist",
+        "../uires/public/sheet/sheet.png",
+        "../uires/public/sheet_bgframe/sheet.plist",
+        "../uires/public/sheet_bgframe/sheet.png",
+        "../uires/public/sheet_common/sheet.plist",
+        "../uires/public/sheet_common/sheet.png",
+        "../uires/public/sheet_icon/sheet.plist",
+        "../uires/public/sheet_icon/sheet.png",
+        "../uires/public/sheet_other/sheet.plist",
+        "../uires/public/sheet_other/sheet.png",
+        "../uires/public/ttf/BRITANIC.TTF",
+        "../uires/public/ttf/jtcs.TTF"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

@@ -1,0 +1,91 @@
+{
+  "ID": "aa692d88-e73c-432b-bf21-a5c832adc4fb",
+  "Version": "3.10.0.0",
+  "Name": "PackageLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "CustomClassName": "BaseNode",
+        "UserData": "shop",
+        "Tag": 1250,
+        "Children": [
+          {
+            "InnerNodeSize": {
+              "Width": 590,
+              "Height": 510
+            },
+            "ScrollDirectionType": "Vertical",
+            "ClipAble": false,
+            "BackColorAlpha": 0,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "G": 150,
+              "B": 100
+            },
+            "FirstColor": {
+              "G": 150,
+              "B": 100
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 123.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1201,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.5762,
+              "Y": 0.7906
+            },
+            "HorizontalEdge": "LeftEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": 123.0,
+            "RightMargin": 311.0,
+            "TopMargin": 134.0,
+            "UserData": "WinHeight,WinWidth",
+            "Tag": 1251,
+            "ActionTag": -1212522693,
+            "Size": {
+              "X": 590.0,
+              "Y": 506.0
+            },
+            "Alpha": 251,
+            "Name": "package_ScrollView",
+            "ctype": "ScrollViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1024.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

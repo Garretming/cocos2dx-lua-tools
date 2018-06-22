@@ -1,0 +1,119 @@
+
+// 包,命名空间
+package Mail;
+
+
+// 邮件信息
+message msg_mail_info {
+	required uint32 sid = 1;				// 邮件id
+	required uint32 type = 2;               // 邮件类型：1.文字邮件；2.奖励邮件；3.战报邮件
+	required uint32 is_read = 3;            // 是否已读：1.未读；2.已读
+	required uint32 is_picked = 4; 			// 是否已领取奖励：1.未领取；2.已领取
+	required uint32 send_time = 5;		   	// 发送时间
+	optional msg_mail_content content = 6;  // 普通邮件，可放空
+	optional msg_mail_battle_report battle_report = 7; // 战报邮件，可放空
+}
+
+// 普通邮件
+message msg_mail_content{
+	required uint32 mail_id = 1;  // 配置表id
+	required string title = 2;    // 标题
+	required string content = 3;         // 内容
+	repeated msg_prize_info prize_list = 4;  // 奖励列表
+}
+
+// 战报敌方信息
+message msg_enemy_info{
+	required uint32 enemy_id = 1;      // 对手id
+	required string enemy_name = 2;    // 对手名字
+	required string enemy_title = 3;   // 对手称号
+	required uint32 enemy_level = 4;   // 等级
+	required uint32 enemy_flag = 5;	   // 国旗
+	required uint32 enemy_current_stage = 6;  // 当前段位
+	required uint32 enemy_top_stage = 7;      // 历史最高段位
+	required string enemy_challenger_count = 8;        // 获得最强王者次数
+}
+
+// 奖励信息
+message msg_prize_info{
+	required uint32 prize_id = 1;      // 奖励id
+	required uint32 prize_count = 2;   // 奖励数量
+}
+
+// 战报邮件
+message msg_mail_battle_report{
+	required uint32 report_time = 1;    // 战报时间
+	required string title = 2;        // 标题
+	required string content = 3;      // 正文
+	required string comment = 4;      // 留言评论
+	required msg_enemy_info enemy_info = 5;  // 对手信息
+	repeated msg_prize_info prize_list = 6;  // 附件
+	required uint32 result = 7;          // 战斗结果: 1.胜利；2.失败
+	required uint32 report_id   = 8;    // 战报id  //gsg + 
+}
+
+
+// 获取邮件列表
+message load_mail_list{
+	//
+	message request {
+	}
+	
+	//邮件列表
+	message response
+	{
+		repeated msg_mail_info mail_list = 1;
+	}
+}
+
+
+// 新增邮件
+message add_mail{
+	//
+	required msg_mail_info mail = 1;
+}
+
+
+// 读取邮件
+message pickup_mail{
+	// 读取邮件
+	message request {
+		required uint32 sid = 1;
+	}
+
+	// 读取结果(1.成功；2.失败)
+	message response {
+		required uint32 sid = 1;
+		required uint32 result = 2;
+	}
+}
+
+
+// 领取奖励
+message pickup_prize{
+	// 领取奖励
+	message request {
+		required uint32 sid = 1;
+	}
+
+	// 领取结果(1.成功；2.失败)
+	message response {
+		required uint32 sid = 1;
+		required uint32 result = 2;
+	}
+}
+
+
+// 删除邮件
+message delete_mail{
+	//
+	message request{
+		required uint32 sid = 1;
+	}
+
+	//删除结果(1.成功；2.失败)
+	message response{
+		required uint32 sid = 1;
+		required uint32 result = 2;
+	}
+}

@@ -1,0 +1,94 @@
+
+// 包。命名空间
+package Game;
+
+
+message login {
+	// 登陆请求
+	message request {
+	  	required string uid = 1;	// 平台账号id
+	  	required string sid = 2;	// 登陆令牌
+	  	required uint32 time = 3;      // 时间戳
+	  	optional string nick_name = 4;		//昵称
+	  	optional uint32 ver = 5;      // 版本号
+	  	required uint32 sdk_id = 6;	// 平台id sdkid
+	  	required string server_id	= 7;//服务器id
+	  	required uint32 sys_platform = 8;	// 客户端平台id : 0:windows 1:android 2:ios
+	  	optional string dev_info = 9;	// 设备信息
+	  	optional uint32 packing = 10;	// 资源分包id
+	  	optional string package_name = 11; //包名
+	}
+	
+	// 登陆返回
+	message response 
+	{
+		required string rid = 1;   //不存在rid填""
+		required uint32 last_login_time = 2; //上次登陆时间
+		required uint32	create_role_time = 3; // 创建角色时间
+		required string name = 4; //角色名字
+		required uint32 level = 5;//角色等级
+		optional string uid = 6;
+		optional string server_id = 7;
+		optional uint32 state = 8; 			//玩家状态 [default = 0]0:为正常 1:异常封号 
+		required uint32 server_time = 9; //服务器时间
+		repeated uint32 unopen_mods = 10;		//未开放的模块
+	}
+}
+
+
+message logout {
+	// 登陆请求
+	message request {
+	  	optional int32 exit_code = 1;	//退出码
+	}
+	message response {
+
+	}
+}
+
+
+// 类 ping 功能，客户端请求服务端响应，看是否能与服务端通信
+message ping {
+	message request {
+		
+	}
+
+	// 登陆返回
+	message response {
+		required uint32 server_time = 1;
+	}
+}
+
+
+// 创建角色
+message create_role {
+	// 创建角色请求
+	message request {
+		required string role_name = 1;		// 角色名
+		optional uint32 sex = 2;   			// 性别 1男 2女
+		optional uint32 role_type = 3; 		//角色类型
+	}
+	
+	// 创建角色返回
+	message response {
+		required login.response role = 1;
+	}
+}
+
+
+
+//gm指令
+message gm_request{
+	message request {
+		required string text = 1;  //gm指令信息，具体参照gm.txt指令说明
+	}
+
+	message response {
+		required bool is_success = 1;
+	}
+}
+
+//restart server
+message notify_restart_server{
+	required uint32 tick = 1;		//服务器重启倒计时，秒
+}

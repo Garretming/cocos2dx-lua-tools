@@ -1,0 +1,355 @@
+package Friend;
+
+
+
+// 申请玩家信息
+message msg_player_info {
+	required string id = 1;    		//玩家id
+	required uint32 head_pic = 2;    //玩家头像
+	required string frame_pic = 14; // 玩家头像框
+	required string name = 3;        //昵称
+	required uint32 level = 4;       //等级
+	optional string apply_text = 5;  //申请信息
+	optional uint32 apply_time = 6;  //申请时间
+}
+
+
+// 1. 申请好友功能
+
+// 申请请求
+message msg_apply_info {
+	required msg_player_info apply_player_info = 1; // 己方信息
+	required string target_friend_id = 2;  // 添加好友id
+}
+
+// 加载申请列表
+message load_apply_list {
+	message request {
+
+	}
+
+	message response {
+		repeated msg_player_info apply_list = 1;  // 申请信息列表
+	}
+}
+
+// 发出申请
+message apply_friend {
+	message request {
+		required string target_friend_id = 1; // 添加好友id
+		required string apply_text = 2; // 申请信息
+	}
+
+	message response {
+		required uint32 result = 1; // 处理结果：1.成功;2.失败;3.对方好友数量已达上限;4.己方好友数量已达上限
+	}
+}
+
+// 同步添加好友申请
+message sync_add_friend_apply{
+	required msg_player_info apply_info = 1; // 好友申请消息
+}
+
+// 同意/拒绝申请
+message handle_friend_apply {
+	message request {
+		required uint32 handle_result = 1; // 处理结果：同意1；拒绝2；
+		required string apply_player_id = 2; // 申请人id
+	}
+
+	message response {
+		required uint32 result = 1; // 处理结果：1.成功;2.失败;3.对方好友数量已达上限;4.己方好友数量已达上限
+	}
+}
+
+// 同步添加新朋友消息
+message sync_add_friend{
+	required msg_friend_info new_friend_info = 1; // 新朋友消息
+}
+
+
+// ==== 申请记录达到上限，自动拒绝最旧申请 ===
+
+
+// 好友信息
+message msg_friend_info {
+	required string friend_id = 1; //好友id
+	required string head_pic = 2; //好友头像
+	required uint32 level = 3; //等级
+	required string name = 4; //昵称
+	required string title = 5; //称号
+	required uint32 online_state = 6; //在线状态：1.在线；2.离线
+	required uint32 offline_time = 7; //离线时间
+	required uint32 is_gave_coin = 8; //是否赠送金币（0.未赠送金币，1.已赠送金币）
+	required uint32 is_received_coin = 9; //是否领取金币（0.不可领取金币，1.未领取金币，2.已领取金币）
+	required uint32 my_refuse_fight_time = 10;   //我拒绝的时间
+	required uint32 target_refuse_fight_time = 11;   //对方拒绝的时间
+	optional uint32 fight_state = 12;   //战斗状态(0空闲1邀请中2战斗中)
+	required uint32 is_read = 13; // 是否已读(0.未读;1.已读)
+	required string frame_pic = 14; // 玩家头像框
+}
+
+
+// 2. 好友列表功能
+
+// 搜索添加好友(返回结果列表？)
+message search_for_friend {
+	message request {
+		required string text = 1; // 搜索内容
+	}
+
+	message response {
+		required msg_player_info friend_info = 1; // 好友信息
+		required uint32 result = 2; // 搜索结果（1.成功；2.搜索不到；3.对方/己方好友数量已达上限）
+	}
+}
+
+// 加载好友列表（更新在线，离线信息）
+message load_friends_list {
+	message request {
+
+	}
+
+	message response {
+		repeated msg_friend_info friend_list = 1; // 好友列表
+	}
+}
+
+// 删除好友
+message del_friend {
+	message request {
+		required string friend_id = 1; // 好友id
+	}
+
+	message response {
+		required uint32 result = 1; // 结果
+	}
+}
+
+
+// 同步删除朋友消息
+message sync_del_friend{
+	required string friend_id = 1; // 朋友id
+}
+
+
+// -- 领取金币功能
+
+// 赠送金币
+message give_coin {
+	message request {
+		required string friend_id = 1; // 赠送对象id
+	}
+
+	message response {
+		required uint32 result = 1; // 结果
+	}
+
+}
+
+// 领取金币
+message pick_up_coin {
+	message request {
+		required string friend_id = 1; // 领取对象id
+	}
+
+	message response {
+		required uint32 result = 1; // 结果
+	}
+}
+
+
+// 同步更新朋友消息
+message sync_update_friend{
+	required msg_friend_info friend_info = 1; // 朋友信息
+	required uint32 state = 2;      // 1 好友上线时候的同步  2 其它时候的同步
+}
+
+// 同步更新所有朋友消息
+message sync_update_friend_list{
+	repeated msg_friend_info friend_list = 1; // 朋友列表
+}
+
+// 个人信息
+message msg_char_info{
+	required string id = 1; // cid
+	required uint32 give_coin_count = 2; // 每天累计赠送金币次数
+	required uint32 receive_coin_count = 3; // 每天累收取金币次数
+	required uint32 fight_state = 4; // 战斗状态(0空闲1邀请中2战斗中)
+	optional string received_coin_friends = 5; // 每天领取金币记录(对方id，用;隔开)
+}
+
+// 加载个人信息
+message load_char_info {
+	message request {
+
+	}
+
+	message response {
+		required msg_char_info char_info = 1; // 个人信息
+	}
+}
+
+// 同步更新个人信息
+message sync_update_char_info{
+	required msg_char_info char_info = 1; // 个人信息
+}
+
+
+//  决斗功能
+
+// 决斗申请
+message apply_fight {
+	message request {
+		required string friend_id = 1; // 决斗对象id
+	}
+
+	message response {
+		required uint32 result = 1; // 结果:1.成功;2.失败(不在线)，3.邀请中，4.对方正在战斗中
+	}
+}
+
+// 同步决斗消息
+message sync_fight_inform{
+	required string apply_fight_friend_id = 1; // 申请决斗玩家id
+}
+
+// 处理决斗申请
+message handle_apply_fight {
+	message request {
+		required uint32 command = 1; // 1.同意；2.拒绝
+		required string fight_friend_id = 2; // 对方id
+	}
+
+	message response {
+		required uint32 result = 1; // 结果
+		required uint32 refuse_fight_time = 2; // 拒绝时间
+	}
+}
+
+// 同步是否同意决斗消息
+message sync_handle_fight_inform{
+	required uint32 refuse_fight_time = 1;   //自己拒绝时间
+}
+
+
+// db {
+//	cid = 1;
+//	chat_info = 2;
+//	{
+//		target_id
+//		sender_id
+//		receiver_id
+//		text
+//	}
+//}
+
+//-- 申请好友db
+//--[[local d_friend_apply = {
+//    id,
+//    cid,
+//    apply_player_id,
+//    apply_text,
+//    apply_time,
+//}
+
+//-- 好友信息db
+//local d_friend = {
+//    id,
+//    cid,
+//    friend_id,
+//    offline_time,
+//    is_gave_coin,（0.未赠送金币，1.已赠送金币，2.不可赠送金币）
+//    is_received_coin,（0.未领取金币，1.已领取金币，2.不可领取金币）
+//}
+
+//-- 聊天记录db
+//local d_friend_chat_record = {
+//    id,
+//    sender_id,
+//    receiver_id,
+//    text,
+//    send_time,
+//}]]--
+
+
+// 3. 聊天功能
+
+// 好友聊天信息
+message msg_friend_chat_record {
+	required string friend_id = 1; // 好友id
+	repeated msg_chat_info chat_records = 2; // 好友聊天记录列表
+}
+
+// 聊天信息
+message msg_chat_info {
+	required string text = 1; // 聊天内容
+	required string sender_id = 2; // 发送者id
+	required string receiver_id = 3; // 接收者id
+	required uint32 send_time = 4; // 发送时间
+}
+
+
+// 加载聊天信息列表
+message load_chat_list {
+	message request {
+
+	}
+
+	message response {
+		repeated msg_friend_chat_record chat_list = 1; // 聊天记录列表
+	}
+}
+
+// 发送聊天信息
+message send_chat_info {
+	message request {
+		required string target_id = 1; // 发送对象id
+		required string text = 2; // 聊天信息
+	}
+
+	message response {
+		required uint32 result = 1; // 结果
+	}
+}
+
+// 同步聊天信息
+message sync_chat_info {
+	required msg_chat_info chat_info = 2; // 聊天信息
+}
+
+// 读取聊天消息
+message read_chat_info {
+	message request {
+		required string target_id = 1; // 发送对象id
+	}
+
+	message response {
+		required uint32 result = 1; // 结果
+	}
+}
+
+
+// 4. 推荐好友功能
+
+message msg_recommend_friend {
+	required string id = 1; // 玩家id
+	required string head_pic = 2; // 玩家头像
+	required string name = 3; // 玩家昵称
+	required uint32 level = 4; // 玩家等级
+	required string frame_pic = 5; // 玩家头像框
+}
+
+// 加载推荐玩家列表(10个)
+message load_recommend_friends {
+	message request {
+
+	}
+
+	message response {
+		repeated msg_recommend_friend recommend_friend_list = 1; // 推荐玩家列表
+	}
+}
+
+
+

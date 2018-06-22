@@ -1,0 +1,55 @@
+// 包。命名空间
+package Map;
+
+//请求角色关卡数据
+message load_map_info {
+	message request {
+	}
+
+	message response {
+		required uint32 map_id		=	1;	//新解锁未挑战成功的关卡
+		required uint32 count		=	2;	//挑战次数
+		required uint32 lasttime	=	3;	//挑战次数刷新时间，客户端每次在打开关卡界面时自行判断是否距上次刷新时间过了一天，如果是则重新获取关卡数据
+	}
+}
+
+message start_battle {
+	message request {
+		required uint32 map_id		=	1;	//关卡id，包括已经挑战成功的和已解锁未挑战成功
+	}
+
+	message response {
+		required bool is_success	=	1;	//是否成功
+	}
+}
+
+
+//角色关卡数据通知，用于战斗胜利后服务器下发次通知
+message notify_map_info {
+	required uint32 map_id		=	1;	//关卡，0: 不解锁新关卡 不为0: 新解锁未挑战成功的关卡id
+	required uint32 count		=	2;	//挑战次数
+}
+
+
+message map_record {
+	required uint32 map_id		=	1;	//关卡id
+	required uint32 cid			=	2;	//该关卡最快通关的玩家id
+	required string name		=	3;  //该关卡最快通关的玩家名字
+	required uint32 pass_time	=	4;	//该关卡最快通关的回合数
+	required uint32 now_time	=	5;	//该关卡最快通关的日期时间
+	required uint32 report_id	=	6;	//该关卡最快通关战报id
+}
+
+//请求关卡记录
+message load_map_record {
+	message request {
+	}
+
+	message response {
+		repeated map_record	record_list = 1;
+	}
+}
+message notify_map_record {
+	required map_record record	=	1;
+}
+

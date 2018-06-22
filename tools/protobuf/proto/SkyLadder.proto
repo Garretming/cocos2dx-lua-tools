@@ -1,0 +1,98 @@
+
+// 包。命名空间
+package SkyLadder;
+
+//角色天梯数据
+message user_data {
+	required uint32 level						= 1;	//天梯等级
+	required uint32 star						= 2;	//星星
+	required uint32 score						= 3;	//荣耀分
+	required uint32 daywintimes					= 4;	//每日已购奖励次数
+	required uint32 kingtimes					= 5;	//王者次数
+	required uint32 prizetimes					= 6;	//奖励次数
+
+	required uint32 total_times 				= 7;   //战斗总场数（当前赛季）
+	required uint32 total_win_times 			= 8;   //总胜利次数（当前赛季）
+
+	required uint32 maxlevel					= 9;	//天梯最高等级
+	required uint32 prizetick					= 10;	//奖励次数回复倒计时秒
+}
+
+//请求角色天梯数据
+message cmd_user_data {
+	message request {
+	}
+
+	message response {
+		required user_data data = 1;
+	}
+}
+
+//匹配（取消，认输）战斗
+message cmd_match_action {
+	message request {
+		required uint32 action = 1;	//action = 0：取消匹配 1：请求匹配 2：认输 3:战斗
+	}
+	
+	message response {
+		required uint32 retval = 1; //返回结果,0 成功 不为0不成功
+	}
+}
+
+//请求角色天梯排行榜
+message rank_data {
+	required string rid							= 1;	//rid
+	required string role_name					= 2;	//角色名
+	required uint32 role_lv						= 3;	//角色等级
+	required uint32 level						= 4;	//天梯等级
+	required uint32 star						= 5;	//星星
+
+	required uint32 total_times 				= 7;   //战斗总场数（当前赛季）
+	required uint32 total_win_times 			= 8;   //总胜利次数（当前赛季）
+}
+
+message cmd_rank_list {
+	message request {
+	}
+
+	message response {
+		required uint32 rank					= 1;	//自己的排名 0表示自己不在榜上
+		repeated rank_data list					= 2;	//排行榜列表
+		optional rank_data info					= 3;	//自己的排行榜信息
+	}
+}
+
+//购买奖励次数
+message cmd_buy_prize {
+	message request {
+	}
+
+	message response {
+		required uint32 ret_val					= 1;	//购买结果：0：成功，1：钻石不够，2：次数不足
+		required uint32 left_times				= 2;	//剩余可购次数
+		required uint32 prizetimes				= 3;	//奖励次数
+	}
+}
+
+
+//通知匹配成功
+message notify_match {
+	required string role_name					= 1;	//角色名
+	required uint32 role_lv						= 2;	//角色等级
+	required uint32 level						= 3;	//天梯等级
+	required uint32 star						= 4;	//星星
+}
+
+
+
+
+//角色天梯数据更新通知
+message notify_user_data {
+	required user_data data = 1;
+}
+
+//天梯开启和关闭通知
+message notify_open_close {
+	required uint32 status = 1;	//0关闭 1开启
+}
+	

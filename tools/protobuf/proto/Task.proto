@@ -1,0 +1,62 @@
+// 包。命名空间
+package Task;
+
+//活跃度或成就宝箱
+message msg_prize_box
+{
+	required uint32	id		=	1;		//宝箱奖励id，该值为成就与活跃值宝箱.xlsx的定义的id
+	required uint32	prize	=	2;		//是否已经领过 0：未领取 1：已领取
+}
+
+message msg_task_info
+{
+	required uint32	id		=	1;		//任务或成就id
+	required uint32	num		=	2;		//任务或成就已完成数量
+	required uint32	finish	=	3;		//任务或成就完成标志 对于任务 0未完成 1完成 对于成就：0,1,2,3分别表示各阶段是否达成，如2表示完成第2阶段
+	required uint32	prize	=	4;		//对于任务：0：不可领奖	1：可以领奖	2：已领奖 对于成就该字段固定为0
+	optional uint32 tasktime=	5;		//完成时间
+}
+
+//请求角色任务数据
+message cmd_get_task {
+	message request {
+	}
+
+	message response {
+		required uint32 goal_point				=	1;	//成就点		
+		required uint32 active_day_point		=	2;	//日活跃度
+		required uint32 active_week_point		=	3;	//周活跃度
+		required uint32 lasttime				=	4;	//日常任务刷新时间，客户端每次在打开任务界面时需要判断是否距上次刷新时间过了一天，如果是则重新获取任务
+
+		repeated msg_prize_box active_day_box	=	5;	//日活跃度宝箱领取情况
+		repeated msg_prize_box active_week_box	=	6;	//周活跃度宝箱领取情况
+		repeated msg_prize_box goal_box			=	7;	//成就宝箱领取情况
+
+		repeated msg_task_info goal_info		=	8;	//成就完成数据
+		repeated msg_task_info quest_info		=	9;	//任务完成数据
+	}
+}
+
+message cmd_get_prize
+{
+	message request {
+		required uint32 type	=	1;	//领奖类型 0：任务完成奖励	1：成就宝箱奖励	2：活跃度宝箱奖励
+		required uint32 id		=	2;	//奖励编号 对于type为0时,id为任务编号 对于type=1或2，id为宝箱奖励id
+	}
+	
+	message response {
+		required uint32 retval	= 1;	//返回结果,0 成功 不为0不成功
+	}
+}
+
+//角色活跃度或成就数据通知
+message notify_point_info {
+	required uint32 goal_point				=	1;	//成就点		
+	required uint32 active_day_point		=	2;	//日活跃度
+	required uint32 active_week_point		=	3;	//周活跃度
+}
+
+//角色任务数据通知
+message notify_task_info {
+	required msg_task_info info		=	1;	//日常任务或成就完成情况
+}

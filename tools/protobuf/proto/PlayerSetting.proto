@@ -1,0 +1,128 @@
+package PlayerSetting;
+
+
+// 个人信息设置
+
+// 修改头像
+message modify_head_pic {
+	message request {
+		required string head_pic = 1; // 头像
+		required string frame_pic = 2; // 边框
+	}
+
+	message response {
+		required uint32 result = 1; // 结果
+
+	}
+}
+
+
+// 修改昵称
+message modify_nickname {
+	message request {
+		required string nickname = 1; // 昵称
+	}
+
+	message response {
+		required uint32 result = 1; // 结果:1.成功；2.失败；3.钻石不足
+	}
+}
+
+// 同步人物信息
+message sync_player_info {
+	required msg_player_info player_info = 1; // 人物信息
+}
+
+message msg_player_info {
+	required string player_id = 1; // id
+	required string nickname = 2;  // 昵称
+	required string head_pic = 3;  // 头像
+	required string frame_pic = 4;  // 边框
+	required string title = 5;      // 玩家称号
+	required uint32 level = 6;      // 玩家等级
+
+	required uint32 cur_stage = 7;  // 当前段位
+	required uint32 top_stage = 8;  // 最高段位
+	required uint32 king_times = 9; // 印记
+
+	required uint32 toggle_music_id = 10; // 音乐：1.开；2.关
+	required uint32 toggle_sound_effects_id = 11; // 音效开关:1.开；2.关  
+
+	required msg_push_info push_info = 12; //推送开关
+	required uint32 change_name_count = 13; // 修改昵称次数
+}
+
+// 加载人物信息
+message load_player_info {
+	message request {
+
+	}
+
+	message response {
+		required msg_player_info player_info = 1; // 人物信息
+	}
+}
+
+// 加载已解锁头像/边框列表
+message load_unlock_heads {
+	message request {
+
+	}
+
+	message response {
+		repeated string unlock_heads = 1;  // 已解锁头像列表
+		repeated string unlock_frames = 2; // 已解锁边框列表
+		repeated string new_unlock_heads = 3; // 新解锁头像列表
+		repeated string new_unlock_frames = 4; // 新解锁边框列表
+	}
+}
+
+// 同步更新解锁头像列表
+message sync_unlock_heads {
+	repeated string unlock_heads = 1;
+}
+
+// 同步更新解锁边框列表
+message sync_unlock_frames {
+	repeated string unlock_frames = 1;
+}
+
+// 同步推送消息
+message sync_push_msg {
+	required uint32 push_id = 1; // 选项id
+	required string text = 2; // 显示文本
+}
+
+// 音乐/音效开关
+message change_sound_information {
+	message request {
+		required uint32 toggle_music_id = 1; // 音乐：1.开；2.关
+		required uint32 toggle_sound_effects_id = 2; // 音效开关:1.开；2.关
+	}
+
+	message response {
+		required uint32 result = 1; // 结果
+	}
+}
+
+// 推送开关信息
+message msg_push_info {
+	required uint32 push_id_1 = 1; // 选项1：1.开；2.关
+	required uint32 push_id_2 = 2; // 选项2: 1.开；2.关
+	//required uint32 push_id_3 = 3; // 选项3：1.开；2.关
+	//required uint32 push_id_4 = 4; // 选项4: 1.开；2.关
+}
+
+// 推送开关
+message change_push_information {
+	message request {
+		required msg_push_info push_info = 1;
+	}
+
+	message response {
+		required uint32 result = 1; // 结果
+	}
+}
+
+
+

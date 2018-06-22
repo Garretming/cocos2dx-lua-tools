@@ -1,0 +1,66 @@
+1.协议在proto里面定义，每个系统模块在不同的.proto文件下定义
+2."***.proto"编写时有两种类型的指令格式，第一种,客户端发送指令，服务端会响应这条指令，第二种,服务端直接推送给客户端的指令
+	第一种指令格式编写规范：1）确定指令属于哪个系统模块，2）为该条指令编写一个名字 3）客户端发送给服务端的内容放在‘request’里面定义
+	服务端发送给客户端的放在‘response’里面定义  以下对Game.proto说明
+		// 包。命名空间
+		package Game;  定写法，Game替换成和‘***.proto’一样的文件名 首字母大写
+
+
+		message login {        //message 消息体，在lua用table表示 ，login 指令名字
+			// 登陆请求
+			message request {  //request 客户端需要填写的内容
+				required string uid = 1;	// 平台账号id    required：表示该字段是必须的，如果不填的话，程序出现错误
+				required string sid = 2;	// 登陆令牌      
+				required uint32 time = 3;      // 时间戳	如果可以确定该字段是整数的话请用uint32，如果可以确定该字段会出现负数请用sint32，如果不能确定该字段请用int32
+				optional string nick_name = 4;		//昵称	//optional 可选字段，可以不填写
+				optional uint32 ver = 5;      // 版本号
+				required uint32 sdk_id = 6;	// 平台id sdkid
+				required string server_id	= 7;//服务器id
+				required uint32 sys_platform = 8;	// 客户端平台id : 0:windows 1:android 2:ios
+				optional string dev_info = 9;	// 设备信息
+				optional uint32 packing = 10;	// 资源分包id
+				optional string package_name = 11; //包名
+			}
+			
+			// 登陆返回
+			message response  //response 服务端发送给给客户端的内容
+			{
+				required string rid = 1;   //不存在rid填""
+				required uint32 last_login_time = 2; //上次登陆时间
+				required uint32	create_role_time = 3; // 创建角色时间
+				required string name = 4; //角色名字
+				required uint32 level = 5;//角色等级
+				optional string uid = 6;
+				optional string server_id = 7;
+				optional uint32 state = 8[default = 0]; //玩家状态 0:为正常 1:异常封号 
+				required uint32 server_time = 9; //服务器时间
+				repeated uint32 unopen_mods = 10;		//未开放的模块  repeated 表示该字段是个key从1开始的数组
+			}
+		}
+
+
+3.proto/ProtoList.lua用来指定每个指令的编号（指令ID）
+	
+	--客户端发送指令，服务端会响应这条指令的放在这边定义，指令ID从1001开始
+	local cmd_list = {
+		{cmd_id = 1001, method = 'Game.login', comment = '登陆'},   //cmd_id 指令的编号，不能一样的 ’method‘ 系统模块名字.指令名字  common对该指令的注释
+	};
+
+
+	--服务端直接推送给客户端的指令放在这边定义，指令ID从10001开始增加
+	local notify = {
+		{cmd_id = 10001, method = 'Notify.upgrade', comment = '升级通知'},
+	};
+
+
+	-- 禁止修改
+	local message_map = {
+		cmd_list = cmd_list,
+		notify = notify,
+		cmd_map = {},
+		notify_map = {},
+	};
+
+4.编写完指令之后，执行批处理文件 
+	make_pb/make_pb.bat
+

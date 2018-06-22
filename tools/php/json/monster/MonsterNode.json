@@ -1,0 +1,525 @@
+{
+  "ID": "bfee6a63-45db-41c5-8ae9-0c8487fab70a",
+  "Version": "3.10.0.0",
+  "Name": "MonsterNode",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "CustomClassName": "SyncNode",
+        "UserData": "monster",
+        "Tag": 483,
+        "Children": [
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Press.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet/dragon001.png",
+              "Plist": "uires/public/sheet/sheet.plist"
+            },
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 92,
+            "Scale9Height": 100,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 0.8,
+              "ScaleY": 0.8
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "RightMargin": -122.0,
+            "TopMargin": -122.0,
+            "CallBackType": "Click",
+            "CallBackName": "toViewDetails",
+            "UserData": "sound=ui_click_button",
+            "Tag": 484,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_other/other0106.png",
+                  "Plist": "uires/public/sheet_other/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 61.0,
+                  "Y": 61.8662
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5071
+                },
+                "PreSize": {
+                  "X": 1.082,
+                  "Y": 1.082
+                },
+                "LeftMargin": -5.0,
+                "RightMargin": -5.0,
+                "TopMargin": -5.8662,
+                "BottomMargin": -4.1338,
+                "Tag": 485,
+                "ActionTag": -1740081739,
+                "Size": {
+                  "X": 132.0,
+                  "Y": 132.0
+                },
+                "Name": "__SELECTED_IMG",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_common/btn0043.png",
+                  "Plist": "uires/public/sheet_common/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 19.3922,
+                  "Y": 106.0005
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.159,
+                  "Y": 0.8689
+                },
+                "PreSize": {
+                  "X": 0.3115,
+                  "Y": 0.3443
+                },
+                "LeftMargin": 0.3922,
+                "RightMargin": 83.6078,
+                "TopMargin": -5.0005,
+                "BottomMargin": 85.0005,
+                "Tag": 487,
+                "Children": [
+                  {
+                    "FontSize": 24,
+                    "LabelText": "9",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "uires/public/ttf/BRITANIC.TTF",
+                      "Plist": ""
+                    },
+                    "OutlineSize": 2,
+                    "OutlineColor": {
+                      "R": 50,
+                      "G": 25,
+                      "B": 0
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 17.6523,
+                      "Y": 19.0023
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.4645,
+                      "Y": 0.4524
+                    },
+                    "PreSize": {
+                      "X": 0.5,
+                      "Y": 0.6667
+                    },
+                    "LeftMargin": 8.1523,
+                    "RightMargin": 10.8477,
+                    "TopMargin": 8.9977,
+                    "BottomMargin": 5.0023,
+                    "Tag": 488,
+                    "ActionTag": -364654993,
+                    "Size": {
+                      "X": 19.0,
+                      "Y": 28.0
+                    },
+                    "Name": "m_gas_num",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 1610737707,
+                "Size": {
+                  "X": 38.0,
+                  "Y": 42.0
+                },
+                "Name": "m_gas",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_icon/icon0056.png",
+                  "Plist": "uires/public/sheet_icon/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 19.0932,
+                  "Y": 18.5241
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1565,
+                  "Y": 0.1518
+                },
+                "PreSize": {
+                  "X": 0.3115,
+                  "Y": 0.3115
+                },
+                "LeftMargin": 0.0932,
+                "RightMargin": 83.9068,
+                "TopMargin": 84.4759,
+                "BottomMargin": -0.4759,
+                "Tag": 489,
+                "ActionTag": -1270793923,
+                "Size": {
+                  "X": 38.0,
+                  "Y": 38.0
+                },
+                "Name": "profession",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_other/other0089.png",
+                  "Plist": "uires/public/sheet_other/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 83.3916,
+                  "Y": 27.5137
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6835,
+                  "Y": 0.2255
+                },
+                "PreSize": {
+                  "X": 0.3525,
+                  "Y": 0.3361
+                },
+                "LeftMargin": 61.8916,
+                "RightMargin": 17.1084,
+                "TopMargin": 73.9863,
+                "BottomMargin": 7.0137,
+                "Tag": 490,
+                "ActionTag": -303670671,
+                "Size": {
+                  "X": 43.0,
+                  "Y": 41.0
+                },
+                "Name": "star",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FontSize": 20,
+                "LabelText": "9",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "uires/public/ttf/BRITANIC.TTF",
+                  "Plist": ""
+                },
+                "OutlineSize": 2,
+                "OutlineColor": {
+                  "R": 50,
+                  "G": 25,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 104.8957,
+                  "Y": 14.9999
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 240,
+                  "G": 200,
+                  "B": 60
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8598,
+                  "Y": 0.123
+                },
+                "PreSize": {
+                  "X": 0.1311,
+                  "Y": 0.1967
+                },
+                "LeftMargin": 96.8957,
+                "RightMargin": 9.1043,
+                "TopMargin": 95.0001,
+                "BottomMargin": 2.9999,
+                "Tag": 486,
+                "ActionTag": 1050486379,
+                "Size": {
+                  "X": 16.0,
+                  "Y": 24.0
+                },
+                "Name": "m_level",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 20,
+                "LabelText": "99999",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "uires/public/ttf/BRITANIC.TTF",
+                  "Plist": ""
+                },
+                "OutlineSize": 2,
+                "OutlineColor": {
+                  "R": 50,
+                  "G": 25,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 117.788,
+                  "Y": 110.6555
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9655,
+                  "Y": 0.907
+                },
+                "PreSize": {
+                  "X": 0.5246,
+                  "Y": 0.1967
+                },
+                "LeftMargin": 53.788,
+                "RightMargin": 4.212,
+                "TopMargin": -0.6555,
+                "BottomMargin": 98.6555,
+                "Tag": 491,
+                "ActionTag": 2107289510,
+                "Size": {
+                  "X": 64.0,
+                  "Y": 24.0
+                },
+                "VisibleForFrame": false,
+                "Name": "m_num",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_other/other0088.png",
+                  "Plist": "uires/public/sheet_other/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 109.8,
+                  "Y": 109.8
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.9,
+                  "Y": 0.9
+                },
+                "PreSize": {
+                  "X": 0.2459,
+                  "Y": 0.2459
+                },
+                "LeftMargin": 94.8,
+                "RightMargin": -2.8,
+                "TopMargin": -2.8,
+                "BottomMargin": 94.8,
+                "Tag": 562,
+                "ActionTag": 1632184148,
+                "Size": {
+                  "X": 30.0,
+                  "Y": 30.0
+                },
+                "Name": "redPoint_sprite",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": -555637764,
+            "Size": {
+              "X": 122.0,
+              "Y": 122.0
+            },
+            "Name": "m_btn",
+            "ctype": "ButtonObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../Default/Button_Disable.png",
+        "../Default/Button_Press.png",
+        "../uires/public/sheet/sheet.plist",
+        "../uires/public/sheet/sheet.png",
+        "../uires/public/sheet_common/sheet.plist",
+        "../uires/public/sheet_common/sheet.png",
+        "../uires/public/sheet_icon/sheet.plist",
+        "../uires/public/sheet_icon/sheet.png",
+        "../uires/public/sheet_other/sheet.plist",
+        "../uires/public/sheet_other/sheet.png",
+        "../uires/public/ttf/BRITANIC.TTF"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

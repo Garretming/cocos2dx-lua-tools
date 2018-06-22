@@ -1,0 +1,533 @@
+{
+  "ID": "c481c4cc-6b55-4549-b4dd-61a5760efd22",
+  "Version": "3.10.0.0",
+  "Name": "UnlockMonsterLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "UserData": "monster",
+        "Tag": 433,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "uires/public/bg_img/bgImg0010.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 512.0,
+              "Y": 320.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.1094,
+              "Y": 1.2
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "BothEdge",
+            "LeftMargin": -56.0,
+            "RightMargin": -56.0,
+            "TopMargin": -64.0,
+            "BottomMargin": -64.0,
+            "Tag": 690,
+            "ActionTag": -1802859266,
+            "Size": {
+              "X": 1136.0,
+              "Y": 768.0
+            },
+            "Name": "bg_img",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Default",
+              "Path": "Default/Sprite.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 512.0,
+              "Y": 179.968
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.2812
+            },
+            "PreSize": {
+              "X": 0.0449,
+              "Y": 0.0719
+            },
+            "LeftMargin": 489.0,
+            "RightMargin": 489.0,
+            "TopMargin": 437.032,
+            "BottomMargin": 156.968,
+            "Tag": 435,
+            "ActionTag": -1125104383,
+            "Size": {
+              "X": 46.0,
+              "Y": 46.0
+            },
+            "Name": "monsterIcon_sprite",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_font/fontImg0065.png",
+              "Plist": "uires/public/sheet_font/sheet.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 512.0,
+              "Y": 45.184
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.0706
+            },
+            "PreSize": {
+              "X": 0.1992,
+              "Y": 0.0375
+            },
+            "LeftMargin": 410.0,
+            "RightMargin": 410.0,
+            "TopMargin": 582.816,
+            "BottomMargin": 33.184,
+            "Tag": 436,
+            "ActionTag": -1918460318,
+            "Size": {
+              "X": 204.0,
+              "Y": 24.0
+            },
+            "Name": "prompt_sprite",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_font/fontImg0099.png",
+              "Plist": "uires/public/sheet_font/sheet.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 512.0,
+              "Y": 499.2
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.78
+            },
+            "PreSize": {
+              "X": 0.3984,
+              "Y": 0.0844
+            },
+            "LeftMargin": 308.0,
+            "RightMargin": 308.0,
+            "TopMargin": 113.8,
+            "BottomMargin": 472.2,
+            "Tag": 437,
+            "ActionTag": 484148158,
+            "Size": {
+              "X": 408.0,
+              "Y": 54.0
+            },
+            "Name": "Sprite_3",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_other/other0104.png",
+              "Plist": "uires/public/sheet_other/sheet.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 608.5105,
+              "Y": 283.3567
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5942,
+              "Y": 0.4427
+            },
+            "PreSize": {
+              "X": 0.1201,
+              "Y": 0.1937
+            },
+            "LeftMargin": 547.0105,
+            "RightMargin": 353.9895,
+            "TopMargin": 294.6433,
+            "BottomMargin": 221.3567,
+            "Tag": 438,
+            "ActionTag": 816498862,
+            "Size": {
+              "X": 123.0,
+              "Y": 124.0
+            },
+            "Name": "hire_sprite",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FontSize": 20,
+            "LabelText": "解锁后每日可进行雇佣",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "uires/public/ttf/jtcs.TTF",
+              "Plist": ""
+            },
+            "OutlineColor": {
+              "R": 50,
+              "G": 25,
+              "B": 0
+            },
+            "OutlineEnabled": true,
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 512.0,
+              "Y": 448.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 80,
+              "B": 0
+            },
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.7
+            },
+            "PreSize": {
+              "X": 0.1992,
+              "Y": 0.0344
+            },
+            "LeftMargin": 410.0,
+            "RightMargin": 410.0,
+            "TopMargin": 181.0,
+            "BottomMargin": 437.0,
+            "Tag": 439,
+            "ActionTag": -2016311559,
+            "Size": {
+              "X": 204.0,
+              "Y": 22.0
+            },
+            "Name": "cue_txt",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "uires/public/sheet_other/other0102.png",
+              "Plist": "uires/public/sheet_other/sheet.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 503.9604,
+              "Y": 102.9054
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4921,
+              "Y": 0.1608
+            },
+            "PreSize": {
+              "X": 0.2666,
+              "Y": 0.0656
+            },
+            "LeftMargin": 367.4604,
+            "RightMargin": 383.5396,
+            "TopMargin": 516.0946,
+            "BottomMargin": 81.9054,
+            "Tag": 440,
+            "Children": [
+              {
+                "FontSize": 28,
+                "LabelText": "豹子大魔王",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "uires/public/ttf/jtcs.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "R": 50,
+                  "G": 25,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 136.5,
+                  "Y": 21.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 240,
+                  "B": 155
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.5275,
+                  "Y": 0.7143
+                },
+                "LeftMargin": 64.5,
+                "RightMargin": 64.5,
+                "TopMargin": 6.0,
+                "BottomMargin": 6.0,
+                "Tag": 443,
+                "ActionTag": 1622125220,
+                "Size": {
+                  "X": 144.0,
+                  "Y": 30.0
+                },
+                "Name": "name_txt",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_other/other0098.png",
+                  "Plist": "uires/public/sheet_other/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 33.7855,
+                  "Y": 21.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.1238,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.2198,
+                  "Y": 0.6905
+                },
+                "LeftMargin": 3.7855,
+                "RightMargin": 209.2145,
+                "TopMargin": 6.5,
+                "BottomMargin": 6.5,
+                "Tag": 441,
+                "ActionTag": -450313062,
+                "Size": {
+                  "X": 60.0,
+                  "Y": 29.0
+                },
+                "Name": "left_sprite",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "uires/public/sheet_other/other0099.png",
+                  "Plist": "uires/public/sheet_other/sheet.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 240.3246,
+                  "Y": 21.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.8803,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.2198,
+                  "Y": 0.6905
+                },
+                "LeftMargin": 210.3246,
+                "RightMargin": 2.6754,
+                "TopMargin": 6.5,
+                "BottomMargin": 6.5,
+                "Tag": 442,
+                "ActionTag": 1416147192,
+                "Size": {
+                  "X": 60.0,
+                  "Y": 29.0
+                },
+                "Name": "right_sprite",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": -539345176,
+            "Size": {
+              "X": 273.0,
+              "Y": 42.0
+            },
+            "Name": "under_sprite",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1024.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "../Default/Sprite.png",
+        "../uires/public/bg_img/bgImg0010.png",
+        "../uires/public/sheet_font/sheet.plist",
+        "../uires/public/sheet_font/sheet.png",
+        "../uires/public/sheet_other/sheet.plist",
+        "../uires/public/sheet_other/sheet.png",
+        "../uires/public/ttf/jtcs.TTF"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

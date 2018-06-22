@@ -1,0 +1,93 @@
+{
+  "ID": "75c26e73-c4d9-49b2-bf84-2bfac730402e",
+  "Version": "3.10.0.0",
+  "Name": "DiamondLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "CustomClassName": "BaseNode",
+        "UserData": "shop",
+        "Tag": 651,
+        "Children": [
+          {
+            "InnerNodeSize": {
+              "Width": 590,
+              "Height": 505
+            },
+            "ScrollDirectionType": "Vertical",
+            "ClipAble": false,
+            "BackColorAlpha": 0,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "G": 150,
+              "B": 100
+            },
+            "FirstColor": {
+              "G": 150,
+              "B": 100
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleY": 1.0
+            },
+            "Position": {
+              "X": 134.9632,
+              "Y": 505.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1318,
+              "Y": 0.7891
+            },
+            "PreSize": {
+              "X": 0.5762,
+              "Y": 0.7891
+            },
+            "HorizontalEdge": "BothEdge",
+            "VerticalEdge": "TopEdge",
+            "LeftMargin": 134.9632,
+            "RightMargin": 299.0368,
+            "TopMargin": 135.0,
+            "UserData": "WinHeight,WinWidth",
+            "Tag": 687,
+            "ActionTag": -499057183,
+            "Size": {
+              "X": 590.0,
+              "Y": 505.0
+            },
+            "Alpha": 251,
+            "Name": "diamond_ScrollView",
+            "ctype": "ScrollViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1024.0,
+          "Y": 640.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}
