@@ -99,10 +99,10 @@ def parseAllNodes(array, parent):
 
 
 # 获取所有json文件
-files = common.parseDir(os.path.join(os.getcwd(), 'json'), 'json')
+files = common.parseDir(os.path.join(os.getcwd(), '../json'), 'json')
 
-if os.path.isdir(os.path.join(os.getcwd(), 'lua')):
-    shutil.rmtree(os.path.join(os.getcwd(), 'lua'))
+if os.path.isdir(os.path.join(os.getcwd(), '../lua')):
+    shutil.rmtree(os.path.join(os.getcwd(), '../lua'))
     
 for filepath in files:
     data = common.getFileContentWithJson(filepath)
