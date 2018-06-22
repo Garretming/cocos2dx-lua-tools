@@ -178,8 +178,8 @@ end
 
 
 function SettingLayer:_onContinue(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onContinue then
-        return self.m_ClickDelegate:onContinue(sender);
+    if self._clickDelegate and self._clickDelegate.onContinue then
+        return self._clickDelegate:onContinue(sender);
     end
     if self.onContinue then
         return self:onContinue(sender);
@@ -188,8 +188,8 @@ end
 
 
 function SettingLayer:_onExit(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onExit then
-        return self.m_ClickDelegate:onExit(sender);
+    if self._clickDelegate and self._clickDelegate.onExit then
+        return self._clickDelegate:onExit(sender);
     end
     if self.onExit then
         return self:onExit(sender);
@@ -198,8 +198,8 @@ end
 
 
 function SettingLayer:_onWinBattle(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onWinBattle then
-        return self.m_ClickDelegate:onWinBattle(sender);
+    if self._clickDelegate and self._clickDelegate.onWinBattle then
+        return self._clickDelegate:onWinBattle(sender);
     end
     if self.onWinBattle then
         return self:onWinBattle(sender);

@@ -238,8 +238,8 @@ end
 
 
 function ActivityMainLayer:_onGoldGame(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onGoldGame then
-        return self.m_ClickDelegate:onGoldGame(sender);
+    if self._clickDelegate and self._clickDelegate.onGoldGame then
+        return self._clickDelegate:onGoldGame(sender);
     end
     if self.onGoldGame then
         return self:onGoldGame(sender);
@@ -248,8 +248,8 @@ end
 
 
 function ActivityMainLayer:_onWall(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onWall then
-        return self.m_ClickDelegate:onWall(sender);
+    if self._clickDelegate and self._clickDelegate.onWall then
+        return self._clickDelegate:onWall(sender);
     end
     if self.onWall then
         return self:onWall(sender);

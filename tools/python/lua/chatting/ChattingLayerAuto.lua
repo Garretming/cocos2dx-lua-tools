@@ -340,8 +340,8 @@ end
 --@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
 --@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
 function ChattingLayer:_onListViewSystem(eventName, listView, row, column, index, cell)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onListViewSystem then
-        return self.m_ClickDelegate:onListViewSystem(eventName, listView, row, column, index, cell);
+    if self._clickDelegate and self._clickDelegate.onListViewSystem then
+        return self._clickDelegate:onListViewSystem(eventName, listView, row, column, index, cell);
     end
     if self.onListViewSystem then
         return self:onListViewSystem(eventName, listView, row, column, index, cell);
@@ -350,8 +350,8 @@ end
 
 
 function ChattingLayer:_closeBtn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.closeBtn then
-        return self.m_ClickDelegate:closeBtn(sender);
+    if self._clickDelegate and self._clickDelegate.closeBtn then
+        return self._clickDelegate:closeBtn(sender);
     end
     if self.closeBtn then
         return self:closeBtn(sender);
@@ -361,8 +361,8 @@ end
 
 --eventName:(began, ended, changed)
 function ChattingLayer:_onCommentText(eventName, editBox)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onCommentText then
-        return self.m_ClickDelegate:onCommentText(eventName, editBox);
+    if self._clickDelegate and self._clickDelegate.onCommentText then
+        return self._clickDelegate:onCommentText(eventName, editBox);
     end
     if self.onCommentText then
         return self:onCommentText(eventName, editBox);
@@ -371,8 +371,8 @@ end
 
 
 function ChattingLayer:_onSend(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSend then
-        return self.m_ClickDelegate:onSend(sender);
+    if self._clickDelegate and self._clickDelegate.onSend then
+        return self._clickDelegate:onSend(sender);
     end
     if self.onSend then
         return self:onSend(sender);
@@ -381,8 +381,8 @@ end
 
 
 function ChattingLayer:_onTabMenu(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTabMenu then
-        return self.m_ClickDelegate:onTabMenu(sender);
+    if self._clickDelegate and self._clickDelegate.onTabMenu then
+        return self._clickDelegate:onTabMenu(sender);
     end
     if self.onTabMenu then
         return self:onTabMenu(sender);
@@ -397,8 +397,8 @@ end
 --@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
 --@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
 function ChattingLayer:_onListViewWorld(eventName, listView, row, column, index, cell)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onListViewWorld then
-        return self.m_ClickDelegate:onListViewWorld(eventName, listView, row, column, index, cell);
+    if self._clickDelegate and self._clickDelegate.onListViewWorld then
+        return self._clickDelegate:onListViewWorld(eventName, listView, row, column, index, cell);
     end
     if self.onListViewWorld then
         return self:onListViewWorld(eventName, listView, row, column, index, cell);

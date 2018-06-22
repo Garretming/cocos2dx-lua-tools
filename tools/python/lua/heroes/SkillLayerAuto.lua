@@ -731,8 +731,8 @@ end
 
 
 function SkillLayer:_onSkill(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSkill then
-        return self.m_ClickDelegate:onSkill(sender);
+    if self._clickDelegate and self._clickDelegate.onSkill then
+        return self._clickDelegate:onSkill(sender);
     end
     if self.onSkill then
         return self:onSkill(sender);

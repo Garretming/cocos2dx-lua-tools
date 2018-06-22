@@ -78,8 +78,8 @@ end
 
 
 function OccupationNode:_onOccupation(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onOccupation then
-        return self.m_ClickDelegate:onOccupation(sender);
+    if self._clickDelegate and self._clickDelegate.onOccupation then
+        return self._clickDelegate:onOccupation(sender);
     end
     if self.onOccupation then
         return self:onOccupation(sender);

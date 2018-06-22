@@ -153,8 +153,8 @@ end
 
 --eventName:(began, ended, changed)
 function AmendNameLayer:_onChangeName(eventName, editBox)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onChangeName then
-        return self.m_ClickDelegate:onChangeName(eventName, editBox);
+    if self._clickDelegate and self._clickDelegate.onChangeName then
+        return self._clickDelegate:onChangeName(eventName, editBox);
     end
     if self.onChangeName then
         return self:onChangeName(eventName, editBox);
@@ -163,8 +163,8 @@ end
 
 
 function AmendNameLayer:_sure_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.sure_btn then
-        return self.m_ClickDelegate:sure_btn(sender);
+    if self._clickDelegate and self._clickDelegate.sure_btn then
+        return self._clickDelegate:sure_btn(sender);
     end
     if self.sure_btn then
         return self:sure_btn(sender);

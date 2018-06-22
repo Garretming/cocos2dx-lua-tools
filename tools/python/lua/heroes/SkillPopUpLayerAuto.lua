@@ -441,8 +441,8 @@ end
 
 
 function SkillPopUpLayer:_onUpgrade(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onUpgrade then
-        return self.m_ClickDelegate:onUpgrade(sender);
+    if self._clickDelegate and self._clickDelegate.onUpgrade then
+        return self._clickDelegate:onUpgrade(sender);
     end
     if self.onUpgrade then
         return self:onUpgrade(sender);
@@ -451,8 +451,8 @@ end
 
 
 function SkillPopUpLayer:_onClose(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onClose then
-        return self.m_ClickDelegate:onClose(sender);
+    if self._clickDelegate and self._clickDelegate.onClose then
+        return self._clickDelegate:onClose(sender);
     end
     if self.onClose then
         return self:onClose(sender);
@@ -461,8 +461,8 @@ end
 
 
 function SkillPopUpLayer:_onUnlock(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onUnlock then
-        return self.m_ClickDelegate:onUnlock(sender);
+    if self._clickDelegate and self._clickDelegate.onUnlock then
+        return self._clickDelegate:onUnlock(sender);
     end
     if self.onUnlock then
         return self:onUnlock(sender);

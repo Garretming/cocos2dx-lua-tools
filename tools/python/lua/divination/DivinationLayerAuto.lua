@@ -995,8 +995,8 @@ end
 
 
 function DivinationLayer:_onGameMoney(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onGameMoney then
-        return self.m_ClickDelegate:onGameMoney(sender);
+    if self._clickDelegate and self._clickDelegate.onGameMoney then
+        return self._clickDelegate:onGameMoney(sender);
     end
     if self.onGameMoney then
         return self:onGameMoney(sender);
@@ -1005,8 +1005,8 @@ end
 
 
 function DivinationLayer:_help_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.help_btn then
-        return self.m_ClickDelegate:help_btn(sender);
+    if self._clickDelegate and self._clickDelegate.help_btn then
+        return self._clickDelegate:help_btn(sender);
     end
     if self.help_btn then
         return self:help_btn(sender);
@@ -1015,8 +1015,8 @@ end
 
 
 function DivinationLayer:_onTabMenu(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTabMenu then
-        return self.m_ClickDelegate:onTabMenu(sender);
+    if self._clickDelegate and self._clickDelegate.onTabMenu then
+        return self._clickDelegate:onTabMenu(sender);
     end
     if self.onTabMenu then
         return self:onTabMenu(sender);
@@ -1025,8 +1025,8 @@ end
 
 
 function DivinationLayer:_soulBtn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.soulBtn then
-        return self.m_ClickDelegate:soulBtn(sender);
+    if self._clickDelegate and self._clickDelegate.soulBtn then
+        return self._clickDelegate:soulBtn(sender);
     end
     if self.soulBtn then
         return self:soulBtn(sender);
@@ -1035,8 +1035,8 @@ end
 
 
 function DivinationLayer:_onRMBMoney(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onRMBMoney then
-        return self.m_ClickDelegate:onRMBMoney(sender);
+    if self._clickDelegate and self._clickDelegate.onRMBMoney then
+        return self._clickDelegate:onRMBMoney(sender);
     end
     if self.onRMBMoney then
         return self:onRMBMoney(sender);
@@ -1045,8 +1045,8 @@ end
 
 
 function DivinationLayer:_back_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.back_btn then
-        return self.m_ClickDelegate:back_btn(sender);
+    if self._clickDelegate and self._clickDelegate.back_btn then
+        return self._clickDelegate:back_btn(sender);
     end
     if self.back_btn then
         return self:back_btn(sender);
@@ -1055,8 +1055,8 @@ end
 
 
 function DivinationLayer:_onSoulMoney(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSoulMoney then
-        return self.m_ClickDelegate:onSoulMoney(sender);
+    if self._clickDelegate and self._clickDelegate.onSoulMoney then
+        return self._clickDelegate:onSoulMoney(sender);
     end
     if self.onSoulMoney then
         return self:onSoulMoney(sender);

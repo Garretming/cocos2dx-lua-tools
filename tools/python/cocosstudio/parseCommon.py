@@ -139,8 +139,8 @@ def parseCallback(callback,classname):
         if value == 'ButtonObjectData':
             string += '''
 function %s:_%s(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.%s then
-        return self.m_ClickDelegate:%s(sender);
+    if self._clickDelegate and self._clickDelegate.%s then
+        return self._clickDelegate:%s(sender);
     end
     if self.%s then
         return self:%s(sender);
@@ -152,8 +152,8 @@ end
             string += '''
 --eventName:(began, ended, changed)
 function %s:_%s(eventName, editBox)
-    if self.m_ClickDelegate and self.m_ClickDelegate.%s then
-        return self.m_ClickDelegate:%s(eventName, editBox);
+    if self._clickDelegate and self._clickDelegate.%s then
+        return self._clickDelegate:%s(eventName, editBox);
     end
     if self.%s then
         return self:%s(eventName, editBox);
@@ -170,8 +170,8 @@ end
 --@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
 --@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
 function %s:_%s(eventName, listView, row, column, index, cell)
-    if self.m_ClickDelegate and self.m_ClickDelegate.%s then
-        return self.m_ClickDelegate:%s(eventName, listView, row, column, index, cell);
+    if self._clickDelegate and self._clickDelegate.%s then
+        return self._clickDelegate:%s(eventName, listView, row, column, index, cell);
     end
     if self.%s then
         return self:%s(eventName, listView, row, column, index, cell);

@@ -352,8 +352,8 @@ end
 
 
 function PropertyLayer:_onPreview(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onPreview then
-        return self.m_ClickDelegate:onPreview(sender);
+    if self._clickDelegate and self._clickDelegate.onPreview then
+        return self._clickDelegate:onPreview(sender);
     end
     if self.onPreview then
         return self:onPreview(sender);

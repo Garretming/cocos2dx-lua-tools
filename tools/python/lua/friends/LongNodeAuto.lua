@@ -196,8 +196,8 @@ end
 
 
 function LongNode:_onRefuse(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onRefuse then
-        return self.m_ClickDelegate:onRefuse(sender);
+    if self._clickDelegate and self._clickDelegate.onRefuse then
+        return self._clickDelegate:onRefuse(sender);
     end
     if self.onRefuse then
         return self:onRefuse(sender);
@@ -206,8 +206,8 @@ end
 
 
 function LongNode:_toViewRoleInfo2(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.toViewRoleInfo2 then
-        return self.m_ClickDelegate:toViewRoleInfo2(sender);
+    if self._clickDelegate and self._clickDelegate.toViewRoleInfo2 then
+        return self._clickDelegate:toViewRoleInfo2(sender);
     end
     if self.toViewRoleInfo2 then
         return self:toViewRoleInfo2(sender);
@@ -216,8 +216,8 @@ end
 
 
 function LongNode:_onAccept(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onAccept then
-        return self.m_ClickDelegate:onAccept(sender);
+    if self._clickDelegate and self._clickDelegate.onAccept then
+        return self._clickDelegate:onAccept(sender);
     end
     if self.onAccept then
         return self:onAccept(sender);

@@ -156,8 +156,8 @@ end
 
 
 function RiskSessionNode:_onSession(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSession then
-        return self.m_ClickDelegate:onSession(sender);
+    if self._clickDelegate and self._clickDelegate.onSession then
+        return self._clickDelegate:onSession(sender);
     end
     if self.onSession then
         return self:onSession(sender);

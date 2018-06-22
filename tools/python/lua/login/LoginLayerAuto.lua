@@ -139,8 +139,8 @@ end
 
 
 function LoginLayer:_onSetting(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSetting then
-        return self.m_ClickDelegate:onSetting(sender);
+    if self._clickDelegate and self._clickDelegate.onSetting then
+        return self._clickDelegate:onSetting(sender);
     end
     if self.onSetting then
         return self:onSetting(sender);

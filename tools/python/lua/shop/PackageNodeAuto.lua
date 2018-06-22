@@ -214,8 +214,8 @@ end
 
 
 function PackageNode:_onPackage(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onPackage then
-        return self.m_ClickDelegate:onPackage(sender);
+    if self._clickDelegate and self._clickDelegate.onPackage then
+        return self._clickDelegate:onPackage(sender);
     end
     if self.onPackage then
         return self:onPackage(sender);

@@ -424,8 +424,8 @@ end
 
 
 function BuyPopUpLayer:_onBuy(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onBuy then
-        return self.m_ClickDelegate:onBuy(sender);
+    if self._clickDelegate and self._clickDelegate.onBuy then
+        return self._clickDelegate:onBuy(sender);
     end
     if self.onBuy then
         return self:onBuy(sender);
@@ -434,8 +434,8 @@ end
 
 
 function BuyPopUpLayer:_onReduce(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onReduce then
-        return self.m_ClickDelegate:onReduce(sender);
+    if self._clickDelegate and self._clickDelegate.onReduce then
+        return self._clickDelegate:onReduce(sender);
     end
     if self.onReduce then
         return self:onReduce(sender);
@@ -444,8 +444,8 @@ end
 
 
 function BuyPopUpLayer:_onPlus(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onPlus then
-        return self.m_ClickDelegate:onPlus(sender);
+    if self._clickDelegate and self._clickDelegate.onPlus then
+        return self._clickDelegate:onPlus(sender);
     end
     if self.onPlus then
         return self:onPlus(sender);
@@ -454,8 +454,8 @@ end
 
 
 function BuyPopUpLayer:_onCancel(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onCancel then
-        return self.m_ClickDelegate:onCancel(sender);
+    if self._clickDelegate and self._clickDelegate.onCancel then
+        return self._clickDelegate:onCancel(sender);
     end
     if self.onCancel then
         return self:onCancel(sender);

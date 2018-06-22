@@ -106,8 +106,8 @@ end
 
 
 function HeadNode:_toHeadDetails(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.toHeadDetails then
-        return self.m_ClickDelegate:toHeadDetails(sender);
+    if self._clickDelegate and self._clickDelegate.toHeadDetails then
+        return self._clickDelegate:toHeadDetails(sender);
     end
     if self.toHeadDetails then
         return self:toHeadDetails(sender);

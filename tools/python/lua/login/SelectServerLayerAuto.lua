@@ -322,8 +322,8 @@ end
 
 
 function SelectServerLayer:_onAccountCenter(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onAccountCenter then
-        return self.m_ClickDelegate:onAccountCenter(sender);
+    if self._clickDelegate and self._clickDelegate.onAccountCenter then
+        return self._clickDelegate:onAccountCenter(sender);
     end
     if self.onAccountCenter then
         return self:onAccountCenter(sender);
@@ -332,8 +332,8 @@ end
 
 
 function SelectServerLayer:_onStart(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onStart then
-        return self.m_ClickDelegate:onStart(sender);
+    if self._clickDelegate and self._clickDelegate.onStart then
+        return self._clickDelegate:onStart(sender);
     end
     if self.onStart then
         return self:onStart(sender);

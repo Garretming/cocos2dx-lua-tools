@@ -223,8 +223,8 @@ end
 
 
 function FriendsRequestLayer:_onRequest(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onRequest then
-        return self.m_ClickDelegate:onRequest(sender);
+    if self._clickDelegate and self._clickDelegate.onRequest then
+        return self._clickDelegate:onRequest(sender);
     end
     if self.onRequest then
         return self:onRequest(sender);
@@ -233,8 +233,8 @@ end
 
 
 function FriendsRequestLayer:_onCancel(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onCancel then
-        return self.m_ClickDelegate:onCancel(sender);
+    if self._clickDelegate and self._clickDelegate.onCancel then
+        return self._clickDelegate:onCancel(sender);
     end
     if self.onCancel then
         return self:onCancel(sender);
@@ -244,8 +244,8 @@ end
 
 --eventName:(began, ended, changed)
 function FriendsRequestLayer:_onInputApply(eventName, editBox)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onInputApply then
-        return self.m_ClickDelegate:onInputApply(eventName, editBox);
+    if self._clickDelegate and self._clickDelegate.onInputApply then
+        return self._clickDelegate:onInputApply(eventName, editBox);
     end
     if self.onInputApply then
         return self:onInputApply(eventName, editBox);

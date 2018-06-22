@@ -869,8 +869,8 @@ end
 --@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
 --@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
 function FriendsLayer:_onListView(eventName, listView, row, column, index, cell)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onListView then
-        return self.m_ClickDelegate:onListView(eventName, listView, row, column, index, cell);
+    if self._clickDelegate and self._clickDelegate.onListView then
+        return self._clickDelegate:onListView(eventName, listView, row, column, index, cell);
     end
     if self.onListView then
         return self:onListView(eventName, listView, row, column, index, cell);
@@ -879,8 +879,8 @@ end
 
 
 function FriendsLayer:_onTabMenu(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTabMenu then
-        return self.m_ClickDelegate:onTabMenu(sender);
+    if self._clickDelegate and self._clickDelegate.onTabMenu then
+        return self._clickDelegate:onTabMenu(sender);
     end
     if self.onTabMenu then
         return self:onTabMenu(sender);
@@ -890,8 +890,8 @@ end
 
 --eventName:(began, ended, changed)
 function FriendsLayer:_onCommentText(eventName, editBox)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onCommentText then
-        return self.m_ClickDelegate:onCommentText(eventName, editBox);
+    if self._clickDelegate and self._clickDelegate.onCommentText then
+        return self._clickDelegate:onCommentText(eventName, editBox);
     end
     if self.onCommentText then
         return self:onCommentText(eventName, editBox);
@@ -900,8 +900,8 @@ end
 
 
 function FriendsLayer:_onFight(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onFight then
-        return self.m_ClickDelegate:onFight(sender);
+    if self._clickDelegate and self._clickDelegate.onFight then
+        return self._clickDelegate:onFight(sender);
     end
     if self.onFight then
         return self:onFight(sender);
@@ -910,8 +910,8 @@ end
 
 
 function FriendsLayer:_onClose(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onClose then
-        return self.m_ClickDelegate:onClose(sender);
+    if self._clickDelegate and self._clickDelegate.onClose then
+        return self._clickDelegate:onClose(sender);
     end
     if self.onClose then
         return self:onClose(sender);
@@ -920,8 +920,8 @@ end
 
 
 function FriendsLayer:_onHelp(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onHelp then
-        return self.m_ClickDelegate:onHelp(sender);
+    if self._clickDelegate and self._clickDelegate.onHelp then
+        return self._clickDelegate:onHelp(sender);
     end
     if self.onHelp then
         return self:onHelp(sender);
@@ -930,8 +930,8 @@ end
 
 
 function FriendsLayer:_onDelete(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onDelete then
-        return self.m_ClickDelegate:onDelete(sender);
+    if self._clickDelegate and self._clickDelegate.onDelete then
+        return self._clickDelegate:onDelete(sender);
     end
     if self.onDelete then
         return self:onDelete(sender);
@@ -940,8 +940,8 @@ end
 
 
 function FriendsLayer:_onSend(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSend then
-        return self.m_ClickDelegate:onSend(sender);
+    if self._clickDelegate and self._clickDelegate.onSend then
+        return self._clickDelegate:onSend(sender);
     end
     if self.onSend then
         return self:onSend(sender);
@@ -950,8 +950,8 @@ end
 
 
 function FriendsLayer:_onData(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onData then
-        return self.m_ClickDelegate:onData(sender);
+    if self._clickDelegate and self._clickDelegate.onData then
+        return self._clickDelegate:onData(sender);
     end
     if self.onData then
         return self:onData(sender);
@@ -960,8 +960,8 @@ end
 
 
 function FriendsLayer:_onReturn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onReturn then
-        return self.m_ClickDelegate:onReturn(sender);
+    if self._clickDelegate and self._clickDelegate.onReturn then
+        return self._clickDelegate:onReturn(sender);
     end
     if self.onReturn then
         return self:onReturn(sender);
@@ -971,8 +971,8 @@ end
 
 --eventName:(began, ended, changed)
 function FriendsLayer:_onCommentSearch(eventName, editBox)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onCommentSearch then
-        return self.m_ClickDelegate:onCommentSearch(eventName, editBox);
+    if self._clickDelegate and self._clickDelegate.onCommentSearch then
+        return self._clickDelegate:onCommentSearch(eventName, editBox);
     end
     if self.onCommentSearch then
         return self:onCommentSearch(eventName, editBox);
@@ -987,8 +987,8 @@ end
 --@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
 --@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
 function FriendsLayer:_onListViewLeft(eventName, listView, row, column, index, cell)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onListViewLeft then
-        return self.m_ClickDelegate:onListViewLeft(eventName, listView, row, column, index, cell);
+    if self._clickDelegate and self._clickDelegate.onListViewLeft then
+        return self._clickDelegate:onListViewLeft(eventName, listView, row, column, index, cell);
     end
     if self.onListViewLeft then
         return self:onListViewLeft(eventName, listView, row, column, index, cell);
@@ -997,8 +997,8 @@ end
 
 
 function FriendsLayer:_onSearch(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSearch then
-        return self.m_ClickDelegate:onSearch(sender);
+    if self._clickDelegate and self._clickDelegate.onSearch then
+        return self._clickDelegate:onSearch(sender);
     end
     if self.onSearch then
         return self:onSearch(sender);

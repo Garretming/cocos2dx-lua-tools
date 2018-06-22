@@ -248,8 +248,8 @@ end
 
 
 function EvaluateNode:_onPraise(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onPraise then
-        return self.m_ClickDelegate:onPraise(sender);
+    if self._clickDelegate and self._clickDelegate.onPraise then
+        return self._clickDelegate:onPraise(sender);
     end
     if self.onPraise then
         return self:onPraise(sender);

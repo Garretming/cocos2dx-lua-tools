@@ -145,8 +145,8 @@ end
 
 
 function VoiceLayer:_onPlay(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onPlay then
-        return self.m_ClickDelegate:onPlay(sender);
+    if self._clickDelegate and self._clickDelegate.onPlay then
+        return self._clickDelegate:onPlay(sender);
     end
     if self.onPlay then
         return self:onPlay(sender);
@@ -155,8 +155,8 @@ end
 
 
 function VoiceLayer:_onClose(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onClose then
-        return self.m_ClickDelegate:onClose(sender);
+    if self._clickDelegate and self._clickDelegate.onClose then
+        return self._clickDelegate:onClose(sender);
     end
     if self.onClose then
         return self:onClose(sender);
@@ -165,8 +165,8 @@ end
 
 
 function VoiceLayer:_onStart(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onStart then
-        return self.m_ClickDelegate:onStart(sender);
+    if self._clickDelegate and self._clickDelegate.onStart then
+        return self._clickDelegate:onStart(sender);
     end
     if self.onStart then
         return self:onStart(sender);
@@ -175,8 +175,8 @@ end
 
 
 function VoiceLayer:_onStop(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onStop then
-        return self.m_ClickDelegate:onStop(sender);
+    if self._clickDelegate and self._clickDelegate.onStop then
+        return self._clickDelegate:onStop(sender);
     end
     if self.onStop then
         return self:onStop(sender);
@@ -185,8 +185,8 @@ end
 
 
 function VoiceLayer:_onJoin(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onJoin then
-        return self.m_ClickDelegate:onJoin(sender);
+    if self._clickDelegate and self._clickDelegate.onJoin then
+        return self._clickDelegate:onJoin(sender);
     end
     if self.onJoin then
         return self:onJoin(sender);
@@ -195,8 +195,8 @@ end
 
 
 function VoiceLayer:_onLogin(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onLogin then
-        return self.m_ClickDelegate:onLogin(sender);
+    if self._clickDelegate and self._clickDelegate.onLogin then
+        return self._clickDelegate:onLogin(sender);
     end
     if self.onLogin then
         return self:onLogin(sender);

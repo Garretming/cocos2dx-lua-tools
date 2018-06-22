@@ -383,8 +383,8 @@ end
 
 
 function ShopLayer:_help_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.help_btn then
-        return self.m_ClickDelegate:help_btn(sender);
+    if self._clickDelegate and self._clickDelegate.help_btn then
+        return self._clickDelegate:help_btn(sender);
     end
     if self.help_btn then
         return self:help_btn(sender);
@@ -393,8 +393,8 @@ end
 
 
 function ShopLayer:_onTabMenu(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTabMenu then
-        return self.m_ClickDelegate:onTabMenu(sender);
+    if self._clickDelegate and self._clickDelegate.onTabMenu then
+        return self._clickDelegate:onTabMenu(sender);
     end
     if self.onTabMenu then
         return self:onTabMenu(sender);
@@ -403,8 +403,8 @@ end
 
 
 function ShopLayer:_back_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.back_btn then
-        return self.m_ClickDelegate:back_btn(sender);
+    if self._clickDelegate and self._clickDelegate.back_btn then
+        return self._clickDelegate:back_btn(sender);
     end
     if self.back_btn then
         return self:back_btn(sender);
@@ -413,8 +413,8 @@ end
 
 
 function ShopLayer:_onNpcClick(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onNpcClick then
-        return self.m_ClickDelegate:onNpcClick(sender);
+    if self._clickDelegate and self._clickDelegate.onNpcClick then
+        return self._clickDelegate:onNpcClick(sender);
     end
     if self.onNpcClick then
         return self:onNpcClick(sender);

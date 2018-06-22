@@ -262,8 +262,8 @@ end
 
 
 function ProfessionLayer:_help_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.help_btn then
-        return self.m_ClickDelegate:help_btn(sender);
+    if self._clickDelegate and self._clickDelegate.help_btn then
+        return self._clickDelegate:help_btn(sender);
     end
     if self.help_btn then
         return self:help_btn(sender);
@@ -272,8 +272,8 @@ end
 
 
 function ProfessionLayer:_profession1(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.profession1 then
-        return self.m_ClickDelegate:profession1(sender);
+    if self._clickDelegate and self._clickDelegate.profession1 then
+        return self._clickDelegate:profession1(sender);
     end
     if self.profession1 then
         return self:profession1(sender);
@@ -282,8 +282,8 @@ end
 
 
 function ProfessionLayer:_profession3(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.profession3 then
-        return self.m_ClickDelegate:profession3(sender);
+    if self._clickDelegate and self._clickDelegate.profession3 then
+        return self._clickDelegate:profession3(sender);
     end
     if self.profession3 then
         return self:profession3(sender);
@@ -292,8 +292,8 @@ end
 
 
 function ProfessionLayer:_profession2(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.profession2 then
-        return self.m_ClickDelegate:profession2(sender);
+    if self._clickDelegate and self._clickDelegate.profession2 then
+        return self._clickDelegate:profession2(sender);
     end
     if self.profession2 then
         return self:profession2(sender);
@@ -302,8 +302,8 @@ end
 
 
 function ProfessionLayer:_profession4(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.profession4 then
-        return self.m_ClickDelegate:profession4(sender);
+    if self._clickDelegate and self._clickDelegate.profession4 then
+        return self._clickDelegate:profession4(sender);
     end
     if self.profession4 then
         return self:profession4(sender);
@@ -312,8 +312,8 @@ end
 
 
 function ProfessionLayer:_back_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.back_btn then
-        return self.m_ClickDelegate:back_btn(sender);
+    if self._clickDelegate and self._clickDelegate.back_btn then
+        return self._clickDelegate:back_btn(sender);
     end
     if self.back_btn then
         return self:back_btn(sender);

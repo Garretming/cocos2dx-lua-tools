@@ -1168,8 +1168,8 @@ end
 
 
 function PreviewLayer:_fight_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.fight_btn then
-        return self.m_ClickDelegate:fight_btn(sender);
+    if self._clickDelegate and self._clickDelegate.fight_btn then
+        return self._clickDelegate:fight_btn(sender);
     end
     if self.fight_btn then
         return self:fight_btn(sender);
@@ -1178,8 +1178,8 @@ end
 
 
 function PreviewLayer:_help_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.help_btn then
-        return self.m_ClickDelegate:help_btn(sender);
+    if self._clickDelegate and self._clickDelegate.help_btn then
+        return self._clickDelegate:help_btn(sender);
     end
     if self.help_btn then
         return self:help_btn(sender);
@@ -1188,8 +1188,8 @@ end
 
 
 function PreviewLayer:_skill_bg_btn2(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.skill_bg_btn2 then
-        return self.m_ClickDelegate:skill_bg_btn2(sender);
+    if self._clickDelegate and self._clickDelegate.skill_bg_btn2 then
+        return self._clickDelegate:skill_bg_btn2(sender);
     end
     if self.skill_bg_btn2 then
         return self:skill_bg_btn2(sender);
@@ -1198,8 +1198,8 @@ end
 
 
 function PreviewLayer:_profession_back1(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.profession_back1 then
-        return self.m_ClickDelegate:profession_back1(sender);
+    if self._clickDelegate and self._clickDelegate.profession_back1 then
+        return self._clickDelegate:profession_back1(sender);
     end
     if self.profession_back1 then
         return self:profession_back1(sender);
@@ -1208,8 +1208,8 @@ end
 
 
 function PreviewLayer:_skill_bg_btn1(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.skill_bg_btn1 then
-        return self.m_ClickDelegate:skill_bg_btn1(sender);
+    if self._clickDelegate and self._clickDelegate.skill_bg_btn1 then
+        return self._clickDelegate:skill_bg_btn1(sender);
     end
     if self.skill_bg_btn1 then
         return self:skill_bg_btn1(sender);
@@ -1218,8 +1218,8 @@ end
 
 
 function PreviewLayer:_back_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.back_btn then
-        return self.m_ClickDelegate:back_btn(sender);
+    if self._clickDelegate and self._clickDelegate.back_btn then
+        return self._clickDelegate:back_btn(sender);
     end
     if self.back_btn then
         return self:back_btn(sender);
@@ -1228,8 +1228,8 @@ end
 
 
 function PreviewLayer:_onMonster(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onMonster then
-        return self.m_ClickDelegate:onMonster(sender);
+    if self._clickDelegate and self._clickDelegate.onMonster then
+        return self._clickDelegate:onMonster(sender);
     end
     if self.onMonster then
         return self:onMonster(sender);

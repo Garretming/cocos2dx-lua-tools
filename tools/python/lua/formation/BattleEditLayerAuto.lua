@@ -1379,8 +1379,8 @@ end
 
 
 function BattleEditLayer:_fight_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.fight_btn then
-        return self.m_ClickDelegate:fight_btn(sender);
+    if self._clickDelegate and self._clickDelegate.fight_btn then
+        return self._clickDelegate:fight_btn(sender);
     end
     if self.fight_btn then
         return self:fight_btn(sender);
@@ -1389,8 +1389,8 @@ end
 
 
 function BattleEditLayer:_help_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.help_btn then
-        return self.m_ClickDelegate:help_btn(sender);
+    if self._clickDelegate and self._clickDelegate.help_btn then
+        return self._clickDelegate:help_btn(sender);
     end
     if self.help_btn then
         return self:help_btn(sender);
@@ -1399,8 +1399,8 @@ end
 
 
 function BattleEditLayer:_onSelectedFormation(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSelectedFormation then
-        return self.m_ClickDelegate:onSelectedFormation(sender);
+    if self._clickDelegate and self._clickDelegate.onSelectedFormation then
+        return self._clickDelegate:onSelectedFormation(sender);
     end
     if self.onSelectedFormation then
         return self:onSelectedFormation(sender);
@@ -1409,8 +1409,8 @@ end
 
 
 function BattleEditLayer:_set_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.set_btn then
-        return self.m_ClickDelegate:set_btn(sender);
+    if self._clickDelegate and self._clickDelegate.set_btn then
+        return self._clickDelegate:set_btn(sender);
     end
     if self.set_btn then
         return self:set_btn(sender);
@@ -1419,8 +1419,8 @@ end
 
 
 function BattleEditLayer:_skill_bg_btn2(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.skill_bg_btn2 then
-        return self.m_ClickDelegate:skill_bg_btn2(sender);
+    if self._clickDelegate and self._clickDelegate.skill_bg_btn2 then
+        return self._clickDelegate:skill_bg_btn2(sender);
     end
     if self.skill_bg_btn2 then
         return self:skill_bg_btn2(sender);
@@ -1429,8 +1429,8 @@ end
 
 
 function BattleEditLayer:_skill_bg_btn1(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.skill_bg_btn1 then
-        return self.m_ClickDelegate:skill_bg_btn1(sender);
+    if self._clickDelegate and self._clickDelegate.skill_bg_btn1 then
+        return self._clickDelegate:skill_bg_btn1(sender);
     end
     if self.skill_bg_btn1 then
         return self:skill_bg_btn1(sender);
@@ -1439,8 +1439,8 @@ end
 
 
 function BattleEditLayer:_back_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.back_btn then
-        return self.m_ClickDelegate:back_btn(sender);
+    if self._clickDelegate and self._clickDelegate.back_btn then
+        return self._clickDelegate:back_btn(sender);
     end
     if self.back_btn then
         return self:back_btn(sender);
@@ -1449,8 +1449,8 @@ end
 
 
 function BattleEditLayer:_onMonster(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onMonster then
-        return self.m_ClickDelegate:onMonster(sender);
+    if self._clickDelegate and self._clickDelegate.onMonster then
+        return self._clickDelegate:onMonster(sender);
     end
     if self.onMonster then
         return self:onMonster(sender);

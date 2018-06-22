@@ -819,8 +819,8 @@ end
 
 
 function EformationLayer:_help_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.help_btn then
-        return self.m_ClickDelegate:help_btn(sender);
+    if self._clickDelegate and self._clickDelegate.help_btn then
+        return self._clickDelegate:help_btn(sender);
     end
     if self.help_btn then
         return self:help_btn(sender);
@@ -829,8 +829,8 @@ end
 
 
 function EformationLayer:_back_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.back_btn then
-        return self.m_ClickDelegate:back_btn(sender);
+    if self._clickDelegate and self._clickDelegate.back_btn then
+        return self._clickDelegate:back_btn(sender);
     end
     if self.back_btn then
         return self:back_btn(sender);
@@ -839,8 +839,8 @@ end
 
 
 function EformationLayer:_m_sure_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.m_sure_btn then
-        return self.m_ClickDelegate:m_sure_btn(sender);
+    if self._clickDelegate and self._clickDelegate.m_sure_btn then
+        return self._clickDelegate:m_sure_btn(sender);
     end
     if self.m_sure_btn then
         return self:m_sure_btn(sender);
@@ -849,8 +849,8 @@ end
 
 
 function EformationLayer:_skill_bg_btn2(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.skill_bg_btn2 then
-        return self.m_ClickDelegate:skill_bg_btn2(sender);
+    if self._clickDelegate and self._clickDelegate.skill_bg_btn2 then
+        return self._clickDelegate:skill_bg_btn2(sender);
     end
     if self.skill_bg_btn2 then
         return self:skill_bg_btn2(sender);
@@ -859,8 +859,8 @@ end
 
 
 function EformationLayer:_skill_bg_btn1(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.skill_bg_btn1 then
-        return self.m_ClickDelegate:skill_bg_btn1(sender);
+    if self._clickDelegate and self._clickDelegate.skill_bg_btn1 then
+        return self._clickDelegate:skill_bg_btn1(sender);
     end
     if self.skill_bg_btn1 then
         return self:skill_bg_btn1(sender);
@@ -869,8 +869,8 @@ end
 
 
 function EformationLayer:_profession_back_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.profession_back_btn then
-        return self.m_ClickDelegate:profession_back_btn(sender);
+    if self._clickDelegate and self._clickDelegate.profession_back_btn then
+        return self._clickDelegate:profession_back_btn(sender);
     end
     if self.profession_back_btn then
         return self:profession_back_btn(sender);
@@ -879,8 +879,8 @@ end
 
 
 function EformationLayer:_complete_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.complete_btn then
-        return self.m_ClickDelegate:complete_btn(sender);
+    if self._clickDelegate and self._clickDelegate.complete_btn then
+        return self._clickDelegate:complete_btn(sender);
     end
     if self.complete_btn then
         return self:complete_btn(sender);

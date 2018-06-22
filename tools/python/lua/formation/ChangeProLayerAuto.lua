@@ -154,8 +154,8 @@ end
 
 
 function ChangeProLayer:_profession2_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.profession2_btn then
-        return self.m_ClickDelegate:profession2_btn(sender);
+    if self._clickDelegate and self._clickDelegate.profession2_btn then
+        return self._clickDelegate:profession2_btn(sender);
     end
     if self.profession2_btn then
         return self:profession2_btn(sender);
@@ -164,8 +164,8 @@ end
 
 
 function ChangeProLayer:_profession3_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.profession3_btn then
-        return self.m_ClickDelegate:profession3_btn(sender);
+    if self._clickDelegate and self._clickDelegate.profession3_btn then
+        return self._clickDelegate:profession3_btn(sender);
     end
     if self.profession3_btn then
         return self:profession3_btn(sender);
@@ -174,8 +174,8 @@ end
 
 
 function ChangeProLayer:_profession1_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.profession1_btn then
-        return self.m_ClickDelegate:profession1_btn(sender);
+    if self._clickDelegate and self._clickDelegate.profession1_btn then
+        return self._clickDelegate:profession1_btn(sender);
     end
     if self.profession1_btn then
         return self:profession1_btn(sender);

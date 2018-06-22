@@ -131,8 +131,8 @@ end
 
 
 function SurePopupLayer:_onSure(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSure then
-        return self.m_ClickDelegate:onSure(sender);
+    if self._clickDelegate and self._clickDelegate.onSure then
+        return self._clickDelegate:onSure(sender);
     end
     if self.onSure then
         return self:onSure(sender);

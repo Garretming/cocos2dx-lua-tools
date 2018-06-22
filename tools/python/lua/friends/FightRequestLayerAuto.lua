@@ -350,8 +350,8 @@ end
 
 
 function FightRequestLayer:_onRefuseFight(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onRefuseFight then
-        return self.m_ClickDelegate:onRefuseFight(sender);
+    if self._clickDelegate and self._clickDelegate.onRefuseFight then
+        return self._clickDelegate:onRefuseFight(sender);
     end
     if self.onRefuseFight then
         return self:onRefuseFight(sender);
@@ -360,8 +360,8 @@ end
 
 
 function FightRequestLayer:_onCancel(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onCancel then
-        return self.m_ClickDelegate:onCancel(sender);
+    if self._clickDelegate and self._clickDelegate.onCancel then
+        return self._clickDelegate:onCancel(sender);
     end
     if self.onCancel then
         return self:onCancel(sender);
@@ -370,8 +370,8 @@ end
 
 
 function FightRequestLayer:_onAcceptFight(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onAcceptFight then
-        return self.m_ClickDelegate:onAcceptFight(sender);
+    if self._clickDelegate and self._clickDelegate.onAcceptFight then
+        return self._clickDelegate:onAcceptFight(sender);
     end
     if self.onAcceptFight then
         return self:onAcceptFight(sender);

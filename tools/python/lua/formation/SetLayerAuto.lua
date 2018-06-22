@@ -137,8 +137,8 @@ end
 
 
 function SetLayer:_amend_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.amend_btn then
-        return self.m_ClickDelegate:amend_btn(sender);
+    if self._clickDelegate and self._clickDelegate.amend_btn then
+        return self._clickDelegate:amend_btn(sender);
     end
     if self.amend_btn then
         return self:amend_btn(sender);
@@ -147,8 +147,8 @@ end
 
 
 function SetLayer:_delete_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.delete_btn then
-        return self.m_ClickDelegate:delete_btn(sender);
+    if self._clickDelegate and self._clickDelegate.delete_btn then
+        return self._clickDelegate:delete_btn(sender);
     end
     if self.delete_btn then
         return self:delete_btn(sender);
@@ -157,8 +157,8 @@ end
 
 
 function SetLayer:_change_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.change_btn then
-        return self.m_ClickDelegate:change_btn(sender);
+    if self._clickDelegate and self._clickDelegate.change_btn then
+        return self._clickDelegate:change_btn(sender);
     end
     if self.change_btn then
         return self:change_btn(sender);

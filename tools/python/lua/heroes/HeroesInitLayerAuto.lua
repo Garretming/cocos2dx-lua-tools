@@ -534,8 +534,8 @@ end
 
 
 function HeroesInitLayer:_onGameMoney(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onGameMoney then
-        return self.m_ClickDelegate:onGameMoney(sender);
+    if self._clickDelegate and self._clickDelegate.onGameMoney then
+        return self._clickDelegate:onGameMoney(sender);
     end
     if self.onGameMoney then
         return self:onGameMoney(sender);
@@ -544,8 +544,8 @@ end
 
 
 function HeroesInitLayer:_onTabMenu(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTabMenu then
-        return self.m_ClickDelegate:onTabMenu(sender);
+    if self._clickDelegate and self._clickDelegate.onTabMenu then
+        return self._clickDelegate:onTabMenu(sender);
     end
     if self.onTabMenu then
         return self:onTabMenu(sender);
@@ -554,8 +554,8 @@ end
 
 
 function HeroesInitLayer:_onArrowRight(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onArrowRight then
-        return self.m_ClickDelegate:onArrowRight(sender);
+    if self._clickDelegate and self._clickDelegate.onArrowRight then
+        return self._clickDelegate:onArrowRight(sender);
     end
     if self.onArrowRight then
         return self:onArrowRight(sender);
@@ -564,8 +564,8 @@ end
 
 
 function HeroesInitLayer:_onRMBMoney(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onRMBMoney then
-        return self.m_ClickDelegate:onRMBMoney(sender);
+    if self._clickDelegate and self._clickDelegate.onRMBMoney then
+        return self._clickDelegate:onRMBMoney(sender);
     end
     if self.onRMBMoney then
         return self:onRMBMoney(sender);
@@ -574,8 +574,8 @@ end
 
 
 function HeroesInitLayer:_help_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.help_btn then
-        return self.m_ClickDelegate:help_btn(sender);
+    if self._clickDelegate and self._clickDelegate.help_btn then
+        return self._clickDelegate:help_btn(sender);
     end
     if self.help_btn then
         return self:help_btn(sender);
@@ -584,8 +584,8 @@ end
 
 
 function HeroesInitLayer:_back_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.back_btn then
-        return self.m_ClickDelegate:back_btn(sender);
+    if self._clickDelegate and self._clickDelegate.back_btn then
+        return self._clickDelegate:back_btn(sender);
     end
     if self.back_btn then
         return self:back_btn(sender);
@@ -594,8 +594,8 @@ end
 
 
 function HeroesInitLayer:_onArrowLeft(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onArrowLeft then
-        return self.m_ClickDelegate:onArrowLeft(sender);
+    if self._clickDelegate and self._clickDelegate.onArrowLeft then
+        return self._clickDelegate:onArrowLeft(sender);
     end
     if self.onArrowLeft then
         return self:onArrowLeft(sender);

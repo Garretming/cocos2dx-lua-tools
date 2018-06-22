@@ -383,8 +383,8 @@ end
 
 
 function BattleOperatorLayer:_onPrintLeaks(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onPrintLeaks then
-        return self.m_ClickDelegate:onPrintLeaks(sender);
+    if self._clickDelegate and self._clickDelegate.onPrintLeaks then
+        return self._clickDelegate:onPrintLeaks(sender);
     end
     if self.onPrintLeaks then
         return self:onPrintLeaks(sender);
@@ -393,8 +393,8 @@ end
 
 
 function BattleOperatorLayer:_onPause(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onPause then
-        return self.m_ClickDelegate:onPause(sender);
+    if self._clickDelegate and self._clickDelegate.onPause then
+        return self._clickDelegate:onPause(sender);
     end
     if self.onPause then
         return self:onPause(sender);

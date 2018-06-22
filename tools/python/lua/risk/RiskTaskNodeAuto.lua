@@ -204,8 +204,8 @@ end
 
 
 function RiskTaskNode:_onChallenge(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onChallenge then
-        return self.m_ClickDelegate:onChallenge(sender);
+    if self._clickDelegate and self._clickDelegate.onChallenge then
+        return self._clickDelegate:onChallenge(sender);
     end
     if self.onChallenge then
         return self:onChallenge(sender);
@@ -214,8 +214,8 @@ end
 
 
 function RiskTaskNode:_onTask(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTask then
-        return self.m_ClickDelegate:onTask(sender);
+    if self._clickDelegate and self._clickDelegate.onTask then
+        return self._clickDelegate:onTask(sender);
     end
     if self.onTask then
         return self:onTask(sender);

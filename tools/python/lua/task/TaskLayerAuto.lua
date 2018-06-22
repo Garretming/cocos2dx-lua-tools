@@ -866,8 +866,8 @@ end
 
 
 function TaskLayer:_onGameMoney(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onGameMoney then
-        return self.m_ClickDelegate:onGameMoney(sender);
+    if self._clickDelegate and self._clickDelegate.onGameMoney then
+        return self._clickDelegate:onGameMoney(sender);
     end
     if self.onGameMoney then
         return self:onGameMoney(sender);
@@ -876,8 +876,8 @@ end
 
 
 function TaskLayer:_getPrizeBoxBtn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.getPrizeBoxBtn then
-        return self.m_ClickDelegate:getPrizeBoxBtn(sender);
+    if self._clickDelegate and self._clickDelegate.getPrizeBoxBtn then
+        return self._clickDelegate:getPrizeBoxBtn(sender);
     end
     if self.getPrizeBoxBtn then
         return self:getPrizeBoxBtn(sender);
@@ -886,8 +886,8 @@ end
 
 
 function TaskLayer:_onRMBMoney(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onRMBMoney then
-        return self.m_ClickDelegate:onRMBMoney(sender);
+    if self._clickDelegate and self._clickDelegate.onRMBMoney then
+        return self._clickDelegate:onRMBMoney(sender);
     end
     if self.onRMBMoney then
         return self:onRMBMoney(sender);
@@ -896,8 +896,8 @@ end
 
 
 function TaskLayer:_back_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.back_btn then
-        return self.m_ClickDelegate:back_btn(sender);
+    if self._clickDelegate and self._clickDelegate.back_btn then
+        return self._clickDelegate:back_btn(sender);
     end
     if self.back_btn then
         return self:back_btn(sender);
@@ -912,8 +912,8 @@ end
 --@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
 --@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
 function TaskLayer:_onAchievementListView(eventName, listView, row, column, index, cell)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onAchievementListView then
-        return self.m_ClickDelegate:onAchievementListView(eventName, listView, row, column, index, cell);
+    if self._clickDelegate and self._clickDelegate.onAchievementListView then
+        return self._clickDelegate:onAchievementListView(eventName, listView, row, column, index, cell);
     end
     if self.onAchievementListView then
         return self:onAchievementListView(eventName, listView, row, column, index, cell);
@@ -922,8 +922,8 @@ end
 
 
 function TaskLayer:_weekPrizeBox2Btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.weekPrizeBox2Btn then
-        return self.m_ClickDelegate:weekPrizeBox2Btn(sender);
+    if self._clickDelegate and self._clickDelegate.weekPrizeBox2Btn then
+        return self._clickDelegate:weekPrizeBox2Btn(sender);
     end
     if self.weekPrizeBox2Btn then
         return self:weekPrizeBox2Btn(sender);
@@ -932,8 +932,8 @@ end
 
 
 function TaskLayer:_onTabMenu(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTabMenu then
-        return self.m_ClickDelegate:onTabMenu(sender);
+    if self._clickDelegate and self._clickDelegate.onTabMenu then
+        return self._clickDelegate:onTabMenu(sender);
     end
     if self.onTabMenu then
         return self:onTabMenu(sender);
@@ -942,8 +942,8 @@ end
 
 
 function TaskLayer:_sortBtn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.sortBtn then
-        return self.m_ClickDelegate:sortBtn(sender);
+    if self._clickDelegate and self._clickDelegate.sortBtn then
+        return self._clickDelegate:sortBtn(sender);
     end
     if self.sortBtn then
         return self:sortBtn(sender);
@@ -952,8 +952,8 @@ end
 
 
 function TaskLayer:_weekPrizeBox1Btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.weekPrizeBox1Btn then
-        return self.m_ClickDelegate:weekPrizeBox1Btn(sender);
+    if self._clickDelegate and self._clickDelegate.weekPrizeBox1Btn then
+        return self._clickDelegate:weekPrizeBox1Btn(sender);
     end
     if self.weekPrizeBox1Btn then
         return self:weekPrizeBox1Btn(sender);
@@ -968,8 +968,8 @@ end
 --@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
 --@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
 function TaskLayer:_onEverydayListView(eventName, listView, row, column, index, cell)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onEverydayListView then
-        return self.m_ClickDelegate:onEverydayListView(eventName, listView, row, column, index, cell);
+    if self._clickDelegate and self._clickDelegate.onEverydayListView then
+        return self._clickDelegate:onEverydayListView(eventName, listView, row, column, index, cell);
     end
     if self.onEverydayListView then
         return self:onEverydayListView(eventName, listView, row, column, index, cell);
@@ -978,8 +978,8 @@ end
 
 
 function TaskLayer:_todayPrizeBoxBtn4(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.todayPrizeBoxBtn4 then
-        return self.m_ClickDelegate:todayPrizeBoxBtn4(sender);
+    if self._clickDelegate and self._clickDelegate.todayPrizeBoxBtn4 then
+        return self._clickDelegate:todayPrizeBoxBtn4(sender);
     end
     if self.todayPrizeBoxBtn4 then
         return self:todayPrizeBoxBtn4(sender);
@@ -988,8 +988,8 @@ end
 
 
 function TaskLayer:_todayPrizeBoxBtn1(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.todayPrizeBoxBtn1 then
-        return self.m_ClickDelegate:todayPrizeBoxBtn1(sender);
+    if self._clickDelegate and self._clickDelegate.todayPrizeBoxBtn1 then
+        return self._clickDelegate:todayPrizeBoxBtn1(sender);
     end
     if self.todayPrizeBoxBtn1 then
         return self:todayPrizeBoxBtn1(sender);
@@ -998,8 +998,8 @@ end
 
 
 function TaskLayer:_help_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.help_btn then
-        return self.m_ClickDelegate:help_btn(sender);
+    if self._clickDelegate and self._clickDelegate.help_btn then
+        return self._clickDelegate:help_btn(sender);
     end
     if self.help_btn then
         return self:help_btn(sender);
@@ -1008,8 +1008,8 @@ end
 
 
 function TaskLayer:_todayPrizeBoxBtn3(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.todayPrizeBoxBtn3 then
-        return self.m_ClickDelegate:todayPrizeBoxBtn3(sender);
+    if self._clickDelegate and self._clickDelegate.todayPrizeBoxBtn3 then
+        return self._clickDelegate:todayPrizeBoxBtn3(sender);
     end
     if self.todayPrizeBoxBtn3 then
         return self:todayPrizeBoxBtn3(sender);
@@ -1018,8 +1018,8 @@ end
 
 
 function TaskLayer:_todayPrizeBoxBtn2(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.todayPrizeBoxBtn2 then
-        return self.m_ClickDelegate:todayPrizeBoxBtn2(sender);
+    if self._clickDelegate and self._clickDelegate.todayPrizeBoxBtn2 then
+        return self._clickDelegate:todayPrizeBoxBtn2(sender);
     end
     if self.todayPrizeBoxBtn2 then
         return self:todayPrizeBoxBtn2(sender);

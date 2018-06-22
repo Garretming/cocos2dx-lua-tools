@@ -323,8 +323,8 @@ end
 
 
 function TaskNode:_getBtn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.getBtn then
-        return self.m_ClickDelegate:getBtn(sender);
+    if self._clickDelegate and self._clickDelegate.getBtn then
+        return self._clickDelegate:getBtn(sender);
     end
     if self.getBtn then
         return self:getBtn(sender);

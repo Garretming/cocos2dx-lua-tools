@@ -143,8 +143,8 @@ end
 
 
 function TabMenuLayer:_onClose(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onClose then
-        return self.m_ClickDelegate:onClose(sender);
+    if self._clickDelegate and self._clickDelegate.onClose then
+        return self._clickDelegate:onClose(sender);
     end
     if self.onClose then
         return self:onClose(sender);
@@ -153,8 +153,8 @@ end
 
 
 function TabMenuLayer:_onTabMenu(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTabMenu then
-        return self.m_ClickDelegate:onTabMenu(sender);
+    if self._clickDelegate and self._clickDelegate.onTabMenu then
+        return self._clickDelegate:onTabMenu(sender);
     end
     if self.onTabMenu then
         return self:onTabMenu(sender);

@@ -2227,8 +2227,8 @@ end
 
 
 function EmbattleLayer:_onSort(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSort then
-        return self.m_ClickDelegate:onSort(sender);
+    if self._clickDelegate and self._clickDelegate.onSort then
+        return self._clickDelegate:onSort(sender);
     end
     if self.onSort then
         return self:onSort(sender);
@@ -2237,8 +2237,8 @@ end
 
 
 function EmbattleLayer:_onCostSort(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onCostSort then
-        return self.m_ClickDelegate:onCostSort(sender);
+    if self._clickDelegate and self._clickDelegate.onCostSort then
+        return self._clickDelegate:onCostSort(sender);
     end
     if self.onCostSort then
         return self:onCostSort(sender);
@@ -2247,8 +2247,8 @@ end
 
 
 function EmbattleLayer:_onQualitySort(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onQualitySort then
-        return self.m_ClickDelegate:onQualitySort(sender);
+    if self._clickDelegate and self._clickDelegate.onQualitySort then
+        return self._clickDelegate:onQualitySort(sender);
     end
     if self.onQualitySort then
         return self:onQualitySort(sender);
@@ -2257,8 +2257,8 @@ end
 
 
 function EmbattleLayer:_onTabMenu(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTabMenu then
-        return self.m_ClickDelegate:onTabMenu(sender);
+    if self._clickDelegate and self._clickDelegate.onTabMenu then
+        return self._clickDelegate:onTabMenu(sender);
     end
     if self.onTabMenu then
         return self:onTabMenu(sender);
@@ -2267,8 +2267,8 @@ end
 
 
 function EmbattleLayer:_back_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.back_btn then
-        return self.m_ClickDelegate:back_btn(sender);
+    if self._clickDelegate and self._clickDelegate.back_btn then
+        return self._clickDelegate:back_btn(sender);
     end
     if self.back_btn then
         return self:back_btn(sender);
@@ -2277,8 +2277,8 @@ end
 
 
 function EmbattleLayer:_skill_bg_btn2(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.skill_bg_btn2 then
-        return self.m_ClickDelegate:skill_bg_btn2(sender);
+    if self._clickDelegate and self._clickDelegate.skill_bg_btn2 then
+        return self._clickDelegate:skill_bg_btn2(sender);
     end
     if self.skill_bg_btn2 then
         return self:skill_bg_btn2(sender);
@@ -2287,8 +2287,8 @@ end
 
 
 function EmbattleLayer:_skill_bg_btn1(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.skill_bg_btn1 then
-        return self.m_ClickDelegate:skill_bg_btn1(sender);
+    if self._clickDelegate and self._clickDelegate.skill_bg_btn1 then
+        return self._clickDelegate:skill_bg_btn1(sender);
     end
     if self.skill_bg_btn1 then
         return self:skill_bg_btn1(sender);
@@ -2297,8 +2297,8 @@ end
 
 
 function EmbattleLayer:_onPositionSort(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onPositionSort then
-        return self.m_ClickDelegate:onPositionSort(sender);
+    if self._clickDelegate and self._clickDelegate.onPositionSort then
+        return self._clickDelegate:onPositionSort(sender);
     end
     if self.onPositionSort then
         return self:onPositionSort(sender);
@@ -2307,8 +2307,8 @@ end
 
 
 function EmbattleLayer:_profession_back_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.profession_back_btn then
-        return self.m_ClickDelegate:profession_back_btn(sender);
+    if self._clickDelegate and self._clickDelegate.profession_back_btn then
+        return self._clickDelegate:profession_back_btn(sender);
     end
     if self.profession_back_btn then
         return self:profession_back_btn(sender);
@@ -2317,8 +2317,8 @@ end
 
 
 function EmbattleLayer:_onStarSort(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onStarSort then
-        return self.m_ClickDelegate:onStarSort(sender);
+    if self._clickDelegate and self._clickDelegate.onStarSort then
+        return self._clickDelegate:onStarSort(sender);
     end
     if self.onStarSort then
         return self:onStarSort(sender);
@@ -2327,8 +2327,8 @@ end
 
 
 function EmbattleLayer:_help_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.help_btn then
-        return self.m_ClickDelegate:help_btn(sender);
+    if self._clickDelegate and self._clickDelegate.help_btn then
+        return self._clickDelegate:help_btn(sender);
     end
     if self.help_btn then
         return self:help_btn(sender);
@@ -2337,8 +2337,8 @@ end
 
 
 function EmbattleLayer:_complete_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.complete_btn then
-        return self.m_ClickDelegate:complete_btn(sender);
+    if self._clickDelegate and self._clickDelegate.complete_btn then
+        return self._clickDelegate:complete_btn(sender);
     end
     if self.complete_btn then
         return self:complete_btn(sender);
@@ -2347,8 +2347,8 @@ end
 
 
 function EmbattleLayer:_onAllSort(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onAllSort then
-        return self.m_ClickDelegate:onAllSort(sender);
+    if self._clickDelegate and self._clickDelegate.onAllSort then
+        return self._clickDelegate:onAllSort(sender);
     end
     if self.onAllSort then
         return self:onAllSort(sender);

@@ -1664,8 +1664,8 @@ end
 
 
 function BackpackLayer:_onTabMenu(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTabMenu then
-        return self.m_ClickDelegate:onTabMenu(sender);
+    if self._clickDelegate and self._clickDelegate.onTabMenu then
+        return self._clickDelegate:onTabMenu(sender);
     end
     if self.onTabMenu then
         return self:onTabMenu(sender);
@@ -1674,8 +1674,8 @@ end
 
 
 function BackpackLayer:_onClose(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onClose then
-        return self.m_ClickDelegate:onClose(sender);
+    if self._clickDelegate and self._clickDelegate.onClose then
+        return self._clickDelegate:onClose(sender);
     end
     if self.onClose then
         return self:onClose(sender);
@@ -1684,8 +1684,8 @@ end
 
 
 function BackpackLayer:_onCompose(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onCompose then
-        return self.m_ClickDelegate:onCompose(sender);
+    if self._clickDelegate and self._clickDelegate.onCompose then
+        return self._clickDelegate:onCompose(sender);
     end
     if self.onCompose then
         return self:onCompose(sender);
@@ -1694,8 +1694,8 @@ end
 
 
 function BackpackLayer:_onSell(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSell then
-        return self.m_ClickDelegate:onSell(sender);
+    if self._clickDelegate and self._clickDelegate.onSell then
+        return self._clickDelegate:onSell(sender);
     end
     if self.onSell then
         return self:onSell(sender);
@@ -1704,8 +1704,8 @@ end
 
 
 function BackpackLayer:_onUse(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onUse then
-        return self.m_ClickDelegate:onUse(sender);
+    if self._clickDelegate and self._clickDelegate.onUse then
+        return self._clickDelegate:onUse(sender);
     end
     if self.onUse then
         return self:onUse(sender);

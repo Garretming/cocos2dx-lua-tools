@@ -168,8 +168,8 @@ end
 
 
 function CheckPopupLayer:_onSure(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSure then
-        return self.m_ClickDelegate:onSure(sender);
+    if self._clickDelegate and self._clickDelegate.onSure then
+        return self._clickDelegate:onSure(sender);
     end
     if self.onSure then
         return self:onSure(sender);
@@ -178,8 +178,8 @@ end
 
 
 function CheckPopupLayer:_onCancel(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onCancel then
-        return self.m_ClickDelegate:onCancel(sender);
+    if self._clickDelegate and self._clickDelegate.onCancel then
+        return self._clickDelegate:onCancel(sender);
     end
     if self.onCancel then
         return self:onCancel(sender);

@@ -110,8 +110,8 @@ end
 
 
 function MatchLayer:_onCancelMatch(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onCancelMatch then
-        return self.m_ClickDelegate:onCancelMatch(sender);
+    if self._clickDelegate and self._clickDelegate.onCancelMatch then
+        return self._clickDelegate:onCancelMatch(sender);
     end
     if self.onCancelMatch then
         return self:onCancelMatch(sender);

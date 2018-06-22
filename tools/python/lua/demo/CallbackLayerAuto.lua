@@ -102,8 +102,8 @@ end
 --@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
 --@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
 function CallbackLayer:_onTableView(eventName, listView, row, column, index, cell)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTableView then
-        return self.m_ClickDelegate:onTableView(eventName, listView, row, column, index, cell);
+    if self._clickDelegate and self._clickDelegate.onTableView then
+        return self._clickDelegate:onTableView(eventName, listView, row, column, index, cell);
     end
     if self.onTableView then
         return self:onTableView(eventName, listView, row, column, index, cell);
@@ -112,8 +112,8 @@ end
 
 
 function CallbackLayer:_onClose(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onClose then
-        return self.m_ClickDelegate:onClose(sender);
+    if self._clickDelegate and self._clickDelegate.onClose then
+        return self._clickDelegate:onClose(sender);
     end
     if self.onClose then
         return self:onClose(sender);

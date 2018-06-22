@@ -281,8 +281,8 @@ end
 --@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
 --@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
 function RankLayer:_onListView(eventName, listView, row, column, index, cell)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onListView then
-        return self.m_ClickDelegate:onListView(eventName, listView, row, column, index, cell);
+    if self._clickDelegate and self._clickDelegate.onListView then
+        return self._clickDelegate:onListView(eventName, listView, row, column, index, cell);
     end
     if self.onListView then
         return self:onListView(eventName, listView, row, column, index, cell);

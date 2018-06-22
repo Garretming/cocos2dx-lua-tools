@@ -142,8 +142,8 @@ end
 --@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
 --@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
 function GmLayer:_onTableView(eventName, listView, row, column, index, cell)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTableView then
-        return self.m_ClickDelegate:onTableView(eventName, listView, row, column, index, cell);
+    if self._clickDelegate and self._clickDelegate.onTableView then
+        return self._clickDelegate:onTableView(eventName, listView, row, column, index, cell);
     end
     if self.onTableView then
         return self:onTableView(eventName, listView, row, column, index, cell);
@@ -152,8 +152,8 @@ end
 
 
 function GmLayer:_onClose(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onClose then
-        return self.m_ClickDelegate:onClose(sender);
+    if self._clickDelegate and self._clickDelegate.onClose then
+        return self._clickDelegate:onClose(sender);
     end
     if self.onClose then
         return self:onClose(sender);
@@ -163,8 +163,8 @@ end
 
 --eventName:(began, ended, changed)
 function GmLayer:_onGM(eventName, editBox)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onGM then
-        return self.m_ClickDelegate:onGM(eventName, editBox);
+    if self._clickDelegate and self._clickDelegate.onGM then
+        return self._clickDelegate:onGM(eventName, editBox);
     end
     if self.onGM then
         return self:onGM(eventName, editBox);
@@ -173,8 +173,8 @@ end
 
 
 function GmLayer:_onSure(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSure then
-        return self.m_ClickDelegate:onSure(sender);
+    if self._clickDelegate and self._clickDelegate.onSure then
+        return self._clickDelegate:onSure(sender);
     end
     if self.onSure then
         return self:onSure(sender);

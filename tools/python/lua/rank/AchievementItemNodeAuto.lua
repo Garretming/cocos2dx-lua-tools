@@ -178,8 +178,8 @@ end
 
 
 function AchievementItemNode:_toViewInfo(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.toViewInfo then
-        return self.m_ClickDelegate:toViewInfo(sender);
+    if self._clickDelegate and self._clickDelegate.toViewInfo then
+        return self._clickDelegate:toViewInfo(sender);
     end
     if self.toViewInfo then
         return self:toViewInfo(sender);

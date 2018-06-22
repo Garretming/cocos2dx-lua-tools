@@ -238,8 +238,8 @@ end
 
 
 function ShortNode:_onGetMoney(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onGetMoney then
-        return self.m_ClickDelegate:onGetMoney(sender);
+    if self._clickDelegate and self._clickDelegate.onGetMoney then
+        return self._clickDelegate:onGetMoney(sender);
     end
     if self.onGetMoney then
         return self:onGetMoney(sender);
@@ -248,8 +248,8 @@ end
 
 
 function ShortNode:_toView(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.toView then
-        return self.m_ClickDelegate:toView(sender);
+    if self._clickDelegate and self._clickDelegate.toView then
+        return self._clickDelegate:toView(sender);
     end
     if self.toView then
         return self:toView(sender);
@@ -258,8 +258,8 @@ end
 
 
 function ShortNode:_onAdd(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onAdd then
-        return self.m_ClickDelegate:onAdd(sender);
+    if self._clickDelegate and self._clickDelegate.onAdd then
+        return self._clickDelegate:onAdd(sender);
     end
     if self.onAdd then
         return self:onAdd(sender);
@@ -268,8 +268,8 @@ end
 
 
 function ShortNode:_toViewRoleInfo1(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.toViewRoleInfo1 then
-        return self.m_ClickDelegate:toViewRoleInfo1(sender);
+    if self._clickDelegate and self._clickDelegate.toViewRoleInfo1 then
+        return self._clickDelegate:toViewRoleInfo1(sender);
     end
     if self.toViewRoleInfo1 then
         return self:toViewRoleInfo1(sender);
@@ -278,8 +278,8 @@ end
 
 
 function ShortNode:_onGiveMoney(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onGiveMoney then
-        return self.m_ClickDelegate:onGiveMoney(sender);
+    if self._clickDelegate and self._clickDelegate.onGiveMoney then
+        return self._clickDelegate:onGiveMoney(sender);
     end
     if self.onGiveMoney then
         return self:onGiveMoney(sender);

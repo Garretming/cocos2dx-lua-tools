@@ -261,8 +261,8 @@ end
 
 
 function ChangeLayer:_onTabMenu(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTabMenu then
-        return self.m_ClickDelegate:onTabMenu(sender);
+    if self._clickDelegate and self._clickDelegate.onTabMenu then
+        return self._clickDelegate:onTabMenu(sender);
     end
     if self.onTabMenu then
         return self:onTabMenu(sender);
@@ -271,8 +271,8 @@ end
 
 
 function ChangeLayer:_cancel_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.cancel_btn then
-        return self.m_ClickDelegate:cancel_btn(sender);
+    if self._clickDelegate and self._clickDelegate.cancel_btn then
+        return self._clickDelegate:cancel_btn(sender);
     end
     if self.cancel_btn then
         return self:cancel_btn(sender);
@@ -281,8 +281,8 @@ end
 
 
 function ChangeLayer:_sure_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.sure_btn then
-        return self.m_ClickDelegate:sure_btn(sender);
+    if self._clickDelegate and self._clickDelegate.sure_btn then
+        return self._clickDelegate:sure_btn(sender);
     end
     if self.sure_btn then
         return self:sure_btn(sender);

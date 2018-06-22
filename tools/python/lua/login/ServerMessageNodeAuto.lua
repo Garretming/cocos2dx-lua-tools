@@ -100,8 +100,8 @@ end
 
 
 function ServerMessageNode:_onSelect(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSelect then
-        return self.m_ClickDelegate:onSelect(sender);
+    if self._clickDelegate and self._clickDelegate.onSelect then
+        return self._clickDelegate:onSelect(sender);
     end
     if self.onSelect then
         return self:onSelect(sender);

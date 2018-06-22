@@ -492,8 +492,8 @@ end
 
 
 function SettingLayer:_changeBtn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.changeBtn then
-        return self.m_ClickDelegate:changeBtn(sender);
+    if self._clickDelegate and self._clickDelegate.changeBtn then
+        return self._clickDelegate:changeBtn(sender);
     end
     if self.changeBtn then
         return self:changeBtn(sender);
@@ -502,8 +502,8 @@ end
 
 
 function SettingLayer:_closeBtn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.closeBtn then
-        return self.m_ClickDelegate:closeBtn(sender);
+    if self._clickDelegate and self._clickDelegate.closeBtn then
+        return self._clickDelegate:closeBtn(sender);
     end
     if self.closeBtn then
         return self:closeBtn(sender);
@@ -512,8 +512,8 @@ end
 
 
 function SettingLayer:_amendBtn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.amendBtn then
-        return self.m_ClickDelegate:amendBtn(sender);
+    if self._clickDelegate and self._clickDelegate.amendBtn then
+        return self._clickDelegate:amendBtn(sender);
     end
     if self.amendBtn then
         return self:amendBtn(sender);

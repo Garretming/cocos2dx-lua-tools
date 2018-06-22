@@ -1756,8 +1756,8 @@ end
 
 
 function PersonalInfoLayer:_onSkill(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSkill then
-        return self.m_ClickDelegate:onSkill(sender);
+    if self._clickDelegate and self._clickDelegate.onSkill then
+        return self._clickDelegate:onSkill(sender);
     end
     if self.onSkill then
         return self:onSkill(sender);
@@ -1766,8 +1766,8 @@ end
 
 
 function PersonalInfoLayer:_onClose(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onClose then
-        return self.m_ClickDelegate:onClose(sender);
+    if self._clickDelegate and self._clickDelegate.onClose then
+        return self._clickDelegate:onClose(sender);
     end
     if self.onClose then
         return self:onClose(sender);
@@ -1776,8 +1776,8 @@ end
 
 
 function PersonalInfoLayer:_onTabMenu(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTabMenu then
-        return self.m_ClickDelegate:onTabMenu(sender);
+    if self._clickDelegate and self._clickDelegate.onTabMenu then
+        return self._clickDelegate:onTabMenu(sender);
     end
     if self.onTabMenu then
         return self:onTabMenu(sender);
@@ -1786,8 +1786,8 @@ end
 
 
 function PersonalInfoLayer:_toInfo(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.toInfo then
-        return self.m_ClickDelegate:toInfo(sender);
+    if self._clickDelegate and self._clickDelegate.toInfo then
+        return self._clickDelegate:toInfo(sender);
     end
     if self.toInfo then
         return self:toInfo(sender);
@@ -1796,8 +1796,8 @@ end
 
 
 function PersonalInfoLayer:_onMonster(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onMonster then
-        return self.m_ClickDelegate:onMonster(sender);
+    if self._clickDelegate and self._clickDelegate.onMonster then
+        return self._clickDelegate:onMonster(sender);
     end
     if self.onMonster then
         return self:onMonster(sender);

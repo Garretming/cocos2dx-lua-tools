@@ -373,8 +373,8 @@ end
 
 
 function RiskMainLayer:_onRMBMoney(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onRMBMoney then
-        return self.m_ClickDelegate:onRMBMoney(sender);
+    if self._clickDelegate and self._clickDelegate.onRMBMoney then
+        return self._clickDelegate:onRMBMoney(sender);
     end
     if self.onRMBMoney then
         return self:onRMBMoney(sender);
@@ -383,8 +383,8 @@ end
 
 
 function RiskMainLayer:_help_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.help_btn then
-        return self.m_ClickDelegate:help_btn(sender);
+    if self._clickDelegate and self._clickDelegate.help_btn then
+        return self._clickDelegate:help_btn(sender);
     end
     if self.help_btn then
         return self:help_btn(sender);
@@ -393,8 +393,8 @@ end
 
 
 function RiskMainLayer:_back_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.back_btn then
-        return self.m_ClickDelegate:back_btn(sender);
+    if self._clickDelegate and self._clickDelegate.back_btn then
+        return self._clickDelegate:back_btn(sender);
     end
     if self.back_btn then
         return self:back_btn(sender);
@@ -403,8 +403,8 @@ end
 
 
 function RiskMainLayer:_onGameMoney(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onGameMoney then
-        return self.m_ClickDelegate:onGameMoney(sender);
+    if self._clickDelegate and self._clickDelegate.onGameMoney then
+        return self._clickDelegate:onGameMoney(sender);
     end
     if self.onGameMoney then
         return self:onGameMoney(sender);
@@ -413,8 +413,8 @@ end
 
 
 function RiskMainLayer:_onBox(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onBox then
-        return self.m_ClickDelegate:onBox(sender);
+    if self._clickDelegate and self._clickDelegate.onBox then
+        return self._clickDelegate:onBox(sender);
     end
     if self.onBox then
         return self:onBox(sender);

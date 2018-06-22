@@ -342,8 +342,8 @@ end
 
 
 function DetailsLayer:_onFriendApply(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onFriendApply then
-        return self.m_ClickDelegate:onFriendApply(sender);
+    if self._clickDelegate and self._clickDelegate.onFriendApply then
+        return self._clickDelegate:onFriendApply(sender);
     end
     if self.onFriendApply then
         return self:onFriendApply(sender);
@@ -352,8 +352,8 @@ end
 
 
 function DetailsLayer:_onRefuseFight(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onRefuseFight then
-        return self.m_ClickDelegate:onRefuseFight(sender);
+    if self._clickDelegate and self._clickDelegate.onRefuseFight then
+        return self._clickDelegate:onRefuseFight(sender);
     end
     if self.onRefuseFight then
         return self:onRefuseFight(sender);
@@ -362,8 +362,8 @@ end
 
 
 function DetailsLayer:_onPersonalInfo(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onPersonalInfo then
-        return self.m_ClickDelegate:onPersonalInfo(sender);
+    if self._clickDelegate and self._clickDelegate.onPersonalInfo then
+        return self._clickDelegate:onPersonalInfo(sender);
     end
     if self.onPersonalInfo then
         return self:onPersonalInfo(sender);
@@ -372,8 +372,8 @@ end
 
 
 function DetailsLayer:_onClose(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onClose then
-        return self.m_ClickDelegate:onClose(sender);
+    if self._clickDelegate and self._clickDelegate.onClose then
+        return self._clickDelegate:onClose(sender);
     end
     if self.onClose then
         return self:onClose(sender);

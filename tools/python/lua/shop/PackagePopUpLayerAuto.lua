@@ -221,8 +221,8 @@ end
 
 
 function PackagePopUpLayer:_onBuy(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onBuy then
-        return self.m_ClickDelegate:onBuy(sender);
+    if self._clickDelegate and self._clickDelegate.onBuy then
+        return self._clickDelegate:onBuy(sender);
     end
     if self.onBuy then
         return self:onBuy(sender);
@@ -231,8 +231,8 @@ end
 
 
 function PackagePopUpLayer:_onCancel(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onCancel then
-        return self.m_ClickDelegate:onCancel(sender);
+    if self._clickDelegate and self._clickDelegate.onCancel then
+        return self._clickDelegate:onCancel(sender);
     end
     if self.onCancel then
         return self:onCancel(sender);

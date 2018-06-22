@@ -354,8 +354,8 @@ end
 
 
 function FightResultLayer:_onClose(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onClose then
-        return self.m_ClickDelegate:onClose(sender);
+    if self._clickDelegate and self._clickDelegate.onClose then
+        return self._clickDelegate:onClose(sender);
     end
     if self.onClose then
         return self:onClose(sender);
@@ -364,8 +364,8 @@ end
 
 
 function FightResultLayer:_onReplay(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onReplay then
-        return self.m_ClickDelegate:onReplay(sender);
+    if self._clickDelegate and self._clickDelegate.onReplay then
+        return self._clickDelegate:onReplay(sender);
     end
     if self.onReplay then
         return self:onReplay(sender);

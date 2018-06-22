@@ -244,8 +244,8 @@ end
 
 
 function DetailsLayer:_help_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.help_btn then
-        return self.m_ClickDelegate:help_btn(sender);
+    if self._clickDelegate and self._clickDelegate.help_btn then
+        return self._clickDelegate:help_btn(sender);
     end
     if self.help_btn then
         return self:help_btn(sender);
@@ -254,8 +254,8 @@ end
 
 
 function DetailsLayer:_back_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.back_btn then
-        return self.m_ClickDelegate:back_btn(sender);
+    if self._clickDelegate and self._clickDelegate.back_btn then
+        return self._clickDelegate:back_btn(sender);
     end
     if self.back_btn then
         return self:back_btn(sender);
@@ -264,8 +264,8 @@ end
 
 
 function DetailsLayer:_sure_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.sure_btn then
-        return self.m_ClickDelegate:sure_btn(sender);
+    if self._clickDelegate and self._clickDelegate.sure_btn then
+        return self._clickDelegate:sure_btn(sender);
     end
     if self.sure_btn then
         return self:sure_btn(sender);

@@ -286,8 +286,8 @@ end
 
 
 function ChatNode:_toInfo(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.toInfo then
-        return self.m_ClickDelegate:toInfo(sender);
+    if self._clickDelegate and self._clickDelegate.toInfo then
+        return self._clickDelegate:toInfo(sender);
     end
     if self.toInfo then
         return self:toInfo(sender);

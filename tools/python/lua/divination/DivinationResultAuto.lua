@@ -276,8 +276,8 @@ end
 
 
 function DivinationResult:_again_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.again_btn then
-        return self.m_ClickDelegate:again_btn(sender);
+    if self._clickDelegate and self._clickDelegate.again_btn then
+        return self._clickDelegate:again_btn(sender);
     end
     if self.again_btn then
         return self:again_btn(sender);
@@ -286,8 +286,8 @@ end
 
 
 function DivinationResult:_prize_good_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.prize_good_btn then
-        return self.m_ClickDelegate:prize_good_btn(sender);
+    if self._clickDelegate and self._clickDelegate.prize_good_btn then
+        return self._clickDelegate:prize_good_btn(sender);
     end
     if self.prize_good_btn then
         return self:prize_good_btn(sender);
@@ -296,8 +296,8 @@ end
 
 
 function DivinationResult:_sure_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.sure_btn then
-        return self.m_ClickDelegate:sure_btn(sender);
+    if self._clickDelegate and self._clickDelegate.sure_btn then
+        return self._clickDelegate:sure_btn(sender);
     end
     if self.sure_btn then
         return self:sure_btn(sender);

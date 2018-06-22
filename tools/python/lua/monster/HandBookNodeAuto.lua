@@ -124,8 +124,8 @@ end
 
 
 function HandBookNode:_onMonster(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onMonster then
-        return self.m_ClickDelegate:onMonster(sender);
+    if self._clickDelegate and self._clickDelegate.onMonster then
+        return self._clickDelegate:onMonster(sender);
     end
     if self.onMonster then
         return self:onMonster(sender);

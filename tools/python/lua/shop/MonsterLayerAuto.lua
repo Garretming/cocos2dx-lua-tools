@@ -310,8 +310,8 @@ end
 
 
 function MonsterLayer:_onBuyRight(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onBuyRight then
-        return self.m_ClickDelegate:onBuyRight(sender);
+    if self._clickDelegate and self._clickDelegate.onBuyRight then
+        return self._clickDelegate:onBuyRight(sender);
     end
     if self.onBuyRight then
         return self:onBuyRight(sender);
@@ -320,8 +320,8 @@ end
 
 
 function MonsterLayer:_onClickRight(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onClickRight then
-        return self.m_ClickDelegate:onClickRight(sender);
+    if self._clickDelegate and self._clickDelegate.onClickRight then
+        return self._clickDelegate:onClickRight(sender);
     end
     if self.onClickRight then
         return self:onClickRight(sender);
@@ -330,8 +330,8 @@ end
 
 
 function MonsterLayer:_onBuyLeft(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onBuyLeft then
-        return self.m_ClickDelegate:onBuyLeft(sender);
+    if self._clickDelegate and self._clickDelegate.onBuyLeft then
+        return self._clickDelegate:onBuyLeft(sender);
     end
     if self.onBuyLeft then
         return self:onBuyLeft(sender);
@@ -340,8 +340,8 @@ end
 
 
 function MonsterLayer:_onClickLeft(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onClickLeft then
-        return self.m_ClickDelegate:onClickLeft(sender);
+    if self._clickDelegate and self._clickDelegate.onClickLeft then
+        return self._clickDelegate:onClickLeft(sender);
     end
     if self.onClickLeft then
         return self:onClickLeft(sender);

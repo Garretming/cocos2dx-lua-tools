@@ -106,8 +106,8 @@ end
 
 
 function BorderNode:_toBorderDetails(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.toBorderDetails then
-        return self.m_ClickDelegate:toBorderDetails(sender);
+    if self._clickDelegate and self._clickDelegate.toBorderDetails then
+        return self._clickDelegate:toBorderDetails(sender);
     end
     if self.toBorderDetails then
         return self:toBorderDetails(sender);

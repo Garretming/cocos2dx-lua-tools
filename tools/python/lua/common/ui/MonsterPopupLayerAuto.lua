@@ -549,8 +549,8 @@ end
 
 
 function MonsterPopupLayer:_onSpecial(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSpecial then
-        return self.m_ClickDelegate:onSpecial(sender);
+    if self._clickDelegate and self._clickDelegate.onSpecial then
+        return self._clickDelegate:onSpecial(sender);
     end
     if self.onSpecial then
         return self:onSpecial(sender);

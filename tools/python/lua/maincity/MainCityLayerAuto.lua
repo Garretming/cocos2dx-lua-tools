@@ -785,8 +785,8 @@ end
 
 
 function MainCityLayer:_onShop(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onShop then
-        return self.m_ClickDelegate:onShop(sender);
+    if self._clickDelegate and self._clickDelegate.onShop then
+        return self._clickDelegate:onShop(sender);
     end
     if self.onShop then
         return self:onShop(sender);
@@ -795,8 +795,8 @@ end
 
 
 function MainCityLayer:_onActivity(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onActivity then
-        return self.m_ClickDelegate:onActivity(sender);
+    if self._clickDelegate and self._clickDelegate.onActivity then
+        return self._clickDelegate:onActivity(sender);
     end
     if self.onActivity then
         return self:onActivity(sender);
@@ -805,8 +805,8 @@ end
 
 
 function MainCityLayer:_onFormation(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onFormation then
-        return self.m_ClickDelegate:onFormation(sender);
+    if self._clickDelegate and self._clickDelegate.onFormation then
+        return self._clickDelegate:onFormation(sender);
     end
     if self.onFormation then
         return self:onFormation(sender);
@@ -815,8 +815,8 @@ end
 
 
 function MainCityLayer:_onGM(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onGM then
-        return self.m_ClickDelegate:onGM(sender);
+    if self._clickDelegate and self._clickDelegate.onGM then
+        return self._clickDelegate:onGM(sender);
     end
     if self.onGM then
         return self:onGM(sender);
@@ -825,8 +825,8 @@ end
 
 
 function MainCityLayer:_onHero(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onHero then
-        return self.m_ClickDelegate:onHero(sender);
+    if self._clickDelegate and self._clickDelegate.onHero then
+        return self._clickDelegate:onHero(sender);
     end
     if self.onHero then
         return self:onHero(sender);
@@ -835,8 +835,8 @@ end
 
 
 function MainCityLayer:_onGuide(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onGuide then
-        return self.m_ClickDelegate:onGuide(sender);
+    if self._clickDelegate and self._clickDelegate.onGuide then
+        return self._clickDelegate:onGuide(sender);
     end
     if self.onGuide then
         return self:onGuide(sender);
@@ -845,8 +845,8 @@ end
 
 
 function MainCityLayer:_onPVE(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onPVE then
-        return self.m_ClickDelegate:onPVE(sender);
+    if self._clickDelegate and self._clickDelegate.onPVE then
+        return self._clickDelegate:onPVE(sender);
     end
     if self.onPVE then
         return self:onPVE(sender);
@@ -855,8 +855,8 @@ end
 
 
 function MainCityLayer:_onBattle(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onBattle then
-        return self.m_ClickDelegate:onBattle(sender);
+    if self._clickDelegate and self._clickDelegate.onBattle then
+        return self._clickDelegate:onBattle(sender);
     end
     if self.onBattle then
         return self:onBattle(sender);
@@ -865,8 +865,8 @@ end
 
 
 function MainCityLayer:_onFriend(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onFriend then
-        return self.m_ClickDelegate:onFriend(sender);
+    if self._clickDelegate and self._clickDelegate.onFriend then
+        return self._clickDelegate:onFriend(sender);
     end
     if self.onFriend then
         return self:onFriend(sender);
@@ -875,8 +875,8 @@ end
 
 
 function MainCityLayer:_onTask(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTask then
-        return self.m_ClickDelegate:onTask(sender);
+    if self._clickDelegate and self._clickDelegate.onTask then
+        return self._clickDelegate:onTask(sender);
     end
     if self.onTask then
         return self:onTask(sender);
@@ -885,8 +885,8 @@ end
 
 
 function MainCityLayer:_onRisk(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onRisk then
-        return self.m_ClickDelegate:onRisk(sender);
+    if self._clickDelegate and self._clickDelegate.onRisk then
+        return self._clickDelegate:onRisk(sender);
     end
     if self.onRisk then
         return self:onRisk(sender);
@@ -895,8 +895,8 @@ end
 
 
 function MainCityLayer:_onRank(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onRank then
-        return self.m_ClickDelegate:onRank(sender);
+    if self._clickDelegate and self._clickDelegate.onRank then
+        return self._clickDelegate:onRank(sender);
     end
     if self.onRank then
         return self:onRank(sender);
@@ -905,8 +905,8 @@ end
 
 
 function MainCityLayer:_onArean(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onArean then
-        return self.m_ClickDelegate:onArean(sender);
+    if self._clickDelegate and self._clickDelegate.onArean then
+        return self._clickDelegate:onArean(sender);
     end
     if self.onArean then
         return self:onArean(sender);
@@ -915,8 +915,8 @@ end
 
 
 function MainCityLayer:_onChat(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onChat then
-        return self.m_ClickDelegate:onChat(sender);
+    if self._clickDelegate and self._clickDelegate.onChat then
+        return self._clickDelegate:onChat(sender);
     end
     if self.onChat then
         return self:onChat(sender);
@@ -925,8 +925,8 @@ end
 
 
 function MainCityLayer:_onDivination(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onDivination then
-        return self.m_ClickDelegate:onDivination(sender);
+    if self._clickDelegate and self._clickDelegate.onDivination then
+        return self._clickDelegate:onDivination(sender);
     end
     if self.onDivination then
         return self:onDivination(sender);
@@ -935,8 +935,8 @@ end
 
 
 function MainCityLayer:_onMonster(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onMonster then
-        return self.m_ClickDelegate:onMonster(sender);
+    if self._clickDelegate and self._clickDelegate.onMonster then
+        return self._clickDelegate:onMonster(sender);
     end
     if self.onMonster then
         return self:onMonster(sender);

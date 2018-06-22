@@ -307,8 +307,8 @@ end
 
 
 function AchievePrizeNode:_prizeGetBtn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.prizeGetBtn then
-        return self.m_ClickDelegate:prizeGetBtn(sender);
+    if self._clickDelegate and self._clickDelegate.prizeGetBtn then
+        return self._clickDelegate:prizeGetBtn(sender);
     end
     if self.prizeGetBtn then
         return self:prizeGetBtn(sender);

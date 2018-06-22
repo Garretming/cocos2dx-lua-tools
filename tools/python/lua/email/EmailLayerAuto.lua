@@ -825,8 +825,8 @@ end
 
 
 function EmailLayer:_onDelete(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onDelete then
-        return self.m_ClickDelegate:onDelete(sender);
+    if self._clickDelegate and self._clickDelegate.onDelete then
+        return self._clickDelegate:onDelete(sender);
     end
     if self.onDelete then
         return self:onDelete(sender);
@@ -835,8 +835,8 @@ end
 
 
 function EmailLayer:_toViewPrizeDetails(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.toViewPrizeDetails then
-        return self.m_ClickDelegate:toViewPrizeDetails(sender);
+    if self._clickDelegate and self._clickDelegate.toViewPrizeDetails then
+        return self._clickDelegate:toViewPrizeDetails(sender);
     end
     if self.toViewPrizeDetails then
         return self:toViewPrizeDetails(sender);
@@ -845,8 +845,8 @@ end
 
 
 function EmailLayer:_onClose(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onClose then
-        return self.m_ClickDelegate:onClose(sender);
+    if self._clickDelegate and self._clickDelegate.onClose then
+        return self._clickDelegate:onClose(sender);
     end
     if self.onClose then
         return self:onClose(sender);
@@ -861,8 +861,8 @@ end
 --@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
 --@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
 function EmailLayer:_onEmailListView(eventName, listView, row, column, index, cell)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onEmailListView then
-        return self.m_ClickDelegate:onEmailListView(eventName, listView, row, column, index, cell);
+    if self._clickDelegate and self._clickDelegate.onEmailListView then
+        return self._clickDelegate:onEmailListView(eventName, listView, row, column, index, cell);
     end
     if self.onEmailListView then
         return self:onEmailListView(eventName, listView, row, column, index, cell);
@@ -871,8 +871,8 @@ end
 
 
 function EmailLayer:_onReceive(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onReceive then
-        return self.m_ClickDelegate:onReceive(sender);
+    if self._clickDelegate and self._clickDelegate.onReceive then
+        return self._clickDelegate:onReceive(sender);
     end
     if self.onReceive then
         return self:onReceive(sender);
@@ -881,8 +881,8 @@ end
 
 
 function EmailLayer:_onTabMenu(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTabMenu then
-        return self.m_ClickDelegate:onTabMenu(sender);
+    if self._clickDelegate and self._clickDelegate.onTabMenu then
+        return self._clickDelegate:onTabMenu(sender);
     end
     if self.onTabMenu then
         return self:onTabMenu(sender);
@@ -891,8 +891,8 @@ end
 
 
 function EmailLayer:_onReplay(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onReplay then
-        return self.m_ClickDelegate:onReplay(sender);
+    if self._clickDelegate and self._clickDelegate.onReplay then
+        return self._clickDelegate:onReplay(sender);
     end
     if self.onReplay then
         return self:onReplay(sender);
@@ -907,8 +907,8 @@ end
 --@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
 --@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
 function EmailLayer:_onReportListView(eventName, listView, row, column, index, cell)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onReportListView then
-        return self.m_ClickDelegate:onReportListView(eventName, listView, row, column, index, cell);
+    if self._clickDelegate and self._clickDelegate.onReportListView then
+        return self._clickDelegate:onReportListView(eventName, listView, row, column, index, cell);
     end
     if self.onReportListView then
         return self:onReportListView(eventName, listView, row, column, index, cell);

@@ -488,8 +488,8 @@ end
 
 
 function GoldLayer:_onChange(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onChange then
-        return self.m_ClickDelegate:onChange(sender);
+    if self._clickDelegate and self._clickDelegate.onChange then
+        return self._clickDelegate:onChange(sender);
     end
     if self.onChange then
         return self:onChange(sender);

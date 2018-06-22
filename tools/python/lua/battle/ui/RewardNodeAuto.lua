@@ -115,8 +115,8 @@ end
 
 
 function RewardNode:_toViewDetails(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.toViewDetails then
-        return self.m_ClickDelegate:toViewDetails(sender);
+    if self._clickDelegate and self._clickDelegate.toViewDetails then
+        return self._clickDelegate:toViewDetails(sender);
     end
     if self.toViewDetails then
         return self:toViewDetails(sender);

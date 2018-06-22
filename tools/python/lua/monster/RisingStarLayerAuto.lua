@@ -470,8 +470,8 @@ end
 
 
 function RisingStarLayer:_onRisingStar(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onRisingStar then
-        return self.m_ClickDelegate:onRisingStar(sender);
+    if self._clickDelegate and self._clickDelegate.onRisingStar then
+        return self._clickDelegate:onRisingStar(sender);
     end
     if self.onRisingStar then
         return self:onRisingStar(sender);

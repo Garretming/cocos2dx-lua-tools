@@ -128,8 +128,8 @@ end
 
 
 function EmailItemNode:_toViewEmailInfo(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.toViewEmailInfo then
-        return self.m_ClickDelegate:toViewEmailInfo(sender);
+    if self._clickDelegate and self._clickDelegate.toViewEmailInfo then
+        return self._clickDelegate:toViewEmailInfo(sender);
     end
     if self.toViewEmailInfo then
         return self:toViewEmailInfo(sender);

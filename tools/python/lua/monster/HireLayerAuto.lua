@@ -598,8 +598,8 @@ end
 
 
 function HireLayer:_onAssess(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onAssess then
-        return self.m_ClickDelegate:onAssess(sender);
+    if self._clickDelegate and self._clickDelegate.onAssess then
+        return self._clickDelegate:onAssess(sender);
     end
     if self.onAssess then
         return self:onAssess(sender);
@@ -608,8 +608,8 @@ end
 
 
 function HireLayer:_onReduce(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onReduce then
-        return self.m_ClickDelegate:onReduce(sender);
+    if self._clickDelegate and self._clickDelegate.onReduce then
+        return self._clickDelegate:onReduce(sender);
     end
     if self.onReduce then
         return self:onReduce(sender);
@@ -618,8 +618,8 @@ end
 
 
 function HireLayer:_onPlus(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onPlus then
-        return self.m_ClickDelegate:onPlus(sender);
+    if self._clickDelegate and self._clickDelegate.onPlus then
+        return self._clickDelegate:onPlus(sender);
     end
     if self.onPlus then
         return self:onPlus(sender);
@@ -628,8 +628,8 @@ end
 
 
 function HireLayer:_onHire(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onHire then
-        return self.m_ClickDelegate:onHire(sender);
+    if self._clickDelegate and self._clickDelegate.onHire then
+        return self._clickDelegate:onHire(sender);
     end
     if self.onHire then
         return self:onHire(sender);

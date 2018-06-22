@@ -181,8 +181,8 @@ end
 
 --eventName:(began, ended, changed)
 function InputAccountLayer:_onAccount(eventName, editBox)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onAccount then
-        return self.m_ClickDelegate:onAccount(eventName, editBox);
+    if self._clickDelegate and self._clickDelegate.onAccount then
+        return self._clickDelegate:onAccount(eventName, editBox);
     end
     if self.onAccount then
         return self:onAccount(eventName, editBox);
@@ -191,8 +191,8 @@ end
 
 
 function InputAccountLayer:_onEnter(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onEnter then
-        return self.m_ClickDelegate:onEnter(sender);
+    if self._clickDelegate and self._clickDelegate.onEnter then
+        return self._clickDelegate:onEnter(sender);
     end
     if self.onEnter then
         return self:onEnter(sender);
@@ -201,8 +201,8 @@ end
 
 
 function InputAccountLayer:_onRegister(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onRegister then
-        return self.m_ClickDelegate:onRegister(sender);
+    if self._clickDelegate and self._clickDelegate.onRegister then
+        return self._clickDelegate:onRegister(sender);
     end
     if self.onRegister then
         return self:onRegister(sender);
@@ -212,8 +212,8 @@ end
 
 --eventName:(began, ended, changed)
 function InputAccountLayer:_onPassWord(eventName, editBox)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onPassWord then
-        return self.m_ClickDelegate:onPassWord(eventName, editBox);
+    if self._clickDelegate and self._clickDelegate.onPassWord then
+        return self._clickDelegate:onPassWord(eventName, editBox);
     end
     if self.onPassWord then
         return self:onPassWord(eventName, editBox);

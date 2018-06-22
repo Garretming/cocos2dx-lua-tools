@@ -163,8 +163,8 @@ end
 
 
 function MonsterHandbookLayer:_closeBtn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.closeBtn then
-        return self.m_ClickDelegate:closeBtn(sender);
+    if self._clickDelegate and self._clickDelegate.closeBtn then
+        return self._clickDelegate:closeBtn(sender);
     end
     if self.closeBtn then
         return self:closeBtn(sender);

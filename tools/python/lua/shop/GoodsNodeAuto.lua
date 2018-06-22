@@ -180,8 +180,8 @@ end
 
 
 function GoodsNode:_onGoods(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onGoods then
-        return self.m_ClickDelegate:onGoods(sender);
+    if self._clickDelegate and self._clickDelegate.onGoods then
+        return self._clickDelegate:onGoods(sender);
     end
     if self.onGoods then
         return self:onGoods(sender);

@@ -137,8 +137,8 @@ end
 
 
 function ReportItemNode:_toViewReportInfo(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.toViewReportInfo then
-        return self.m_ClickDelegate:toViewReportInfo(sender);
+    if self._clickDelegate and self._clickDelegate.toViewReportInfo then
+        return self._clickDelegate:toViewReportInfo(sender);
     end
     if self.toViewReportInfo then
         return self:toViewReportInfo(sender);

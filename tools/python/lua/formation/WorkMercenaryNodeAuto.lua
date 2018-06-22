@@ -186,8 +186,8 @@ end
 
 
 function WorkMercenaryNode:_demountMonster(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.demountMonster then
-        return self.m_ClickDelegate:demountMonster(sender);
+    if self._clickDelegate and self._clickDelegate.demountMonster then
+        return self._clickDelegate:demountMonster(sender);
     end
     if self.demountMonster then
         return self:demountMonster(sender);

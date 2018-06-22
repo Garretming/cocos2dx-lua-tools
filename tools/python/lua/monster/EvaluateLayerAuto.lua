@@ -470,8 +470,8 @@ end
 
 
 function EvaluateLayer:_onEvaluate(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onEvaluate then
-        return self.m_ClickDelegate:onEvaluate(sender);
+    if self._clickDelegate and self._clickDelegate.onEvaluate then
+        return self._clickDelegate:onEvaluate(sender);
     end
     if self.onEvaluate then
         return self:onEvaluate(sender);
@@ -486,8 +486,8 @@ end
 --@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
 --@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
 function EvaluateLayer:_onListView(eventName, listView, row, column, index, cell)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onListView then
-        return self.m_ClickDelegate:onListView(eventName, listView, row, column, index, cell);
+    if self._clickDelegate and self._clickDelegate.onListView then
+        return self._clickDelegate:onListView(eventName, listView, row, column, index, cell);
     end
     if self.onListView then
         return self:onListView(eventName, listView, row, column, index, cell);
@@ -496,8 +496,8 @@ end
 
 
 function EvaluateLayer:_onClose(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onClose then
-        return self.m_ClickDelegate:onClose(sender);
+    if self._clickDelegate and self._clickDelegate.onClose then
+        return self._clickDelegate:onClose(sender);
     end
     if self.onClose then
         return self:onClose(sender);
@@ -507,8 +507,8 @@ end
 
 --eventName:(began, ended, changed)
 function EvaluateLayer:_onComment(eventName, editBox)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onComment then
-        return self.m_ClickDelegate:onComment(eventName, editBox);
+    if self._clickDelegate and self._clickDelegate.onComment then
+        return self._clickDelegate:onComment(eventName, editBox);
     end
     if self.onComment then
         return self:onComment(eventName, editBox);

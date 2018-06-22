@@ -985,8 +985,8 @@ end
 
 
 function LadderLayer:_onTrain(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTrain then
-        return self.m_ClickDelegate:onTrain(sender);
+    if self._clickDelegate and self._clickDelegate.onTrain then
+        return self._clickDelegate:onTrain(sender);
     end
     if self.onTrain then
         return self:onTrain(sender);
@@ -995,8 +995,8 @@ end
 
 
 function LadderLayer:_onFormation(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onFormation then
-        return self.m_ClickDelegate:onFormation(sender);
+    if self._clickDelegate and self._clickDelegate.onFormation then
+        return self._clickDelegate:onFormation(sender);
     end
     if self.onFormation then
         return self:onFormation(sender);
@@ -1005,8 +1005,8 @@ end
 
 
 function LadderLayer:_help_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.help_btn then
-        return self.m_ClickDelegate:help_btn(sender);
+    if self._clickDelegate and self._clickDelegate.help_btn then
+        return self._clickDelegate:help_btn(sender);
     end
     if self.help_btn then
         return self:help_btn(sender);
@@ -1015,8 +1015,8 @@ end
 
 
 function LadderLayer:_toViewDetails(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.toViewDetails then
-        return self.m_ClickDelegate:toViewDetails(sender);
+    if self._clickDelegate and self._clickDelegate.toViewDetails then
+        return self._clickDelegate:toViewDetails(sender);
     end
     if self.toViewDetails then
         return self:toViewDetails(sender);
@@ -1025,8 +1025,8 @@ end
 
 
 function LadderLayer:_onAddTimes(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onAddTimes then
-        return self.m_ClickDelegate:onAddTimes(sender);
+    if self._clickDelegate and self._clickDelegate.onAddTimes then
+        return self._clickDelegate:onAddTimes(sender);
     end
     if self.onAddTimes then
         return self:onAddTimes(sender);
@@ -1035,8 +1035,8 @@ end
 
 
 function LadderLayer:_onRankList(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onRankList then
-        return self.m_ClickDelegate:onRankList(sender);
+    if self._clickDelegate and self._clickDelegate.onRankList then
+        return self._clickDelegate:onRankList(sender);
     end
     if self.onRankList then
         return self:onRankList(sender);
@@ -1045,8 +1045,8 @@ end
 
 
 function LadderLayer:_onStartMatch(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onStartMatch then
-        return self.m_ClickDelegate:onStartMatch(sender);
+    if self._clickDelegate and self._clickDelegate.onStartMatch then
+        return self._clickDelegate:onStartMatch(sender);
     end
     if self.onStartMatch then
         return self:onStartMatch(sender);
@@ -1055,8 +1055,8 @@ end
 
 
 function LadderLayer:_back_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.back_btn then
-        return self.m_ClickDelegate:back_btn(sender);
+    if self._clickDelegate and self._clickDelegate.back_btn then
+        return self._clickDelegate:back_btn(sender);
     end
     if self.back_btn then
         return self:back_btn(sender);

@@ -458,8 +458,8 @@ end
 --@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
 --@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
 function RankLayer:_onListView2(eventName, listView, row, column, index, cell)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onListView2 then
-        return self.m_ClickDelegate:onListView2(eventName, listView, row, column, index, cell);
+    if self._clickDelegate and self._clickDelegate.onListView2 then
+        return self._clickDelegate:onListView2(eventName, listView, row, column, index, cell);
     end
     if self.onListView2 then
         return self:onListView2(eventName, listView, row, column, index, cell);
@@ -474,8 +474,8 @@ end
 --@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
 --@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
 function RankLayer:_onListView(eventName, listView, row, column, index, cell)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onListView then
-        return self.m_ClickDelegate:onListView(eventName, listView, row, column, index, cell);
+    if self._clickDelegate and self._clickDelegate.onListView then
+        return self._clickDelegate:onListView(eventName, listView, row, column, index, cell);
     end
     if self.onListView then
         return self:onListView(eventName, listView, row, column, index, cell);
@@ -484,8 +484,8 @@ end
 
 
 function RankLayer:_onTabMenu(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTabMenu then
-        return self.m_ClickDelegate:onTabMenu(sender);
+    if self._clickDelegate and self._clickDelegate.onTabMenu then
+        return self._clickDelegate:onTabMenu(sender);
     end
     if self.onTabMenu then
         return self:onTabMenu(sender);
@@ -494,8 +494,8 @@ end
 
 
 function RankLayer:_onClose(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onClose then
-        return self.m_ClickDelegate:onClose(sender);
+    if self._clickDelegate and self._clickDelegate.onClose then
+        return self._clickDelegate:onClose(sender);
     end
     if self.onClose then
         return self:onClose(sender);

@@ -157,8 +157,8 @@ end
 
 
 function SkillItemNode:_onSkillWork(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSkillWork then
-        return self.m_ClickDelegate:onSkillWork(sender);
+    if self._clickDelegate and self._clickDelegate.onSkillWork then
+        return self._clickDelegate:onSkillWork(sender);
     end
     if self.onSkillWork then
         return self:onSkillWork(sender);

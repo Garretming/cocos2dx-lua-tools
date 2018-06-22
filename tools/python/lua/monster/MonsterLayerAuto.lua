@@ -3102,8 +3102,8 @@ end
 
 
 function MonsterLayer:_onGameMoney(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onGameMoney then
-        return self.m_ClickDelegate:onGameMoney(sender);
+    if self._clickDelegate and self._clickDelegate.onGameMoney then
+        return self._clickDelegate:onGameMoney(sender);
     end
     if self.onGameMoney then
         return self:onGameMoney(sender);
@@ -3112,8 +3112,8 @@ end
 
 
 function MonsterLayer:_onSort(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSort then
-        return self.m_ClickDelegate:onSort(sender);
+    if self._clickDelegate and self._clickDelegate.onSort then
+        return self._clickDelegate:onSort(sender);
     end
     if self.onSort then
         return self:onSort(sender);
@@ -3122,8 +3122,8 @@ end
 
 
 function MonsterLayer:_onCostSort(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onCostSort then
-        return self.m_ClickDelegate:onCostSort(sender);
+    if self._clickDelegate and self._clickDelegate.onCostSort then
+        return self._clickDelegate:onCostSort(sender);
     end
     if self.onCostSort then
         return self:onCostSort(sender);
@@ -3132,8 +3132,8 @@ end
 
 
 function MonsterLayer:_onQualitySort(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onQualitySort then
-        return self.m_ClickDelegate:onQualitySort(sender);
+    if self._clickDelegate and self._clickDelegate.onQualitySort then
+        return self._clickDelegate:onQualitySort(sender);
     end
     if self.onQualitySort then
         return self:onQualitySort(sender);
@@ -3142,8 +3142,8 @@ end
 
 
 function MonsterLayer:_onRMBMoney(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onRMBMoney then
-        return self.m_ClickDelegate:onRMBMoney(sender);
+    if self._clickDelegate and self._clickDelegate.onRMBMoney then
+        return self._clickDelegate:onRMBMoney(sender);
     end
     if self.onRMBMoney then
         return self:onRMBMoney(sender);
@@ -3152,8 +3152,8 @@ end
 
 
 function MonsterLayer:_onStarSort(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onStarSort then
-        return self.m_ClickDelegate:onStarSort(sender);
+    if self._clickDelegate and self._clickDelegate.onStarSort then
+        return self._clickDelegate:onStarSort(sender);
     end
     if self.onStarSort then
         return self:onStarSort(sender);
@@ -3162,8 +3162,8 @@ end
 
 
 function MonsterLayer:_onSpecial(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSpecial then
-        return self.m_ClickDelegate:onSpecial(sender);
+    if self._clickDelegate and self._clickDelegate.onSpecial then
+        return self._clickDelegate:onSpecial(sender);
     end
     if self.onSpecial then
         return self:onSpecial(sender);
@@ -3172,8 +3172,8 @@ end
 
 
 function MonsterLayer:_onTabMenu(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onTabMenu then
-        return self.m_ClickDelegate:onTabMenu(sender);
+    if self._clickDelegate and self._clickDelegate.onTabMenu then
+        return self._clickDelegate:onTabMenu(sender);
     end
     if self.onTabMenu then
         return self:onTabMenu(sender);
@@ -3182,8 +3182,8 @@ end
 
 
 function MonsterLayer:_onAllSort(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onAllSort then
-        return self.m_ClickDelegate:onAllSort(sender);
+    if self._clickDelegate and self._clickDelegate.onAllSort then
+        return self._clickDelegate:onAllSort(sender);
     end
     if self.onAllSort then
         return self:onAllSort(sender);
@@ -3192,8 +3192,8 @@ end
 
 
 function MonsterLayer:_onAnimation(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onAnimation then
-        return self.m_ClickDelegate:onAnimation(sender);
+    if self._clickDelegate and self._clickDelegate.onAnimation then
+        return self._clickDelegate:onAnimation(sender);
     end
     if self.onAnimation then
         return self:onAnimation(sender);
@@ -3202,8 +3202,8 @@ end
 
 
 function MonsterLayer:_onSwitchSecond(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSwitchSecond then
-        return self.m_ClickDelegate:onSwitchSecond(sender);
+    if self._clickDelegate and self._clickDelegate.onSwitchSecond then
+        return self._clickDelegate:onSwitchSecond(sender);
     end
     if self.onSwitchSecond then
         return self:onSwitchSecond(sender);
@@ -3212,8 +3212,8 @@ end
 
 
 function MonsterLayer:_onPositionSort(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onPositionSort then
-        return self.m_ClickDelegate:onPositionSort(sender);
+    if self._clickDelegate and self._clickDelegate.onPositionSort then
+        return self._clickDelegate:onPositionSort(sender);
     end
     if self.onPositionSort then
         return self:onPositionSort(sender);
@@ -3222,8 +3222,8 @@ end
 
 
 function MonsterLayer:_onSwitchFirst(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSwitchFirst then
-        return self.m_ClickDelegate:onSwitchFirst(sender);
+    if self._clickDelegate and self._clickDelegate.onSwitchFirst then
+        return self._clickDelegate:onSwitchFirst(sender);
     end
     if self.onSwitchFirst then
         return self:onSwitchFirst(sender);
@@ -3232,8 +3232,8 @@ end
 
 
 function MonsterLayer:_onHandbook(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onHandbook then
-        return self.m_ClickDelegate:onHandbook(sender);
+    if self._clickDelegate and self._clickDelegate.onHandbook then
+        return self._clickDelegate:onHandbook(sender);
     end
     if self.onHandbook then
         return self:onHandbook(sender);
@@ -3242,8 +3242,8 @@ end
 
 
 function MonsterLayer:_back_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.back_btn then
-        return self.m_ClickDelegate:back_btn(sender);
+    if self._clickDelegate and self._clickDelegate.back_btn then
+        return self._clickDelegate:back_btn(sender);
     end
     if self.back_btn then
         return self:back_btn(sender);
@@ -3252,8 +3252,8 @@ end
 
 
 function MonsterLayer:_help_btn(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.help_btn then
-        return self.m_ClickDelegate:help_btn(sender);
+    if self._clickDelegate and self._clickDelegate.help_btn then
+        return self._clickDelegate:help_btn(sender);
     end
     if self.help_btn then
         return self:help_btn(sender);

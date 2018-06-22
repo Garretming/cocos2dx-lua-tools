@@ -247,8 +247,8 @@ end
 
 --eventName:(began, ended, changed)
 function RegisterLayer:_onAccount(eventName, editBox)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onAccount then
-        return self.m_ClickDelegate:onAccount(eventName, editBox);
+    if self._clickDelegate and self._clickDelegate.onAccount then
+        return self._clickDelegate:onAccount(eventName, editBox);
     end
     if self.onAccount then
         return self:onAccount(eventName, editBox);
@@ -257,8 +257,8 @@ end
 
 
 function RegisterLayer:_onSureRegisiter(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onSureRegisiter then
-        return self.m_ClickDelegate:onSureRegisiter(sender);
+    if self._clickDelegate and self._clickDelegate.onSureRegisiter then
+        return self._clickDelegate:onSureRegisiter(sender);
     end
     if self.onSureRegisiter then
         return self:onSureRegisiter(sender);
@@ -267,8 +267,8 @@ end
 
 
 function RegisterLayer:_onAccountCenter(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onAccountCenter then
-        return self.m_ClickDelegate:onAccountCenter(sender);
+    if self._clickDelegate and self._clickDelegate.onAccountCenter then
+        return self._clickDelegate:onAccountCenter(sender);
     end
     if self.onAccountCenter then
         return self:onAccountCenter(sender);
@@ -278,8 +278,8 @@ end
 
 --eventName:(began, ended, changed)
 function RegisterLayer:_onPassWord1(eventName, editBox)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onPassWord1 then
-        return self.m_ClickDelegate:onPassWord1(eventName, editBox);
+    if self._clickDelegate and self._clickDelegate.onPassWord1 then
+        return self._clickDelegate:onPassWord1(eventName, editBox);
     end
     if self.onPassWord1 then
         return self:onPassWord1(eventName, editBox);
@@ -289,8 +289,8 @@ end
 
 --eventName:(began, ended, changed)
 function RegisterLayer:_onPassWord(eventName, editBox)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onPassWord then
-        return self.m_ClickDelegate:onPassWord(eventName, editBox);
+    if self._clickDelegate and self._clickDelegate.onPassWord then
+        return self._clickDelegate:onPassWord(eventName, editBox);
     end
     if self.onPassWord then
         return self:onPassWord(eventName, editBox);

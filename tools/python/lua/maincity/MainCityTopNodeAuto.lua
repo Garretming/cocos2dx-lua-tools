@@ -459,8 +459,8 @@ end
 
 
 function MainCityTopNode:_onMail(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onMail then
-        return self.m_ClickDelegate:onMail(sender);
+    if self._clickDelegate and self._clickDelegate.onMail then
+        return self._clickDelegate:onMail(sender);
     end
     if self.onMail then
         return self:onMail(sender);
@@ -469,8 +469,8 @@ end
 
 
 function MainCityTopNode:_onAnnounce(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onAnnounce then
-        return self.m_ClickDelegate:onAnnounce(sender);
+    if self._clickDelegate and self._clickDelegate.onAnnounce then
+        return self._clickDelegate:onAnnounce(sender);
     end
     if self.onAnnounce then
         return self:onAnnounce(sender);
@@ -479,8 +479,8 @@ end
 
 
 function MainCityTopNode:_onHead(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onHead then
-        return self.m_ClickDelegate:onHead(sender);
+    if self._clickDelegate and self._clickDelegate.onHead then
+        return self._clickDelegate:onHead(sender);
     end
     if self.onHead then
         return self:onHead(sender);
@@ -489,8 +489,8 @@ end
 
 
 function MainCityTopNode:_onRMBMoney(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onRMBMoney then
-        return self.m_ClickDelegate:onRMBMoney(sender);
+    if self._clickDelegate and self._clickDelegate.onRMBMoney then
+        return self._clickDelegate:onRMBMoney(sender);
     end
     if self.onRMBMoney then
         return self:onRMBMoney(sender);
@@ -499,8 +499,8 @@ end
 
 
 function MainCityTopNode:_onGameMoney(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onGameMoney then
-        return self.m_ClickDelegate:onGameMoney(sender);
+    if self._clickDelegate and self._clickDelegate.onGameMoney then
+        return self._clickDelegate:onGameMoney(sender);
     end
     if self.onGameMoney then
         return self:onGameMoney(sender);

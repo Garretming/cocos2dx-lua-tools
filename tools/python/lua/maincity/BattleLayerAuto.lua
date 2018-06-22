@@ -267,8 +267,8 @@ end
 
 
 function BattleLayer:_onFormation(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onFormation then
-        return self.m_ClickDelegate:onFormation(sender);
+    if self._clickDelegate and self._clickDelegate.onFormation then
+        return self._clickDelegate:onFormation(sender);
     end
     if self.onFormation then
         return self:onFormation(sender);
@@ -277,8 +277,8 @@ end
 
 
 function BattleLayer:_on1VS1(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.on1VS1 then
-        return self.m_ClickDelegate:on1VS1(sender);
+    if self._clickDelegate and self._clickDelegate.on1VS1 then
+        return self._clickDelegate:on1VS1(sender);
     end
     if self.on1VS1 then
         return self:on1VS1(sender);
@@ -287,8 +287,8 @@ end
 
 
 function BattleLayer:_onWall(sender)
-    if self.m_ClickDelegate and self.m_ClickDelegate.onWall then
-        return self.m_ClickDelegate:onWall(sender);
+    if self._clickDelegate and self._clickDelegate.onWall then
+        return self._clickDelegate:onWall(sender);
     end
     if self.onWall then
         return self:onWall(sender);
