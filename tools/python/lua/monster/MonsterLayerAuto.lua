@@ -85,7 +85,7 @@ function MonsterLayer:initView()
 	localParams[6] = ImageView:create('uires/public/sheet_bgframe/bgFrame0051.png', 1);
 	localParams[6]:ignoreContentAdaptWithSize(false);
 	localParams[6]:setScale9Enabled(true);
-	localParams[6]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000);
+	localParams[6]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000});
 	localParams[6]:setAnchorPoint(1.00, 1.00);
 	localParams[6]:setContentSize({width = 800.0, height = 93.0});
 	localParams[6]:setPosition(localParams[5]:getContentSize().width - 0.00, localParams[5]:getContentSize().height - 0.00);
@@ -349,7 +349,7 @@ function MonsterLayer:initView()
 	localParams[27] = ImageView:create('uires/public/sheet_bgframe/bgFrame0067.png', 1);
 	localParams[27]:ignoreContentAdaptWithSize(false);
 	localParams[27]:setScale9Enabled(true);
-	localParams[27]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000);
+	localParams[27]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000});
 	localParams[27]:setAnchorPoint(0.50, 0.50);
 	localParams[27]:setContentSize({width = 460.0, height = 60.0});
 	localParams[27]:setPosition(238.6, 177.35);
@@ -361,7 +361,7 @@ function MonsterLayer:initView()
 	localParams[28] = ImageView:create('uires/public/sheet_bgframe/bgFrame0088.png', 1);
 	localParams[28]:ignoreContentAdaptWithSize(false);
 	localParams[28]:setScale9Enabled(true);
-	localParams[28]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000);
+	localParams[28]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000});
 	localParams[28]:setAnchorPoint(0.50, 0.50);
 	localParams[28]:setContentSize({width = 99.0, height = 171.0});
 	localParams[28]:setPosition(407.1, 133.2);
@@ -556,7 +556,7 @@ function MonsterLayer:initView()
 	localParams[44] = ImageView:create('uires/public/sheet_bgframe/bgFrame0088.png', 1);
 	localParams[44]:ignoreContentAdaptWithSize(false);
 	localParams[44]:setScale9Enabled(true);
-	localParams[44]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000);
+	localParams[44]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000});
 	localParams[44]:setAnchorPoint(0.50, 0.50);
 	localParams[44]:setContentSize({width = 99.0, height = 216.0});
 	localParams[44]:setPosition(407.1, 157.2);
@@ -799,7 +799,7 @@ function MonsterLayer:initView()
 	localParams[64] = ImageView:create('uires/public/sheet_bgframe/bgFrame0088.png', 1);
 	localParams[64]:ignoreContentAdaptWithSize(false);
 	localParams[64]:setScale9Enabled(true);
-	localParams[64]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000);
+	localParams[64]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000});
 	localParams[64]:setAnchorPoint(0.50, 0.50);
 	localParams[64]:setContentSize({width = 99.0, height = 261.0});
 	localParams[64]:setPosition(407.1, 179.2);
@@ -1090,7 +1090,7 @@ function MonsterLayer:initView()
 	localParams[88] = ImageView:create('uires/public/sheet_bgframe/bgFrame0088.png', 1);
 	localParams[88]:ignoreContentAdaptWithSize(false);
 	localParams[88]:setScale9Enabled(true);
-	localParams[88]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000);
+	localParams[88]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000});
 	localParams[88]:setAnchorPoint(0.50, 0.50);
 	localParams[88]:setContentSize({width = 99.0, height = 306.0});
 	localParams[88]:setPosition(407.1, 201.2);
@@ -1553,7 +1553,7 @@ function MonsterLayer:initView()
 	localParams[126] = ImageView:create('uires/public/sheet_bgframe/bgFrame0067.png', 1);
 	localParams[126]:ignoreContentAdaptWithSize(false);
 	localParams[126]:setScale9Enabled(true);
-	localParams[126]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000);
+	localParams[126]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000});
 	localParams[126]:setAnchorPoint(0.50, 0.50);
 	localParams[126]:setContentSize({width = 340.0, height = 120.0});
 	localParams[126]:setPosition(WinSize.width - 288.40, 78.35);
@@ -1565,7 +1565,7 @@ function MonsterLayer:initView()
 	localParams[127] = ImageView:create('uires/public/sheet_bgframe/bgFrame0088.png', 1);
 	localParams[127]:ignoreContentAdaptWithSize(false);
 	localParams[127]:setScale9Enabled(true);
-	localParams[127]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000);
+	localParams[127]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000});
 	localParams[127]:setAnchorPoint(0.50, 0.50);
 	localParams[127]:setContentSize({width = 99.0, height = 171.0});
 	localParams[127]:setPosition(277.1, 163.2);
@@ -1760,7 +1760,7 @@ function MonsterLayer:initView()
 	localParams[143] = ImageView:create('uires/public/sheet_bgframe/bgFrame0088.png', 1);
 	localParams[143]:ignoreContentAdaptWithSize(false);
 	localParams[143]:setScale9Enabled(true);
-	localParams[143]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000);
+	localParams[143]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000});
 	localParams[143]:setAnchorPoint(0.50, 0.50);
 	localParams[143]:setContentSize({width = 99.0, height = 216.0});
 	localParams[143]:setPosition(277.1, 187.36);
@@ -2003,7 +2003,7 @@ function MonsterLayer:initView()
 	localParams[163] = ImageView:create('uires/public/sheet_bgframe/bgFrame0088.png', 1);
 	localParams[163]:ignoreContentAdaptWithSize(false);
 	localParams[163]:setScale9Enabled(true);
-	localParams[163]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000);
+	localParams[163]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000});
 	localParams[163]:setAnchorPoint(0.50, 0.50);
 	localParams[163]:setContentSize({width = 99.0, height = 261.0});
 	localParams[163]:setPosition(277.1, 209.4);
@@ -2294,7 +2294,7 @@ function MonsterLayer:initView()
 	localParams[187] = ImageView:create('uires/public/sheet_bgframe/bgFrame0088.png', 1);
 	localParams[187]:ignoreContentAdaptWithSize(false);
 	localParams[187]:setScale9Enabled(true);
-	localParams[187]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000);
+	localParams[187]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000});
 	localParams[187]:setAnchorPoint(0.50, 0.50);
 	localParams[187]:setContentSize({width = 99.0, height = 306.0});
 	localParams[187]:setPosition(277.1, 231.4);
@@ -2757,7 +2757,7 @@ function MonsterLayer:initView()
 	localParams[225] = ImageView:create('uires/public/sheet_bgframe/bgFrame0088.png', 1);
 	localParams[225]:ignoreContentAdaptWithSize(false);
 	localParams[225]:setScale9Enabled(true);
-	localParams[225]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 1.000000);
+	localParams[225]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 1.000000});
 	localParams[225]:setAnchorPoint(0.00, 0.00);
 	localParams[225]:setContentSize({width = WinSize.width - 24.00, height = 134.0});
 	localParams[225]:setPosition(WinSize.width/2 + (-500.00 * ccx.scaleX), -170.0);
@@ -2769,7 +2769,7 @@ function MonsterLayer:initView()
 	localParams[226] = ImageView:create('uires/public/sheet_bgframe/bgFrame0014.png', 1);
 	localParams[226]:ignoreContentAdaptWithSize(false);
 	localParams[226]:setScale9Enabled(true);
-	localParams[226]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[226]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[226]:setAnchorPoint(0.00, 0.00);
 	localParams[226]:setContentSize({width = WinSize.width - 134.00, height = 110.0});
 	localParams[226]:setPosition(localParams[225]:getContentSize().width/2 + (-483.00 * ccx.scaleX), 6.41);

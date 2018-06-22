@@ -33,7 +33,7 @@ function SystemNode:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0085.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 39.000000, y = 13.000000,width = 42.000000, height = 14.000000);
+	localParams[1]:setCapInsets({x = 39.000000, y = 13.000000,width = 42.000000, height = 14.000000});
 	localParams[1]:setAnchorPoint(0.00, 0.00);
 	localParams[1]:setContentSize({width = 560.0, height = 50.0});
 	localParams[1]:setPosition(5.0, 5.0);

@@ -33,7 +33,7 @@ function EvaluateNode:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0085.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 39.000000, y = 13.000000,width = 42.000000, height = 14.000000);
+	localParams[1]:setCapInsets({x = 39.000000, y = 13.000000,width = 42.000000, height = 14.000000});
 	localParams[1]:setAnchorPoint(0.00, 0.00);
 	localParams[1]:setContentSize({width = 830.0, height = 40.0});
 	localParams[1]:setPosition(10.0, 3.0);
@@ -45,7 +45,7 @@ function EvaluateNode:initView()
 	localParams[2] = ImageView:create('uires/public/sheet_bgframe/bgFrame0083.png', 1);
 	localParams[2]:ignoreContentAdaptWithSize(false);
 	localParams[2]:setScale9Enabled(true);
-	localParams[2]:setCapInsets({x = 31.000000, y = 10.000000,width = 34.000000, height = 12.000000);
+	localParams[2]:setCapInsets({x = 31.000000, y = 10.000000,width = 34.000000, height = 12.000000});
 	localParams[2]:setAnchorPoint(0.50, 0.50);
 	localParams[2]:setContentSize({width = 266.0, height = 32.0});
 	localParams[2]:setPosition(172.85, 20.0);
@@ -131,7 +131,7 @@ function EvaluateNode:initView()
 	localParams[9] = ImageView:create('uires/public/sheet_bgframe/bgFrame0085.png', 1);
 	localParams[9]:ignoreContentAdaptWithSize(false);
 	localParams[9]:setScale9Enabled(true);
-	localParams[9]:setCapInsets({x = 39.000000, y = 13.000000,width = 42.000000, height = 14.000000);
+	localParams[9]:setCapInsets({x = 39.000000, y = 13.000000,width = 42.000000, height = 14.000000});
 	localParams[9]:setAnchorPoint(0.00, 0.00);
 	localParams[9]:setContentSize({width = 830.0, height = 70.0});
 	localParams[9]:setPosition(10.0, 3.0);
@@ -143,7 +143,7 @@ function EvaluateNode:initView()
 	localParams[10] = ImageView:create('uires/public/sheet_bgframe/bgFrame0083.png', 1);
 	localParams[10]:ignoreContentAdaptWithSize(false);
 	localParams[10]:setScale9Enabled(true);
-	localParams[10]:setCapInsets({x = 31.000000, y = 10.000000,width = 34.000000, height = 12.000000);
+	localParams[10]:setCapInsets({x = 31.000000, y = 10.000000,width = 34.000000, height = 12.000000});
 	localParams[10]:setAnchorPoint(0.50, 0.50);
 	localParams[10]:setContentSize({width = 266.0, height = 32.0});
 	localParams[10]:setPosition(172.85, 35.0);

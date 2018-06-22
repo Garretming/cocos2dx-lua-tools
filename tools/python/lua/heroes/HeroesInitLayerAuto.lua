@@ -85,7 +85,7 @@ function HeroesInitLayer:initView()
 	localParams[5] = ImageView:create('uires/public/sheet_bgframe/bgFrame0052.png', 1);
 	localParams[5]:ignoreContentAdaptWithSize(false);
 	localParams[5]:setScale9Enabled(true);
-	localParams[5]:setCapInsets({x = 60.000000, y = 30.000000,width = 180.000000, height = 43.000000);
+	localParams[5]:setCapInsets({x = 60.000000, y = 30.000000,width = 180.000000, height = 43.000000});
 	localParams[5]:setAnchorPoint(0.00, 0.00);
 	localParams[5]:setContentSize({width = WinSize.width - 0.00, height = 103.0});
 	localParams[5]:setPosition(WinSize.width/2 + (-512.00 * ccx.scaleX), -103.0);
@@ -155,7 +155,7 @@ function HeroesInitLayer:initView()
 	localParams[10] = ImageView:create('uires/public/sheet_bgframe/bgFrame0051.png', 1);
 	localParams[10]:ignoreContentAdaptWithSize(false);
 	localParams[10]:setScale9Enabled(true);
-	localParams[10]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000);
+	localParams[10]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000});
 	localParams[10]:setAnchorPoint(1.00, 1.00);
 	localParams[10]:setContentSize({width = 800.0, height = 93.0});
 	localParams[10]:setPosition(localParams[9]:getContentSize().width - 0.00, localParams[9]:getContentSize().height - 0.00);

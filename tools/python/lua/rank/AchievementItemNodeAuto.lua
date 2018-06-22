@@ -79,7 +79,7 @@ function AchievementItemNode:initView()
 	localParams[5] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[5]:ignoreContentAdaptWithSize(false);
 	localParams[5]:setScale9Enabled(true);
-	localParams[5]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[5]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setContentSize({width = 330.0, height = 32.0});
 	localParams[5]:setPosition(347.2, 31.57);

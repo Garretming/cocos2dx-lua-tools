@@ -34,7 +34,7 @@ function EmailLayer:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0016.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 39.000000, y = 39.000000,width = 144.000000, height = 144.000000);
+	localParams[1]:setCapInsets({x = 39.000000, y = 39.000000,width = 144.000000, height = 144.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setScaleX(0.30);
 	localParams[1]:setScaleY(0.30);
@@ -48,7 +48,7 @@ function EmailLayer:initView()
 	localParams[2] = ImageView:create('uires/public/sheet_common/bgFrame0011.png', 1);
 	localParams[2]:ignoreContentAdaptWithSize(false);
 	localParams[2]:setScale9Enabled(true);
-	localParams[2]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000);
+	localParams[2]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000});
 	localParams[2]:setAnchorPoint(0.50, 0.50);
 	localParams[2]:setContentSize({width = 860.0, height = 525.0});
 	localParams[2]:setPosition(460.75, 295.0);
@@ -60,7 +60,7 @@ function EmailLayer:initView()
 	localParams[3] = ImageView:create('uires/public/sheet_bgframe/bgFrame0013.png', 1);
 	localParams[3]:ignoreContentAdaptWithSize(false);
 	localParams[3]:setScale9Enabled(true);
-	localParams[3]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000);
+	localParams[3]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000});
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 280.0, height = 505.0});
 	localParams[3]:setPosition(179.45, 295.0);
@@ -127,7 +127,7 @@ function EmailLayer:initView()
 	localParams[8] = ImageView:create('uires/public/sheet_bgframe/bgFrame0013.png', 1);
 	localParams[8]:ignoreContentAdaptWithSize(false);
 	localParams[8]:setScale9Enabled(true);
-	localParams[8]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000);
+	localParams[8]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000});
 	localParams[8]:setAnchorPoint(0.50, 0.50);
 	localParams[8]:setContentSize({width = 555.0, height = 505.0});
 	localParams[8]:setPosition(605.0, 295.0);
@@ -148,7 +148,7 @@ function EmailLayer:initView()
 	localParams[10] = ImageView:create('uires/public/sheet_bgframe/bgFrame0119.png', 1);
 	localParams[10]:ignoreContentAdaptWithSize(false);
 	localParams[10]:setScale9Enabled(true);
-	localParams[10]:setCapInsets({x = 29.000000, y = 12.000000,width = 32.000000, height = 14.000000);
+	localParams[10]:setCapInsets({x = 29.000000, y = 12.000000,width = 32.000000, height = 14.000000});
 	localParams[10]:setAnchorPoint(0.50, 0.50);
 	localParams[10]:setContentSize({width = 530.0, height = 38.0});
 	localParams[10]:setPosition(277.5, 474.7);
@@ -188,7 +188,7 @@ function EmailLayer:initView()
 	localParams[13] = ImageView:create('uires/public/sheet_bgframe/bgFrame0014.png', 1);
 	localParams[13]:ignoreContentAdaptWithSize(false);
 	localParams[13]:setScale9Enabled(true);
-	localParams[13]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[13]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[13]:setAnchorPoint(0.50, 0.50);
 	localParams[13]:setContentSize({width = 530.0, height = 210.0});
 	localParams[13]:setPosition(277.5, 343.4);
@@ -212,7 +212,7 @@ function EmailLayer:initView()
 	localParams[15] = ImageView:create('uires/public/sheet_bgframe/bgFrame0014.png', 1);
 	localParams[15]:ignoreContentAdaptWithSize(false);
 	localParams[15]:setScale9Enabled(true);
-	localParams[15]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[15]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[15]:setAnchorPoint(0.50, 0.50);
 	localParams[15]:setContentSize({width = 530.0, height = 125.0});
 	localParams[15]:setPosition(277.5, 166.65);
@@ -528,7 +528,7 @@ function EmailLayer:initView()
 	localParams[40] = ImageView:create('uires/public/sheet_bgframe/bgFrame0013.png', 1);
 	localParams[40]:ignoreContentAdaptWithSize(false);
 	localParams[40]:setScale9Enabled(true);
-	localParams[40]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000);
+	localParams[40]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000});
 	localParams[40]:setAnchorPoint(0.50, 0.50);
 	localParams[40]:setContentSize({width = 555.0, height = 505.0});
 	localParams[40]:setPosition(605.0, 295.0);
@@ -549,7 +549,7 @@ function EmailLayer:initView()
 	localParams[42] = ImageView:create('uires/public/sheet_bgframe/bgFrame0119.png', 1);
 	localParams[42]:ignoreContentAdaptWithSize(false);
 	localParams[42]:setScale9Enabled(true);
-	localParams[42]:setCapInsets({x = 29.000000, y = 12.000000,width = 32.000000, height = 14.000000);
+	localParams[42]:setCapInsets({x = 29.000000, y = 12.000000,width = 32.000000, height = 14.000000});
 	localParams[42]:setAnchorPoint(0.50, 0.50);
 	localParams[42]:setContentSize({width = 530.0, height = 38.0});
 	localParams[42]:setPosition(277.5, 474.7);
@@ -589,7 +589,7 @@ function EmailLayer:initView()
 	localParams[45] = ImageView:create('uires/public/sheet_bgframe/bgFrame0014.png', 1);
 	localParams[45]:ignoreContentAdaptWithSize(false);
 	localParams[45]:setScale9Enabled(true);
-	localParams[45]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[45]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[45]:setAnchorPoint(0.50, 1.00);
 	localParams[45]:setContentSize({width = 530.0, height = 350.0});
 	localParams[45]:setPosition(277.5, 445.0);

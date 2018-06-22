@@ -34,7 +34,7 @@ function RankLayer:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0016.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 81.000000, y = 81.000000,width = 60.000000, height = 60.000000);
+	localParams[1]:setCapInsets({x = 81.000000, y = 81.000000,width = 60.000000, height = 60.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setContentSize({width = 710.0, height = WinSize.height - 50.00});
 	localParams[1]:setPosition(-360.0, WinSize.height/2 + (-12.80 * ccx.scaleY));
@@ -46,7 +46,7 @@ function RankLayer:initView()
 	localParams[2] = ImageView:create('uires/public/sheet_common/bgFrame0011.png', 1);
 	localParams[2]:ignoreContentAdaptWithSize(false);
 	localParams[2]:setScale9Enabled(true);
-	localParams[2]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[2]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[2]:setAnchorPoint(0.50, 0.50);
 	localParams[2]:setContentSize({width = 600.0, height = WinSize.height - 120.00});
 	localParams[2]:setPosition(377.93, localParams[1]:getContentSize().height/2 + (-0.00 * ccx.scaleY));
@@ -58,7 +58,7 @@ function RankLayer:initView()
 	localParams[3] = ImageView:create('uires/public/sheet_bgframe/bgFrame0013.png', 1);
 	localParams[3]:ignoreContentAdaptWithSize(false);
 	localParams[3]:setScale9Enabled(true);
-	localParams[3]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[3]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 580.0, height = 110.0});
 	localParams[3]:setPosition(380.0, localParams[1]:getContentSize().height - 100.00);
@@ -152,7 +152,7 @@ function RankLayer:initView()
 	localParams[10] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[10]:ignoreContentAdaptWithSize(false);
 	localParams[10]:setScale9Enabled(true);
-	localParams[10]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[10]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[10]:setAnchorPoint(0.50, 0.50);
 	localParams[10]:setContentSize({width = 330.0, height = 32.0});
 	localParams[10]:setPosition(359.6, 30.8);
@@ -214,7 +214,7 @@ function RankLayer:initView()
 	localParams[15] = ImageView:create('uires/public/sheet_bgframe/bgFrame0013.png', 1);
 	localParams[15]:ignoreContentAdaptWithSize(false);
 	localParams[15]:setScale9Enabled(true);
-	localParams[15]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[15]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[15]:setAnchorPoint(0.50, 0.50);
 	localParams[15]:setContentSize({width = 580.0, height = 110.0});
 	localParams[15]:setPosition(380.0, localParams[1]:getContentSize().height - 100.00);
@@ -245,7 +245,7 @@ function RankLayer:initView()
 	localParams[18] = ImageView:create('uires/public/sheet_bgframe/bgFrame0014.png', 1);
 	localParams[18]:ignoreContentAdaptWithSize(false);
 	localParams[18]:setScale9Enabled(true);
-	localParams[18]:setCapInsets({x = 29.000000, y = 11.000000,width = 62.000000, height = 98.000000);
+	localParams[18]:setCapInsets({x = 29.000000, y = 11.000000,width = 62.000000, height = 98.000000});
 	localParams[18]:setAnchorPoint(0.00, 0.50);
 	localParams[18]:setContentSize({width = 350.0, height = 80.0});
 	localParams[18]:setPosition(216.0, 55.0);
@@ -282,7 +282,7 @@ function RankLayer:initView()
 	localParams[21] = ImageView:create('uires/public/sheet_bgframe/bgFrame0013.png', 1);
 	localParams[21]:ignoreContentAdaptWithSize(false);
 	localParams[21]:setScale9Enabled(true);
-	localParams[21]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[21]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[21]:setAnchorPoint(0.50, 1.00);
 	localParams[21]:setContentSize({width = 580.0, height = WinSize.height - 255.00});
 	localParams[21]:setPosition(377.93, localParams[1]:getContentSize().height - 160.00);

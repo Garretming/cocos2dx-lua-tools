@@ -34,7 +34,7 @@ function SkillLayer:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0061.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 59.000000, y = 59.000000,width = 62.000000, height = 62.000000);
+	localParams[1]:setCapInsets({x = 59.000000, y = 59.000000,width = 62.000000, height = 62.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setContentSize({width = WinSize.width - 64.00, height = WinSize.height - 215.00});
 	localParams[1]:setPosition(WinSize.width/2 + (-17.00 * ccx.scaleX), WinSize.height/2 + (8.00 * ccx.scaleY));

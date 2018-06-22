@@ -33,7 +33,7 @@ function AchievementNode:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0122.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 37.000000, y = 37.000000,width = 40.000000, height = 40.000000);
+	localParams[1]:setCapInsets({x = 37.000000, y = 37.000000,width = 40.000000, height = 40.000000});
 	localParams[1]:setAnchorPoint(0.00, 0.00);
 	localParams[1]:setContentSize({width = 870.0, height = 145.0});
 	localParams[1]:setPosition(0.0, 0.0);
@@ -54,7 +54,7 @@ function AchievementNode:initView()
 	localParams[3] = ImageView:create('uires/public/sheet_bgframe/bgFrame0125.png', 1);
 	localParams[3]:ignoreContentAdaptWithSize(false);
 	localParams[3]:setScale9Enabled(true);
-	localParams[3]:setCapInsets({x = 36.000000, y = 36.000000,width = 50.000000, height = 50.000000);
+	localParams[3]:setCapInsets({x = 36.000000, y = 36.000000,width = 50.000000, height = 50.000000});
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 122.0, height = 122.0});
 	localParams[3]:setPosition(767.12, 74.94);
@@ -117,7 +117,7 @@ function AchievementNode:initView()
 	localParams[8] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[8]:ignoreContentAdaptWithSize(false);
 	localParams[8]:setScale9Enabled(true);
-	localParams[8]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[8]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[8]:setAnchorPoint(0.50, 0.50);
 	localParams[8]:setContentSize({width = 450.0, height = 32.0});
 	localParams[8]:setPosition(452.45, 70.37);

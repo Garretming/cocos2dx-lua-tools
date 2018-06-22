@@ -33,7 +33,7 @@ function ChattingLayer:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_common/bgFrame0017.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 39.000000, y = 39.000000,width = 168.000000, height = 168.000000);
+	localParams[1]:setCapInsets({x = 39.000000, y = 39.000000,width = 168.000000, height = 168.000000});
 	localParams[1]:setAnchorPoint(0.00, 0.00);
 	localParams[1]:setContentSize({width = 640.0, height = WinSize.height - 0.00});
 	localParams[1]:setPosition(-640.56, WinSize.height/2 + (-320.00 * ccx.scaleY));
@@ -45,7 +45,7 @@ function ChattingLayer:initView()
 	localParams[2] = ImageView:create('uires/public/sheet_common/bgFrame0011.png', 1);
 	localParams[2]:ignoreContentAdaptWithSize(false);
 	localParams[2]:setScale9Enabled(true);
-	localParams[2]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000);
+	localParams[2]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000});
 	localParams[2]:setAnchorPoint(0.50, 0.50);
 	localParams[2]:setContentSize({width = 600.0, height = WinSize.height - 130.00});
 	localParams[2]:setPosition(320.0, localParams[1]:getContentSize().height/2 + (26.75 * ccx.scaleY));
@@ -57,7 +57,7 @@ function ChattingLayer:initView()
 	localParams[3] = ImageView:create('uires/public/sheet_bgframe/bgFrame0013.png', 1);
 	localParams[3]:ignoreContentAdaptWithSize(false);
 	localParams[3]:setScale9Enabled(true);
-	localParams[3]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000);
+	localParams[3]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000});
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 570.0, height = WinSize.height - 164.00});
 	localParams[3]:setPosition(320.0, localParams[1]:getContentSize().height/2 + (25.98 * ccx.scaleY));
@@ -111,7 +111,7 @@ function ChattingLayer:initView()
 	localParams[7] = ImageView:create('uires/public/sheet_bgframe/bgFrame0013.png', 1);
 	localParams[7]:ignoreContentAdaptWithSize(false);
 	localParams[7]:setScale9Enabled(true);
-	localParams[7]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000);
+	localParams[7]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000});
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setContentSize({width = 570.0, height = WinSize.height - 164.00});
 	localParams[7]:setPosition(320.0, localParams[1]:getContentSize().height/2 + (25.98 * ccx.scaleY));
@@ -188,7 +188,7 @@ function ChattingLayer:initView()
 	localParams[13] = ImageView:create('uires/public/sheet_bgframe/bgFrame0047.png', 1);
 	localParams[13]:ignoreContentAdaptWithSize(false);
 	localParams[13]:setScale9Enabled(true);
-	localParams[13]:setCapInsets({x = 49.000000, y = 16.000000,width = 52.000000, height = 18.000000);
+	localParams[13]:setCapInsets({x = 49.000000, y = 16.000000,width = 52.000000, height = 18.000000});
 	localParams[13]:setAnchorPoint(0.50, 0.50);
 	localParams[13]:setContentSize({width = 400.0, height = 50.0});
 	localParams[13]:setPosition(199.67, -61.4);
@@ -218,7 +218,7 @@ function ChattingLayer:initView()
 	localParams[15] = ImageView:create('uires/public/sheet_common/bgFrame0011.png', 1);
 	localParams[15]:ignoreContentAdaptWithSize(false);
 	localParams[15]:setScale9Enabled(true);
-	localParams[15]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[15]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[15]:setAnchorPoint(0.50, 0.50);
 	localParams[15]:setContentSize({width = 124.0, height = WinSize.height - 0.00});
 	localParams[15]:setPosition(-61.63, localParams[1]:getContentSize().height/2 + (-0.90 * ccx.scaleY));

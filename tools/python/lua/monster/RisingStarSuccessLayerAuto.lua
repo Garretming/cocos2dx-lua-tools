@@ -78,7 +78,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[6] = ImageView:create('uires/public/sheet_bgframe/bgFrame0062.png', 1);
 	localParams[6]:ignoreContentAdaptWithSize(false);
 	localParams[6]:setScale9Enabled(true);
-	localParams[6]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000);
+	localParams[6]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000});
 	localParams[6]:setAnchorPoint(0.50, 0.50);
 	localParams[6]:setVisible(false);
 	localParams[6]:setContentSize({width = 172.0, height = 29.0});
@@ -118,7 +118,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[9] = ImageView:create('uires/public/sheet_bgframe/bgFrame0062.png', 1);
 	localParams[9]:ignoreContentAdaptWithSize(false);
 	localParams[9]:setScale9Enabled(true);
-	localParams[9]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000);
+	localParams[9]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000});
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:setVisible(false);
 	localParams[9]:setContentSize({width = 172.0, height = 29.0});
@@ -158,7 +158,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[12] = ImageView:create('uires/public/sheet_bgframe/bgFrame0062.png', 1);
 	localParams[12]:ignoreContentAdaptWithSize(false);
 	localParams[12]:setScale9Enabled(true);
-	localParams[12]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000);
+	localParams[12]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000});
 	localParams[12]:setAnchorPoint(0.50, 0.50);
 	localParams[12]:setVisible(false);
 	localParams[12]:setContentSize({width = 172.0, height = 29.0});
@@ -198,7 +198,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[15] = ImageView:create('uires/public/sheet_bgframe/bgFrame0062.png', 1);
 	localParams[15]:ignoreContentAdaptWithSize(false);
 	localParams[15]:setScale9Enabled(true);
-	localParams[15]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000);
+	localParams[15]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000});
 	localParams[15]:setAnchorPoint(0.50, 0.50);
 	localParams[15]:setVisible(false);
 	localParams[15]:setContentSize({width = 172.0, height = 29.0});
@@ -238,7 +238,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[18] = ImageView:create('uires/public/sheet_bgframe/bgFrame0062.png', 1);
 	localParams[18]:ignoreContentAdaptWithSize(false);
 	localParams[18]:setScale9Enabled(true);
-	localParams[18]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000);
+	localParams[18]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000});
 	localParams[18]:setAnchorPoint(0.50, 0.50);
 	localParams[18]:setVisible(false);
 	localParams[18]:setContentSize({width = 172.0, height = 29.0});
@@ -278,7 +278,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[21] = ImageView:create('uires/public/sheet_bgframe/bgFrame0062.png', 1);
 	localParams[21]:ignoreContentAdaptWithSize(false);
 	localParams[21]:setScale9Enabled(true);
-	localParams[21]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000);
+	localParams[21]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000});
 	localParams[21]:setAnchorPoint(0.50, 0.50);
 	localParams[21]:setVisible(false);
 	localParams[21]:setContentSize({width = 172.0, height = 29.0});
@@ -318,7 +318,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[24] = ImageView:create('uires/public/sheet_bgframe/bgFrame0062.png', 1);
 	localParams[24]:ignoreContentAdaptWithSize(false);
 	localParams[24]:setScale9Enabled(true);
-	localParams[24]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000);
+	localParams[24]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000});
 	localParams[24]:setAnchorPoint(0.50, 0.50);
 	localParams[24]:setVisible(false);
 	localParams[24]:setContentSize({width = 172.0, height = 29.0});
@@ -358,7 +358,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[27] = ImageView:create('uires/public/sheet_bgframe/bgFrame0062.png', 1);
 	localParams[27]:ignoreContentAdaptWithSize(false);
 	localParams[27]:setScale9Enabled(true);
-	localParams[27]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000);
+	localParams[27]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000});
 	localParams[27]:setAnchorPoint(0.50, 0.50);
 	localParams[27]:setVisible(false);
 	localParams[27]:setContentSize({width = 172.0, height = 29.0});
@@ -639,7 +639,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[54] = ImageView:create('uires/public/sheet_bgframe/bgFrame0067.png', 1);
 	localParams[54]:ignoreContentAdaptWithSize(false);
 	localParams[54]:setScale9Enabled(true);
-	localParams[54]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000);
+	localParams[54]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000});
 	localParams[54]:setAnchorPoint(0.50, 0.50);
 	localParams[54]:setVisible(false);
 	localParams[54]:setContentSize({width = 440.0, height = 120.0});

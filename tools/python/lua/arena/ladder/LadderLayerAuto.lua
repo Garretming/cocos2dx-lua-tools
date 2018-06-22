@@ -467,7 +467,7 @@ function LadderLayer:initView()
 	localParams[43] = ImageView:create('uires/public/sheet_bgframe/bgFrame0051.png', 1);
 	localParams[43]:ignoreContentAdaptWithSize(false);
 	localParams[43]:setScale9Enabled(true);
-	localParams[43]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000);
+	localParams[43]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000});
 	localParams[43]:setAnchorPoint(1.00, 1.00);
 	localParams[43]:setContentSize({width = 800.0, height = 93.0});
 	localParams[43]:setPosition(localParams[42]:getContentSize().width - -1.56, localParams[42]:getContentSize().height - 0.00);
@@ -610,7 +610,7 @@ function LadderLayer:initView()
 	localParams[55] = ImageView:create('uires/public/sheet_bgframe/bgFrame0097.png', 1);
 	localParams[55]:ignoreContentAdaptWithSize(false);
 	localParams[55]:setScale9Enabled(true);
-	localParams[55]:setCapInsets({x = 136.000000, y = 5.000000,width = 162.000000, height = 8.000000);
+	localParams[55]:setCapInsets({x = 136.000000, y = 5.000000,width = 162.000000, height = 8.000000});
 	localParams[55]:setAnchorPoint(0.50, 0.50);
 	localParams[55]:setContentSize({width = 434.0, height = 200.0});
 	localParams[55]:setPosition(217.0, 110.0);
@@ -850,7 +850,7 @@ function LadderLayer:initView()
 	localParams[74] = ImageView:create('uires/public/sheet_bgframe/bgFrame0086.png', 1);
 	localParams[74]:ignoreContentAdaptWithSize(false);
 	localParams[74]:setScale9Enabled(true);
-	localParams[74]:setCapInsets({x = 29.000000, y = 18.000000,width = 110.000000, height = 20.000000);
+	localParams[74]:setCapInsets({x = 29.000000, y = 18.000000,width = 110.000000, height = 20.000000});
 	localParams[74]:setAnchorPoint(1.00, 0.50);
 	localParams[74]:setVisible(false);
 	localParams[74]:setContentSize({width = 300.0, height = 56.0});

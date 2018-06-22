@@ -42,7 +42,7 @@ function EmbattleLayer:initView()
 	localParams[2] = ImageView:create('uires/public/sheet_bgframe/bgFrame0069.png', 1);
 	localParams[2]:ignoreContentAdaptWithSize(false);
 	localParams[2]:setScale9Enabled(true);
-	localParams[2]:setCapInsets({x = 40.000000, y = 40.000000,width = 40.000000, height = 40.000000);
+	localParams[2]:setCapInsets({x = 40.000000, y = 40.000000,width = 40.000000, height = 40.000000});
 	localParams[2]:setAnchorPoint(1.00, 0.00);
 	localParams[2]:setContentSize({width = 265.0, height = WinSize.height - 53.00});
 	localParams[2]:setPosition(WinSize.width - 0.00, 0.0);
@@ -334,7 +334,7 @@ function EmbattleLayer:initView()
 	localParams[25] = ImageView:create('uires/public/sheet_bgframe/bgFrame0051.png', 1);
 	localParams[25]:ignoreContentAdaptWithSize(false);
 	localParams[25]:setScale9Enabled(true);
-	localParams[25]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000);
+	localParams[25]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000});
 	localParams[25]:setAnchorPoint(0.50, 0.50);
 	localParams[25]:setContentSize({width = 800.0, height = 93.0});
 	localParams[25]:setPosition(WinSize.width - 400.00, WinSize.height - 46.50);
@@ -374,7 +374,7 @@ function EmbattleLayer:initView()
 	localParams[28] = ImageView:create('uires/public/sheet_bgframe/bgFrame0091.png', 1);
 	localParams[28]:ignoreContentAdaptWithSize(false);
 	localParams[28]:setScale9Enabled(true);
-	localParams[28]:setCapInsets({x = 309.000000, y = 75.000000,width = 169.000000, height = 90.000000);
+	localParams[28]:setCapInsets({x = 309.000000, y = 75.000000,width = 169.000000, height = 90.000000});
 	localParams[28]:setAnchorPoint(0.50, 0.50);
 	localParams[28]:setContentSize({width = WinSize.width - 294.00, height = WinSize.height - 110.00});
 	localParams[28]:setPosition(WinSize.width/2 + (-121.04 * ccx.scaleX), WinSize.height/2 + (-46.02 * ccx.scaleY));
@@ -726,7 +726,7 @@ function EmbattleLayer:initView()
 	localParams[60] = ImageView:create('uires/public/sheet_common/bgFrame0068.png', 1);
 	localParams[60]:ignoreContentAdaptWithSize(false);
 	localParams[60]:setScale9Enabled(true);
-	localParams[60]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[60]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[60]:setAnchorPoint(0.00, 0.50);
 	localParams[60]:setContentSize({width = 270.0, height = 360.0});
 	localParams[60]:setPosition(1027.36, 360.49);
@@ -911,7 +911,7 @@ function EmbattleLayer:initView()
 	localParams[74] = ImageView:create('uires/public/sheet_common/bgFrame0068.png', 1);
 	localParams[74]:ignoreContentAdaptWithSize(false);
 	localParams[74]:setScale9Enabled(true);
-	localParams[74]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[74]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[74]:setAnchorPoint(0.00, 0.50);
 	localParams[74]:setContentSize({width = 270.0, height = 230.0});
 	localParams[74]:setPosition(1044.08, 204.9);
@@ -973,7 +973,7 @@ function EmbattleLayer:initView()
 	localParams[79] = ImageView:create('uires/public/sheet_bgframe/bgFrame0067.png', 1);
 	localParams[79]:ignoreContentAdaptWithSize(false);
 	localParams[79]:setScale9Enabled(true);
-	localParams[79]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000);
+	localParams[79]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000});
 	localParams[79]:setAnchorPoint(0.50, 0.50);
 	localParams[79]:setContentSize({width = 460.0, height = 60.0});
 	localParams[79]:setPosition(WinSize.width/2 + (-56.83 * ccx.scaleX), WinSize.height/2 + (-262.08 * ccx.scaleY));
@@ -985,7 +985,7 @@ function EmbattleLayer:initView()
 	localParams[80] = ImageView:create('uires/public/sheet_bgframe/bgFrame0088.png', 1);
 	localParams[80]:ignoreContentAdaptWithSize(false);
 	localParams[80]:setScale9Enabled(true);
-	localParams[80]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000);
+	localParams[80]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000});
 	localParams[80]:setAnchorPoint(0.50, 0.50);
 	localParams[80]:setContentSize({width = 99.0, height = 171.0});
 	localParams[80]:setPosition(407.1, 133.2);
@@ -1180,7 +1180,7 @@ function EmbattleLayer:initView()
 	localParams[96] = ImageView:create('uires/public/sheet_bgframe/bgFrame0088.png', 1);
 	localParams[96]:ignoreContentAdaptWithSize(false);
 	localParams[96]:setScale9Enabled(true);
-	localParams[96]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000);
+	localParams[96]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000});
 	localParams[96]:setAnchorPoint(0.50, 0.50);
 	localParams[96]:setContentSize({width = 99.0, height = 216.0});
 	localParams[96]:setPosition(407.1, 157.2);
@@ -1423,7 +1423,7 @@ function EmbattleLayer:initView()
 	localParams[116] = ImageView:create('uires/public/sheet_bgframe/bgFrame0088.png', 1);
 	localParams[116]:ignoreContentAdaptWithSize(false);
 	localParams[116]:setScale9Enabled(true);
-	localParams[116]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000);
+	localParams[116]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000});
 	localParams[116]:setAnchorPoint(0.50, 0.50);
 	localParams[116]:setContentSize({width = 99.0, height = 261.0});
 	localParams[116]:setPosition(407.1, 179.2);
@@ -1714,7 +1714,7 @@ function EmbattleLayer:initView()
 	localParams[140] = ImageView:create('uires/public/sheet_bgframe/bgFrame0088.png', 1);
 	localParams[140]:ignoreContentAdaptWithSize(false);
 	localParams[140]:setScale9Enabled(true);
-	localParams[140]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000);
+	localParams[140]:setCapInsets({x = 32.000000, y = 38.000000,width = 35.000000, height = 3.000000});
 	localParams[140]:setAnchorPoint(0.50, 0.50);
 	localParams[140]:setContentSize({width = 99.0, height = 306.0});
 	localParams[140]:setPosition(407.1, 201.2);

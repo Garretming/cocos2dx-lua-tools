@@ -32,7 +32,7 @@ function DivinationResult:initView()
 	localParams[1] = ImageView:create('uires/public/bg_img/bgImg0024.png', 0);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 374.000000, y = 253.000000,width = 388.000000, height = 262.000000);
+	localParams[1]:setCapInsets({x = 374.000000, y = 253.000000,width = 388.000000, height = 262.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setContentSize({width = 1136.0, height = 768.0});
 	localParams[1]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), WinSize.height/2 + (-0.00 * ccx.scaleY));

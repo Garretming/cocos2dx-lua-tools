@@ -33,7 +33,7 @@ function RisingStarLayer:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0067.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000);
+	localParams[1]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setContentSize({width = 440.0, height = 400.0});
 	localParams[1]:setPosition(WinSize.width - 329.00, WinSize.height/2 + (25.02 * ccx.scaleY));

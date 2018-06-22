@@ -33,7 +33,7 @@ function ChangeLayer:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0016.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 73.000000, y = 73.000000,width = 76.000000, height = 76.000000);
+	localParams[1]:setCapInsets({x = 73.000000, y = 73.000000,width = 76.000000, height = 76.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setContentSize({width = 710.0, height = 540.0});
 	localParams[1]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), WinSize.height/2 + (1.15 * ccx.scaleY));
@@ -45,7 +45,7 @@ function ChangeLayer:initView()
 	localParams[2] = ImageView:create('uires/public/sheet_common/bgFrame0011.png', 1);
 	localParams[2]:ignoreContentAdaptWithSize(false);
 	localParams[2]:setScale9Enabled(true);
-	localParams[2]:setCapInsets({x = 36.000000, y = 36.000000,width = 48.000000, height = 48.000000);
+	localParams[2]:setCapInsets({x = 36.000000, y = 36.000000,width = 48.000000, height = 48.000000});
 	localParams[2]:setAnchorPoint(0.50, 0.50);
 	localParams[2]:setContentSize({width = 600.0, height = 390.0});
 	localParams[2]:setPosition(328.87, 314.76);
@@ -57,7 +57,7 @@ function ChangeLayer:initView()
 	localParams[3] = ImageView:create('uires/public/sheet_bgframe/bgFrame0013.png', 1);
 	localParams[3]:ignoreContentAdaptWithSize(false);
 	localParams[3]:setScale9Enabled(true);
-	localParams[3]:setCapInsets({x = 36.000000, y = 36.000000,width = 48.000000, height = 48.000000);
+	localParams[3]:setCapInsets({x = 36.000000, y = 36.000000,width = 48.000000, height = 48.000000});
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 580.0, height = 370.0});
 	localParams[3]:setPosition(329.66, 314.76);

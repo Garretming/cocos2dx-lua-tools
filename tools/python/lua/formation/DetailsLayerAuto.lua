@@ -144,7 +144,7 @@ function DetailsLayer:initView()
 	localParams[11] = ImageView:create('uires/public/sheet_bgframe/bgFrame0051.png', 1);
 	localParams[11]:ignoreContentAdaptWithSize(false);
 	localParams[11]:setScale9Enabled(true);
-	localParams[11]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000);
+	localParams[11]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000});
 	localParams[11]:setAnchorPoint(0.50, 0.50);
 	localParams[11]:setContentSize({width = 800.0, height = 93.0});
 	localParams[11]:setPosition(WinSize.width - 400.00, WinSize.height - 46.50);

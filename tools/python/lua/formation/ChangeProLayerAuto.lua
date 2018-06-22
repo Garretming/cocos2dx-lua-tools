@@ -32,7 +32,7 @@ function ChangeProLayer:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0066.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 81.000000, y = 81.000000,width = 84.000000, height = 84.000000);
+	localParams[1]:setCapInsets({x = 81.000000, y = 81.000000,width = 84.000000, height = 84.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setContentSize({width = 320.0, height = 350.0});
 	localParams[1]:setPosition(WinSize.width/2 + (-18.53 * ccx.scaleX), WinSize.height/2 + (11.07 * ccx.scaleY));

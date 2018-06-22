@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-import parseSprite
 import parseText
 import parseLayout
 import parseButton
@@ -9,7 +8,6 @@ import parseTextBMFont
 import parseTextAtlas
 import parseProgressTimer
 import parseScrollView
-import parseLayout
 import parseListView
 import parseSlider
 import parseCommon

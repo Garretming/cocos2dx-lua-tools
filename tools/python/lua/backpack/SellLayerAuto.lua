@@ -34,7 +34,7 @@ function SellLayer:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_common/bgFrame0017.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 81.000000, y = 81.000000,width = 84.000000, height = 84.000000);
+	localParams[1]:setCapInsets({x = 81.000000, y = 81.000000,width = 84.000000, height = 84.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setScaleX(0.30);
 	localParams[1]:setScaleY(0.30);
@@ -48,7 +48,7 @@ function SellLayer:initView()
 	localParams[2] = ImageView:create('uires/public/sheet_common/bgFrame0011.png', 1);
 	localParams[2]:ignoreContentAdaptWithSize(false);
 	localParams[2]:setScale9Enabled(true);
-	localParams[2]:setCapInsets({x = 30.000000, y = 16.000000,width = 74.000000, height = 74.000000);
+	localParams[2]:setCapInsets({x = 30.000000, y = 16.000000,width = 74.000000, height = 74.000000});
 	localParams[2]:setAnchorPoint(0.50, 0.50);
 	localParams[2]:setContentSize({width = 370.0, height = 445.0});
 	localParams[2]:setPosition(207.94, 319.76);
@@ -60,7 +60,7 @@ function SellLayer:initView()
 	localParams[3] = ImageView:create('uires/public/sheet_bgframe/bgFrame0013.png', 1);
 	localParams[3]:ignoreContentAdaptWithSize(false);
 	localParams[3]:setScale9Enabled(true);
-	localParams[3]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000);
+	localParams[3]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000});
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 350.0, height = 365.0});
 	localParams[3]:setPosition(185.16, 252.42);
@@ -72,7 +72,7 @@ function SellLayer:initView()
 	localParams[4] = ImageView:create('uires/public/sheet_common/bgFrame0019.png', 1);
 	localParams[4]:ignoreContentAdaptWithSize(false);
 	localParams[4]:setScale9Enabled(true);
-	localParams[4]:setCapInsets({x = 37.000000, y = 12.000000,width = 40.000000, height = 13.000000);
+	localParams[4]:setCapInsets({x = 37.000000, y = 12.000000,width = 40.000000, height = 13.000000});
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setContentSize({width = 332.0, height = 37.0});
 	localParams[4]:setPosition(176.96, 164.87);
@@ -115,7 +115,7 @@ function SellLayer:initView()
 	localParams[8] = ImageView:create('uires/public/sheet_common/bgFrame0019.png', 1);
 	localParams[8]:ignoreContentAdaptWithSize(false);
 	localParams[8]:setScale9Enabled(true);
-	localParams[8]:setCapInsets({x = 37.000000, y = 12.000000,width = 40.000000, height = 13.000000);
+	localParams[8]:setCapInsets({x = 37.000000, y = 12.000000,width = 40.000000, height = 13.000000});
 	localParams[8]:setAnchorPoint(0.50, 0.50);
 	localParams[8]:setContentSize({width = 332.0, height = 37.0});
 	localParams[8]:setPosition(176.96, 99.82);
@@ -327,7 +327,7 @@ function SellLayer:initView()
 	localParams[25] = ImageView:create('uires/public/sheet_common/bgFrame0019.png', 1);
 	localParams[25]:ignoreContentAdaptWithSize(false);
 	localParams[25]:setScale9Enabled(true);
-	localParams[25]:setCapInsets({x = 37.000000, y = 12.000000,width = 40.000000, height = 13.000000);
+	localParams[25]:setCapInsets({x = 37.000000, y = 12.000000,width = 40.000000, height = 13.000000});
 	localParams[25]:setAnchorPoint(0.50, 0.50);
 	localParams[25]:setContentSize({width = 332.0, height = 37.0});
 	localParams[25]:setPosition(186.56, 38.09);

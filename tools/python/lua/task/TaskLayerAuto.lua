@@ -33,7 +33,7 @@ function TaskLayer:initView()
 	localParams[1] = ImageView:create('uires/public/bg_img/bgImg0017.png', 0);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 374.000000, y = 253.000000,width = 388.000000, height = 262.000000);
+	localParams[1]:setCapInsets({x = 374.000000, y = 253.000000,width = 388.000000, height = 262.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setContentSize({width = 1136.0, height = 768.0});
 	localParams[1]:setPosition(WinSize.width/2 + (-0.51 * ccx.scaleX), WinSize.height/2 + (1.41 * ccx.scaleY));
@@ -244,7 +244,7 @@ function TaskLayer:initView()
 	localParams[19] = ImageView:create('uires/public/sheet_bgframe/bgFrame0067.png', 1);
 	localParams[19]:ignoreContentAdaptWithSize(false);
 	localParams[19]:setScale9Enabled(true);
-	localParams[19]:setCapInsets({x = 39.000000, y = 39.000000,width = 12.000000, height = 12.000000);
+	localParams[19]:setCapInsets({x = 39.000000, y = 39.000000,width = 12.000000, height = 12.000000});
 	localParams[19]:setAnchorPoint(0.50, 0.00);
 	localParams[19]:setContentSize({width = 900.0, height = WinSize.height - 190.00});
 	localParams[19]:setPosition(WinSize.width/2 + (60.11 * ccx.scaleX), 5.8);
@@ -299,7 +299,7 @@ function TaskLayer:initView()
 	localParams[23] = ImageView:create('uires/public/sheet_bgframe/bgFrame0051.png', 1);
 	localParams[23]:ignoreContentAdaptWithSize(false);
 	localParams[23]:setScale9Enabled(true);
-	localParams[23]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000);
+	localParams[23]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000});
 	localParams[23]:setAnchorPoint(0.50, 0.50);
 	localParams[23]:setContentSize({width = 800.0, height = 93.0});
 	localParams[23]:setPosition(localParams[22]:getContentSize().width - 400.00, localParams[22]:getContentSize().height - 45.50);
@@ -520,7 +520,7 @@ function TaskLayer:initView()
 	localParams[41] = ImageView:create('uires/public/sheet_bgframe/bgFrame0114.png', 1);
 	localParams[41]:ignoreContentAdaptWithSize(false);
 	localParams[41]:setScale9Enabled(true);
-	localParams[41]:setCapInsets({x = 29.000000, y = 22.000000,width = 32.000000, height = 25.000000);
+	localParams[41]:setCapInsets({x = 29.000000, y = 22.000000,width = 32.000000, height = 25.000000});
 	localParams[41]:setAnchorPoint(0.50, 0.50);
 	localParams[41]:setContentSize({width = 900.0, height = 69.0});
 	localParams[41]:setPosition(WinSize.width/2 + (60.31 * ccx.scaleX), 33.18);

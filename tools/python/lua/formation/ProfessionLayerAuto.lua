@@ -171,7 +171,7 @@ function ProfessionLayer:initView()
 	localParams[12] = ImageView:create('uires/public/sheet_bgframe/bgFrame0051.png', 1);
 	localParams[12]:ignoreContentAdaptWithSize(false);
 	localParams[12]:setScale9Enabled(true);
-	localParams[12]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000);
+	localParams[12]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000});
 	localParams[12]:setAnchorPoint(0.50, 0.50);
 	localParams[12]:setContentSize({width = 800.0, height = 93.0});
 	localParams[12]:setPosition(WinSize.width - 400.00, WinSize.height - 46.50);

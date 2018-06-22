@@ -33,7 +33,7 @@ function RankItemNode:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0112.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 35.000000, y = 31.000000,width = 38.000000, height = 34.000000);
+	localParams[1]:setCapInsets({x = 35.000000, y = 31.000000,width = 38.000000, height = 34.000000});
 	localParams[1]:setAnchorPoint(0.00, 0.00);
 	localParams[1]:setContentSize({width = 560.0, height = 96.0});
 	localParams[1]:setPosition(10.0, 3.0);
@@ -64,7 +64,7 @@ function RankItemNode:initView()
 	localParams[4] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[4]:ignoreContentAdaptWithSize(false);
 	localParams[4]:setScale9Enabled(true);
-	localParams[4]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[4]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setContentSize({width = 330.0, height = 32.0});
 	localParams[4]:setPosition(347.2, 31.57);

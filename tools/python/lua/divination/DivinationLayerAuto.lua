@@ -32,7 +32,7 @@ function DivinationLayer:initView()
 	localParams[1] = ImageView:create('uires/public/bg_img/bgImg0023.png', 0);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 374.000000, y = 253.000000,width = 388.000000, height = 262.000000);
+	localParams[1]:setCapInsets({x = 374.000000, y = 253.000000,width = 388.000000, height = 262.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setContentSize({width = 1136.0, height = 768.0});
 	localParams[1]:setPosition(WinSize.width/2 + (-1.43 * ccx.scaleX), WinSize.height/2 + (1.22 * ccx.scaleY));
@@ -55,7 +55,7 @@ function DivinationLayer:initView()
 	localParams[3] = ImageView:create('uires/public/sheet_bgframe/bgFrame0051.png', 1);
 	localParams[3]:ignoreContentAdaptWithSize(false);
 	localParams[3]:setScale9Enabled(true);
-	localParams[3]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000);
+	localParams[3]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000});
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 800.0, height = 93.0});
 	localParams[3]:setPosition(localParams[2]:getContentSize().width - 400.00, localParams[2]:getContentSize().height - 45.50);
@@ -660,7 +660,7 @@ function DivinationLayer:initView()
 	localParams[51] = ImageView:create('uires/public/sheet_bgframe/bgFrame0067.png', 1);
 	localParams[51]:ignoreContentAdaptWithSize(false);
 	localParams[51]:setScale9Enabled(true);
-	localParams[51]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000);
+	localParams[51]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000});
 	localParams[51]:setAnchorPoint(0.50, 0.50);
 	localParams[51]:setContentSize({width = 890.0, height = 390.0});
 	localParams[51]:setPosition(WinSize.width/2 + (57.96 * ccx.scaleX), WinSize.height/2 + (-0.00 * ccx.scaleY));

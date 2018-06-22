@@ -34,7 +34,7 @@ function MainCityTopNode:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0141.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 15.000000, y = 25.000000,width = 150.000000, height = 7.000000);
+	localParams[1]:setCapInsets({x = 15.000000, y = 25.000000,width = 150.000000, height = 7.000000});
 	localParams[1]:setAnchorPoint(0.00, 1.00);
 	localParams[1]:setContentSize({width = 1136.0, height = 57.0});
 	localParams[1]:setPosition(0.0, WinSize.height - 0.00);
@@ -396,7 +396,7 @@ function MainCityTopNode:initView()
 	localParams[32] = ImageView:create('uires/public/sheet_other/other0244.png', 1);
 	localParams[32]:ignoreContentAdaptWithSize(false);
 	localParams[32]:setScale9Enabled(true);
-	localParams[32]:setCapInsets({x = 8.000000, y = 3.000000,width = 9.000000, height = 6.000000);
+	localParams[32]:setCapInsets({x = 8.000000, y = 3.000000,width = 9.000000, height = 6.000000});
 	localParams[32]:setAnchorPoint(0.00, 0.50);
 	localParams[32]:setContentSize({width = 29.0, height = 16.0});
 	localParams[32]:setPosition(350.0, WinSize.height - 26.50);

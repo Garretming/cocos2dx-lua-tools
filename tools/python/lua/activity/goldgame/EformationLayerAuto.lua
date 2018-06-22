@@ -33,7 +33,7 @@ function EformationLayer:initView()
 	localParams[1] = ImageView:create('uires/public/bg_img/bgImg0015.png', 0);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 374.000000, y = 253.000000,width = 388.000000, height = 262.000000);
+	localParams[1]:setCapInsets({x = 374.000000, y = 253.000000,width = 388.000000, height = 262.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setContentSize({width = 1136.0, height = 768.0});
 	localParams[1]:setPosition(WinSize.width/2 + (0.20 * ccx.scaleX), WinSize.height/2 + (1.22 * ccx.scaleY));
@@ -45,7 +45,7 @@ function EformationLayer:initView()
 	localParams[2] = ImageView:create('uires/public/sheet_bgframe/bgFrame0051.png', 1);
 	localParams[2]:ignoreContentAdaptWithSize(false);
 	localParams[2]:setScale9Enabled(true);
-	localParams[2]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000);
+	localParams[2]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000});
 	localParams[2]:setAnchorPoint(0.50, 0.50);
 	localParams[2]:setContentSize({width = 800.0, height = 93.0});
 	localParams[2]:setPosition(WinSize.width - 400.00, WinSize.height - 46.50);
@@ -80,7 +80,7 @@ function EformationLayer:initView()
 	localParams[5] = ImageView:create('uires/public/sheet_bgframe/bgFrame0091.png', 1);
 	localParams[5]:ignoreContentAdaptWithSize(false);
 	localParams[5]:setScale9Enabled(true);
-	localParams[5]:setCapInsets({x = 309.000000, y = 75.000000,width = 169.000000, height = 90.000000);
+	localParams[5]:setCapInsets({x = 309.000000, y = 75.000000,width = 169.000000, height = 90.000000});
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setContentSize({width = WinSize.width - 289.00, height = WinSize.height - 110.00});
 	localParams[5]:setPosition(WinSize.width/2 + (-124.01 * ccx.scaleX), WinSize.height/2 + (-45.25 * ccx.scaleY));
@@ -207,7 +207,7 @@ function EformationLayer:initView()
 	localParams[17] = ImageView:create('uires/public/sheet_bgframe/bgFrame0069.png', 1);
 	localParams[17]:ignoreContentAdaptWithSize(false);
 	localParams[17]:setScale9Enabled(true);
-	localParams[17]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[17]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[17]:setAnchorPoint(1.00, 0.00);
 	localParams[17]:setContentSize({width = 265.0, height = WinSize.height - 85.00});
 	localParams[17]:setPosition(WinSize.width - 0.00, 0.0);
@@ -544,7 +544,7 @@ function EformationLayer:initView()
 	localParams[43] = ImageView:create('uires/public/sheet_common/bgFrame0068.png', 1);
 	localParams[43]:ignoreContentAdaptWithSize(false);
 	localParams[43]:setScale9Enabled(true);
-	localParams[43]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[43]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[43]:setAnchorPoint(0.00, 0.50);
 	localParams[43]:setContentSize({width = 270.0, height = 360.0});
 	localParams[43]:setPosition(1138.71, 373.15);
@@ -729,7 +729,7 @@ function EformationLayer:initView()
 	localParams[57] = ImageView:create('uires/public/sheet_common/bgFrame0068.png', 1);
 	localParams[57]:ignoreContentAdaptWithSize(false);
 	localParams[57]:setScale9Enabled(true);
-	localParams[57]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[57]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[57]:setAnchorPoint(0.00, 0.50);
 	localParams[57]:setContentSize({width = 270.0, height = 230.0});
 	localParams[57]:setPosition(1044.08, 204.9);

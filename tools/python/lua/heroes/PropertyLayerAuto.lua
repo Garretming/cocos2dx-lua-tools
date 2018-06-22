@@ -32,7 +32,7 @@ function PropertyLayer:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0061.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 59.000000, y = 59.000000,width = 62.000000, height = 62.000000);
+	localParams[1]:setCapInsets({x = 59.000000, y = 59.000000,width = 62.000000, height = 62.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setContentSize({width = WinSize.width - 64.00, height = WinSize.height - 215.00});
 	localParams[1]:setPosition(WinSize.width/2 + (-17.00 * ccx.scaleX), WinSize.height/2 + (8.00 * ccx.scaleY));
@@ -101,7 +101,7 @@ function PropertyLayer:initView()
 	localParams[7] = ImageView:create('uires/public/sheet_bgframe/bgFrame0062.png', 1);
 	localParams[7]:ignoreContentAdaptWithSize(false);
 	localParams[7]:setScale9Enabled(true);
-	localParams[7]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000);
+	localParams[7]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000});
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setContentSize({width = 175.0, height = 28.0});
 	localParams[7]:setPosition(89.32, -27.0);
@@ -140,7 +140,7 @@ function PropertyLayer:initView()
 	localParams[10] = ImageView:create('uires/public/sheet_bgframe/bgFrame0062.png', 1);
 	localParams[10]:ignoreContentAdaptWithSize(false);
 	localParams[10]:setScale9Enabled(true);
-	localParams[10]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000);
+	localParams[10]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000});
 	localParams[10]:setAnchorPoint(0.50, 0.50);
 	localParams[10]:setContentSize({width = 175.0, height = 28.0});
 	localParams[10]:setPosition(272.6, -27.0);
@@ -179,7 +179,7 @@ function PropertyLayer:initView()
 	localParams[13] = ImageView:create('uires/public/sheet_bgframe/bgFrame0062.png', 1);
 	localParams[13]:ignoreContentAdaptWithSize(false);
 	localParams[13]:setScale9Enabled(true);
-	localParams[13]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000);
+	localParams[13]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000});
 	localParams[13]:setAnchorPoint(0.50, 0.50);
 	localParams[13]:setContentSize({width = 175.0, height = 28.0});
 	localParams[13]:setPosition(89.32, -59.4);
@@ -218,7 +218,7 @@ function PropertyLayer:initView()
 	localParams[16] = ImageView:create('uires/public/sheet_bgframe/bgFrame0062.png', 1);
 	localParams[16]:ignoreContentAdaptWithSize(false);
 	localParams[16]:setScale9Enabled(true);
-	localParams[16]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000);
+	localParams[16]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000});
 	localParams[16]:setAnchorPoint(0.50, 0.50);
 	localParams[16]:setContentSize({width = 175.0, height = 28.0});
 	localParams[16]:setPosition(272.6, -59.4);
@@ -257,7 +257,7 @@ function PropertyLayer:initView()
 	localParams[19] = ImageView:create('uires/public/sheet_bgframe/bgFrame0062.png', 1);
 	localParams[19]:ignoreContentAdaptWithSize(false);
 	localParams[19]:setScale9Enabled(true);
-	localParams[19]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000);
+	localParams[19]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000});
 	localParams[19]:setAnchorPoint(0.50, 0.50);
 	localParams[19]:setContentSize({width = 175.0, height = 28.0});
 	localParams[19]:setPosition(89.32, -91.8);
@@ -296,7 +296,7 @@ function PropertyLayer:initView()
 	localParams[22] = ImageView:create('uires/public/sheet_bgframe/bgFrame0062.png', 1);
 	localParams[22]:ignoreContentAdaptWithSize(false);
 	localParams[22]:setScale9Enabled(true);
-	localParams[22]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000);
+	localParams[22]:setCapInsets({x = 25.000000, y = 8.000000,width = 34.000000, height = 12.000000});
 	localParams[22]:setAnchorPoint(0.50, 0.50);
 	localParams[22]:setVisible(false);
 	localParams[22]:setContentSize({width = 175.0, height = 28.0});

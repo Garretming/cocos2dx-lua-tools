@@ -221,7 +221,7 @@ function BattleEditLayer:initView()
 	localParams[14] = ImageView:create('uires/public/sheet_bgframe/bgFrame0067.png', 1);
 	localParams[14]:ignoreContentAdaptWithSize(false);
 	localParams[14]:setScale9Enabled(true);
-	localParams[14]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000);
+	localParams[14]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000});
 	localParams[14]:setAnchorPoint(0.50, 0.50);
 	localParams[14]:setContentSize({width = 425.0, height = 170.0});
 	localParams[14]:setPosition(WinSize.width - 487.50, 100.0);
@@ -447,7 +447,7 @@ function BattleEditLayer:initView()
 	localParams[31] = ImageView:create('uires/public/sheet_bgframe/bgFrame0067.png', 1);
 	localParams[31]:ignoreContentAdaptWithSize(false);
 	localParams[31]:setScale9Enabled(true);
-	localParams[31]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000);
+	localParams[31]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000});
 	localParams[31]:setAnchorPoint(0.50, 0.50);
 	localParams[31]:setContentSize({width = 180.0, height = 170.0});
 	localParams[31]:setPosition(WinSize.width - 803.44, 99.72);
@@ -651,7 +651,7 @@ function BattleEditLayer:initView()
 	localParams[47] = ImageView:create('uires/public/sheet_bgframe/bgFrame0069.png', 1);
 	localParams[47]:ignoreContentAdaptWithSize(false);
 	localParams[47]:setScale9Enabled(true);
-	localParams[47]:setCapInsets({x = 40.000000, y = 40.000000,width = 40.000000, height = 40.000000);
+	localParams[47]:setCapInsets({x = 40.000000, y = 40.000000,width = 40.000000, height = 40.000000});
 	localParams[47]:setAnchorPoint(1.00, 0.00);
 	localParams[47]:setContentSize({width = 265.0, height = WinSize.height - 53.00});
 	localParams[47]:setPosition(WinSize.width - 0.00, 0.0);
@@ -1097,7 +1097,7 @@ function BattleEditLayer:initView()
 	localParams[87] = ImageView:create('uires/public/sheet_bgframe/bgFrame0051.png', 1);
 	localParams[87]:ignoreContentAdaptWithSize(false);
 	localParams[87]:setScale9Enabled(true);
-	localParams[87]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000);
+	localParams[87]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000});
 	localParams[87]:setAnchorPoint(0.50, 0.50);
 	localParams[87]:setContentSize({width = 800.0, height = 93.0});
 	localParams[87]:setPosition(WinSize.width - 400.00, WinSize.height - 46.50);
@@ -1172,7 +1172,7 @@ function BattleEditLayer:initView()
 	localParams[93] = ImageView:create('uires/public/sheet_common/bgFrame0068.png', 1);
 	localParams[93]:ignoreContentAdaptWithSize(false);
 	localParams[93]:setScale9Enabled(true);
-	localParams[93]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[93]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[93]:setAnchorPoint(0.00, 0.50);
 	localParams[93]:setContentSize({width = 270.0, height = 360.0});
 	localParams[93]:setPosition(1138.71, 373.15);

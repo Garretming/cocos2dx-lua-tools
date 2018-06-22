@@ -33,7 +33,7 @@ function TaskNode:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0122.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 37.000000, y = 37.000000,width = 40.000000, height = 40.000000);
+	localParams[1]:setCapInsets({x = 37.000000, y = 37.000000,width = 40.000000, height = 40.000000});
 	localParams[1]:setAnchorPoint(0.00, 0.00);
 	localParams[1]:setContentSize({width = 870.0, height = 114.0});
 	localParams[1]:setPosition(0.0, 0.0);
@@ -83,7 +83,7 @@ function TaskNode:initView()
 	localParams[5] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[5]:ignoreContentAdaptWithSize(false);
 	localParams[5]:setScale9Enabled(true);
-	localParams[5]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[5]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setContentSize({width = 310.0, height = 32.0});
 	localParams[5]:setPosition(286.22, 83.95);

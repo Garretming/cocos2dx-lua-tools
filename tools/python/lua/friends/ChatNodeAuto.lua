@@ -105,7 +105,7 @@ function ChatNode:initView()
 	localParams[7] = ImageView:create('uires/public/sheet_bgframe/bgFrame0134.png', 1);
 	localParams[7]:ignoreContentAdaptWithSize(false);
 	localParams[7]:setScale9Enabled(true);
-	localParams[7]:setCapInsets({x = 14.000000, y = 14.000000,width = 17.000000, height = 17.000000);
+	localParams[7]:setCapInsets({x = 14.000000, y = 14.000000,width = 17.000000, height = 17.000000});
 	localParams[7]:setAnchorPoint(0.00, 1.00);
 	localParams[7]:setContentSize({width = 45.0, height = 45.0});
 	localParams[7]:setPosition(115.14, 64.0);
@@ -209,7 +209,7 @@ function ChatNode:initView()
 	localParams[16] = ImageView:create('uires/public/sheet_bgframe/bgFrame0136.png', 1);
 	localParams[16]:ignoreContentAdaptWithSize(false);
 	localParams[16]:setScale9Enabled(true);
-	localParams[16]:setCapInsets({x = 14.000000, y = 14.000000,width = 17.000000, height = 17.000000);
+	localParams[16]:setCapInsets({x = 14.000000, y = 14.000000,width = 17.000000, height = 17.000000});
 	localParams[16]:setAnchorPoint(1.00, 1.00);
 	localParams[16]:setContentSize({width = 45.0, height = 45.0});
 	localParams[16]:setPosition(377.67, 64.0);

@@ -33,7 +33,7 @@ function PersonalInfoLayer:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0016.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 73.000000, y = 73.000000,width = 76.000000, height = 76.000000);
+	localParams[1]:setCapInsets({x = 73.000000, y = 73.000000,width = 76.000000, height = 76.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setContentSize({width = 935.0, height = 590.0});
 	localParams[1]:setPosition(512.0, 320.0);
@@ -70,7 +70,7 @@ function PersonalInfoLayer:initView()
 	localParams[4] = ImageView:create('uires/public/sheet_common/bgFrame0011.png', 1);
 	localParams[4]:ignoreContentAdaptWithSize(false);
 	localParams[4]:setScale9Enabled(true);
-	localParams[4]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000);
+	localParams[4]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000});
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setContentSize({width = 825.0, height = 525.0});
 	localParams[4]:setPosition(446.74, 287.86);
@@ -82,7 +82,7 @@ function PersonalInfoLayer:initView()
 	localParams[5] = ImageView:create('uires/public/sheet_bgframe/bgFrame0013.png', 1);
 	localParams[5]:ignoreContentAdaptWithSize(false);
 	localParams[5]:setScale9Enabled(true);
-	localParams[5]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000);
+	localParams[5]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000});
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setContentSize({width = 220.0, height = 500.0});
 	localParams[5]:setPosition(123.75, 262.5);
@@ -133,7 +133,7 @@ function PersonalInfoLayer:initView()
 	localParams[9] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[9]:ignoreContentAdaptWithSize(false);
 	localParams[9]:setScale9Enabled(true);
-	localParams[9]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[9]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:setContentSize({width = 195.0, height = 32.0});
 	localParams[9]:setPosition(107.8, 295.0);
@@ -159,7 +159,7 @@ function PersonalInfoLayer:initView()
 	localParams[11] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[11]:ignoreContentAdaptWithSize(false);
 	localParams[11]:setScale9Enabled(true);
-	localParams[11]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[11]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[11]:setAnchorPoint(0.50, 0.50);
 	localParams[11]:setContentSize({width = 195.0, height = 32.0});
 	localParams[11]:setPosition(107.8, 335.0);
@@ -185,7 +185,7 @@ function PersonalInfoLayer:initView()
 	localParams[13] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[13]:ignoreContentAdaptWithSize(false);
 	localParams[13]:setScale9Enabled(true);
-	localParams[13]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[13]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[13]:setAnchorPoint(0.50, 0.50);
 	localParams[13]:setContentSize({width = 190.0, height = 75.0});
 	localParams[13]:setPosition(109.01, 230.0);
@@ -222,7 +222,7 @@ function PersonalInfoLayer:initView()
 	localParams[16] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[16]:ignoreContentAdaptWithSize(false);
 	localParams[16]:setScale9Enabled(true);
-	localParams[16]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[16]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[16]:setAnchorPoint(0.50, 0.50);
 	localParams[16]:setContentSize({width = 190.0, height = 75.0});
 	localParams[16]:setPosition(108.61, 143.0);
@@ -259,7 +259,7 @@ function PersonalInfoLayer:initView()
 	localParams[19] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[19]:ignoreContentAdaptWithSize(false);
 	localParams[19]:setScale9Enabled(true);
-	localParams[19]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[19]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[19]:setAnchorPoint(0.50, 0.50);
 	localParams[19]:setContentSize({width = 190.0, height = 75.0});
 	localParams[19]:setPosition(108.42, 56.0);
@@ -307,7 +307,7 @@ function PersonalInfoLayer:initView()
 	localParams[23] = ImageView:create('uires/public/sheet_bgframe/bgFrame0013.png', 1);
 	localParams[23]:ignoreContentAdaptWithSize(false);
 	localParams[23]:setScale9Enabled(true);
-	localParams[23]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000);
+	localParams[23]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000});
 	localParams[23]:setAnchorPoint(0.50, 0.50);
 	localParams[23]:setContentSize({width = 570.0, height = 500.0});
 	localParams[23]:setPosition(528.0, 262.5);
@@ -319,7 +319,7 @@ function PersonalInfoLayer:initView()
 	localParams[24] = ImageView:create('uires/public/sheet_bgframe/bgFrame0122.png', 1);
 	localParams[24]:ignoreContentAdaptWithSize(false);
 	localParams[24]:setScale9Enabled(true);
-	localParams[24]:setCapInsets({x = 37.000000, y = 37.000000,width = 40.000000, height = 40.000000);
+	localParams[24]:setCapInsets({x = 37.000000, y = 37.000000,width = 40.000000, height = 40.000000});
 	localParams[24]:setAnchorPoint(0.50, 0.50);
 	localParams[24]:setContentSize({width = 545.0, height = 115.0});
 	localParams[24]:setPosition(287.0, 430.76);
@@ -476,7 +476,7 @@ function PersonalInfoLayer:initView()
 	localParams[36] = ImageView:create('uires/public/sheet_bgframe/bgFrame0122.png', 1);
 	localParams[36]:ignoreContentAdaptWithSize(false);
 	localParams[36]:setScale9Enabled(true);
-	localParams[36]:setCapInsets({x = 37.000000, y = 37.000000,width = 40.000000, height = 40.000000);
+	localParams[36]:setCapInsets({x = 37.000000, y = 37.000000,width = 40.000000, height = 40.000000});
 	localParams[36]:setAnchorPoint(0.50, 0.50);
 	localParams[36]:setContentSize({width = 545.0, height = 115.0});
 	localParams[36]:setPosition(287.0, 309.28);
@@ -510,7 +510,7 @@ function PersonalInfoLayer:initView()
 	localParams[39] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[39]:ignoreContentAdaptWithSize(false);
 	localParams[39]:setScale9Enabled(true);
-	localParams[39]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[39]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[39]:setAnchorPoint(0.50, 0.50);
 	localParams[39]:setContentSize({width = 195.0, height = 34.0});
 	localParams[39]:setPosition(396.49, 56.4);
@@ -615,7 +615,7 @@ function PersonalInfoLayer:initView()
 	localParams[48] = ImageView:create('uires/public/sheet_bgframe/bgFrame0013.png', 1);
 	localParams[48]:ignoreContentAdaptWithSize(false);
 	localParams[48]:setScale9Enabled(true);
-	localParams[48]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000);
+	localParams[48]:setCapInsets({x = 29.000000, y = 29.000000,width = 62.000000, height = 62.000000});
 	localParams[48]:setAnchorPoint(0.50, 0.50);
 	localParams[48]:setContentSize({width = 570.0, height = 500.0});
 	localParams[48]:setPosition(528.0, 262.5);
@@ -1335,7 +1335,7 @@ function PersonalInfoLayer:initView()
 	localParams[109] = ImageView:create('uires/public/sheet_common/bgFrame0068.png', 1);
 	localParams[109]:ignoreContentAdaptWithSize(false);
 	localParams[109]:setScale9Enabled(true);
-	localParams[109]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[109]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[109]:setAnchorPoint(0.00, 0.50);
 	localParams[109]:setContentSize({width = 270.0, height = 360.0});
 	localParams[109]:setPosition(-95.86, 331.83);
@@ -1520,7 +1520,7 @@ function PersonalInfoLayer:initView()
 	localParams[123] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[123]:ignoreContentAdaptWithSize(false);
 	localParams[123]:setScale9Enabled(true);
-	localParams[123]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[123]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[123]:setAnchorPoint(0.50, 0.50);
 	localParams[123]:setContentSize({width = 170.0, height = 475.0});
 	localParams[123]:setPosition(470.14, 250.0);
@@ -1667,7 +1667,7 @@ function PersonalInfoLayer:initView()
 	localParams[135] = ImageView:create('uires/public/sheet_common/bgFrame0068.png', 1);
 	localParams[135]:ignoreContentAdaptWithSize(false);
 	localParams[135]:setScale9Enabled(true);
-	localParams[135]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[135]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[135]:setAnchorPoint(1.00, 0.50);
 	localParams[135]:setContentSize({width = 270.0, height = 230.0});
 	localParams[135]:setPosition(264.4, 374.23);

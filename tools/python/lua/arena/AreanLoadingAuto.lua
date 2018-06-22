@@ -64,7 +64,7 @@ function AreanLoading:initView()
 	localParams[4] = ImageView:create('uires/public/sheet_bgframe/bgFrame0097.png', 1);
 	localParams[4]:ignoreContentAdaptWithSize(false);
 	localParams[4]:setScale9Enabled(true);
-	localParams[4]:setCapInsets({x = 136.000000, y = 5.000000,width = 162.000000, height = 8.000000);
+	localParams[4]:setCapInsets({x = 136.000000, y = 5.000000,width = 162.000000, height = 8.000000});
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setContentSize({width = 450.0, height = 110.0});
 	localParams[4]:setPosition(-300.0, 220.0);
@@ -101,7 +101,7 @@ function AreanLoading:initView()
 	localParams[7] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[7]:ignoreContentAdaptWithSize(false);
 	localParams[7]:setScale9Enabled(true);
-	localParams[7]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[7]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setContentSize({width = 207.0, height = 32.0});
 	localParams[7]:setPosition(243.0, 74.8);
@@ -127,7 +127,7 @@ function AreanLoading:initView()
 	localParams[9] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[9]:ignoreContentAdaptWithSize(false);
 	localParams[9]:setScale9Enabled(true);
-	localParams[9]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[9]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:setContentSize({width = 207.0, height = 32.0});
 	localParams[9]:setPosition(243.0, 33.0);
@@ -162,7 +162,7 @@ function AreanLoading:initView()
 	localParams[12] = ImageView:create('uires/public/sheet_bgframe/bgFrame0097.png', 1);
 	localParams[12]:ignoreContentAdaptWithSize(false);
 	localParams[12]:setScale9Enabled(true);
-	localParams[12]:setCapInsets({x = 136.000000, y = 5.000000,width = 162.000000, height = 8.000000);
+	localParams[12]:setCapInsets({x = 136.000000, y = 5.000000,width = 162.000000, height = 8.000000});
 	localParams[12]:setAnchorPoint(0.50, 0.50);
 	localParams[12]:setRotationSkewX(180.00);
 	localParams[12]:setRotationSkewY(180.00);
@@ -205,7 +205,7 @@ function AreanLoading:initView()
 	localParams[15] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[15]:ignoreContentAdaptWithSize(false);
 	localParams[15]:setScale9Enabled(true);
-	localParams[15]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[15]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[15]:setAnchorPoint(0.50, 0.50);
 	localParams[15]:setRotationSkewX(180.00);
 	localParams[15]:setRotationSkewY(180.00);
@@ -233,7 +233,7 @@ function AreanLoading:initView()
 	localParams[17] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[17]:ignoreContentAdaptWithSize(false);
 	localParams[17]:setScale9Enabled(true);
-	localParams[17]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[17]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[17]:setAnchorPoint(0.50, 0.50);
 	localParams[17]:setRotationSkewX(180.00);
 	localParams[17]:setRotationSkewY(180.00);

@@ -33,7 +33,7 @@ function AchievePrizeNode:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0112.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 37.000000, y = 37.000000,width = 34.000000, height = 22.000000);
+	localParams[1]:setCapInsets({x = 37.000000, y = 37.000000,width = 34.000000, height = 22.000000});
 	localParams[1]:setAnchorPoint(0.00, 0.00);
 	localParams[1]:setContentSize({width = 640.0, height = 100.0});
 	localParams[1]:setPosition(0.0, 0.0);

@@ -57,7 +57,7 @@ function RiskSessionNode:initView()
 	localParams[3] = ImageView:create('uires/public/sheet_other/other0304.png', 1);
 	localParams[3]:ignoreContentAdaptWithSize(false);
 	localParams[3]:setScale9Enabled(true);
-	localParams[3]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000);
+	localParams[3]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000});
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 320.0, height = 160.0});
 	localParams[3]:setPosition(160.0, 80.0);
@@ -91,7 +91,7 @@ function RiskSessionNode:initView()
 	localParams[6] = ImageView:create('uires/public/sheet_bgframe/bgFrame0067.png', 1);
 	localParams[6]:ignoreContentAdaptWithSize(false);
 	localParams[6]:setScale9Enabled(true);
-	localParams[6]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000);
+	localParams[6]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000});
 	localParams[6]:setAnchorPoint(0.50, 0.50);
 	localParams[6]:setContentSize({width = 310.0, height = 150.0});
 	localParams[6]:setPosition(160.0, 80.0);

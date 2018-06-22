@@ -41,7 +41,7 @@ function RiskMainLayer:initView()
 	localParams[2] = ImageView:create('uires/public/sheet_bgframe/bgFrame0067.png', 1);
 	localParams[2]:ignoreContentAdaptWithSize(false);
 	localParams[2]:setScale9Enabled(true);
-	localParams[2]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000);
+	localParams[2]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000});
 	localParams[2]:setAnchorPoint(0.50, 0.50);
 	localParams[2]:setContentSize({width = 340.0, height = WinSize.height - 110.00});
 	localParams[2]:setPosition(WinSize.width/2 + (-297.00 * ccx.scaleX), WinSize.height/2 + (-40.00 * ccx.scaleY));
@@ -68,7 +68,7 @@ function RiskMainLayer:initView()
 	localParams[4] = ImageView:create('uires/public/sheet_bgframe/bgFrame0061.png', 1);
 	localParams[4]:ignoreContentAdaptWithSize(false);
 	localParams[4]:setScale9Enabled(true);
-	localParams[4]:setCapInsets({x = 59.000000, y = 59.000000,width = 62.000000, height = 62.000000);
+	localParams[4]:setCapInsets({x = 59.000000, y = 59.000000,width = 62.000000, height = 62.000000});
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setContentSize({width = 520.0, height = WinSize.height - 190.00});
 	localParams[4]:setPosition(WinSize.width/2 + (207.00 * ccx.scaleX), WinSize.height/2 + (-80.00 * ccx.scaleY));
@@ -132,7 +132,7 @@ function RiskMainLayer:initView()
 	localParams[9] = ImageView:create('uires/public/sheet_bgframe/bgFrame0051.png', 1);
 	localParams[9]:ignoreContentAdaptWithSize(false);
 	localParams[9]:setScale9Enabled(true);
-	localParams[9]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000);
+	localParams[9]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000});
 	localParams[9]:setAnchorPoint(1.00, 1.00);
 	localParams[9]:setContentSize({width = 800.0, height = 93.0});
 	localParams[9]:setPosition(localParams[8]:getContentSize().width - 0.00, localParams[8]:getContentSize().height - 0.00);

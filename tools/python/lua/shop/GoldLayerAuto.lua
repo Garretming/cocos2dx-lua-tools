@@ -116,7 +116,7 @@ function GoldLayer:initView()
 	localParams[8] = ImageView:create('uires/public/sheet_bgframe/bgFrame0115.png', 1);
 	localParams[8]:ignoreContentAdaptWithSize(false);
 	localParams[8]:setScale9Enabled(true);
-	localParams[8]:setCapInsets({x = 11.000000, y = 15.000000,width = 14.000000, height = 4.000000);
+	localParams[8]:setCapInsets({x = 11.000000, y = 15.000000,width = 14.000000, height = 4.000000});
 	localParams[8]:setAnchorPoint(0.50, 0.50);
 	localParams[8]:setContentSize({width = 160.0, height = 32.0});
 	localParams[8]:setPosition(92.5, 32.47);
@@ -261,7 +261,7 @@ function GoldLayer:initView()
 	localParams[20] = ImageView:create('uires/public/sheet_bgframe/bgFrame0115.png', 1);
 	localParams[20]:ignoreContentAdaptWithSize(false);
 	localParams[20]:setScale9Enabled(true);
-	localParams[20]:setCapInsets({x = 11.000000, y = 15.000000,width = 14.000000, height = 4.000000);
+	localParams[20]:setCapInsets({x = 11.000000, y = 15.000000,width = 14.000000, height = 4.000000});
 	localParams[20]:setAnchorPoint(0.50, 0.50);
 	localParams[20]:setContentSize({width = 160.0, height = 32.0});
 	localParams[20]:setPosition(92.5, 32.47);
@@ -407,7 +407,7 @@ function GoldLayer:initView()
 	localParams[32] = ImageView:create('uires/public/sheet_bgframe/bgFrame0115.png', 1);
 	localParams[32]:ignoreContentAdaptWithSize(false);
 	localParams[32]:setScale9Enabled(true);
-	localParams[32]:setCapInsets({x = 11.000000, y = 15.000000,width = 14.000000, height = 4.000000);
+	localParams[32]:setCapInsets({x = 11.000000, y = 15.000000,width = 14.000000, height = 4.000000});
 	localParams[32]:setAnchorPoint(0.50, 0.50);
 	localParams[32]:setContentSize({width = 160.0, height = 32.0});
 	localParams[32]:setPosition(92.5, 32.47);

@@ -32,7 +32,7 @@ function MonsterHandbookLayer:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0016.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 73.000000, y = 73.000000,width = 76.000000, height = 76.000000);
+	localParams[1]:setCapInsets({x = 73.000000, y = 73.000000,width = 76.000000, height = 76.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setContentSize({width = 970.0, height = 560.0});
 	localParams[1]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), WinSize.height/2 + (-0.00 * ccx.scaleY));
@@ -89,7 +89,7 @@ function MonsterHandbookLayer:initView()
 	localParams[6] = ImageView:create('uires/public/sheet_common/bgFrame0011.png', 1);
 	localParams[6]:ignoreContentAdaptWithSize(false);
 	localParams[6]:setScale9Enabled(true);
-	localParams[6]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[6]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[6]:setAnchorPoint(0.00, 0.00);
 	localParams[6]:setContentSize({width = 910.0, height = 460.0});
 	localParams[6]:setPosition(30.0, 30.0);

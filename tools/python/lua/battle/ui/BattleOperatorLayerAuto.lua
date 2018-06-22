@@ -143,7 +143,7 @@ function BattleOperatorLayer:initView()
 	localParams[11] = ImageView:create('uires/battle/sheet/bgFrame0010.png', 1);
 	localParams[11]:ignoreContentAdaptWithSize(false);
 	localParams[11]:setScale9Enabled(true);
-	localParams[11]:setCapInsets({x = 20.000000, y = 33.000000,width = 80.000000, height = 93.000000);
+	localParams[11]:setCapInsets({x = 20.000000, y = 33.000000,width = 80.000000, height = 93.000000});
 	localParams[11]:setAnchorPoint(0.50, 0.50);
 	localParams[11]:setContentSize({width = 1136.0, height = 155.0});
 	localParams[11]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), 72.42);

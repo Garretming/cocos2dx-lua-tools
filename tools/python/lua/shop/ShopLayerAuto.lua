@@ -53,7 +53,7 @@ function ShopLayer:initView()
 	localParams[3] = ImageView:create('uires/public/sheet_bgframe/bgFrame0051.png', 1);
 	localParams[3]:ignoreContentAdaptWithSize(false);
 	localParams[3]:setScale9Enabled(true);
-	localParams[3]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000);
+	localParams[3]:setCapInsets({x = 100.000000, y = 10.000000,width = 140.000000, height = 13.000000});
 	localParams[3]:setAnchorPoint(1.00, 1.00);
 	localParams[3]:setContentSize({width = 800.0, height = 93.0});
 	localParams[3]:setPosition(localParams[2]:getContentSize().width - 0.00, localParams[2]:getContentSize().height - 0.00);

@@ -77,7 +77,7 @@ function InputAccountLayer:initView()
 	localParams[5] = ImageView:create('uires/public/sheet_bgframe/bgFrame0047.png', 1);
 	localParams[5]:ignoreContentAdaptWithSize(false);
 	localParams[5]:setScale9Enabled(true);
-	localParams[5]:setCapInsets({x = 49.000000, y = 16.000000,width = 52.000000, height = 18.000000);
+	localParams[5]:setCapInsets({x = 49.000000, y = 16.000000,width = 52.000000, height = 18.000000});
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setContentSize({width = 335.0, height = 50.0});
 	localParams[5]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), WinSize.height/2 + (-36.99 * ccx.scaleY));
@@ -106,7 +106,7 @@ function InputAccountLayer:initView()
 	localParams[7] = ImageView:create('uires/public/sheet_bgframe/bgFrame0047.png', 1);
 	localParams[7]:ignoreContentAdaptWithSize(false);
 	localParams[7]:setScale9Enabled(true);
-	localParams[7]:setCapInsets({x = 49.000000, y = 16.000000,width = 52.000000, height = 18.000000);
+	localParams[7]:setCapInsets({x = 49.000000, y = 16.000000,width = 52.000000, height = 18.000000});
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setContentSize({width = 335.0, height = 50.0});
 	localParams[7]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), WinSize.height/2 + (-99.97 * ccx.scaleY));

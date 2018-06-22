@@ -34,7 +34,7 @@ function BuyPopUpLayer:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0016.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 73.000000, y = 73.000000,width = 76.000000, height = 76.000000);
+	localParams[1]:setCapInsets({x = 73.000000, y = 73.000000,width = 76.000000, height = 76.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setScaleX(0.30);
 	localParams[1]:setScaleY(0.30);
@@ -48,7 +48,7 @@ function BuyPopUpLayer:initView()
 	localParams[2] = ImageView:create('uires/public/sheet_common/bgFrame0011.png', 1);
 	localParams[2]:ignoreContentAdaptWithSize(false);
 	localParams[2]:setScale9Enabled(true);
-	localParams[2]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[2]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[2]:setAnchorPoint(0.50, 0.50);
 	localParams[2]:setContentSize({width = 430.0, height = 345.0});
 	localParams[2]:setPosition(245.0, 286.31);
@@ -60,7 +60,7 @@ function BuyPopUpLayer:initView()
 	localParams[3] = ImageView:create('uires/public/sheet_bgframe/bgFrame0013.png', 1);
 	localParams[3]:ignoreContentAdaptWithSize(false);
 	localParams[3]:setScale9Enabled(true);
-	localParams[3]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[3]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 416.0, height = 220.0});
 	localParams[3]:setPosition(245.0, 338.1);
@@ -72,7 +72,7 @@ function BuyPopUpLayer:initView()
 	localParams[4] = ImageView:create('uires/public/sheet_bgframe/bgFrame0014.png', 1);
 	localParams[4]:ignoreContentAdaptWithSize(false);
 	localParams[4]:setScale9Enabled(true);
-	localParams[4]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[4]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setContentSize({width = 265.0, height = 110.0});
 	localParams[4]:setPosition(270.4, 149.6);
@@ -185,7 +185,7 @@ function BuyPopUpLayer:initView()
 	localParams[13] = ImageView:create('uires/public/sheet_common/bgFrame0019.png', 1);
 	localParams[13]:ignoreContentAdaptWithSize(false);
 	localParams[13]:setScale9Enabled(true);
-	localParams[13]:setCapInsets({x = 37.000000, y = 12.000000,width = 40.000000, height = 13.000000);
+	localParams[13]:setCapInsets({x = 37.000000, y = 12.000000,width = 40.000000, height = 13.000000});
 	localParams[13]:setAnchorPoint(0.50, 0.50);
 	localParams[13]:setContentSize({width = 380.0, height = 37.0});
 	localParams[13]:setPosition(245.0, 196.0);
@@ -224,7 +224,7 @@ function BuyPopUpLayer:initView()
 	localParams[16] = ImageView:create('uires/public/sheet_common/bgFrame0019.png', 1);
 	localParams[16]:ignoreContentAdaptWithSize(false);
 	localParams[16]:setScale9Enabled(true);
-	localParams[16]:setCapInsets({x = 37.000000, y = 12.000000,width = 40.000000, height = 13.000000);
+	localParams[16]:setCapInsets({x = 37.000000, y = 12.000000,width = 40.000000, height = 13.000000});
 	localParams[16]:setAnchorPoint(0.50, 0.50);
 	localParams[16]:setContentSize({width = 380.0, height = 37.0});
 	localParams[16]:setPosition(245.0, 147.0);

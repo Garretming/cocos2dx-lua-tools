@@ -33,7 +33,7 @@ function TipPopupNode:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_common/bgFrame0068.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[1]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[1]:setAnchorPoint(0.00, 0.00);
 	localParams[1]:setContentSize({width = 290.0, height = 200.0});
 	localParams[1]:setPosition(0.0, 0.0);
@@ -121,7 +121,7 @@ function TipPopupNode:initView()
 	localParams[8] = ImageView:create('uires/public/sheet_common/bgFrame0068.png', 1);
 	localParams[8]:ignoreContentAdaptWithSize(false);
 	localParams[8]:setScale9Enabled(true);
-	localParams[8]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000);
+	localParams[8]:setCapInsets({x = 39.000000, y = 39.000000,width = 42.000000, height = 42.000000});
 	localParams[8]:setAnchorPoint(0.00, 0.00);
 	localParams[8]:onClick(handler(self, self._m_page_btn));
 	localParams[8]:setContentSize({width = 290.0, height = 260.0});

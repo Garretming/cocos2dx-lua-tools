@@ -335,7 +335,7 @@ function MonsterPopupLayer:initView()
 	localParams[31] = ImageView:create('uires/public/sheet_common/bgFrame0043.png', 1);
 	localParams[31]:ignoreContentAdaptWithSize(false);
 	localParams[31]:setScale9Enabled(true);
-	localParams[31]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000);
+	localParams[31]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000});
 	localParams[31]:setAnchorPoint(0.50, 0.50);
 	localParams[31]:setContentSize({width = 440.0, height = 120.0});
 	localParams[31]:setPosition(WinSize.width - 260.00, WinSize.height/2 + (110.02 * ccx.scaleY));
@@ -401,7 +401,7 @@ function MonsterPopupLayer:initView()
 	localParams[36] = ImageView:create('uires/public/sheet_common/bgFrame0043.png', 1);
 	localParams[36]:ignoreContentAdaptWithSize(false);
 	localParams[36]:setScale9Enabled(true);
-	localParams[36]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000);
+	localParams[36]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000});
 	localParams[36]:setAnchorPoint(0.50, 0.50);
 	localParams[36]:setContentSize({width = 440.0, height = 120.0});
 	localParams[36]:setPosition(WinSize.width - 260.00, WinSize.height/2 + (-40.00 * ccx.scaleY));
@@ -467,7 +467,7 @@ function MonsterPopupLayer:initView()
 	localParams[41] = ImageView:create('uires/public/sheet_common/bgFrame0043.png', 1);
 	localParams[41]:ignoreContentAdaptWithSize(false);
 	localParams[41]:setScale9Enabled(true);
-	localParams[41]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000);
+	localParams[41]:setCapInsets({x = 29.000000, y = 29.000000,width = 32.000000, height = 32.000000});
 	localParams[41]:setAnchorPoint(0.50, 0.50);
 	localParams[41]:setContentSize({width = 440.0, height = 120.0});
 	localParams[41]:setPosition(WinSize.width - 260.00, WinSize.height/2 + (-190.02 * ccx.scaleY));

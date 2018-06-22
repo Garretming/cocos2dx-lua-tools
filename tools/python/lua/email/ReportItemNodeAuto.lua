@@ -59,7 +59,7 @@ function ReportItemNode:initView()
 	localParams[3] = ImageView:create('uires/public/sheet_bgframe/bgFrame0098.png', 1);
 	localParams[3]:ignoreContentAdaptWithSize(false);
 	localParams[3]:setScale9Enabled(true);
-	localParams[3]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000);
+	localParams[3]:setCapInsets({x = 19.000000, y = 10.000000,width = 22.000000, height = 12.000000});
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 155.0, height = 32.0});
 	localParams[3]:setPosition(169.0, 58.5);

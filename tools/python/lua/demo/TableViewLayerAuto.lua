@@ -70,7 +70,7 @@ function TableViewLayer:initView()
 	localParams[4] = ImageView:create('uires/public/scrollBarBg.png', 0);
 	localParams[4]:ignoreContentAdaptWithSize(false);
 	localParams[4]:setScale9Enabled(true);
-	localParams[4]:setCapInsets({x = 0.000000, y = 6.000000,width = 3.000000, height = 8.000000);
+	localParams[4]:setCapInsets({x = 0.000000, y = 6.000000,width = 3.000000, height = 8.000000});
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setOpacity(0);
 	localParams[4]:setContentSize({width = 3.0, height = 380.0});
@@ -83,7 +83,7 @@ function TableViewLayer:initView()
 	localParams[5] = ImageView:create('uires/public/scrollBar.png', 0);
 	localParams[5]:ignoreContentAdaptWithSize(false);
 	localParams[5]:setScale9Enabled(true);
-	localParams[5]:setCapInsets({x = 1.000000, y = 6.000000,width = 3.000000, height = 8.000000);
+	localParams[5]:setCapInsets({x = 1.000000, y = 6.000000,width = 3.000000, height = 8.000000});
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setContentSize({width = 5.0, height = 20.0});
 	localParams[5]:setPosition(1.5, 190.0);
@@ -111,7 +111,7 @@ function TableViewLayer:initView()
 	localParams[7] = ImageView:create('uires/public/scrollBarBg.png', 0);
 	localParams[7]:ignoreContentAdaptWithSize(false);
 	localParams[7]:setScale9Enabled(true);
-	localParams[7]:setCapInsets({x = 1.000000, y = 0.000000,width = 1.000000, height = 20.000000);
+	localParams[7]:setCapInsets({x = 1.000000, y = 0.000000,width = 1.000000, height = 20.000000});
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setOpacity(0);
 	localParams[7]:setRotationSkewX(90.00);
@@ -126,7 +126,7 @@ function TableViewLayer:initView()
 	localParams[8] = ImageView:create('uires/public/scrollBar.png', 0);
 	localParams[8]:ignoreContentAdaptWithSize(false);
 	localParams[8]:setScale9Enabled(true);
-	localParams[8]:setCapInsets({x = 1.000000, y = 1.000000,width = 3.000000, height = 18.000000);
+	localParams[8]:setCapInsets({x = 1.000000, y = 1.000000,width = 3.000000, height = 18.000000});
 	localParams[8]:setAnchorPoint(0.50, 0.50);
 	localParams[8]:setFlippedY(true);
 	localParams[8]:setContentSize({width = 5.0, height = 20.0});

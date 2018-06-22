@@ -125,7 +125,7 @@ function PackageNode:initView()
 	localParams[9] = ImageView:create('uires/public/sheet_bgframe/bgFrame0115.png', 1);
 	localParams[9]:ignoreContentAdaptWithSize(false);
 	localParams[9]:setScale9Enabled(true);
-	localParams[9]:setCapInsets({x = 11.000000, y = 15.000000,width = 14.000000, height = 4.000000);
+	localParams[9]:setCapInsets({x = 11.000000, y = 15.000000,width = 14.000000, height = 4.000000});
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:setContentSize({width = 160.0, height = 32.0});
 	localParams[9]:setPosition(92.5, 30.81);

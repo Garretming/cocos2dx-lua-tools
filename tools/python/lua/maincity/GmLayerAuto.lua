@@ -32,7 +32,7 @@ function GmLayer:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_common/bgFrame0017.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 81.000000, y = 81.000000,width = 84.000000, height = 84.000000);
+	localParams[1]:setCapInsets({x = 81.000000, y = 81.000000,width = 84.000000, height = 84.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setContentSize({width = 1024.0, height = 640.0});
 	localParams[1]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), 320.0);
@@ -74,7 +74,7 @@ function GmLayer:initView()
 	localParams[4] = ImageView:create('uires/public/sheet_bgframe/bgFrame0036.png', 1);
 	localParams[4]:ignoreContentAdaptWithSize(false);
 	localParams[4]:setScale9Enabled(true);
-	localParams[4]:setCapInsets({x = 25.000000, y = 8.000000,width = 28.000000, height = 10.000000);
+	localParams[4]:setCapInsets({x = 25.000000, y = 8.000000,width = 28.000000, height = 10.000000});
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setContentSize({width = 800.0, height = 60.0});
 	localParams[4]:setPosition(415.09, 590.0);

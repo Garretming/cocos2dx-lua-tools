@@ -34,7 +34,7 @@ function RegisterLayer:initView()
 	localParams[1] = ImageView:create('uires/public/sheet_bgframe/bgFrame0047.png', 1);
 	localParams[1]:ignoreContentAdaptWithSize(false);
 	localParams[1]:setScale9Enabled(true);
-	localParams[1]:setCapInsets({x = 49.000000, y = 22.000000,width = 52.000000, height = 6.000000);
+	localParams[1]:setCapInsets({x = 49.000000, y = 22.000000,width = 52.000000, height = 6.000000});
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setContentSize({width = 335.0, height = 50.0});
 	localParams[1]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), WinSize.height/2 + (25.02 * ccx.scaleY));
@@ -72,7 +72,7 @@ function RegisterLayer:initView()
 	localParams[4] = ImageView:create('uires/public/sheet_bgframe/bgFrame0047.png', 1);
 	localParams[4]:ignoreContentAdaptWithSize(false);
 	localParams[4]:setScale9Enabled(true);
-	localParams[4]:setCapInsets({x = 49.000000, y = 22.000000,width = 52.000000, height = 6.000000);
+	localParams[4]:setCapInsets({x = 49.000000, y = 22.000000,width = 52.000000, height = 6.000000});
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setContentSize({width = 335.0, height = 50.0});
 	localParams[4]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), WinSize.height/2 + (-35.01 * ccx.scaleY));
@@ -110,7 +110,7 @@ function RegisterLayer:initView()
 	localParams[7] = ImageView:create('uires/public/sheet_bgframe/bgFrame0047.png', 1);
 	localParams[7]:ignoreContentAdaptWithSize(false);
 	localParams[7]:setScale9Enabled(true);
-	localParams[7]:setCapInsets({x = 49.000000, y = 22.000000,width = 52.000000, height = 6.000000);
+	localParams[7]:setCapInsets({x = 49.000000, y = 22.000000,width = 52.000000, height = 6.000000});
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setContentSize({width = 335.0, height = 50.0});
 	localParams[7]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), WinSize.height/2 + (-94.98 * ccx.scaleY));
