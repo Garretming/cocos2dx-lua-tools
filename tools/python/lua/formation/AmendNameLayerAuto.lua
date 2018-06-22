@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：AmendNameLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -97,7 +94,7 @@ function AmendNameLayer:initView()
 	localParams[6].__Name = 'bg#sure_btn#sure';
 	localParams[5]:addChild(localParams[6]);
 
-	localParams[7] = Node:create();
+	localParams[7] = Widget:create();
 	localParams[7]:setAnchorPoint(0.00, 0.00);
 	localParams[7]:setScaleX(0.90);
 	localParams[7]:setScaleY(0.90);
@@ -123,9 +120,7 @@ function AmendNameLayer:initView()
 	localParams[9] = EditBox:create({width = 0, height = 0}, Scale9Sprite:create());
 	localParams[9]:setFontSize(20);
 	localParams[9]:setPlaceholderFontSize(20);
-	localParams[9]:setMaxLengthEnabled(true);
 	localParams[9]:setMaxLength(5);
-	localParams[9]:setPasswordEnabled(false);
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:registerScriptEditBoxHandler(handler(self, self._onChangeName));
 	localParams[9]:setTouchEnabled(true);

@@ -49,7 +49,7 @@ def parse(node, array):
             type = 1
 
 
-        string += "\t%s = LoadingBar:create('%s', %d, %.2f);\n" % (node, name, type, ProgressInfo)
+        string += "\t%s = LoadingBar:create(%s, %d, %.2f);\n" % (node, name, type, ProgressInfo)
 
         if (array.get('ProgressType') != None):
             string += "\t%s:setDirection(1);\n" % node

@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：RankLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -71,7 +68,7 @@ function RankLayer:initView()
 	localParams[4]:setFontSize(20);
 	localParams[4]:setString([[我的排名]]);
 	localParams[4]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[4]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[4]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[4]:setAnchorPoint(0.50, 0.00);
 	localParams[4]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[4]:setContentSize({width = 83.0, height = 22.0});
@@ -95,7 +92,7 @@ function RankLayer:initView()
 	localParams[6]:setFontSize(22);
 	localParams[6]:setString([[大鸟大鸟大鸟]]);
 	localParams[6]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[6]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[6]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[6]:setAnchorPoint(0.00, 0.50);
 	localParams[6]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[6]:setContentSize({width = 136.0, height = 26.0});
@@ -109,7 +106,7 @@ function RankLayer:initView()
 	localParams[7]:setFontSize(22);
 	localParams[7]:setString([[LV.25]]);
 	localParams[7]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[7]:setAnchorPoint(1.00, 0.50);
 	localParams[7]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[7]:setContentSize({width = 59.0, height = 26.0});
@@ -123,7 +120,7 @@ function RankLayer:initView()
 	localParams[8]:setFontSize(22);
 	localParams[8]:setString([[胜率：]]);
 	localParams[8]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[8]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[8]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[8]:setAnchorPoint(1.00, 0.50);
 	localParams[8]:setScaleX(1.01);
 	localParams[8]:setTextColor({r = 255, g = 140, b = 0});
@@ -138,7 +135,7 @@ function RankLayer:initView()
 	localParams[9]:setFontSize(22);
 	localParams[9]:setString([[55.00%]]);
 	localParams[9]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[9]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[9]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[9]:setAnchorPoint(0.00, 0.50);
 	localParams[9]:setScaleX(1.01);
 	localParams[9]:setTextColor({r = 255, g = 140, b = 0});
@@ -165,7 +162,7 @@ function RankLayer:initView()
 	localParams[11]:setFontSize(20);
 	localParams[11]:setString([[最强王者]]);
 	localParams[11]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[11]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[11]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[11]:setAnchorPoint(0.50, 0.50);
 	localParams[11]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[11]:setContentSize({width = 84.0, height = 22.0});
@@ -190,7 +187,7 @@ function RankLayer:initView()
 	localParams[13]:setFontSize(20);
 	localParams[13]:setString([[x6]]);
 	localParams[13]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[13]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[13]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[13]:setAnchorPoint(0.50, 0.50);
 	localParams[13]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[13]:setContentSize({width = 25.0, height = 22.0});
@@ -200,7 +197,7 @@ function RankLayer:initView()
 	localParams[13].__Name = 'Bg_img#under_img0#under_1#count_txt';
 	localParams[10]:addChild(localParams[13]);
 
-	localParams[14] = ImageView:create(, 0);
+	localParams[14] = ImageView:create(nil, 0);
 	localParams[14]:setAnchorPoint(0.50, 0.50);
 	localParams[14]:setScaleX(0.75);
 	localParams[14]:setScaleY(0.75);
@@ -260,7 +257,7 @@ function RankLayer:initView()
 排名第一的玩家可入冠军榜]]);
 	localParams[19]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[19]:setTextAreaSize({width = 320, height = 50});
-	localParams[19]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[19]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[19]:setAnchorPoint(0.00, 0.50);
 	localParams[19]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[19]:setContentSize({width = 320.0, height = 50.0});
@@ -298,7 +295,7 @@ function RankLayer:initView()
 	localParams[22]:setBackGroundColor({r = 150, g = 150, b = 255});
 	localParams[22]:setBackGroundColorOpacity(0);
 	localParams[22]:setAnchorPoint(0.00, 0.00);
-	localParams[22]:onClick(handler(self, self._onListView));
+	localParams[22]:setEventCallback(handler(self, self._onListView));
 	localParams[22]:setTouchEnabled(true);
 	localParams[22]:setContentSize({width = 580.0, height = WinSize.height - 275.00});
 	localParams[22]:setPosition(0.0, 10.0);
@@ -314,7 +311,7 @@ function RankLayer:initView()
 	localParams[23]:setBackGroundColor({r = 150, g = 150, b = 255});
 	localParams[23]:setBackGroundColorOpacity(0);
 	localParams[23]:setAnchorPoint(0.00, 0.00);
-	localParams[23]:onClick(handler(self, self._onListView2));
+	localParams[23]:setEventCallback(handler(self, self._onListView2));
 	localParams[23]:setTouchEnabled(true);
 	localParams[23]:setContentSize({width = 580.0, height = WinSize.height - 275.00});
 	localParams[23]:setPosition(0.0, 10.0);
@@ -370,7 +367,7 @@ function RankLayer:initView()
 	localParams[28]:setFontSize(20);
 	localParams[28]:setString([[冠军]]);
 	localParams[28]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[28]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[28]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[28]:setAnchorPoint(0.50, 0.50);
 	localParams[28]:setTextColor({r = 240, g = 200, b = 0});
 	localParams[28]:setContentSize({width = 45.0, height = 24.0});
@@ -450,6 +447,38 @@ function RankLayer:loadPlistResources()
 
     if (table.nums(self._plistList) > 0) then
         ccx.ResourcesMgr:getInstance():addSpriteFramesWithFiles(self._plistList)
+    end
+end
+
+
+--@callback:('count', listView)                              --总共cell数量
+--@callback:('size', listView, row)                          --每个cell的尺寸
+--@callback:('delay', listView, row, column, index)          --每个cell上item延时创建的时间
+--@callback:('add', listView, row, column, index, cell)      --添加每个item
+--@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
+--@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
+function RankLayer:_onListView2(eventName, listView, row, column, index, cell)
+    if self.m_ClickDelegate and self.m_ClickDelegate.onListView2 then
+        return self.m_ClickDelegate:onListView2(eventName, listView, row, column, index, cell);
+    end
+    if self.onListView2 then
+        return self:onListView2(eventName, listView, row, column, index, cell);
+    end
+end
+
+
+--@callback:('count', listView)                              --总共cell数量
+--@callback:('size', listView, row)                          --每个cell的尺寸
+--@callback:('delay', listView, row, column, index)          --每个cell上item延时创建的时间
+--@callback:('add', listView, row, column, index, cell)      --添加每个item
+--@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
+--@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
+function RankLayer:_onListView(eventName, listView, row, column, index, cell)
+    if self.m_ClickDelegate and self.m_ClickDelegate.onListView then
+        return self.m_ClickDelegate:onListView(eventName, listView, row, column, index, cell);
+    end
+    if self.onListView then
+        return self:onListView(eventName, listView, row, column, index, cell);
     end
 end
 

@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：BackpackLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -81,7 +78,7 @@ function BackpackLayer:initView()
 	localParams[5]:setString([[其它]]);
 	localParams[5]:setFontName('uires/public/ttf/jtcs.TTF');
 	localParams[5]:setTextHorizontalAlignment(1);
-	localParams[5]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[5]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[5]:setContentSize({width = 44.0, height = 22.0});
@@ -108,7 +105,7 @@ function BackpackLayer:initView()
 	localParams[7]:setString([[打狗棒法共有绊、劈、缠、戳、挑、引、封、转八诀!"打狗棒法”威力巨大以至“天下无狗"!]]);
 	localParams[7]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[7]:setTextAreaSize({width = 300, height = 170});
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setContentSize({width = 300.0, height = 170.0});
 	localParams[7]:setPosition(167.0, 112.5);
@@ -169,7 +166,7 @@ function BackpackLayer:initView()
 	localParams[13]:setFontSize(24);
 	localParams[13]:setString([[6456413]]);
 	localParams[13]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[13]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[13]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[13]:setAnchorPoint(1.00, 0.50);
 	localParams[13]:setContentSize({width = 107.0, height = 26.0});
 	localParams[13]:setPosition(275.74, 18.36);
@@ -182,7 +179,7 @@ function BackpackLayer:initView()
 	localParams[14]:setFontSize(20);
 	localParams[14]:setString([[不可出售]]);
 	localParams[14]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[14]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[14]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[14]:setAnchorPoint(1.00, 0.50);
 	localParams[14]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[14]:setContentSize({width = 83.0, height = 22.0});
@@ -196,7 +193,7 @@ function BackpackLayer:initView()
 	localParams[15]:setFontSize(20);
 	localParams[15]:setString([[拥有：]]);
 	localParams[15]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[15]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[15]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[15]:setAnchorPoint(0.00, 0.50);
 	localParams[15]:setContentSize({width = 56.0, height = 22.0});
 	localParams[15]:setPosition(168.0, 314.06);
@@ -209,7 +206,7 @@ function BackpackLayer:initView()
 	localParams[16]:setFontSize(20);
 	localParams[16]:setString([[999]]);
 	localParams[16]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[16]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[16]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[16]:setAnchorPoint(0.00, 0.50);
 	localParams[16]:setContentSize({width = 39.0, height = 22.0});
 	localParams[16]:setPosition(231.0, 314.06);
@@ -222,7 +219,7 @@ function BackpackLayer:initView()
 	localParams[17]:setFontSize(20);
 	localParams[17]:setString([[件]]);
 	localParams[17]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[17]:enableOutline({r = 50, g = 20, b = 255, a = 255}, 1.000000);
+	localParams[17]:enableOutline({r = 50, g = 20, b = 0, a = 255}, 1.00);
 	localParams[17]:setAnchorPoint(0.50, 0.50);
 	localParams[17]:setContentSize({width = 24.0, height = 22.0});
 	localParams[17]:setPosition(280.0, 314.06);
@@ -235,7 +232,7 @@ function BackpackLayer:initView()
 	localParams[18]:setFontSize(20);
 	localParams[18]:setString([[品质：]]);
 	localParams[18]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[18]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[18]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[18]:setAnchorPoint(0.00, 0.50);
 	localParams[18]:setContentSize({width = 56.0, height = 22.0});
 	localParams[18]:setPosition(168.0, 275.76);
@@ -248,7 +245,7 @@ function BackpackLayer:initView()
 	localParams[19]:setFontSize(20);
 	localParams[19]:setString([[传说]]);
 	localParams[19]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[19]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[19]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[19]:setAnchorPoint(0.50, 0.50);
 	localParams[19]:setTextColor({r = 240, g = 0, b = 255});
 	localParams[19]:setContentSize({width = 44.0, height = 22.0});
@@ -274,7 +271,7 @@ function BackpackLayer:initView()
 	localParams[20].__Name = 'otherInfoBg_img#sell_btn';
 	localParams[1]:addChild(localParams[20]);
 
-	localParams[21] = Node:create();
+	localParams[21] = Widget:create();
 	localParams[21]:setAnchorPoint(0.00, 0.00);
 	localParams[21]:setScaleX(0.90);
 	localParams[21]:setScaleY(0.90);
@@ -344,7 +341,7 @@ function BackpackLayer:initView()
 	localParams[27]:setString([[消耗品]]);
 	localParams[27]:setFontName('uires/public/ttf/jtcs.TTF');
 	localParams[27]:setTextHorizontalAlignment(1);
-	localParams[27]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[27]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[27]:setAnchorPoint(0.50, 0.50);
 	localParams[27]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[27]:setContentSize({width = 64.0, height = 22.0});
@@ -371,7 +368,7 @@ function BackpackLayer:initView()
 	localParams[29]:setString([[打狗棒法共有绊、劈、缠、戳、挑、引、封、转八诀!"打狗棒法”威力巨大以至“天下无狗"!]]);
 	localParams[29]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[29]:setTextAreaSize({width = 300, height = 170});
-	localParams[29]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[29]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[29]:setAnchorPoint(0.50, 0.50);
 	localParams[29]:setContentSize({width = 300.0, height = 170.0});
 	localParams[29]:setPosition(167.0, 112.5);
@@ -432,7 +429,7 @@ function BackpackLayer:initView()
 	localParams[35]:setFontSize(24);
 	localParams[35]:setString([[6456413]]);
 	localParams[35]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[35]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[35]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[35]:setAnchorPoint(1.00, 0.50);
 	localParams[35]:setContentSize({width = 107.0, height = 26.0});
 	localParams[35]:setPosition(275.74, 18.36);
@@ -445,7 +442,7 @@ function BackpackLayer:initView()
 	localParams[36]:setFontSize(20);
 	localParams[36]:setString([[不可出售]]);
 	localParams[36]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[36]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[36]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[36]:setAnchorPoint(1.00, 0.50);
 	localParams[36]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[36]:setContentSize({width = 83.0, height = 22.0});
@@ -459,7 +456,7 @@ function BackpackLayer:initView()
 	localParams[37]:setFontSize(20);
 	localParams[37]:setString([[拥有：]]);
 	localParams[37]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[37]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[37]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[37]:setAnchorPoint(0.00, 0.50);
 	localParams[37]:setContentSize({width = 56.0, height = 22.0});
 	localParams[37]:setPosition(168.0, 314.06);
@@ -472,7 +469,7 @@ function BackpackLayer:initView()
 	localParams[38]:setFontSize(20);
 	localParams[38]:setString([[999]]);
 	localParams[38]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[38]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[38]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[38]:setAnchorPoint(0.00, 0.50);
 	localParams[38]:setContentSize({width = 39.0, height = 22.0});
 	localParams[38]:setPosition(231.0, 314.06);
@@ -485,7 +482,7 @@ function BackpackLayer:initView()
 	localParams[39]:setFontSize(20);
 	localParams[39]:setString([[件]]);
 	localParams[39]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[39]:enableOutline({r = 50, g = 20, b = 255, a = 255}, 1.000000);
+	localParams[39]:enableOutline({r = 50, g = 20, b = 0, a = 255}, 1.00);
 	localParams[39]:setAnchorPoint(0.50, 0.50);
 	localParams[39]:setContentSize({width = 24.0, height = 22.0});
 	localParams[39]:setPosition(280.0, 314.06);
@@ -498,7 +495,7 @@ function BackpackLayer:initView()
 	localParams[40]:setFontSize(20);
 	localParams[40]:setString([[品质：]]);
 	localParams[40]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[40]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[40]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[40]:setAnchorPoint(0.00, 0.50);
 	localParams[40]:setContentSize({width = 56.0, height = 22.0});
 	localParams[40]:setPosition(168.0, 275.76);
@@ -511,7 +508,7 @@ function BackpackLayer:initView()
 	localParams[41]:setFontSize(20);
 	localParams[41]:setString([[传说]]);
 	localParams[41]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[41]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[41]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[41]:setAnchorPoint(0.50, 0.50);
 	localParams[41]:setTextColor({r = 240, g = 0, b = 255});
 	localParams[41]:setContentSize({width = 44.0, height = 22.0});
@@ -535,7 +532,7 @@ function BackpackLayer:initView()
 	localParams[42].__Name = 'consumablesInfoBg_img#use_btn';
 	localParams[23]:addChild(localParams[42]);
 
-	localParams[43] = Node:create();
+	localParams[43] = Widget:create();
 	localParams[43]:setAnchorPoint(0.00, 0.00);
 	localParams[43]:setScaleX(0.90);
 	localParams[43]:setScaleY(0.90);
@@ -569,7 +566,7 @@ function BackpackLayer:initView()
 	localParams[45].__Name = 'consumablesInfoBg_img#sell_btn';
 	localParams[23]:addChild(localParams[45]);
 
-	localParams[46] = Node:create();
+	localParams[46] = Widget:create();
 	localParams[46]:setAnchorPoint(0.00, 0.00);
 	localParams[46]:setScaleX(0.90);
 	localParams[46]:setScaleY(0.90);
@@ -639,7 +636,7 @@ function BackpackLayer:initView()
 	localParams[52]:setString([[打狗棒]]);
 	localParams[52]:setFontName('uires/public/ttf/jtcs.TTF');
 	localParams[52]:setTextHorizontalAlignment(1);
-	localParams[52]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[52]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[52]:setAnchorPoint(0.50, 0.50);
 	localParams[52]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[52]:setContentSize({width = 64.0, height = 22.0});
@@ -677,7 +674,7 @@ function BackpackLayer:initView()
 	localParams[55]:setFontSize(20);
 	localParams[55]:setString([[生命：]]);
 	localParams[55]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[55]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[55]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[55]:setAnchorPoint(0.00, 0.50);
 	localParams[55]:setContentSize({width = 51.0, height = 25.0});
 	localParams[55]:setPosition(9.0, 14.0);
@@ -690,7 +687,7 @@ function BackpackLayer:initView()
 	localParams[56]:setFontSize(20);
 	localParams[56]:setString([[8888888]]);
 	localParams[56]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[56]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[56]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[56]:setAnchorPoint(1.00, 0.50);
 	localParams[56]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[56]:setContentSize({width = 73.0, height = 22.0});
@@ -716,7 +713,7 @@ function BackpackLayer:initView()
 	localParams[58]:setFontSize(20);
 	localParams[58]:setString([[护甲：]]);
 	localParams[58]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[58]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[58]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[58]:setAnchorPoint(0.00, 0.50);
 	localParams[58]:setContentSize({width = 51.0, height = 25.0});
 	localParams[58]:setPosition(9.0, 14.0);
@@ -729,7 +726,7 @@ function BackpackLayer:initView()
 	localParams[59]:setFontSize(20);
 	localParams[59]:setString([[777]]);
 	localParams[59]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[59]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[59]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[59]:setAnchorPoint(1.00, 0.50);
 	localParams[59]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[59]:setContentSize({width = 33.0, height = 22.0});
@@ -755,7 +752,7 @@ function BackpackLayer:initView()
 	localParams[61]:setFontSize(20);
 	localParams[61]:setString([[速度：]]);
 	localParams[61]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[61]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[61]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[61]:setAnchorPoint(0.00, 0.50);
 	localParams[61]:setContentSize({width = 51.0, height = 25.0});
 	localParams[61]:setPosition(9.0, 14.0);
@@ -768,7 +765,7 @@ function BackpackLayer:initView()
 	localParams[62]:setFontSize(20);
 	localParams[62]:setString([[66666]]);
 	localParams[62]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[62]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[62]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[62]:setAnchorPoint(1.00, 0.50);
 	localParams[62]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[62]:setContentSize({width = 53.0, height = 22.0});
@@ -794,7 +791,7 @@ function BackpackLayer:initView()
 	localParams[64]:setFontSize(20);
 	localParams[64]:setString([[魔法：]]);
 	localParams[64]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[64]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[64]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[64]:setAnchorPoint(0.00, 0.50);
 	localParams[64]:setContentSize({width = 51.0, height = 25.0});
 	localParams[64]:setPosition(9.0, 14.0);
@@ -807,7 +804,7 @@ function BackpackLayer:initView()
 	localParams[65]:setFontSize(20);
 	localParams[65]:setString([[99999999]]);
 	localParams[65]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[65]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[65]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[65]:setAnchorPoint(1.00, 0.50);
 	localParams[65]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[65]:setContentSize({width = 83.0, height = 22.0});
@@ -833,7 +830,7 @@ function BackpackLayer:initView()
 	localParams[67]:setFontSize(20);
 	localParams[67]:setString([[怒气：]]);
 	localParams[67]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[67]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[67]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[67]:setAnchorPoint(0.00, 0.50);
 	localParams[67]:setContentSize({width = 51.0, height = 25.0});
 	localParams[67]:setPosition(9.0, 14.0);
@@ -846,7 +843,7 @@ function BackpackLayer:initView()
 	localParams[68]:setFontSize(20);
 	localParams[68]:setString([[22222]]);
 	localParams[68]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[68]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[68]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[68]:setAnchorPoint(1.00, 0.50);
 	localParams[68]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[68]:setContentSize({width = 53.0, height = 22.0});
@@ -872,7 +869,7 @@ function BackpackLayer:initView()
 	localParams[70]:setFontSize(20);
 	localParams[70]:setString([[对龙族伤害增加5%]]);
 	localParams[70]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[70]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[70]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[70]:setAnchorPoint(0.50, 0.50);
 	localParams[70]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[70]:setContentSize({width = 169.0, height = 25.0});
@@ -934,7 +931,7 @@ function BackpackLayer:initView()
 	localParams[76]:setFontSize(20);
 	localParams[76]:setString([[456781]]);
 	localParams[76]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[76]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[76]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[76]:setAnchorPoint(1.00, 0.50);
 	localParams[76]:setContentSize({width = 73.0, height = 22.0});
 	localParams[76]:setPosition(273.24, 18.36);
@@ -947,7 +944,7 @@ function BackpackLayer:initView()
 	localParams[77]:setFontSize(20);
 	localParams[77]:setString([[不可出售]]);
 	localParams[77]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[77]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[77]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[77]:setAnchorPoint(1.00, 0.50);
 	localParams[77]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[77]:setContentSize({width = 83.0, height = 22.0});
@@ -961,7 +958,7 @@ function BackpackLayer:initView()
 	localParams[78]:setFontSize(20);
 	localParams[78]:setString([[战士武器]]);
 	localParams[78]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[78]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[78]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[78]:setAnchorPoint(0.00, 0.50);
 	localParams[78]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[78]:setContentSize({width = 84.0, height = 22.0});
@@ -975,7 +972,7 @@ function BackpackLayer:initView()
 	localParams[79]:setFontSize(20);
 	localParams[79]:setString([[评分：]]);
 	localParams[79]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[79]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[79]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[79]:setAnchorPoint(0.00, 0.50);
 	localParams[79]:setContentSize({width = 56.0, height = 22.0});
 	localParams[79]:setPosition(168.95, 293.52);
@@ -988,7 +985,7 @@ function BackpackLayer:initView()
 	localParams[80]:setFontSize(20);
 	localParams[80]:setString([[999999]]);
 	localParams[80]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[80]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[80]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[80]:setAnchorPoint(0.00, 0.50);
 	localParams[80]:setTextColor({r = 0, g = 235, b = 255});
 	localParams[80]:setContentSize({width = 75.0, height = 22.0});
@@ -1002,7 +999,7 @@ function BackpackLayer:initView()
 	localParams[81]:setFontSize(20);
 	localParams[81]:setString([[佩戴等级：]]);
 	localParams[81]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[81]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[81]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[81]:setAnchorPoint(0.00, 0.50);
 	localParams[81]:setContentSize({width = 96.0, height = 22.0});
 	localParams[81]:setPosition(169.42, 263.83);
@@ -1015,7 +1012,7 @@ function BackpackLayer:initView()
 	localParams[82]:setFontSize(20);
 	localParams[82]:setString([[66]]);
 	localParams[82]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[82]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[82]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[82]:setAnchorPoint(0.00, 0.50);
 	localParams[82]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[82]:setContentSize({width = 28.0, height = 22.0});
@@ -1041,7 +1038,7 @@ function BackpackLayer:initView()
 	localParams[83].__Name = 'equipInfoBg_img#sell_btn';
 	localParams[48]:addChild(localParams[83]);
 
-	localParams[84] = Node:create();
+	localParams[84] = Widget:create();
 	localParams[84]:setAnchorPoint(0.00, 0.00);
 	localParams[84]:setScaleX(0.90);
 	localParams[84]:setScaleY(0.90);
@@ -1111,7 +1108,7 @@ function BackpackLayer:initView()
 	localParams[90]:setString([[符文]]);
 	localParams[90]:setFontName('uires/public/ttf/jtcs.TTF');
 	localParams[90]:setTextHorizontalAlignment(1);
-	localParams[90]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[90]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[90]:setAnchorPoint(0.50, 0.50);
 	localParams[90]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[90]:setContentSize({width = 44.0, height = 22.0});
@@ -1137,7 +1134,7 @@ function BackpackLayer:initView()
 	localParams[92]:setFontSize(20);
 	localParams[92]:setString([[生命： +66.66%]]);
 	localParams[92]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[92]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[92]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[92]:setAnchorPoint(0.00, 0.50);
 	localParams[92]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[92]:setContentSize({width = 144.0, height = 22.0});
@@ -1152,7 +1149,7 @@ function BackpackLayer:initView()
 	localParams[93]:setString([[打狗棒法共有绊、劈、缠、戳、挑、引、封、转八诀!"打狗棒法”威力巨大以至“天下无狗"!]]);
 	localParams[93]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[93]:setTextAreaSize({width = 300, height = 150});
-	localParams[93]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[93]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[93]:setAnchorPoint(0.50, 0.50);
 	localParams[93]:setContentSize({width = 300.0, height = 150.0});
 	localParams[93]:setPosition(167.1, 92.15);
@@ -1213,7 +1210,7 @@ function BackpackLayer:initView()
 	localParams[99]:setFontSize(24);
 	localParams[99]:setString([[6456413]]);
 	localParams[99]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[99]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[99]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[99]:setAnchorPoint(1.00, 0.50);
 	localParams[99]:setContentSize({width = 107.0, height = 26.0});
 	localParams[99]:setPosition(275.74, 18.36);
@@ -1226,7 +1223,7 @@ function BackpackLayer:initView()
 	localParams[100]:setFontSize(20);
 	localParams[100]:setString([[不可出售]]);
 	localParams[100]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[100]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[100]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[100]:setAnchorPoint(1.00, 0.50);
 	localParams[100]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[100]:setContentSize({width = 83.0, height = 22.0});
@@ -1240,7 +1237,7 @@ function BackpackLayer:initView()
 	localParams[101]:setFontSize(20);
 	localParams[101]:setString([[拥有：]]);
 	localParams[101]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[101]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[101]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[101]:setAnchorPoint(0.00, 0.50);
 	localParams[101]:setContentSize({width = 56.0, height = 22.0});
 	localParams[101]:setPosition(168.0, 314.06);
@@ -1253,7 +1250,7 @@ function BackpackLayer:initView()
 	localParams[102]:setFontSize(20);
 	localParams[102]:setString([[999]]);
 	localParams[102]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[102]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[102]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[102]:setAnchorPoint(0.00, 0.50);
 	localParams[102]:setContentSize({width = 39.0, height = 22.0});
 	localParams[102]:setPosition(231.0, 314.06);
@@ -1266,7 +1263,7 @@ function BackpackLayer:initView()
 	localParams[103]:setFontSize(20);
 	localParams[103]:setString([[件]]);
 	localParams[103]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[103]:enableOutline({r = 50, g = 20, b = 255, a = 255}, 1.000000);
+	localParams[103]:enableOutline({r = 50, g = 20, b = 0, a = 255}, 1.00);
 	localParams[103]:setAnchorPoint(0.50, 0.50);
 	localParams[103]:setContentSize({width = 24.0, height = 22.0});
 	localParams[103]:setPosition(280.0, 314.06);
@@ -1279,7 +1276,7 @@ function BackpackLayer:initView()
 	localParams[104]:setFontSize(20);
 	localParams[104]:setString([[品质：]]);
 	localParams[104]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[104]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[104]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[104]:setAnchorPoint(0.00, 0.50);
 	localParams[104]:setContentSize({width = 56.0, height = 22.0});
 	localParams[104]:setPosition(168.0, 275.76);
@@ -1292,7 +1289,7 @@ function BackpackLayer:initView()
 	localParams[105]:setFontSize(20);
 	localParams[105]:setString([[传说]]);
 	localParams[105]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[105]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[105]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[105]:setAnchorPoint(0.50, 0.50);
 	localParams[105]:setTextColor({r = 240, g = 0, b = 255});
 	localParams[105]:setContentSize({width = 44.0, height = 22.0});
@@ -1318,7 +1315,7 @@ function BackpackLayer:initView()
 	localParams[106].__Name = 'runeInfoBg_img#compose_btn';
 	localParams[86]:addChild(localParams[106]);
 
-	localParams[107] = Node:create();
+	localParams[107] = Widget:create();
 	localParams[107]:setAnchorPoint(0.00, 0.00);
 	localParams[107]:setScaleX(0.90);
 	localParams[107]:setScaleY(0.90);
@@ -1354,7 +1351,7 @@ function BackpackLayer:initView()
 	localParams[109].__Name = 'runeInfoBg_img#sell_btn';
 	localParams[86]:addChild(localParams[109]);
 
-	localParams[110] = Node:create();
+	localParams[110] = Widget:create();
 	localParams[110]:setAnchorPoint(0.00, 0.00);
 	localParams[110]:setScaleX(0.90);
 	localParams[110]:setScaleY(0.90);
@@ -1626,7 +1623,7 @@ function BackpackLayer:initView()
 	localParams[131].__Name = 'packageBg_img#close_btn';
 	localParams[112]:addChild(localParams[131]);
 
-	localParams[132] = Node:create();
+	localParams[132] = Widget:create();
 	localParams[132]:setAnchorPoint(0.00, 0.00);
 	localParams[132]:setScaleX(0.90);
 	localParams[132]:setScaleY(0.90);

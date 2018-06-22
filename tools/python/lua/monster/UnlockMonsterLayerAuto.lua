@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：UnlockMonsterLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -38,7 +35,7 @@ function UnlockMonsterLayer:initView()
 	localParams[1].__Name = 'bg_img';
 	self:addChild(localParams[1]);
 
-	localParams[2] = ImageView:create(, 0);
+	localParams[2] = ImageView:create(nil, 0);
 	localParams[2]:setAnchorPoint(0.50, 0.50);
 	localParams[2]:setContentSize({width = 46.0, height = 46.0});
 	localParams[2]:setPosition(512.0, 179.97);
@@ -78,7 +75,7 @@ function UnlockMonsterLayer:initView()
 	localParams[6]:setFontSize(20);
 	localParams[6]:setString([[解锁后每日可进行雇佣]]);
 	localParams[6]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[6]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[6]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[6]:setAnchorPoint(0.50, 0.50);
 	localParams[6]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[6]:setContentSize({width = 204.0, height = 22.0});
@@ -101,7 +98,7 @@ function UnlockMonsterLayer:initView()
 	localParams[8]:setFontSize(28);
 	localParams[8]:setString([[豹子大魔王]]);
 	localParams[8]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[8]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[8]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[8]:setAnchorPoint(0.50, 0.50);
 	localParams[8]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[8]:setContentSize({width = 144.0, height = 30.0});

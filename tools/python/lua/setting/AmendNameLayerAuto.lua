@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：AmendNameLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -98,7 +95,7 @@ function AmendNameLayer:initView()
 	localParams[6].__Name = 'amend_bg#sure_btn#sure';
 	localParams[5]:addChild(localParams[6]);
 
-	localParams[7] = Node:create();
+	localParams[7] = Widget:create();
 	localParams[7]:setAnchorPoint(0.00, 0.00);
 	localParams[7]:setScaleX(0.90);
 	localParams[7]:setScaleY(0.90);
@@ -125,9 +122,7 @@ function AmendNameLayer:initView()
 	localParams[9]:setFontSize(20);
 	localParams[9]:setPlaceholderFontSize(20);
 	localParams[9]:setPlaceHolder([[点击输入新名字]]);
-	localParams[9]:setMaxLengthEnabled(true);
 	localParams[9]:setMaxLength(6);
-	localParams[9]:setPasswordEnabled(false);
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:registerScriptEditBoxHandler(handler(self, self._onChangeName));
 	localParams[9]:setTouchEnabled(true);
@@ -164,7 +159,7 @@ function AmendNameLayer:initView()
 	localParams[11].__Name = 'amend_bg#cancel#sure';
 	localParams[10]:addChild(localParams[11]);
 
-	localParams[12] = Node:create();
+	localParams[12] = Widget:create();
 	localParams[12]:setAnchorPoint(0.00, 0.00);
 	localParams[12]:setScaleX(0.90);
 	localParams[12]:setScaleY(0.90);
@@ -179,7 +174,7 @@ function AmendNameLayer:initView()
 	localParams[13]:setFontSize(20);
 	localParams[13]:setString([[首次修改昵称所需]]);
 	localParams[13]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[13]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[13]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[13]:setAnchorPoint(1.00, 0.50);
 	localParams[13]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[13]:setContentSize({width = 164.0, height = 22.0});
@@ -202,7 +197,7 @@ function AmendNameLayer:initView()
 	localParams[15]:setFontSize(20);
 	localParams[15]:setString([[100]]);
 	localParams[15]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[15]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[15]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[15]:setAnchorPoint(0.50, 0.50);
 	localParams[15]:setScaleX(1.30);
 	localParams[15]:setScaleY(1.30);

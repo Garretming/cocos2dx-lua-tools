@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：HeadNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -46,7 +43,7 @@ function HeadNode:initView()
 	localParams[1].__Name = 'bg';
 	self:addChild(localParams[1]);
 
-	localParams[2] = ImageView:create(, 0);
+	localParams[2] = ImageView:create(nil, 0);
 	localParams[2]:setAnchorPoint(0.50, 0.50);
 	localParams[2]:setContentSize({width = 46.0, height = 46.0});
 	localParams[2]:setPosition(55.0, 55.0);
@@ -64,7 +61,7 @@ function HeadNode:initView()
 	localParams[3].__Name = 'bg#light';
 	localParams[1]:addChild(localParams[3]);
 
-	localParams[4] = ImageView:create(, 0);
+	localParams[4] = ImageView:create(nil, 0);
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setContentSize({width = 46.0, height = 46.0});
 	localParams[4]:setPosition(54.34, 57.4);

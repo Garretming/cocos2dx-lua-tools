@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：MonsterLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -47,7 +44,7 @@ function MonsterLayer:initView()
 	localParams[2].__Name = 'bg_sprite#cue_sprite';
 	localParams[1]:addChild(localParams[2]);
 
-	localParams[3] = ImageView:create(, 0);
+	localParams[3] = ImageView:create(nil, 0);
 	localParams[3]:setAnchorPoint(0.50, 0.00);
 	localParams[3]:setContentSize({width = 46.0, height = 46.0});
 	localParams[3]:setPosition(300.0, 320.0);
@@ -142,7 +139,7 @@ function MonsterLayer:initView()
 	localParams[11]:setFontSize(20);
 	localParams[11]:setString([[999999]]);
 	localParams[11]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[11]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[11]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[11]:setAnchorPoint(1.00, 0.50);
 	localParams[11]:setContentSize({width = 75.0, height = 22.0});
 	localParams[11]:setPosition(141.77, localParams[10]:getContentSize().height - 18.98);
@@ -237,7 +234,7 @@ function MonsterLayer:initView()
 	localParams[19]:setFontSize(20);
 	localParams[19]:setString([[999999]]);
 	localParams[19]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[19]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[19]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[19]:setAnchorPoint(1.00, 0.50);
 	localParams[19]:setContentSize({width = 75.0, height = 22.0});
 	localParams[19]:setPosition(143.96, 30.61);
@@ -292,7 +289,7 @@ function MonsterLayer:initView()
 	localParams[22].__Name = '__FULL_LAYER#help_btn';
 	localParams[5]:addChild(localParams[22]);
 
-	localParams[23] = Node:create();
+	localParams[23] = Widget:create();
 	localParams[23]:setAnchorPoint(0.00, 0.00);
 	localParams[23]:setScaleX(0.90);
 	localParams[23]:setScaleY(0.90);
@@ -335,7 +332,7 @@ function MonsterLayer:initView()
 	localParams[25].__Name = 'Button_8';
 	self:addChild(localParams[25]);
 
-	localParams[26] = Node:create();
+	localParams[26] = Widget:create();
 	localParams[26]:setAnchorPoint(0.00, 0.00);
 	localParams[26]:setScaleX(0.90);
 	localParams[26]:setScaleY(0.90);
@@ -394,13 +391,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#positionBg_img#Button_1#__SELECTED_IMG'] = localParams[30];
 	localParams[30].__children = self.__children;
 	localParams[30].__Name = 'Image_1#positionBg_img#Button_1#__SELECTED_IMG';
+	localParams[29]:setSelectNode(localParams[30]);
 	localParams[29]:addChild(localParams[30]);
 
 	localParams[31] = Text:create();
 	localParams[31]:setFontSize(18);
 	localParams[31]:setString([[全部]]);
 	localParams[31]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[31]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[31]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[31]:setAnchorPoint(0.50, 0.50);
 	localParams[31]:setContentSize({width = 40.0, height = 20.0});
 	localParams[31]:setPosition(45.0, 18.5);
@@ -433,13 +431,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#positionBg_img#Button_2#__SELECTED_IMG'] = localParams[33];
 	localParams[33].__children = self.__children;
 	localParams[33].__Name = 'Image_1#positionBg_img#Button_2#__SELECTED_IMG';
+	localParams[32]:setSelectNode(localParams[33]);
 	localParams[32]:addChild(localParams[33]);
 
 	localParams[34] = Text:create();
 	localParams[34]:setFontSize(18);
 	localParams[34]:setString([[坦克]]);
 	localParams[34]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[34]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[34]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[34]:setAnchorPoint(0.50, 0.50);
 	localParams[34]:setContentSize({width = 40.0, height = 20.0});
 	localParams[34]:setPosition(45.0, 18.5);
@@ -472,13 +471,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#positionBg_img#Button_3#__SELECTED_IMG'] = localParams[36];
 	localParams[36].__children = self.__children;
 	localParams[36].__Name = 'Image_1#positionBg_img#Button_3#__SELECTED_IMG';
+	localParams[35]:setSelectNode(localParams[36]);
 	localParams[35]:addChild(localParams[36]);
 
 	localParams[37] = Text:create();
 	localParams[37]:setFontSize(18);
 	localParams[37]:setString([[输出]]);
 	localParams[37]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[37]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[37]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[37]:setAnchorPoint(0.50, 0.50);
 	localParams[37]:setContentSize({width = 39.0, height = 20.0});
 	localParams[37]:setPosition(45.0, 18.5);
@@ -511,13 +511,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#positionBg_img#Button_4#__SELECTED_IMG'] = localParams[39];
 	localParams[39].__children = self.__children;
 	localParams[39].__Name = 'Image_1#positionBg_img#Button_4#__SELECTED_IMG';
+	localParams[38]:setSelectNode(localParams[39]);
 	localParams[38]:addChild(localParams[39]);
 
 	localParams[40] = Text:create();
 	localParams[40]:setFontSize(18);
 	localParams[40]:setString([[突袭]]);
 	localParams[40]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[40]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[40]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[40]:setAnchorPoint(0.50, 0.50);
 	localParams[40]:setContentSize({width = 40.0, height = 20.0});
 	localParams[40]:setPosition(45.0, 18.5);
@@ -589,13 +590,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#qualityBg_img#Button_1#__SELECTED_IMG'] = localParams[46];
 	localParams[46].__children = self.__children;
 	localParams[46].__Name = 'Image_1#qualityBg_img#Button_1#__SELECTED_IMG';
+	localParams[45]:setSelectNode(localParams[46]);
 	localParams[45]:addChild(localParams[46]);
 
 	localParams[47] = Text:create();
 	localParams[47]:setFontSize(18);
 	localParams[47]:setString([[全部]]);
 	localParams[47]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[47]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[47]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[47]:setAnchorPoint(0.50, 0.50);
 	localParams[47]:setContentSize({width = 40.0, height = 20.0});
 	localParams[47]:setPosition(45.0, 18.5);
@@ -628,13 +630,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#qualityBg_img#Button_2#__SELECTED_IMG'] = localParams[49];
 	localParams[49].__children = self.__children;
 	localParams[49].__Name = 'Image_1#qualityBg_img#Button_2#__SELECTED_IMG';
+	localParams[48]:setSelectNode(localParams[49]);
 	localParams[48]:addChild(localParams[49]);
 
 	localParams[50] = Text:create();
 	localParams[50]:setFontSize(18);
 	localParams[50]:setString([[传说]]);
 	localParams[50]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[50]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[50]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[50]:setAnchorPoint(0.50, 0.50);
 	localParams[50]:setContentSize({width = 40.0, height = 20.0});
 	localParams[50]:setPosition(45.0, 18.5);
@@ -667,13 +670,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#qualityBg_img#Button_3#__SELECTED_IMG'] = localParams[52];
 	localParams[52].__children = self.__children;
 	localParams[52].__Name = 'Image_1#qualityBg_img#Button_3#__SELECTED_IMG';
+	localParams[51]:setSelectNode(localParams[52]);
 	localParams[51]:addChild(localParams[52]);
 
 	localParams[53] = Text:create();
 	localParams[53]:setFontSize(18);
 	localParams[53]:setString([[史诗]]);
 	localParams[53]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[53]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[53]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[53]:setAnchorPoint(0.50, 0.50);
 	localParams[53]:setContentSize({width = 40.0, height = 20.0});
 	localParams[53]:setPosition(45.0, 18.5);
@@ -706,13 +710,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#qualityBg_img#Button_4#__SELECTED_IMG'] = localParams[55];
 	localParams[55].__children = self.__children;
 	localParams[55].__Name = 'Image_1#qualityBg_img#Button_4#__SELECTED_IMG';
+	localParams[54]:setSelectNode(localParams[55]);
 	localParams[54]:addChild(localParams[55]);
 
 	localParams[56] = Text:create();
 	localParams[56]:setFontSize(18);
 	localParams[56]:setString([[稀有]]);
 	localParams[56]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[56]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[56]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[56]:setAnchorPoint(0.50, 0.50);
 	localParams[56]:setContentSize({width = 40.0, height = 20.0});
 	localParams[56]:setPosition(45.0, 18.5);
@@ -745,13 +750,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#qualityBg_img#Button_5#__SELECTED_IMG'] = localParams[58];
 	localParams[58].__children = self.__children;
 	localParams[58].__Name = 'Image_1#qualityBg_img#Button_5#__SELECTED_IMG';
+	localParams[57]:setSelectNode(localParams[58]);
 	localParams[57]:addChild(localParams[58]);
 
 	localParams[59] = Text:create();
 	localParams[59]:setFontSize(18);
 	localParams[59]:setString([[普通]]);
 	localParams[59]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[59]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[59]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[59]:setAnchorPoint(0.50, 0.50);
 	localParams[59]:setContentSize({width = 40.0, height = 20.0});
 	localParams[59]:setPosition(45.0, 18.5);
@@ -832,13 +838,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#starBg_img#Button_1#__SELECTED_IMG'] = localParams[66];
 	localParams[66].__children = self.__children;
 	localParams[66].__Name = 'Image_1#starBg_img#Button_1#__SELECTED_IMG';
+	localParams[65]:setSelectNode(localParams[66]);
 	localParams[65]:addChild(localParams[66]);
 
 	localParams[67] = Text:create();
 	localParams[67]:setFontSize(18);
 	localParams[67]:setString([[全部]]);
 	localParams[67]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[67]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[67]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[67]:setAnchorPoint(0.50, 0.50);
 	localParams[67]:setContentSize({width = 40.0, height = 20.0});
 	localParams[67]:setPosition(45.0, 18.5);
@@ -871,13 +878,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#starBg_img#Button_2#__SELECTED_IMG'] = localParams[69];
 	localParams[69].__children = self.__children;
 	localParams[69].__Name = 'Image_1#starBg_img#Button_2#__SELECTED_IMG';
+	localParams[68]:setSelectNode(localParams[69]);
 	localParams[68]:addChild(localParams[69]);
 
 	localParams[70] = Text:create();
 	localParams[70]:setFontSize(18);
 	localParams[70]:setString([[9~10星]]);
 	localParams[70]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[70]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[70]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[70]:setAnchorPoint(0.50, 0.50);
 	localParams[70]:setContentSize({width = 58.0, height = 20.0});
 	localParams[70]:setPosition(45.0, 18.5);
@@ -910,13 +918,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#starBg_img#Button_3#__SELECTED_IMG'] = localParams[72];
 	localParams[72].__children = self.__children;
 	localParams[72].__Name = 'Image_1#starBg_img#Button_3#__SELECTED_IMG';
+	localParams[71]:setSelectNode(localParams[72]);
 	localParams[71]:addChild(localParams[72]);
 
 	localParams[73] = Text:create();
 	localParams[73]:setFontSize(18);
 	localParams[73]:setString([[7~8星]]);
 	localParams[73]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[73]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[73]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[73]:setAnchorPoint(0.50, 0.50);
 	localParams[73]:setContentSize({width = 49.0, height = 20.0});
 	localParams[73]:setPosition(45.0, 18.5);
@@ -949,13 +958,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#starBg_img#Button_4#__SELECTED_IMG'] = localParams[75];
 	localParams[75].__children = self.__children;
 	localParams[75].__Name = 'Image_1#starBg_img#Button_4#__SELECTED_IMG';
+	localParams[74]:setSelectNode(localParams[75]);
 	localParams[74]:addChild(localParams[75]);
 
 	localParams[76] = Text:create();
 	localParams[76]:setFontSize(18);
 	localParams[76]:setString([[5~6星]]);
 	localParams[76]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[76]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[76]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[76]:setAnchorPoint(0.50, 0.50);
 	localParams[76]:setContentSize({width = 49.0, height = 20.0});
 	localParams[76]:setPosition(45.0, 18.5);
@@ -988,13 +998,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#starBg_img#Button_5#__SELECTED_IMG'] = localParams[78];
 	localParams[78].__children = self.__children;
 	localParams[78].__Name = 'Image_1#starBg_img#Button_5#__SELECTED_IMG';
+	localParams[77]:setSelectNode(localParams[78]);
 	localParams[77]:addChild(localParams[78]);
 
 	localParams[79] = Text:create();
 	localParams[79]:setFontSize(18);
 	localParams[79]:setString([[3~4星]]);
 	localParams[79]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[79]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[79]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[79]:setAnchorPoint(0.50, 0.50);
 	localParams[79]:setContentSize({width = 49.0, height = 20.0});
 	localParams[79]:setPosition(45.0, 18.5);
@@ -1027,13 +1038,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#starBg_img#Button_6#__SELECTED_IMG'] = localParams[81];
 	localParams[81].__children = self.__children;
 	localParams[81].__Name = 'Image_1#starBg_img#Button_6#__SELECTED_IMG';
+	localParams[80]:setSelectNode(localParams[81]);
 	localParams[80]:addChild(localParams[81]);
 
 	localParams[82] = Text:create();
 	localParams[82]:setFontSize(18);
 	localParams[82]:setString([[1~2星]]);
 	localParams[82]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[82]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[82]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[82]:setAnchorPoint(0.50, 0.50);
 	localParams[82]:setContentSize({width = 49.0, height = 20.0});
 	localParams[82]:setPosition(45.0, 18.5);
@@ -1177,13 +1189,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#costBg_img#Button_1#__SELECTED_IMG'] = localParams[96];
 	localParams[96].__children = self.__children;
 	localParams[96].__Name = 'Image_1#costBg_img#Button_1#__SELECTED_IMG';
+	localParams[95]:setSelectNode(localParams[96]);
 	localParams[95]:addChild(localParams[96]);
 
 	localParams[97] = Text:create();
 	localParams[97]:setFontSize(18);
 	localParams[97]:setString([[全部]]);
 	localParams[97]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[97]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[97]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[97]:setAnchorPoint(0.50, 0.50);
 	localParams[97]:setContentSize({width = 40.0, height = 20.0});
 	localParams[97]:setPosition(45.0, 18.5);
@@ -1216,13 +1229,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#costBg_img#Button_2#__SELECTED_IMG'] = localParams[99];
 	localParams[99].__children = self.__children;
 	localParams[99].__Name = 'Image_1#costBg_img#Button_2#__SELECTED_IMG';
+	localParams[98]:setSelectNode(localParams[99]);
 	localParams[98]:addChild(localParams[99]);
 
 	localParams[100] = Text:create();
 	localParams[100]:setFontSize(18);
 	localParams[100]:setString([[6怒]]);
 	localParams[100]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[100]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[100]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[100]:setAnchorPoint(0.50, 0.50);
 	localParams[100]:setContentSize({width = 31.0, height = 20.0});
 	localParams[100]:setPosition(45.0, 18.5);
@@ -1255,13 +1269,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#costBg_img#Button_3#__SELECTED_IMG'] = localParams[102];
 	localParams[102].__children = self.__children;
 	localParams[102].__Name = 'Image_1#costBg_img#Button_3#__SELECTED_IMG';
+	localParams[101]:setSelectNode(localParams[102]);
 	localParams[101]:addChild(localParams[102]);
 
 	localParams[103] = Text:create();
 	localParams[103]:setFontSize(18);
 	localParams[103]:setString([[5怒]]);
 	localParams[103]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[103]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[103]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[103]:setAnchorPoint(0.50, 0.50);
 	localParams[103]:setContentSize({width = 31.0, height = 20.0});
 	localParams[103]:setPosition(45.0, 17.5);
@@ -1294,13 +1309,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#costBg_img#Button_4#__SELECTED_IMG'] = localParams[105];
 	localParams[105].__children = self.__children;
 	localParams[105].__Name = 'Image_1#costBg_img#Button_4#__SELECTED_IMG';
+	localParams[104]:setSelectNode(localParams[105]);
 	localParams[104]:addChild(localParams[105]);
 
 	localParams[106] = Text:create();
 	localParams[106]:setFontSize(18);
 	localParams[106]:setString([[4怒]]);
 	localParams[106]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[106]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[106]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[106]:setAnchorPoint(0.50, 0.50);
 	localParams[106]:setContentSize({width = 31.0, height = 20.0});
 	localParams[106]:setPosition(45.0, 18.5);
@@ -1333,13 +1349,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#costBg_img#Button_5#__SELECTED_IMG'] = localParams[108];
 	localParams[108].__children = self.__children;
 	localParams[108].__Name = 'Image_1#costBg_img#Button_5#__SELECTED_IMG';
+	localParams[107]:setSelectNode(localParams[108]);
 	localParams[107]:addChild(localParams[108]);
 
 	localParams[109] = Text:create();
 	localParams[109]:setFontSize(18);
 	localParams[109]:setString([[3怒]]);
 	localParams[109]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[109]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[109]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[109]:setAnchorPoint(0.50, 0.50);
 	localParams[109]:setContentSize({width = 31.0, height = 20.0});
 	localParams[109]:setPosition(45.0, 18.5);
@@ -1372,13 +1389,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#costBg_img#Button_6#__SELECTED_IMG'] = localParams[111];
 	localParams[111].__children = self.__children;
 	localParams[111].__Name = 'Image_1#costBg_img#Button_6#__SELECTED_IMG';
+	localParams[110]:setSelectNode(localParams[111]);
 	localParams[110]:addChild(localParams[111]);
 
 	localParams[112] = Text:create();
 	localParams[112]:setFontSize(18);
 	localParams[112]:setString([[2怒]]);
 	localParams[112]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[112]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[112]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[112]:setAnchorPoint(0.50, 0.50);
 	localParams[112]:setContentSize({width = 31.0, height = 20.0});
 	localParams[112]:setPosition(45.0, 18.5);
@@ -1411,13 +1429,14 @@ function MonsterLayer:initView()
 	self.__children['Image_1#costBg_img#Button_7#__SELECTED_IMG'] = localParams[114];
 	localParams[114].__children = self.__children;
 	localParams[114].__Name = 'Image_1#costBg_img#Button_7#__SELECTED_IMG';
+	localParams[113]:setSelectNode(localParams[114]);
 	localParams[113]:addChild(localParams[114]);
 
 	localParams[115] = Text:create();
 	localParams[115]:setFontSize(18);
 	localParams[115]:setString([[1怒]]);
 	localParams[115]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[115]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[115]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[115]:setAnchorPoint(0.50, 0.50);
 	localParams[115]:setContentSize({width = 31.0, height = 20.0});
 	localParams[115]:setPosition(45.0, 18.5);
@@ -1541,7 +1560,7 @@ function MonsterLayer:initView()
 	localParams[125]:setFontSize(18);
 	localParams[125]:setString([[全部]]);
 	localParams[125]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[125]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[125]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[125]:setAnchorPoint(1.00, 0.50);
 	localParams[125]:setContentSize({width = 40.0, height = 20.0});
 	localParams[125]:setPosition(62.2, 23.0);
@@ -1598,13 +1617,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#positionBg_img#Button_1#__SELECTED_IMG'] = localParams[129];
 	localParams[129].__children = self.__children;
 	localParams[129].__Name = 'Image_2#positionBg_img#Button_1#__SELECTED_IMG';
+	localParams[128]:setSelectNode(localParams[129]);
 	localParams[128]:addChild(localParams[129]);
 
 	localParams[130] = Text:create();
 	localParams[130]:setFontSize(18);
 	localParams[130]:setString([[全部]]);
 	localParams[130]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[130]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[130]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[130]:setAnchorPoint(0.50, 0.50);
 	localParams[130]:setContentSize({width = 40.0, height = 20.0});
 	localParams[130]:setPosition(45.0, 18.5);
@@ -1637,13 +1657,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#positionBg_img#Button_2#__SELECTED_IMG'] = localParams[132];
 	localParams[132].__children = self.__children;
 	localParams[132].__Name = 'Image_2#positionBg_img#Button_2#__SELECTED_IMG';
+	localParams[131]:setSelectNode(localParams[132]);
 	localParams[131]:addChild(localParams[132]);
 
 	localParams[133] = Text:create();
 	localParams[133]:setFontSize(18);
 	localParams[133]:setString([[坦克]]);
 	localParams[133]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[133]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[133]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[133]:setAnchorPoint(0.50, 0.50);
 	localParams[133]:setContentSize({width = 40.0, height = 20.0});
 	localParams[133]:setPosition(45.0, 18.5);
@@ -1676,13 +1697,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#positionBg_img#Button_3#__SELECTED_IMG'] = localParams[135];
 	localParams[135].__children = self.__children;
 	localParams[135].__Name = 'Image_2#positionBg_img#Button_3#__SELECTED_IMG';
+	localParams[134]:setSelectNode(localParams[135]);
 	localParams[134]:addChild(localParams[135]);
 
 	localParams[136] = Text:create();
 	localParams[136]:setFontSize(18);
 	localParams[136]:setString([[输出]]);
 	localParams[136]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[136]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[136]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[136]:setAnchorPoint(0.50, 0.50);
 	localParams[136]:setContentSize({width = 39.0, height = 20.0});
 	localParams[136]:setPosition(45.0, 18.5);
@@ -1715,13 +1737,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#positionBg_img#Button_4#__SELECTED_IMG'] = localParams[138];
 	localParams[138].__children = self.__children;
 	localParams[138].__Name = 'Image_2#positionBg_img#Button_4#__SELECTED_IMG';
+	localParams[137]:setSelectNode(localParams[138]);
 	localParams[137]:addChild(localParams[138]);
 
 	localParams[139] = Text:create();
 	localParams[139]:setFontSize(18);
 	localParams[139]:setString([[突袭]]);
 	localParams[139]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[139]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[139]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[139]:setAnchorPoint(0.50, 0.50);
 	localParams[139]:setContentSize({width = 40.0, height = 20.0});
 	localParams[139]:setPosition(45.0, 18.5);
@@ -1793,13 +1816,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#qualityBg_img#Button_1#__SELECTED_IMG'] = localParams[145];
 	localParams[145].__children = self.__children;
 	localParams[145].__Name = 'Image_2#qualityBg_img#Button_1#__SELECTED_IMG';
+	localParams[144]:setSelectNode(localParams[145]);
 	localParams[144]:addChild(localParams[145]);
 
 	localParams[146] = Text:create();
 	localParams[146]:setFontSize(18);
 	localParams[146]:setString([[全部]]);
 	localParams[146]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[146]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[146]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[146]:setAnchorPoint(0.50, 0.50);
 	localParams[146]:setContentSize({width = 40.0, height = 20.0});
 	localParams[146]:setPosition(45.0, 18.5);
@@ -1832,13 +1856,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#qualityBg_img#Button_2#__SELECTED_IMG'] = localParams[148];
 	localParams[148].__children = self.__children;
 	localParams[148].__Name = 'Image_2#qualityBg_img#Button_2#__SELECTED_IMG';
+	localParams[147]:setSelectNode(localParams[148]);
 	localParams[147]:addChild(localParams[148]);
 
 	localParams[149] = Text:create();
 	localParams[149]:setFontSize(18);
 	localParams[149]:setString([[传说]]);
 	localParams[149]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[149]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[149]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[149]:setAnchorPoint(0.50, 0.50);
 	localParams[149]:setContentSize({width = 40.0, height = 20.0});
 	localParams[149]:setPosition(45.0, 18.5);
@@ -1871,13 +1896,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#qualityBg_img#Button_3#__SELECTED_IMG'] = localParams[151];
 	localParams[151].__children = self.__children;
 	localParams[151].__Name = 'Image_2#qualityBg_img#Button_3#__SELECTED_IMG';
+	localParams[150]:setSelectNode(localParams[151]);
 	localParams[150]:addChild(localParams[151]);
 
 	localParams[152] = Text:create();
 	localParams[152]:setFontSize(18);
 	localParams[152]:setString([[史诗]]);
 	localParams[152]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[152]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[152]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[152]:setAnchorPoint(0.50, 0.50);
 	localParams[152]:setContentSize({width = 40.0, height = 20.0});
 	localParams[152]:setPosition(45.0, 18.5);
@@ -1910,13 +1936,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#qualityBg_img#Button_4#__SELECTED_IMG'] = localParams[154];
 	localParams[154].__children = self.__children;
 	localParams[154].__Name = 'Image_2#qualityBg_img#Button_4#__SELECTED_IMG';
+	localParams[153]:setSelectNode(localParams[154]);
 	localParams[153]:addChild(localParams[154]);
 
 	localParams[155] = Text:create();
 	localParams[155]:setFontSize(18);
 	localParams[155]:setString([[稀有]]);
 	localParams[155]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[155]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[155]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[155]:setAnchorPoint(0.50, 0.50);
 	localParams[155]:setContentSize({width = 40.0, height = 20.0});
 	localParams[155]:setPosition(45.0, 18.5);
@@ -1949,13 +1976,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#qualityBg_img#Button_5#__SELECTED_IMG'] = localParams[157];
 	localParams[157].__children = self.__children;
 	localParams[157].__Name = 'Image_2#qualityBg_img#Button_5#__SELECTED_IMG';
+	localParams[156]:setSelectNode(localParams[157]);
 	localParams[156]:addChild(localParams[157]);
 
 	localParams[158] = Text:create();
 	localParams[158]:setFontSize(18);
 	localParams[158]:setString([[普通]]);
 	localParams[158]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[158]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[158]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[158]:setAnchorPoint(0.50, 0.50);
 	localParams[158]:setContentSize({width = 40.0, height = 20.0});
 	localParams[158]:setPosition(45.0, 18.5);
@@ -2036,13 +2064,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#starBg_img#Button_1#__SELECTED_IMG'] = localParams[165];
 	localParams[165].__children = self.__children;
 	localParams[165].__Name = 'Image_2#starBg_img#Button_1#__SELECTED_IMG';
+	localParams[164]:setSelectNode(localParams[165]);
 	localParams[164]:addChild(localParams[165]);
 
 	localParams[166] = Text:create();
 	localParams[166]:setFontSize(18);
 	localParams[166]:setString([[全部]]);
 	localParams[166]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[166]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[166]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[166]:setAnchorPoint(0.50, 0.50);
 	localParams[166]:setContentSize({width = 40.0, height = 20.0});
 	localParams[166]:setPosition(45.0, 18.5);
@@ -2075,13 +2104,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#starBg_img#Button_2#__SELECTED_IMG'] = localParams[168];
 	localParams[168].__children = self.__children;
 	localParams[168].__Name = 'Image_2#starBg_img#Button_2#__SELECTED_IMG';
+	localParams[167]:setSelectNode(localParams[168]);
 	localParams[167]:addChild(localParams[168]);
 
 	localParams[169] = Text:create();
 	localParams[169]:setFontSize(18);
 	localParams[169]:setString([[9~10星]]);
 	localParams[169]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[169]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[169]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[169]:setAnchorPoint(0.50, 0.50);
 	localParams[169]:setContentSize({width = 58.0, height = 20.0});
 	localParams[169]:setPosition(45.0, 18.5);
@@ -2114,13 +2144,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#starBg_img#Button_3#__SELECTED_IMG'] = localParams[171];
 	localParams[171].__children = self.__children;
 	localParams[171].__Name = 'Image_2#starBg_img#Button_3#__SELECTED_IMG';
+	localParams[170]:setSelectNode(localParams[171]);
 	localParams[170]:addChild(localParams[171]);
 
 	localParams[172] = Text:create();
 	localParams[172]:setFontSize(18);
 	localParams[172]:setString([[7~8星]]);
 	localParams[172]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[172]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[172]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[172]:setAnchorPoint(0.50, 0.50);
 	localParams[172]:setContentSize({width = 49.0, height = 20.0});
 	localParams[172]:setPosition(45.0, 18.5);
@@ -2153,13 +2184,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#starBg_img#Button_4#__SELECTED_IMG'] = localParams[174];
 	localParams[174].__children = self.__children;
 	localParams[174].__Name = 'Image_2#starBg_img#Button_4#__SELECTED_IMG';
+	localParams[173]:setSelectNode(localParams[174]);
 	localParams[173]:addChild(localParams[174]);
 
 	localParams[175] = Text:create();
 	localParams[175]:setFontSize(18);
 	localParams[175]:setString([[5~6星]]);
 	localParams[175]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[175]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[175]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[175]:setAnchorPoint(0.50, 0.50);
 	localParams[175]:setContentSize({width = 49.0, height = 20.0});
 	localParams[175]:setPosition(45.0, 18.5);
@@ -2192,13 +2224,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#starBg_img#Button_5#__SELECTED_IMG'] = localParams[177];
 	localParams[177].__children = self.__children;
 	localParams[177].__Name = 'Image_2#starBg_img#Button_5#__SELECTED_IMG';
+	localParams[176]:setSelectNode(localParams[177]);
 	localParams[176]:addChild(localParams[177]);
 
 	localParams[178] = Text:create();
 	localParams[178]:setFontSize(18);
 	localParams[178]:setString([[3~4星]]);
 	localParams[178]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[178]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[178]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[178]:setAnchorPoint(0.50, 0.50);
 	localParams[178]:setContentSize({width = 49.0, height = 20.0});
 	localParams[178]:setPosition(45.0, 18.5);
@@ -2231,13 +2264,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#starBg_img#Button_6#__SELECTED_IMG'] = localParams[180];
 	localParams[180].__children = self.__children;
 	localParams[180].__Name = 'Image_2#starBg_img#Button_6#__SELECTED_IMG';
+	localParams[179]:setSelectNode(localParams[180]);
 	localParams[179]:addChild(localParams[180]);
 
 	localParams[181] = Text:create();
 	localParams[181]:setFontSize(18);
 	localParams[181]:setString([[1~2星]]);
 	localParams[181]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[181]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[181]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[181]:setAnchorPoint(0.50, 0.50);
 	localParams[181]:setContentSize({width = 49.0, height = 20.0});
 	localParams[181]:setPosition(45.0, 18.5);
@@ -2327,13 +2361,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#costBg_img#Button_1#__SELECTED_IMG'] = localParams[189];
 	localParams[189].__children = self.__children;
 	localParams[189].__Name = 'Image_2#costBg_img#Button_1#__SELECTED_IMG';
+	localParams[188]:setSelectNode(localParams[189]);
 	localParams[188]:addChild(localParams[189]);
 
 	localParams[190] = Text:create();
 	localParams[190]:setFontSize(18);
 	localParams[190]:setString([[全部]]);
 	localParams[190]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[190]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[190]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[190]:setAnchorPoint(0.50, 0.50);
 	localParams[190]:setContentSize({width = 40.0, height = 20.0});
 	localParams[190]:setPosition(45.0, 18.5);
@@ -2366,13 +2401,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#costBg_img#Button_2#__SELECTED_IMG'] = localParams[192];
 	localParams[192].__children = self.__children;
 	localParams[192].__Name = 'Image_2#costBg_img#Button_2#__SELECTED_IMG';
+	localParams[191]:setSelectNode(localParams[192]);
 	localParams[191]:addChild(localParams[192]);
 
 	localParams[193] = Text:create();
 	localParams[193]:setFontSize(18);
 	localParams[193]:setString([[6怒]]);
 	localParams[193]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[193]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[193]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[193]:setAnchorPoint(0.50, 0.50);
 	localParams[193]:setContentSize({width = 31.0, height = 20.0});
 	localParams[193]:setPosition(45.0, 18.5);
@@ -2405,13 +2441,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#costBg_img#Button_3#__SELECTED_IMG'] = localParams[195];
 	localParams[195].__children = self.__children;
 	localParams[195].__Name = 'Image_2#costBg_img#Button_3#__SELECTED_IMG';
+	localParams[194]:setSelectNode(localParams[195]);
 	localParams[194]:addChild(localParams[195]);
 
 	localParams[196] = Text:create();
 	localParams[196]:setFontSize(18);
 	localParams[196]:setString([[5怒]]);
 	localParams[196]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[196]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[196]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[196]:setAnchorPoint(0.50, 0.50);
 	localParams[196]:setContentSize({width = 31.0, height = 20.0});
 	localParams[196]:setPosition(45.0, 17.5);
@@ -2444,13 +2481,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#costBg_img#Button_4#__SELECTED_IMG'] = localParams[198];
 	localParams[198].__children = self.__children;
 	localParams[198].__Name = 'Image_2#costBg_img#Button_4#__SELECTED_IMG';
+	localParams[197]:setSelectNode(localParams[198]);
 	localParams[197]:addChild(localParams[198]);
 
 	localParams[199] = Text:create();
 	localParams[199]:setFontSize(18);
 	localParams[199]:setString([[4怒]]);
 	localParams[199]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[199]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[199]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[199]:setAnchorPoint(0.50, 0.50);
 	localParams[199]:setContentSize({width = 31.0, height = 20.0});
 	localParams[199]:setPosition(45.0, 18.5);
@@ -2483,13 +2521,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#costBg_img#Button_5#__SELECTED_IMG'] = localParams[201];
 	localParams[201].__children = self.__children;
 	localParams[201].__Name = 'Image_2#costBg_img#Button_5#__SELECTED_IMG';
+	localParams[200]:setSelectNode(localParams[201]);
 	localParams[200]:addChild(localParams[201]);
 
 	localParams[202] = Text:create();
 	localParams[202]:setFontSize(18);
 	localParams[202]:setString([[3怒]]);
 	localParams[202]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[202]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[202]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[202]:setAnchorPoint(0.50, 0.50);
 	localParams[202]:setContentSize({width = 31.0, height = 20.0});
 	localParams[202]:setPosition(45.0, 18.5);
@@ -2522,13 +2561,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#costBg_img#Button_6#__SELECTED_IMG'] = localParams[204];
 	localParams[204].__children = self.__children;
 	localParams[204].__Name = 'Image_2#costBg_img#Button_6#__SELECTED_IMG';
+	localParams[203]:setSelectNode(localParams[204]);
 	localParams[203]:addChild(localParams[204]);
 
 	localParams[205] = Text:create();
 	localParams[205]:setFontSize(18);
 	localParams[205]:setString([[2怒]]);
 	localParams[205]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[205]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[205]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[205]:setAnchorPoint(0.50, 0.50);
 	localParams[205]:setContentSize({width = 31.0, height = 20.0});
 	localParams[205]:setPosition(45.0, 18.5);
@@ -2561,13 +2601,14 @@ function MonsterLayer:initView()
 	self.__children['Image_2#costBg_img#Button_7#__SELECTED_IMG'] = localParams[207];
 	localParams[207].__children = self.__children;
 	localParams[207].__Name = 'Image_2#costBg_img#Button_7#__SELECTED_IMG';
+	localParams[206]:setSelectNode(localParams[207]);
 	localParams[206]:addChild(localParams[207]);
 
 	localParams[208] = Text:create();
 	localParams[208]:setFontSize(18);
 	localParams[208]:setString([[1怒]]);
 	localParams[208]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[208]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[208]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[208]:setAnchorPoint(0.50, 0.50);
 	localParams[208]:setContentSize({width = 31.0, height = 20.0});
 	localParams[208]:setPosition(45.0, 18.5);
@@ -2745,7 +2786,7 @@ function MonsterLayer:initView()
 	localParams[224]:setFontSize(18);
 	localParams[224]:setString([[9~10星]]);
 	localParams[224]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[224]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[224]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[224]:setAnchorPoint(1.00, 0.50);
 	localParams[224]:setContentSize({width = 58.0, height = 20.0});
 	localParams[224]:setPosition(62.2, 23.0);
@@ -2791,7 +2832,7 @@ function MonsterLayer:initView()
 	localParams[228]:setFontSize(20);
 	localParams[228]:setString([[没有符合条件的佣兵！]]);
 	localParams[228]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[228]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[228]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[228]:setAnchorPoint(0.50, 0.50);
 	localParams[228]:setTextColor({r = 155, g = 125, b = 100});
 	localParams[228]:setContentSize({width = 193.0, height = 24.0});
@@ -2924,7 +2965,7 @@ function MonsterLayer:initView()
 	localParams[238]:setFontSize(20);
 	localParams[238]:setString([[3阶解锁]]);
 	localParams[238]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[238]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[238]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[238]:setAnchorPoint(0.50, 0.50);
 	localParams[238]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[238]:setContentSize({width = 74.0, height = 22.0});
@@ -2973,7 +3014,7 @@ function MonsterLayer:initView()
 	localParams[242]:setFontSize(20);
 	localParams[242]:setString([[3阶解锁]]);
 	localParams[242]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[242]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[242]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[242]:setAnchorPoint(0.50, 0.50);
 	localParams[242]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[242]:setContentSize({width = 74.0, height = 22.0});
@@ -3022,7 +3063,7 @@ function MonsterLayer:initView()
 	localParams[246]:setFontSize(20);
 	localParams[246]:setString([[3阶解锁]]);
 	localParams[246]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[246]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[246]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[246]:setAnchorPoint(0.50, 0.50);
 	localParams[246]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[246]:setContentSize({width = 74.0, height = 22.0});

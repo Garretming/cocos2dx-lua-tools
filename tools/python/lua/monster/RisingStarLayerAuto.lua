@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：RisingStarLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -64,7 +61,7 @@ function RisingStarLayer:initView()
 	localParams[4]:setFontSize(28);
 	localParams[4]:setString([[作死的大鸟]]);
 	localParams[4]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[4]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[4]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[4]:setContentSize({width = 143.0, height = 30.0});
@@ -312,7 +309,7 @@ function RisingStarLayer:initView()
 	localParams[27].__Name = 'under_img#under_sprite#risingStar_btn#LoadingBar_1';
 	localParams[26]:addChild(localParams[27]);
 
-	localParams[28] = Node:create();
+	localParams[28] = Widget:create();
 	localParams[28]:setAnchorPoint(0.00, 0.00);
 	localParams[28]:setContentSize({width = 0.0, height = 0.0});
 	localParams[28]:setPosition(0.0, 0.0);
@@ -325,7 +322,7 @@ function RisingStarLayer:initView()
 	localParams[29]:setFontSize(18);
 	localParams[29]:setString([[升星需消耗：]]);
 	localParams[29]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[29]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[29]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[29]:setAnchorPoint(0.50, 0.50);
 	localParams[29]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[29]:setContentSize({width = 106.0, height = 22.0});
@@ -339,7 +336,7 @@ function RisingStarLayer:initView()
 	localParams[30]:setFontSize(20);
 	localParams[30]:setString([[3500]]);
 	localParams[30]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[30]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[30]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[30]:setAnchorPoint(0.00, 0.50);
 	localParams[30]:setContentSize({width = 48.0, height = 25.0});
 	localParams[30]:setPosition(189.44, -20.0);
@@ -363,7 +360,7 @@ function RisingStarLayer:initView()
 	localParams[32]:setFontSize(18);
 	localParams[32]:setString([[数量]]);
 	localParams[32]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[32]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[32]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[32]:setAnchorPoint(0.50, 0.50);
 	localParams[32]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[32]:setContentSize({width = 41.0, height = 22.0});
@@ -377,7 +374,7 @@ function RisingStarLayer:initView()
 	localParams[33]:setFontSize(20);
 	localParams[33]:setString([[100/200]]);
 	localParams[33]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[33]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[33]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[33]:setAnchorPoint(0.50, 0.50);
 	localParams[33]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[33]:setContentSize({width = 74.0, height = 24.0});
@@ -387,7 +384,7 @@ function RisingStarLayer:initView()
 	localParams[33].__Name = 'under_img#under_sprite#need#number';
 	localParams[28]:addChild(localParams[33]);
 
-	localParams[34] = Node:create();
+	localParams[34] = Widget:create();
 	localParams[34]:setAnchorPoint(0.00, 0.00);
 	localParams[34]:setContentSize({width = 0.0, height = 0.0});
 	localParams[34]:setPosition(0.0, 0.0);
@@ -409,7 +406,7 @@ function RisingStarLayer:initView()
 	localParams[36]:setDefaultFontSize(18);
 	localParams[36]:setString([[3500]]);
 	localParams[36]:setDefaultFontName('uires/public/ttf/jzy.ttf');
-	localParams[36]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[36]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[36]:setAnchorPoint(0.50, 0.50);
 	localParams[36]:setContentSize({width = 44.0, height = 22.0});
 	localParams[36]:setPosition(142.5, 159.0);
@@ -422,7 +419,7 @@ function RisingStarLayer:initView()
 	localParams[37]:setFontSize(18);
 	localParams[37]:setString([[限制等级：4]]);
 	localParams[37]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[37]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[37]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[37]:setAnchorPoint(0.50, 0.50);
 	localParams[37]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[37]:setContentSize({width = 104.0, height = 22.0});

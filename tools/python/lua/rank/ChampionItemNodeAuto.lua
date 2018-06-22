@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：ChampionItemNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -46,7 +43,7 @@ function ChampionItemNode:initView()
 	localParams[1].__Name = 'item_btn';
 	self:addChild(localParams[1]);
 
-	localParams[2] = Node:create();
+	localParams[2] = Widget:create();
 	localParams[2]:setAnchorPoint(0.00, 0.00);
 	localParams[2]:setScaleX(0.98);
 	localParams[2]:setScaleY(0.95);
@@ -82,7 +79,7 @@ function ChampionItemNode:initView()
 	localParams[5]:setFontSize(20);
 	localParams[5]:setString([[最强王者]]);
 	localParams[5]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[5]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[5]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[5]:setContentSize({width = 84.0, height = 22.0});
@@ -107,7 +104,7 @@ function ChampionItemNode:initView()
 	localParams[7]:setFontSize(20);
 	localParams[7]:setString([[x6]]);
 	localParams[7]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[7]:setContentSize({width = 25.0, height = 22.0});
@@ -117,7 +114,7 @@ function ChampionItemNode:initView()
 	localParams[7].__Name = 'item_btn#under_1#count_txt';
 	localParams[4]:addChild(localParams[7]);
 
-	localParams[8] = ImageView:create(, 0);
+	localParams[8] = ImageView:create(nil, 0);
 	localParams[8]:setAnchorPoint(0.50, 0.50);
 	localParams[8]:setScaleX(0.75);
 	localParams[8]:setScaleY(0.75);
@@ -132,7 +129,7 @@ function ChampionItemNode:initView()
 	localParams[9]:setFontSize(22);
 	localParams[9]:setString([[UID:1235]]);
 	localParams[9]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[9]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[9]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[9]:setAnchorPoint(1.00, 0.50);
 	localParams[9]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[9]:setContentSize({width = 92.0, height = 26.0});
@@ -146,7 +143,7 @@ function ChampionItemNode:initView()
 	localParams[10]:setFontSize(22);
 	localParams[10]:setString([[大鸟大鸟大鸟]]);
 	localParams[10]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[10]:setAnchorPoint(0.00, 0.50);
 	localParams[10]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[10]:setContentSize({width = 136.0, height = 26.0});

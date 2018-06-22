@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：GoldLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -55,7 +52,7 @@ function GoldLayer:initView()
 	localParams[2].__Name = 'item_btn1#under_sprite';
 	localParams[1]:addChild(localParams[2]);
 
-	localParams[3] = ImageView:create(, 0);
+	localParams[3] = ImageView:create(nil, 0);
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 46.0, height = 46.0});
 	localParams[3]:setPosition(79.5, 168.6);
@@ -81,7 +78,7 @@ function GoldLayer:initView()
 	localParams[5]:setFontSize(24);
 	localParams[5]:setString([[]]);
 	localParams[5]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[5]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[5]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setContentSize({width = 0.0, height = 0.0});
 	localParams[5]:setPosition(79.5, 89.92);
@@ -103,7 +100,7 @@ function GoldLayer:initView()
 	localParams[7]:setFontSize(20);
 	localParams[7]:setString([[]]);
 	localParams[7]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setTextColor({r = 255, g = 255, b = 0});
 	localParams[7]:setContentSize({width = 0.0, height = 0.0});
@@ -138,7 +135,7 @@ function GoldLayer:initView()
 	localParams[10]:setFontSize(20);
 	localParams[10]:setString([[已售罄]]);
 	localParams[10]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[10]:setAnchorPoint(0.50, 0.50);
 	localParams[10]:setTextColor({r = 155, g = 125, b = 100});
 	localParams[10]:setContentSize({width = 64.0, height = 22.0});
@@ -152,7 +149,7 @@ function GoldLayer:initView()
 	localParams[11]:setFontSize(24);
 	localParams[11]:setString([[]]);
 	localParams[11]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[11]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[11]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[11]:setAnchorPoint(0.50, 0.50);
 	localParams[11]:setContentSize({width = 0.0, height = 0.0});
 	localParams[11]:setPosition(96.0, 16.0);
@@ -165,7 +162,7 @@ function GoldLayer:initView()
 	localParams[12]:setFontSize(24);
 	localParams[12]:setString([[]]);
 	localParams[12]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[12]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[12]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[12]:setAnchorPoint(0.50, 0.50);
 	localParams[12]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[12]:setContentSize({width = 0.0, height = 0.0});
@@ -200,7 +197,7 @@ function GoldLayer:initView()
 	localParams[14].__Name = 'item_btn2#under_sprite';
 	localParams[13]:addChild(localParams[14]);
 
-	localParams[15] = ImageView:create(, 0);
+	localParams[15] = ImageView:create(nil, 0);
 	localParams[15]:setAnchorPoint(0.50, 0.50);
 	localParams[15]:setContentSize({width = 46.0, height = 46.0});
 	localParams[15]:setPosition(79.5, 168.6);
@@ -226,7 +223,7 @@ function GoldLayer:initView()
 	localParams[17]:setFontSize(24);
 	localParams[17]:setString([[]]);
 	localParams[17]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[17]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[17]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[17]:setAnchorPoint(0.50, 0.50);
 	localParams[17]:setContentSize({width = 0.0, height = 0.0});
 	localParams[17]:setPosition(79.5, 89.92);
@@ -248,7 +245,7 @@ function GoldLayer:initView()
 	localParams[19]:setFontSize(20);
 	localParams[19]:setString([[]]);
 	localParams[19]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[19]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[19]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[19]:setAnchorPoint(0.50, 0.50);
 	localParams[19]:setTextColor({r = 255, g = 255, b = 0});
 	localParams[19]:setContentSize({width = 0.0, height = 0.0});
@@ -283,7 +280,7 @@ function GoldLayer:initView()
 	localParams[22]:setDefaultFontSize(20);
 	localParams[22]:setString([[已售罄]]);
 	localParams[22]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[22]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[22]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[22]:setAnchorPoint(0.50, 0.50);
 	localParams[22]:setTextColor({r = 155, g = 125, b = 100});
 	localParams[22]:setContentSize({width = 64.0, height = 22.0});
@@ -297,7 +294,7 @@ function GoldLayer:initView()
 	localParams[23]:setFontSize(24);
 	localParams[23]:setString([[]]);
 	localParams[23]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[23]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[23]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[23]:setAnchorPoint(0.50, 0.50);
 	localParams[23]:setContentSize({width = 0.0, height = 0.0});
 	localParams[23]:setPosition(96.0, 16.0);
@@ -310,7 +307,7 @@ function GoldLayer:initView()
 	localParams[24]:setFontSize(24);
 	localParams[24]:setString([[]]);
 	localParams[24]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[24]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[24]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[24]:setAnchorPoint(0.50, 0.50);
 	localParams[24]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[24]:setVisible(false);
@@ -346,7 +343,7 @@ function GoldLayer:initView()
 	localParams[26].__Name = 'item_btn3#under_sprite';
 	localParams[25]:addChild(localParams[26]);
 
-	localParams[27] = ImageView:create(, 0);
+	localParams[27] = ImageView:create(nil, 0);
 	localParams[27]:setAnchorPoint(0.50, 0.50);
 	localParams[27]:setContentSize({width = 46.0, height = 46.0});
 	localParams[27]:setPosition(79.5, 168.6);
@@ -372,7 +369,7 @@ function GoldLayer:initView()
 	localParams[29]:setFontSize(24);
 	localParams[29]:setString([[]]);
 	localParams[29]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[29]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[29]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[29]:setAnchorPoint(0.50, 0.50);
 	localParams[29]:setContentSize({width = 0.0, height = 0.0});
 	localParams[29]:setPosition(79.5, 89.92);
@@ -394,7 +391,7 @@ function GoldLayer:initView()
 	localParams[31]:setFontSize(20);
 	localParams[31]:setString([[]]);
 	localParams[31]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[31]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[31]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[31]:setAnchorPoint(0.50, 0.50);
 	localParams[31]:setTextColor({r = 255, g = 255, b = 0});
 	localParams[31]:setContentSize({width = 0.0, height = 0.0});
@@ -429,7 +426,7 @@ function GoldLayer:initView()
 	localParams[34]:setDefaultFontSize(20);
 	localParams[34]:setString([[已售罄]]);
 	localParams[34]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[34]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[34]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[34]:setAnchorPoint(0.50, 0.50);
 	localParams[34]:setTextColor({r = 155, g = 125, b = 100});
 	localParams[34]:setContentSize({width = 64.0, height = 22.0});
@@ -443,7 +440,7 @@ function GoldLayer:initView()
 	localParams[35]:setFontSize(24);
 	localParams[35]:setString([[]]);
 	localParams[35]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[35]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[35]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[35]:setAnchorPoint(0.50, 0.50);
 	localParams[35]:setContentSize({width = 0.0, height = 0.0});
 	localParams[35]:setPosition(96.0, 16.0);
@@ -456,7 +453,7 @@ function GoldLayer:initView()
 	localParams[36]:setFontSize(24);
 	localParams[36]:setString([[]]);
 	localParams[36]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[36]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[36]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[36]:setAnchorPoint(0.50, 0.50);
 	localParams[36]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[36]:setVisible(false);

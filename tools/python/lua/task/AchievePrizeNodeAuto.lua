@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：AchievePrizeNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -70,7 +67,7 @@ function AchievePrizeNode:initView()
 	localParams[3].__Name = 'achievePrize_bg#getBtn#font';
 	localParams[2]:addChild(localParams[3]);
 
-	localParams[4] = Node:create();
+	localParams[4] = Widget:create();
 	localParams[4]:setAnchorPoint(0.00, 0.00);
 	localParams[4]:setScaleX(0.50);
 	localParams[4]:setScaleY(0.50);
@@ -105,7 +102,7 @@ function AchievePrizeNode:initView()
 	localParams[6].__Name = 'achievePrize_bg#prize_bg1';
 	localParams[1]:addChild(localParams[6]);
 
-	localParams[7] = ImageView:create(, 0);
+	localParams[7] = ImageView:create(nil, 0);
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setContentSize({width = 46.0, height = 46.0});
 	localParams[7]:setPosition(55.0, 55.0);
@@ -118,7 +115,7 @@ function AchievePrizeNode:initView()
 	localParams[8]:setFontSize(22);
 	localParams[8]:setString([[88]]);
 	localParams[8]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[8]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[8]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[8]:setAnchorPoint(1.00, 0.00);
 	localParams[8]:setScaleX(0.90);
 	localParams[8]:setScaleY(0.90);
@@ -144,7 +141,7 @@ function AchievePrizeNode:initView()
 	localParams[9].__Name = 'achievePrize_bg#prize_bg2';
 	localParams[1]:addChild(localParams[9]);
 
-	localParams[10] = ImageView:create(, 0);
+	localParams[10] = ImageView:create(nil, 0);
 	localParams[10]:setAnchorPoint(0.50, 0.50);
 	localParams[10]:setContentSize({width = 46.0, height = 46.0});
 	localParams[10]:setPosition(55.0, 55.0);
@@ -157,7 +154,7 @@ function AchievePrizeNode:initView()
 	localParams[11]:setFontSize(22);
 	localParams[11]:setString([[88]]);
 	localParams[11]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[11]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[11]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[11]:setAnchorPoint(1.00, 0.00);
 	localParams[11]:setScaleX(0.90);
 	localParams[11]:setScaleY(0.90);
@@ -183,7 +180,7 @@ function AchievePrizeNode:initView()
 	localParams[12].__Name = 'achievePrize_bg#prize_bg3';
 	localParams[1]:addChild(localParams[12]);
 
-	localParams[13] = ImageView:create(, 0);
+	localParams[13] = ImageView:create(nil, 0);
 	localParams[13]:setAnchorPoint(0.50, 0.50);
 	localParams[13]:setContentSize({width = 46.0, height = 46.0});
 	localParams[13]:setPosition(55.0, 55.0);
@@ -196,7 +193,7 @@ function AchievePrizeNode:initView()
 	localParams[14]:setFontSize(22);
 	localParams[14]:setString([[88]]);
 	localParams[14]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[14]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[14]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[14]:setAnchorPoint(1.00, 0.00);
 	localParams[14]:setScaleX(0.90);
 	localParams[14]:setScaleY(0.90);
@@ -222,7 +219,7 @@ function AchievePrizeNode:initView()
 	localParams[15].__Name = 'achievePrize_bg#prize_bg4';
 	localParams[1]:addChild(localParams[15]);
 
-	localParams[16] = ImageView:create(, 0);
+	localParams[16] = ImageView:create(nil, 0);
 	localParams[16]:setAnchorPoint(0.50, 0.50);
 	localParams[16]:setContentSize({width = 46.0, height = 46.0});
 	localParams[16]:setPosition(55.0, 55.0);
@@ -235,7 +232,7 @@ function AchievePrizeNode:initView()
 	localParams[17]:setFontSize(22);
 	localParams[17]:setString([[88]]);
 	localParams[17]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[17]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[17]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[17]:setAnchorPoint(1.00, 0.00);
 	localParams[17]:setScaleX(0.90);
 	localParams[17]:setScaleY(0.90);

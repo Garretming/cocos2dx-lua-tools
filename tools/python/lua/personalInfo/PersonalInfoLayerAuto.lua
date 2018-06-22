@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：PersonalInfoLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -56,7 +53,7 @@ function PersonalInfoLayer:initView()
 	localParams[2].__Name = 'bg#close_btn';
 	localParams[1]:addChild(localParams[2]);
 
-	localParams[3] = Node:create();
+	localParams[3] = Widget:create();
 	localParams[3]:setAnchorPoint(0.00, 0.00);
 	localParams[3]:setScaleX(0.90);
 	localParams[3]:setScaleY(0.90);
@@ -120,7 +117,7 @@ function PersonalInfoLayer:initView()
 	localParams[8]:setFontSize(26);
 	localParams[8]:setString([[LV:25]]);
 	localParams[8]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[8]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[8]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[8]:setAnchorPoint(0.00, 0.50);
 	localParams[8]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[8]:setContentSize({width = 69.0, height = 30.0});
@@ -146,7 +143,7 @@ function PersonalInfoLayer:initView()
 	localParams[10]:setFontSize(18);
 	localParams[10]:setString([[]]);
 	localParams[10]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[10]:setAnchorPoint(0.50, 0.50);
 	localParams[10]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[10]:setContentSize({width = 0.0, height = 0.0});
@@ -172,7 +169,7 @@ function PersonalInfoLayer:initView()
 	localParams[12]:setFontSize(18);
 	localParams[12]:setString([[]]);
 	localParams[12]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[12]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[12]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[12]:setAnchorPoint(0.50, 0.50);
 	localParams[12]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[12]:setContentSize({width = 0.0, height = 0.0});
@@ -198,7 +195,7 @@ function PersonalInfoLayer:initView()
 	localParams[14]:setFontSize(20);
 	localParams[14]:setString([[当前：]]);
 	localParams[14]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[14]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[14]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[14]:setAnchorPoint(0.00, 0.50);
 	localParams[14]:setTextColor({r = 155, g = 125, b = 100});
 	localParams[14]:setContentSize({width = 57.0, height = 24.0});
@@ -208,7 +205,7 @@ function PersonalInfoLayer:initView()
 	localParams[14].__Name = 'bg#friendBg_img#under_img1#under1#font1_txt';
 	localParams[13]:addChild(localParams[14]);
 
-	localParams[15] = ImageView:create(, 0);
+	localParams[15] = ImageView:create(nil, 0);
 	localParams[15]:setAnchorPoint(0.50, 0.50);
 	localParams[15]:setScaleX(0.90);
 	localParams[15]:setScaleY(0.90);
@@ -235,7 +232,7 @@ function PersonalInfoLayer:initView()
 	localParams[17]:setFontSize(20);
 	localParams[17]:setString([[最高：]]);
 	localParams[17]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[17]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[17]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[17]:setAnchorPoint(0.00, 0.50);
 	localParams[17]:setTextColor({r = 155, g = 125, b = 100});
 	localParams[17]:setContentSize({width = 57.0, height = 24.0});
@@ -245,7 +242,7 @@ function PersonalInfoLayer:initView()
 	localParams[17].__Name = 'bg#friendBg_img#under_img1#under2#font1_txt';
 	localParams[16]:addChild(localParams[17]);
 
-	localParams[18] = ImageView:create(, 0);
+	localParams[18] = ImageView:create(nil, 0);
 	localParams[18]:setAnchorPoint(0.50, 0.50);
 	localParams[18]:setScaleX(0.90);
 	localParams[18]:setScaleY(0.90);
@@ -272,7 +269,7 @@ function PersonalInfoLayer:initView()
 	localParams[20]:setFontSize(20);
 	localParams[20]:setString([[印记：]]);
 	localParams[20]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[20]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[20]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[20]:setAnchorPoint(0.00, 0.50);
 	localParams[20]:setTextColor({r = 155, g = 125, b = 100});
 	localParams[20]:setContentSize({width = 57.0, height = 24.0});
@@ -341,7 +338,7 @@ function PersonalInfoLayer:initView()
 	localParams[26]:setFontSize(20);
 	localParams[26]:setString([[百战天梯]]);
 	localParams[26]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[26]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[26]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[26]:setAnchorPoint(0.50, 0.50);
 	localParams[26]:setContentSize({width = 84.0, height = 22.0});
 	localParams[26]:setPosition(98.0, 57.0);
@@ -363,7 +360,7 @@ function PersonalInfoLayer:initView()
 	localParams[28]:setFontSize(20);
 	localParams[28]:setString([[总场次]]);
 	localParams[28]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[28]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[28]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[28]:setAnchorPoint(0.50, 0.50);
 	localParams[28]:setScaleX(0.90);
 	localParams[28]:setScaleY(0.90);
@@ -379,7 +376,7 @@ function PersonalInfoLayer:initView()
 	localParams[29]:setFontSize(20);
 	localParams[29]:setString([[105]]);
 	localParams[29]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[29]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[29]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[29]:setAnchorPoint(0.50, 0.50);
 	localParams[29]:setScaleX(0.90);
 	localParams[29]:setScaleY(0.90);
@@ -404,7 +401,7 @@ function PersonalInfoLayer:initView()
 	localParams[31]:setFontSize(20);
 	localParams[31]:setString([[胜场]]);
 	localParams[31]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[31]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[31]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[31]:setAnchorPoint(0.50, 0.50);
 	localParams[31]:setScaleX(0.90);
 	localParams[31]:setScaleY(0.90);
@@ -420,7 +417,7 @@ function PersonalInfoLayer:initView()
 	localParams[32]:setFontSize(20);
 	localParams[32]:setString([[105]]);
 	localParams[32]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[32]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[32]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[32]:setAnchorPoint(0.50, 0.50);
 	localParams[32]:setScaleX(0.90);
 	localParams[32]:setScaleY(0.90);
@@ -445,7 +442,7 @@ function PersonalInfoLayer:initView()
 	localParams[34]:setFontSize(20);
 	localParams[34]:setString([[胜率]]);
 	localParams[34]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[34]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[34]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[34]:setAnchorPoint(0.50, 0.50);
 	localParams[34]:setScaleX(0.90);
 	localParams[34]:setScaleY(0.90);
@@ -461,7 +458,7 @@ function PersonalInfoLayer:initView()
 	localParams[35]:setFontSize(20);
 	localParams[35]:setString([[105]]);
 	localParams[35]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[35]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[35]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[35]:setAnchorPoint(0.50, 0.50);
 	localParams[35]:setScaleX(0.90);
 	localParams[35]:setScaleY(0.90);
@@ -498,7 +495,7 @@ function PersonalInfoLayer:initView()
 	localParams[38]:setFontSize(20);
 	localParams[38]:setString([[成就点数]]);
 	localParams[38]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[38]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[38]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[38]:setAnchorPoint(0.50, 0.50);
 	localParams[38]:setContentSize({width = 84.0, height = 22.0});
 	localParams[38]:setPosition(98.0, 57.0);
@@ -523,7 +520,7 @@ function PersonalInfoLayer:initView()
 	localParams[40]:setFontSize(18);
 	localParams[40]:setString([[67/90]]);
 	localParams[40]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[40]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[40]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[40]:setAnchorPoint(0.50, 0.50);
 	localParams[40]:setScaleX(1.10);
 	localParams[40]:setScaleY(1.10);
@@ -653,7 +650,7 @@ function PersonalInfoLayer:initView()
 	localParams[51]:setFontSize(20);
 	localParams[51]:setString([[8]]);
 	localParams[51]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[51]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[51]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[51]:setAnchorPoint(0.50, 0.50);
 	localParams[51]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[51]:setContentSize({width = 17.0, height = 24.0});
@@ -712,7 +709,7 @@ function PersonalInfoLayer:initView()
 	localParams[56]:setFontSize(20);
 	localParams[56]:setString([[8]]);
 	localParams[56]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[56]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[56]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[56]:setAnchorPoint(0.50, 0.50);
 	localParams[56]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[56]:setContentSize({width = 17.0, height = 24.0});
@@ -771,7 +768,7 @@ function PersonalInfoLayer:initView()
 	localParams[61]:setFontSize(20);
 	localParams[61]:setString([[8]]);
 	localParams[61]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[61]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[61]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[61]:setAnchorPoint(0.50, 0.50);
 	localParams[61]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[61]:setContentSize({width = 17.0, height = 24.0});
@@ -830,7 +827,7 @@ function PersonalInfoLayer:initView()
 	localParams[66]:setFontSize(20);
 	localParams[66]:setString([[8]]);
 	localParams[66]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[66]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[66]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[66]:setAnchorPoint(0.50, 0.50);
 	localParams[66]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[66]:setContentSize({width = 17.0, height = 24.0});
@@ -889,7 +886,7 @@ function PersonalInfoLayer:initView()
 	localParams[71]:setFontSize(20);
 	localParams[71]:setString([[8]]);
 	localParams[71]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[71]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[71]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[71]:setAnchorPoint(0.50, 0.50);
 	localParams[71]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[71]:setContentSize({width = 17.0, height = 24.0});
@@ -948,7 +945,7 @@ function PersonalInfoLayer:initView()
 	localParams[76]:setFontSize(20);
 	localParams[76]:setString([[8]]);
 	localParams[76]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[76]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[76]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[76]:setAnchorPoint(0.50, 0.50);
 	localParams[76]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[76]:setContentSize({width = 17.0, height = 24.0});
@@ -1007,7 +1004,7 @@ function PersonalInfoLayer:initView()
 	localParams[81]:setFontSize(20);
 	localParams[81]:setString([[8]]);
 	localParams[81]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[81]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[81]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[81]:setAnchorPoint(0.50, 0.50);
 	localParams[81]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[81]:setContentSize({width = 17.0, height = 24.0});
@@ -1066,7 +1063,7 @@ function PersonalInfoLayer:initView()
 	localParams[86]:setFontSize(20);
 	localParams[86]:setString([[8]]);
 	localParams[86]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[86]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[86]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[86]:setAnchorPoint(0.50, 0.50);
 	localParams[86]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[86]:setContentSize({width = 17.0, height = 24.0});
@@ -1125,7 +1122,7 @@ function PersonalInfoLayer:initView()
 	localParams[91]:setFontSize(20);
 	localParams[91]:setString([[8]]);
 	localParams[91]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[91]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[91]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[91]:setAnchorPoint(0.50, 0.50);
 	localParams[91]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[91]:setContentSize({width = 17.0, height = 24.0});
@@ -1184,7 +1181,7 @@ function PersonalInfoLayer:initView()
 	localParams[96]:setFontSize(20);
 	localParams[96]:setString([[8]]);
 	localParams[96]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[96]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[96]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[96]:setAnchorPoint(0.50, 0.50);
 	localParams[96]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[96]:setContentSize({width = 17.0, height = 24.0});
@@ -1243,7 +1240,7 @@ function PersonalInfoLayer:initView()
 	localParams[101]:setFontSize(20);
 	localParams[101]:setString([[8]]);
 	localParams[101]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[101]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[101]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[101]:setAnchorPoint(0.50, 0.50);
 	localParams[101]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[101]:setContentSize({width = 17.0, height = 24.0});
@@ -1302,7 +1299,7 @@ function PersonalInfoLayer:initView()
 	localParams[106]:setFontSize(20);
 	localParams[106]:setString([[8]]);
 	localParams[106]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[106]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[106]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[106]:setAnchorPoint(0.50, 0.50);
 	localParams[106]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[106]:setContentSize({width = 17.0, height = 24.0});
@@ -1344,7 +1341,7 @@ function PersonalInfoLayer:initView()
 	localParams[109].__Name = 'bg#friendBg_img#under_img3#m_message_bg';
 	localParams[48]:addChild(localParams[109]);
 
-	localParams[110] = Node:create();
+	localParams[110] = Widget:create();
 	localParams[110]:setAnchorPoint(0.00, 0.00);
 	localParams[110]:setContentSize({width = 0.0, height = 0.0});
 	localParams[110]:setPosition(0.0, 360.0);
@@ -1357,7 +1354,7 @@ function PersonalInfoLayer:initView()
 	localParams[111]:setFontSize(24);
 	localParams[111]:setString([[重甲奇兵]]);
 	localParams[111]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[111]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[111]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[111]:setAnchorPoint(0.50, 0.50);
 	localParams[111]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[111]:setContentSize({width = 100.0, height = 26.0});
@@ -1371,7 +1368,7 @@ function PersonalInfoLayer:initView()
 	localParams[112]:setFontSize(20);
 	localParams[112]:setString([[攻  击:]]);
 	localParams[112]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[112]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[112]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[112]:setAnchorPoint(0.00, 0.50);
 	localParams[112]:setContentSize({width = 58.0, height = 25.0});
 	localParams[112]:setPosition(13.23, -60.31);
@@ -1385,7 +1382,7 @@ function PersonalInfoLayer:initView()
 	localParams[113]:setString([[d]]);
 	localParams[113]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[113]:setTextAreaSize({width = 240, height = 0});
-	localParams[113]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[113]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[113]:setAnchorPoint(0.00, 1.00);
 	localParams[113]:setContentSize({width = 240.0, height = 0.0});
 	localParams[113]:setPosition(15.0, -110.0);
@@ -1398,7 +1395,7 @@ function PersonalInfoLayer:initView()
 	localParams[114]:setFontSize(20);
 	localParams[114]:setString([[血  量:]]);
 	localParams[114]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[114]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[114]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[114]:setAnchorPoint(0.00, 0.50);
 	localParams[114]:setContentSize({width = 58.0, height = 25.0});
 	localParams[114]:setPosition(13.23, -87.5);
@@ -1411,7 +1408,7 @@ function PersonalInfoLayer:initView()
 	localParams[115]:setFontSize(20);
 	localParams[115]:setString([[护  甲:]]);
 	localParams[115]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[115]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[115]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[115]:setAnchorPoint(0.00, 0.50);
 	localParams[115]:setContentSize({width = 58.0, height = 25.0});
 	localParams[115]:setPosition(135.97, -60.31);
@@ -1424,7 +1421,7 @@ function PersonalInfoLayer:initView()
 	localParams[116]:setFontSize(20);
 	localParams[116]:setString([[速  度:]]);
 	localParams[116]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[116]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[116]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[116]:setAnchorPoint(0.00, 0.50);
 	localParams[116]:setContentSize({width = 58.0, height = 25.0});
 	localParams[116]:setPosition(135.97, -87.5);
@@ -1437,7 +1434,7 @@ function PersonalInfoLayer:initView()
 	localParams[117]:setFontSize(20);
 	localParams[117]:setString([[99999]]);
 	localParams[117]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[117]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[117]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[117]:setAnchorPoint(0.00, 0.50);
 	localParams[117]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[117]:setContentSize({width = 58.0, height = 25.0});
@@ -1451,7 +1448,7 @@ function PersonalInfoLayer:initView()
 	localParams[118]:setFontSize(20);
 	localParams[118]:setString([[99999]]);
 	localParams[118]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[118]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[118]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[118]:setAnchorPoint(0.00, 0.39);
 	localParams[118]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[118]:setContentSize({width = 58.0, height = 25.0});
@@ -1465,7 +1462,7 @@ function PersonalInfoLayer:initView()
 	localParams[119]:setFontSize(20);
 	localParams[119]:setString([[99999]]);
 	localParams[119]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[119]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[119]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[119]:setAnchorPoint(0.00, 0.50);
 	localParams[119]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[119]:setContentSize({width = 58.0, height = 25.0});
@@ -1479,7 +1476,7 @@ function PersonalInfoLayer:initView()
 	localParams[120]:setFontSize(20);
 	localParams[120]:setString([[99999]]);
 	localParams[120]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[120]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[120]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[120]:setAnchorPoint(0.00, 0.50);
 	localParams[120]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[120]:setContentSize({width = 58.0, height = 25.0});
@@ -1494,7 +1491,7 @@ function PersonalInfoLayer:initView()
 	localParams[121]:setString([[]]);
 	localParams[121]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[121]:setTextAreaSize({width = 240, height = 0});
-	localParams[121]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[121]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[121]:setAnchorPoint(0.00, 1.00);
 	localParams[121]:setContentSize({width = 240.0, height = 0.0});
 	localParams[121]:setPosition(15.0, -227.94);
@@ -1508,7 +1505,7 @@ function PersonalInfoLayer:initView()
 	localParams[122]:setString([[]]);
 	localParams[122]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[122]:setTextAreaSize({width = 240, height = 0});
-	localParams[122]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[122]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[122]:setAnchorPoint(0.00, 1.00);
 	localParams[122]:setContentSize({width = 240.0, height = 0.0});
 	localParams[122]:setPosition(15.0, -338.34);
@@ -1538,7 +1535,7 @@ function PersonalInfoLayer:initView()
 	localParams[124].__Name = 'bg#friendBg_img#under_img3#role_bg#head_bg';
 	localParams[123]:addChild(localParams[124]);
 
-	localParams[125] = ImageView:create(, 0);
+	localParams[125] = ImageView:create(nil, 0);
 	localParams[125]:setAnchorPoint(0.50, 0.50);
 	localParams[125]:setContentSize({width = 46.0, height = 46.0});
 	localParams[125]:setPosition(55.0, 55.0);
@@ -1547,7 +1544,7 @@ function PersonalInfoLayer:initView()
 	localParams[125].__Name = 'bg#friendBg_img#under_img3#role_bg#head_bg#head';
 	localParams[124]:addChild(localParams[125]);
 
-	localParams[126] = ImageView:create(, 0);
+	localParams[126] = ImageView:create(nil, 0);
 	localParams[126]:setAnchorPoint(0.50, 0.50);
 	localParams[126]:setScaleX(0.70);
 	localParams[126]:setScaleY(0.70);
@@ -1578,7 +1575,7 @@ function PersonalInfoLayer:initView()
 	localParams[128]:setFontSize(16);
 	localParams[128]:setString([[]]);
 	localParams[128]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[128]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[128]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[128]:setAnchorPoint(0.50, 0.50);
 	localParams[128]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[128]:setContentSize({width = 0.0, height = 0.0});
@@ -1588,7 +1585,7 @@ function PersonalInfoLayer:initView()
 	localParams[128].__Name = 'bg#friendBg_img#under_img3#role_bg#use_skill_bg1#skill_name1';
 	localParams[127]:addChild(localParams[128]);
 
-	localParams[129] = ImageView:create(, 0);
+	localParams[129] = ImageView:create(nil, 0);
 	localParams[129]:setAnchorPoint(0.50, 0.50);
 	localParams[129]:setContentSize({width = 46.0, height = 46.0});
 	localParams[129]:setPosition(59.0, 59.5);
@@ -1601,7 +1598,7 @@ function PersonalInfoLayer:initView()
 	localParams[130]:setFontSize(20);
 	localParams[130]:setString([[]]);
 	localParams[130]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[130]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[130]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[130]:setAnchorPoint(0.50, 0.50);
 	localParams[130]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[130]:setContentSize({width = 0.0, height = 0.0});
@@ -1631,7 +1628,7 @@ function PersonalInfoLayer:initView()
 	localParams[132]:setFontSize(16);
 	localParams[132]:setString([[]]);
 	localParams[132]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[132]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[132]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[132]:setAnchorPoint(0.50, 0.50);
 	localParams[132]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[132]:setContentSize({width = 0.0, height = 0.0});
@@ -1645,7 +1642,7 @@ function PersonalInfoLayer:initView()
 	localParams[133]:setFontSize(20);
 	localParams[133]:setString([[]]);
 	localParams[133]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[133]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[133]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[133]:setAnchorPoint(0.50, 0.50);
 	localParams[133]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[133]:setContentSize({width = 0.0, height = 0.0});
@@ -1655,7 +1652,7 @@ function PersonalInfoLayer:initView()
 	localParams[133].__Name = 'bg#friendBg_img#under_img3#role_bg#use_skill_bg2#skill_level2';
 	localParams[131]:addChild(localParams[133]);
 
-	localParams[134] = ImageView:create(, 0);
+	localParams[134] = ImageView:create(nil, 0);
 	localParams[134]:setAnchorPoint(0.50, 0.50);
 	localParams[134]:setContentSize({width = 46.0, height = 46.0});
 	localParams[134]:setPosition(59.0, 59.5);
@@ -1676,7 +1673,7 @@ function PersonalInfoLayer:initView()
 	localParams[135].__Name = 'bg#friendBg_img#under_img3#role_bg#s_message_bg';
 	localParams[123]:addChild(localParams[135]);
 
-	localParams[136] = Node:create();
+	localParams[136] = Widget:create();
 	localParams[136]:setAnchorPoint(0.00, 0.00);
 	localParams[136]:setContentSize({width = 0.0, height = 0.0});
 	localParams[136]:setPosition(0.0, 230.0);
@@ -1689,7 +1686,7 @@ function PersonalInfoLayer:initView()
 	localParams[137]:setFontSize(24);
 	localParams[137]:setString([[风华之身]]);
 	localParams[137]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[137]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[137]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[137]:setAnchorPoint(0.50, 0.50);
 	localParams[137]:setTextColor({r = 250, g = 240, b = 155});
 	localParams[137]:setContentSize({width = 100.0, height = 26.0});
@@ -1704,7 +1701,7 @@ function PersonalInfoLayer:initView()
 	localParams[138]:setString([[技能说明:小体型 近距离小体型 近距离小体型 近距离小体型 近距离]]);
 	localParams[138]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[138]:setTextAreaSize({width = 235, height = 0});
-	localParams[138]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[138]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[138]:setAnchorPoint(0.50, 1.00);
 	localParams[138]:setContentSize({width = 235.0, height = 0.0});
 	localParams[138]:setPosition(135.0, localParams[136]:getContentSize().height - 110.00);
@@ -1717,7 +1714,7 @@ function PersonalInfoLayer:initView()
 	localParams[139]:setFontSize(20);
 	localParams[139]:setString([[技能说明：]]);
 	localParams[139]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[139]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[139]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[139]:setAnchorPoint(0.50, 0.50);
 	localParams[139]:setContentSize({width = 91.0, height = 25.0});
 	localParams[139]:setPosition(63.08, localParams[136]:getContentSize().height - 82.50);

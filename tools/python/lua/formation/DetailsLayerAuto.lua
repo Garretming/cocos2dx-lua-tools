@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：DetailsLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -84,7 +81,7 @@ function DetailsLayer:initView()
 	localParams[6]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[6]:setTextAreaSize({width = 300, height = 140});
 	localParams[6]:setTextHorizontalAlignment(1);
-	localParams[6]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[6]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[6]:setAnchorPoint(0.50, 0.50);
 	localParams[6]:setContentSize({width = 300.0, height = 140.0});
 	localParams[6]:setPosition(WinSize.width/2 + (-301.06 * ccx.scaleX), 100.24);
@@ -130,7 +127,7 @@ function DetailsLayer:initView()
 	localParams[9].__Name = 'sure_btn#font';
 	localParams[8]:addChild(localParams[9]);
 
-	localParams[10] = Node:create();
+	localParams[10] = Widget:create();
 	localParams[10]:setAnchorPoint(0.00, 0.00);
 	localParams[10]:setScaleX(0.80);
 	localParams[10]:setScaleY(0.80);
@@ -205,7 +202,7 @@ function DetailsLayer:initView()
 	localParams[15].__Name = 'help_btn';
 	self:addChild(localParams[15]);
 
-	localParams[16] = Node:create();
+	localParams[16] = Widget:create();
 	localParams[16]:setAnchorPoint(0.00, 0.00);
 	localParams[16]:setScaleX(1.20);
 	localParams[16]:setScaleY(1.20);

@@ -41,15 +41,9 @@ def parse(node, classname, array, parent):
 
     if (array.get('CColor') != None): 
         CColor = [255,255,255]
-        if (array['CColor'].get('R') != None):
-            CColor[0] = array['CColor']['R']
-
-        if ( array['CColor'].get('G') != None):
-            CColor[1] = array['CColor']['G']
-        
-        if ( array['CColor'].get('B') != None ):
-            CColor[2] = array['CColor']['B']
-        
+        CColor[0] = array['CColor'].get('R', 255)
+        CColor[1] = array['CColor'].get('G', 255)
+        CColor[2] = array['CColor'].get('B', 255)
 
         if (CColor[0] != 255 or CColor[1] != 255 or CColor[2] != 255): 
             if (classname == 'TextObjectData'):
@@ -74,6 +68,8 @@ def parse(node, classname, array, parent):
             gl.get_value('callback')[array['CallBackName']] = classname
             if classname == 'TextFieldObjectData':
                 string += "\t%s:registerScriptEditBoxHandler(handler(self, self._%s));\n" % (node, array['CallBackName'])
+            elif classname == 'ListViewObjectData':
+                string += "\t%s:setEventCallback(handler(self, self._%s));\n" % (node, array['CallBackName'])
             else:
                 string += "\t%s:onClick(handler(self, self._%s));\n" % (node, array['CallBackName'])
 
@@ -161,6 +157,24 @@ function %s:_%s(eventName, editBox)
     end
     if self.%s then
         return self:%s(eventName, editBox);
+    end
+end
+
+''' % (classname, key, key, key, key, key)
+        elif value == 'ListViewObjectData':
+            string += '''
+--@callback:('count', listView)                              --总共cell数量
+--@callback:('size', listView, row)                          --每个cell的尺寸
+--@callback:('delay', listView, row, column, index)          --每个cell上item延时创建的时间
+--@callback:('add', listView, row, column, index, cell)      --添加每个item
+--@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
+--@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
+function %s:_%s(eventName, listView, row, column, index, cell)
+    if self.m_ClickDelegate and self.m_ClickDelegate.%s then
+        return self.m_ClickDelegate:%s(eventName, listView, row, column, index, cell);
+    end
+    if self.%s then
+        return self:%s(eventName, listView, row, column, index, cell);
     end
 end
 

@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：EmailLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -82,7 +79,7 @@ function EmailLayer:initView()
 	localParams[5]:setFontSize(20);
 	localParams[5]:setString([[您还没有邮件！]]);
 	localParams[5]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[5]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[5]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setTextColor({r = 155, g = 125, b = 100});
 	localParams[5]:setContentSize({width = 133.0, height = 24.0});
@@ -99,7 +96,7 @@ function EmailLayer:initView()
 	localParams[6]:setBackGroundColor({r = 150, g = 150, b = 255});
 	localParams[6]:setBackGroundColorOpacity(0);
 	localParams[6]:setAnchorPoint(0.00, 0.00);
-	localParams[6]:onClick(handler(self, self._onEmailListView));
+	localParams[6]:setEventCallback(handler(self, self._onEmailListView));
 	localParams[6]:setTouchEnabled(true);
 	localParams[6]:setContentSize({width = 270.0, height = 495.0});
 	localParams[6]:setPosition(5.0, 5.0);
@@ -115,7 +112,7 @@ function EmailLayer:initView()
 	localParams[7]:setBackGroundColor({r = 150, g = 150, b = 255});
 	localParams[7]:setBackGroundColorOpacity(0);
 	localParams[7]:setAnchorPoint(0.00, 0.00);
-	localParams[7]:onClick(handler(self, self._onReportListView));
+	localParams[7]:setEventCallback(handler(self, self._onReportListView));
 	localParams[7]:setTouchEnabled(true);
 	localParams[7]:setContentSize({width = 270.0, height = 495.0});
 	localParams[7]:setPosition(5.0, 5.0);
@@ -161,7 +158,7 @@ function EmailLayer:initView()
 	localParams[11]:setFontSize(20);
 	localParams[11]:setString([[系统补偿发放奖励]]);
 	localParams[11]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[11]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[11]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[11]:setAnchorPoint(0.00, 0.50);
 	localParams[11]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[11]:setContentSize({width = 165.0, height = 24.0});
@@ -175,7 +172,7 @@ function EmailLayer:initView()
 	localParams[12]:setFontSize(20);
 	localParams[12]:setString([[有效期限：2017-4-30 24：00]]);
 	localParams[12]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[12]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[12]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[12]:setAnchorPoint(1.00, 0.50);
 	localParams[12]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[12]:setContentSize({width = 264.0, height = 24.0});
@@ -251,7 +248,7 @@ function EmailLayer:initView()
 	localParams[18]:setFontSize(20);
 	localParams[18]:setString([[25]]);
 	localParams[18]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[18]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[18]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[18]:setAnchorPoint(1.00, 0.50);
 	localParams[18]:setContentSize({width = 27.0, height = 22.0});
 	localParams[18]:setPosition(94.6, 22.0);
@@ -290,7 +287,7 @@ function EmailLayer:initView()
 	localParams[21]:setFontSize(20);
 	localParams[21]:setString([[25]]);
 	localParams[21]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[21]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[21]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[21]:setAnchorPoint(1.00, 0.50);
 	localParams[21]:setContentSize({width = 27.0, height = 22.0});
 	localParams[21]:setPosition(94.6, 22.0);
@@ -329,7 +326,7 @@ function EmailLayer:initView()
 	localParams[24]:setFontSize(20);
 	localParams[24]:setString([[25]]);
 	localParams[24]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[24]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[24]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[24]:setAnchorPoint(1.00, 0.50);
 	localParams[24]:setContentSize({width = 27.0, height = 22.0});
 	localParams[24]:setPosition(94.6, 22.0);
@@ -368,7 +365,7 @@ function EmailLayer:initView()
 	localParams[27]:setFontSize(20);
 	localParams[27]:setString([[25]]);
 	localParams[27]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[27]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[27]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[27]:setAnchorPoint(1.00, 0.50);
 	localParams[27]:setContentSize({width = 27.0, height = 22.0});
 	localParams[27]:setPosition(94.6, 22.0);
@@ -407,7 +404,7 @@ function EmailLayer:initView()
 	localParams[30]:setFontSize(20);
 	localParams[30]:setString([[25]]);
 	localParams[30]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[30]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[30]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[30]:setAnchorPoint(1.00, 0.50);
 	localParams[30]:setContentSize({width = 27.0, height = 22.0});
 	localParams[30]:setPosition(94.6, 22.0);
@@ -446,7 +443,7 @@ function EmailLayer:initView()
 	localParams[33]:setFontSize(20);
 	localParams[33]:setString([[25]]);
 	localParams[33]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[33]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[33]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[33]:setAnchorPoint(1.00, 0.50);
 	localParams[33]:setContentSize({width = 27.0, height = 22.0});
 	localParams[33]:setPosition(94.6, 22.0);
@@ -480,7 +477,7 @@ function EmailLayer:initView()
 	localParams[35].__Name = 'bg_img#under_img2#receive1_btn#font_sprite';
 	localParams[34]:addChild(localParams[35]);
 
-	localParams[36] = Node:create();
+	localParams[36] = Widget:create();
 	localParams[36]:setAnchorPoint(0.00, 0.00);
 	localParams[36]:setScaleX(0.90);
 	localParams[36]:setScaleY(0.90);
@@ -514,7 +511,7 @@ function EmailLayer:initView()
 	localParams[38].__Name = 'bg_img#under_img2#delete1_btn#font_sprite';
 	localParams[37]:addChild(localParams[38]);
 
-	localParams[39] = Node:create();
+	localParams[39] = Widget:create();
 	localParams[39]:setAnchorPoint(0.00, 0.00);
 	localParams[39]:setScaleX(0.90);
 	localParams[39]:setScaleY(0.90);
@@ -562,7 +559,7 @@ function EmailLayer:initView()
 	localParams[43]:setFontSize(20);
 	localParams[43]:setString([[系统补偿发放奖励]]);
 	localParams[43]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[43]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[43]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[43]:setAnchorPoint(0.00, 0.50);
 	localParams[43]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[43]:setContentSize({width = 165.0, height = 24.0});
@@ -576,7 +573,7 @@ function EmailLayer:initView()
 	localParams[44]:setFontSize(20);
 	localParams[44]:setString([[有效期限：2017-4-30 24：00]]);
 	localParams[44]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[44]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[44]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[44]:setAnchorPoint(1.00, 0.50);
 	localParams[44]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[44]:setContentSize({width = 264.0, height = 24.0});
@@ -637,7 +634,7 @@ function EmailLayer:initView()
 	localParams[48].__Name = 'bg_img#under_img3#replay_btn#font_sprite';
 	localParams[47]:addChild(localParams[48]);
 
-	localParams[49] = Node:create();
+	localParams[49] = Widget:create();
 	localParams[49]:setAnchorPoint(0.00, 0.00);
 	localParams[49]:setScaleX(0.90);
 	localParams[49]:setScaleY(0.90);
@@ -675,7 +672,7 @@ function EmailLayer:initView()
 	localParams[51].__Name = 'bg_img#under_img3#delete2_btn#font_sprite';
 	localParams[50]:addChild(localParams[51]);
 
-	localParams[52] = Node:create();
+	localParams[52] = Widget:create();
 	localParams[52]:setAnchorPoint(0.00, 0.00);
 	localParams[52]:setScaleX(0.90);
 	localParams[52]:setScaleY(0.90);
@@ -719,7 +716,7 @@ function EmailLayer:initView()
 	localParams[55].__Name = 'bg_img#close_btn';
 	localParams[1]:addChild(localParams[55]);
 
-	localParams[56] = Node:create();
+	localParams[56] = Widget:create();
 	localParams[56]:setAnchorPoint(0.00, 0.00);
 	localParams[56]:setScaleX(0.90);
 	localParams[56]:setScaleY(0.90);
@@ -857,6 +854,22 @@ function EmailLayer:_onClose(sender)
 end
 
 
+--@callback:('count', listView)                              --总共cell数量
+--@callback:('size', listView, row)                          --每个cell的尺寸
+--@callback:('delay', listView, row, column, index)          --每个cell上item延时创建的时间
+--@callback:('add', listView, row, column, index, cell)      --添加每个item
+--@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
+--@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
+function EmailLayer:_onEmailListView(eventName, listView, row, column, index, cell)
+    if self.m_ClickDelegate and self.m_ClickDelegate.onEmailListView then
+        return self.m_ClickDelegate:onEmailListView(eventName, listView, row, column, index, cell);
+    end
+    if self.onEmailListView then
+        return self:onEmailListView(eventName, listView, row, column, index, cell);
+    end
+end
+
+
 function EmailLayer:_onReceive(sender)
     if self.m_ClickDelegate and self.m_ClickDelegate.onReceive then
         return self.m_ClickDelegate:onReceive(sender);
@@ -883,6 +896,22 @@ function EmailLayer:_onReplay(sender)
     end
     if self.onReplay then
         return self:onReplay(sender);
+    end
+end
+
+
+--@callback:('count', listView)                              --总共cell数量
+--@callback:('size', listView, row)                          --每个cell的尺寸
+--@callback:('delay', listView, row, column, index)          --每个cell上item延时创建的时间
+--@callback:('add', listView, row, column, index, cell)      --添加每个item
+--@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
+--@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
+function EmailLayer:_onReportListView(eventName, listView, row, column, index, cell)
+    if self.m_ClickDelegate and self.m_ClickDelegate.onReportListView then
+        return self.m_ClickDelegate:onReportListView(eventName, listView, row, column, index, cell);
+    end
+    if self.onReportListView then
+        return self:onReportListView(eventName, listView, row, column, index, cell);
     end
 end
 

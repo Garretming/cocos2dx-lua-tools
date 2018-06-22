@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：BuyPopUpLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -86,7 +83,7 @@ function BuyPopUpLayer:initView()
 	localParams[5]:setString([[]]);
 	localParams[5]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[5]:setTextAreaSize({width = 240, height = 80});
-	localParams[5]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[5]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[5]:setAnchorPoint(0.00, 0.50);
 	localParams[5]:setContentSize({width = 240.0, height = 80.0});
 	localParams[5]:setPosition(13.25, 55.0);
@@ -104,7 +101,7 @@ function BuyPopUpLayer:initView()
 	localParams[6].__Name = 'bg_img#bg_img1#under_sprite';
 	localParams[3]:addChild(localParams[6]);
 
-	localParams[7] = ImageView:create(, 0);
+	localParams[7] = ImageView:create(nil, 0);
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setContentSize({width = 46.0, height = 46.0});
 	localParams[7]:setPosition(55.0, 55.0);
@@ -144,7 +141,7 @@ function BuyPopUpLayer:initView()
 	localParams[9].__Name = 'bg_img#bg_img1#plus_btn';
 	localParams[3]:addChild(localParams[9]);
 
-	localParams[10] = Node:create();
+	localParams[10] = Widget:create();
 	localParams[10]:setAnchorPoint(0.00, 0.00);
 	localParams[10]:setScaleX(0.90);
 	localParams[10]:setScaleY(0.90);
@@ -171,7 +168,7 @@ function BuyPopUpLayer:initView()
 	localParams[11].__Name = 'bg_img#bg_img1#reduce_btn';
 	localParams[3]:addChild(localParams[11]);
 
-	localParams[12] = Node:create();
+	localParams[12] = Widget:create();
 	localParams[12]:setAnchorPoint(0.00, 0.00);
 	localParams[12]:setScaleX(0.90);
 	localParams[12]:setScaleY(0.90);
@@ -198,7 +195,7 @@ function BuyPopUpLayer:initView()
 	localParams[14]:setFontSize(24);
 	localParams[14]:setString([[购买数量]]);
 	localParams[14]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[14]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[14]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[14]:setAnchorPoint(0.50, 0.50);
 	localParams[14]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[14]:setContentSize({width = 100.0, height = 26.0});
@@ -212,7 +209,7 @@ function BuyPopUpLayer:initView()
 	localParams[15]:setFontSize(24);
 	localParams[15]:setString([[]]);
 	localParams[15]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[15]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[15]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[15]:setAnchorPoint(1.00, 0.50);
 	localParams[15]:setContentSize({width = 0.0, height = 0.0});
 	localParams[15]:setPosition(361.0, 18.5);
@@ -246,7 +243,7 @@ function BuyPopUpLayer:initView()
 	localParams[18]:setFontSize(24);
 	localParams[18]:setString([[售 价]]);
 	localParams[18]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[18]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[18]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[18]:setAnchorPoint(0.50, 0.50);
 	localParams[18]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[18]:setContentSize({width = 64.0, height = 26.0});
@@ -260,7 +257,7 @@ function BuyPopUpLayer:initView()
 	localParams[19]:setFontSize(24);
 	localParams[19]:setString([[¥ 100]]);
 	localParams[19]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[19]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[19]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[19]:setAnchorPoint(0.50, 0.50);
 	localParams[19]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[19]:setVisible(false);
@@ -275,7 +272,7 @@ function BuyPopUpLayer:initView()
 	localParams[20]:setFontSize(20);
 	localParams[20]:setString([[已售罄]]);
 	localParams[20]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[20]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[20]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[20]:setAnchorPoint(0.50, 0.50);
 	localParams[20]:setTextColor({r = 155, g = 125, b = 100});
 	localParams[20]:setVisible(false);
@@ -290,7 +287,7 @@ function BuyPopUpLayer:initView()
 	localParams[21]:setFontSize(24);
 	localParams[21]:setString([[]]);
 	localParams[21]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[21]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[21]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[21]:setAnchorPoint(1.00, 0.50);
 	localParams[21]:setContentSize({width = 0.0, height = 0.0});
 	localParams[21]:setPosition(315.4, 18.5);
@@ -312,7 +309,7 @@ function BuyPopUpLayer:initView()
 	localParams[23]:setFontSize(24);
 	localParams[23]:setString([[]]);
 	localParams[23]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[23]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[23]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[23]:setAnchorPoint(0.50, 0.50);
 	localParams[23]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[23]:setContentSize({width = 0.0, height = 0.0});
@@ -338,7 +335,7 @@ function BuyPopUpLayer:initView()
 	localParams[24].__Name = 'bg_img#buy_btn';
 	localParams[1]:addChild(localParams[24]);
 
-	localParams[25] = Node:create();
+	localParams[25] = Widget:create();
 	localParams[25]:setAnchorPoint(0.00, 0.00);
 	localParams[25]:setScaleX(0.90);
 	localParams[25]:setScaleY(0.90);
@@ -374,7 +371,7 @@ function BuyPopUpLayer:initView()
 	localParams[27].__Name = 'bg_img#cancel_btn';
 	localParams[1]:addChild(localParams[27]);
 
-	localParams[28] = Node:create();
+	localParams[28] = Widget:create();
 	localParams[28]:setAnchorPoint(0.00, 0.00);
 	localParams[28]:setScaleX(0.90);
 	localParams[28]:setScaleY(0.90);

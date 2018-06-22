@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：AchievementItemNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -46,7 +43,7 @@ function AchievementItemNode:initView()
 	localParams[1].__Name = 'item_btn';
 	self:addChild(localParams[1]);
 
-	localParams[2] = Node:create();
+	localParams[2] = Widget:create();
 	localParams[2]:setAnchorPoint(0.00, 0.00);
 	localParams[2]:setScaleX(0.98);
 	localParams[2]:setScaleY(0.95);
@@ -92,7 +89,7 @@ function AchievementItemNode:initView()
 	localParams[6]:setFontSize(20);
 	localParams[6]:setString([[成就点数]]);
 	localParams[6]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[6]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[6]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[6]:setAnchorPoint(0.50, 0.50);
 	localParams[6]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[6]:setContentSize({width = 84.0, height = 22.0});
@@ -130,7 +127,7 @@ function AchievementItemNode:initView()
 	localParams[9]:setFontSize(22);
 	localParams[9]:setString([[LV.25]]);
 	localParams[9]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[9]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[9]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[9]:setContentSize({width = 59.0, height = 26.0});
@@ -144,7 +141,7 @@ function AchievementItemNode:initView()
 	localParams[10]:setFontSize(22);
 	localParams[10]:setString([[大鸟大鸟大鸟]]);
 	localParams[10]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[10]:setAnchorPoint(0.00, 0.50);
 	localParams[10]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[10]:setContentSize({width = 136.0, height = 26.0});

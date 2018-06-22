@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：DescPopupNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -42,7 +39,7 @@ function DescPopupNode:initView()
 	localParams[1].__Name = 'tip';
 	self:addChild(localParams[1]);
 
-	localParams[2] = Node:create();
+	localParams[2] = Widget:create();
 	localParams[2]:setAnchorPoint(0.00, 0.00);
 	localParams[2]:setContentSize({width = 0.0, height = 0.0});
 	localParams[2]:setPosition(0.0, 120.0);
@@ -56,7 +53,7 @@ function DescPopupNode:initView()
 	localParams[3]:setString([[]]);
 	localParams[3]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[3]:setTextAreaSize({width = 220, height = 0});
-	localParams[3]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[3]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[3]:setAnchorPoint(0.50, 1.00);
 	localParams[3]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[3]:setContentSize({width = 220.0, height = 0.0});
@@ -70,7 +67,7 @@ function DescPopupNode:initView()
 	localParams[4]:setDefaultFontSize(20);
 	localParams[4]:setString([[汉谟拉比法典]]);
 	localParams[4]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[4]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[4]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[4]:setAnchorPoint(0.00, 1.00);
 	localParams[4]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[4]:setContentSize({width = 125.0, height = 24.0});

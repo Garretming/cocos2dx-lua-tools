@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：ActivityMainLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -31,7 +28,7 @@ end
 function ActivityMainLayer:initView()
     self.__LAYER_NAME = 'activity.ActivityMainLayer';
     local localParams = {};
-	localParams[1] = Node:create();
+	localParams[1] = Widget:create();
 	localParams[1]:setAnchorPoint(0.00, 0.00);
 	localParams[1]:setContentSize({width = 0.0, height = 0.0});
 	localParams[1]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), WinSize.height/2 + (-0.00 * ccx.scaleY));
@@ -63,7 +60,7 @@ function ActivityMainLayer:initView()
 	localParams[3].__Name = 'Node_1#Image1#Sprite_43';
 	localParams[2]:addChild(localParams[3]);
 
-	localParams[4] = Node:create();
+	localParams[4] = Widget:create();
 	localParams[4]:setAnchorPoint(0.00, 0.00);
 	localParams[4]:setScaleX(0.98);
 	localParams[4]:setScaleY(0.98);
@@ -107,7 +104,7 @@ function ActivityMainLayer:initView()
 	localParams[8]:setFontSize(20);
 	localParams[8]:setString([[]]);
 	localParams[8]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[8]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[8]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[8]:setAnchorPoint(0.50, 0.50);
 	localParams[8]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[8]:setContentSize({width = 86.0, height = 27.0});
@@ -121,7 +118,7 @@ function ActivityMainLayer:initView()
 	localParams[9]:setFontSize(20);
 	localParams[9]:setString([[]]);
 	localParams[9]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[9]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[9]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[9]:setContentSize({width = 86.0, height = 27.0});
@@ -135,7 +132,7 @@ function ActivityMainLayer:initView()
 	localParams[10]:setFontSize(16);
 	localParams[10]:setString([[1/40]]);
 	localParams[10]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[10]:setAnchorPoint(1.00, 0.50);
 	localParams[10]:setContentSize({width = 41.0, height = 20.0});
 	localParams[10]:setPosition(361.5, 141.0);
@@ -167,7 +164,7 @@ function ActivityMainLayer:initView()
 	localParams[12].__Name = 'Node_1#Image2#Sprite_43';
 	localParams[11]:addChild(localParams[12]);
 
-	localParams[13] = Node:create();
+	localParams[13] = Widget:create();
 	localParams[13]:setAnchorPoint(0.00, 0.00);
 	localParams[13]:setScaleX(0.98);
 	localParams[13]:setScaleY(0.98);
@@ -201,7 +198,7 @@ function ActivityMainLayer:initView()
 	localParams[16]:setFontSize(20);
 	localParams[16]:setString([[更多精彩内容准备中]]);
 	localParams[16]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[16]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[16]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[16]:setAnchorPoint(0.50, 0.50);
 	localParams[16]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[16]:setContentSize({width = 185.0, height = 27.0});

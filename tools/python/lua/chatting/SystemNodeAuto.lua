@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：SystemNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -55,7 +52,7 @@ function SystemNode:initView()
 	localParams[3]:setFontSize(20);
 	localParams[3]:setString([[占卜]]);
 	localParams[3]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[3]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[3]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 43.0, height = 22.0});
 	localParams[3]:setPosition(32.66, 16.64);
@@ -69,7 +66,7 @@ function SystemNode:initView()
 	localParams[4]:setString([[不移打是   大大是大所大所大所撒大所大]]);
 	localParams[4]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[4]:setTextAreaSize({width = 0, height = 25});
-	localParams[4]:setDefaultOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[4]:setDefaultOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[4]:setAnchorPoint(0.00, 1.00);
 	localParams[4]:setContentSize({width = 0.0, height = 25.0});
 	localParams[4]:setPosition(100.0, 37.5);

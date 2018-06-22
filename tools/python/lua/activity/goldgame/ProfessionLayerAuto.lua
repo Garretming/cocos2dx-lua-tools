@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：ProfessionLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -54,7 +51,7 @@ function ProfessionLayer:initView()
 	localParams[3]:setFontSize(22);
 	localParams[3]:setString([[01:02:03后活动结束]]);
 	localParams[3]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[3]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[3]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[3]:setAnchorPoint(0.00, 0.50);
 	localParams[3]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[3]:setContentSize({width = 195.0, height = 29.0});
@@ -171,7 +168,7 @@ function ProfessionLayer:initView()
 	localParams[12].__Name = 'help_btn';
 	self:addChild(localParams[12]);
 
-	localParams[13] = Node:create();
+	localParams[13] = Widget:create();
 	localParams[13]:setAnchorPoint(0.00, 0.00);
 	localParams[13]:setScaleX(1.20);
 	localParams[13]:setScaleY(1.20);

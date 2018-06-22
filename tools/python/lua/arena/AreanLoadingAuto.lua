@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：AreanLoadingAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -88,7 +85,7 @@ function AreanLoading:initView()
 	localParams[6]:setFontSize(20);
 	localParams[6]:setString([[最强王者]]);
 	localParams[6]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[6]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[6]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[6]:setAnchorPoint(0.50, 0.50);
 	localParams[6]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[6]:setContentSize({width = 84.0, height = 22.0});
@@ -114,7 +111,7 @@ function AreanLoading:initView()
 	localParams[8]:setFontSize(20);
 	localParams[8]:setString([[大鸟]]);
 	localParams[8]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[8]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[8]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[8]:setAnchorPoint(0.75, 0.64);
 	localParams[8]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[8]:setContentSize({width = 44.0, height = 24.0});
@@ -140,7 +137,7 @@ function AreanLoading:initView()
 	localParams[10]:setFontSize(22);
 	localParams[10]:setString([[LV:25]]);
 	localParams[10]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[10]:setAnchorPoint(0.50, 0.50);
 	localParams[10]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[10]:setContentSize({width = 59.0, height = 26.0});
@@ -150,7 +147,7 @@ function AreanLoading:initView()
 	localParams[10].__Name = 'bg_sprite#role_data_left#under_2#value';
 	localParams[9]:addChild(localParams[10]);
 
-	localParams[11] = Node:create();
+	localParams[11] = Widget:create();
 	localParams[11]:setAnchorPoint(0.00, 0.00);
 	localParams[11]:setContentSize({width = 0.0, height = 0.0});
 	localParams[11]:setPosition(1136.0, 0.0);
@@ -190,7 +187,7 @@ function AreanLoading:initView()
 	localParams[14]:setFontSize(20);
 	localParams[14]:setString([[最强王者]]);
 	localParams[14]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[14]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[14]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[14]:setAnchorPoint(0.50, 0.50);
 	localParams[14]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[14]:setRotationSkewX(180.00);
@@ -220,7 +217,7 @@ function AreanLoading:initView()
 	localParams[16]:setFontSize(20);
 	localParams[16]:setString([[大鸟]]);
 	localParams[16]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[16]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[16]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[16]:setAnchorPoint(0.50, 0.50);
 	localParams[16]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[16]:setContentSize({width = 44.0, height = 24.0});
@@ -248,7 +245,7 @@ function AreanLoading:initView()
 	localParams[18]:setFontSize(22);
 	localParams[18]:setString([[LV:25]]);
 	localParams[18]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[18]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[18]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[18]:setAnchorPoint(0.50, 0.50);
 	localParams[18]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[18]:setContentSize({width = 59.0, height = 26.0});
@@ -267,7 +264,7 @@ function AreanLoading:initView()
 	localParams[19].__Name = 'bg_sprite#loading';
 	localParams[1]:addChild(localParams[19]);
 
-	localParams[20] = LoadingBar:create(''uires/public/sheet_common/other0179.png'', 1, 0.00);
+	localParams[20] = LoadingBar:create('uires/public/sheet_common/other0179.png', 1, 0.00);
 	localParams[20]:setAnchorPoint(0.50, 0.50);
 	localParams[20]:setContentSize({width = 882.0, height = 26.0});
 	localParams[20]:setPosition(482.0, 19.0);
@@ -280,7 +277,7 @@ function AreanLoading:initView()
 	localParams[21]:setFontSize(24);
 	localParams[21]:setString([[0%]]);
 	localParams[21]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[21]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[21]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[21]:setAnchorPoint(0.50, 0.50);
 	localParams[21]:setContentSize({width = 38.0, height = 28.0});
 	localParams[21]:setPosition(482.0, 19.0);

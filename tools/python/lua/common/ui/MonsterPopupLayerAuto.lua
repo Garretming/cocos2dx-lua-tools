@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：MonsterPopupLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -374,7 +371,7 @@ function MonsterPopupLayer:initView()
 	localParams[34]:setFontSize(20);
 	localParams[34]:setString([[3阶解锁]]);
 	localParams[34]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[34]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[34]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[34]:setAnchorPoint(0.50, 0.50);
 	localParams[34]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[34]:setContentSize({width = 75.0, height = 24.0});
@@ -389,7 +386,7 @@ function MonsterPopupLayer:initView()
 	localParams[35]:setString([[Text LabelText LabelText LabelText LabelText LabelText Label]]);
 	localParams[35]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
 	localParams[35]:setTextAreaSize({width = 330, height = 100});
-	localParams[35]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[35]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[35]:setAnchorPoint(0.00, 0.50);
 	localParams[35]:setContentSize({width = 330.0, height = 100.0});
 	localParams[35]:setPosition(126.0, 54.0);
@@ -440,7 +437,7 @@ function MonsterPopupLayer:initView()
 	localParams[39]:setFontSize(20);
 	localParams[39]:setString([[3阶解锁]]);
 	localParams[39]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[39]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[39]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[39]:setAnchorPoint(0.50, 0.50);
 	localParams[39]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[39]:setContentSize({width = 75.0, height = 24.0});
@@ -455,7 +452,7 @@ function MonsterPopupLayer:initView()
 	localParams[40]:setString([[Text LabelText LabelText LabelText LabelText LabelText Label]]);
 	localParams[40]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
 	localParams[40]:setTextAreaSize({width = 330, height = 100});
-	localParams[40]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[40]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[40]:setAnchorPoint(0.00, 0.50);
 	localParams[40]:setContentSize({width = 330.0, height = 100.0});
 	localParams[40]:setPosition(126.0, 54.0);
@@ -506,7 +503,7 @@ function MonsterPopupLayer:initView()
 	localParams[44]:setFontSize(20);
 	localParams[44]:setString([[3阶解锁]]);
 	localParams[44]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[44]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[44]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[44]:setAnchorPoint(0.50, 0.50);
 	localParams[44]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[44]:setContentSize({width = 75.0, height = 24.0});
@@ -521,7 +518,7 @@ function MonsterPopupLayer:initView()
 	localParams[45]:setString([[Text LabelText LabelText LabelText LabelText LabelText Label]]);
 	localParams[45]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
 	localParams[45]:setTextAreaSize({width = 330, height = 100});
-	localParams[45]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[45]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[45]:setAnchorPoint(0.00, 0.50);
 	localParams[45]:setContentSize({width = 330.0, height = 100.0});
 	localParams[45]:setPosition(126.0, 54.0);

@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：SellLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -103,7 +100,7 @@ function SellLayer:initView()
 	localParams[7]:setFontSize(20);
 	localParams[7]:setString([[9999999]]);
 	localParams[7]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[7]:setAnchorPoint(1.00, 0.50);
 	localParams[7]:setContentSize({width = 87.0, height = 22.0});
 	localParams[7]:setPosition(274.01, 19.0);
@@ -137,7 +134,7 @@ function SellLayer:initView()
 	localParams[10]:setFontSize(20);
 	localParams[10]:setString([[1]]);
 	localParams[10]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[10]:setAnchorPoint(1.00, 0.50);
 	localParams[10]:setContentSize({width = 13.0, height = 22.0});
 	localParams[10]:setPosition(312.08, 18.5);
@@ -177,7 +174,7 @@ function SellLayer:initView()
 	localParams[12].__Name = 'sellBg_img#sellUnder_img#interUnder_img#reduce_btn';
 	localParams[3]:addChild(localParams[12]);
 
-	localParams[13] = Node:create();
+	localParams[13] = Widget:create();
 	localParams[13]:setAnchorPoint(0.00, 0.00);
 	localParams[13]:setScaleX(0.90);
 	localParams[13]:setScaleY(0.90);
@@ -204,7 +201,7 @@ function SellLayer:initView()
 	localParams[14].__Name = 'sellBg_img#sellUnder_img#interUnder_img#plus_btn';
 	localParams[3]:addChild(localParams[14]);
 
-	localParams[15] = Node:create();
+	localParams[15] = Widget:create();
 	localParams[15]:setAnchorPoint(0.00, 0.00);
 	localParams[15]:setScaleX(0.90);
 	localParams[15]:setScaleY(0.90);
@@ -230,7 +227,7 @@ function SellLayer:initView()
 	localParams[17]:setFontName('uires/public/ttf/jtcs.TTF');
 	localParams[17]:setTextHorizontalAlignment(1);
 	localParams[17]:setTextVerticalAlignment(1);
-	localParams[17]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[17]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[17]:setAnchorPoint(0.50, 0.50);
 	localParams[17]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[17]:setContentSize({width = 64.0, height = 22.0});
@@ -244,7 +241,7 @@ function SellLayer:initView()
 	localParams[18]:setFontSize(20);
 	localParams[18]:setString([[拥有：]]);
 	localParams[18]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[18]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[18]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[18]:setAnchorPoint(0.00, 0.50);
 	localParams[18]:setContentSize({width = 56.0, height = 22.0});
 	localParams[18]:setPosition(171.21, 298.33);
@@ -257,7 +254,7 @@ function SellLayer:initView()
 	localParams[19]:setFontSize(20);
 	localParams[19]:setString([[件]]);
 	localParams[19]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[19]:enableOutline({r = 50, g = 20, b = 255, a = 255}, 1.000000);
+	localParams[19]:enableOutline({r = 50, g = 20, b = 0, a = 255}, 1.00);
 	localParams[19]:setAnchorPoint(0.50, 0.50);
 	localParams[19]:setContentSize({width = 24.0, height = 22.0});
 	localParams[19]:setPosition(280.0, 299.3);
@@ -270,7 +267,7 @@ function SellLayer:initView()
 	localParams[20]:setFontSize(20);
 	localParams[20]:setString([[999]]);
 	localParams[20]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[20]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[20]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[20]:setAnchorPoint(0.00, 0.50);
 	localParams[20]:setContentSize({width = 39.0, height = 22.0});
 	localParams[20]:setPosition(231.0, 299.3);
@@ -283,7 +280,7 @@ function SellLayer:initView()
 	localParams[21]:setFontSize(20);
 	localParams[21]:setString([[品质：]]);
 	localParams[21]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[21]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[21]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[21]:setAnchorPoint(0.00, 0.50);
 	localParams[21]:setContentSize({width = 56.0, height = 22.0});
 	localParams[21]:setPosition(170.73, 259.02);
@@ -296,7 +293,7 @@ function SellLayer:initView()
 	localParams[22]:setFontSize(20);
 	localParams[22]:setString([[传说]]);
 	localParams[22]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[22]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[22]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[22]:setAnchorPoint(0.50, 0.50);
 	localParams[22]:setTextColor({r = 240, g = 0, b = 255});
 	localParams[22]:setContentSize({width = 44.0, height = 22.0});
@@ -358,7 +355,7 @@ function SellLayer:initView()
 	localParams[28]:setFontSize(20);
 	localParams[28]:setString([[110]]);
 	localParams[28]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[28]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[28]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[28]:setAnchorPoint(1.00, 0.50);
 	localParams[28]:setContentSize({width = 40.0, height = 22.0});
 	localParams[28]:setPosition(271.01, 19.0);
@@ -392,7 +389,7 @@ function SellLayer:initView()
 	localParams[30].__Name = 'sellBg_img#cancel_btn#cancelFont_sprite';
 	localParams[29]:addChild(localParams[30]);
 
-	localParams[31] = Node:create();
+	localParams[31] = Widget:create();
 	localParams[31]:setAnchorPoint(0.00, 0.00);
 	localParams[31]:setScaleX(0.90);
 	localParams[31]:setScaleY(0.90);
@@ -417,7 +414,7 @@ function SellLayer:initView()
 	localParams[32].__Name = 'sellBg_img#confirmedSale_btn';
 	localParams[1]:addChild(localParams[32]);
 
-	localParams[33] = Node:create();
+	localParams[33] = Widget:create();
 	localParams[33]:setAnchorPoint(0.00, 0.00);
 	localParams[33]:setScaleX(0.90);
 	localParams[33]:setScaleY(0.90);

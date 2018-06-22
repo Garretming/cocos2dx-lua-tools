@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：TaskNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -69,7 +66,7 @@ function TaskNode:initView()
 	localParams[3].__Name = 'task_bg#getBtn#font';
 	localParams[2]:addChild(localParams[3]);
 
-	localParams[4] = Node:create();
+	localParams[4] = Widget:create();
 	localParams[4]:setAnchorPoint(0.00, 0.00);
 	localParams[4]:setScaleX(0.60);
 	localParams[4]:setScaleY(0.60);
@@ -96,7 +93,7 @@ function TaskNode:initView()
 	localParams[6]:setFontSize(22);
 	localParams[6]:setString([[]]);
 	localParams[6]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[6]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[6]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[6]:setAnchorPoint(0.00, 1.00);
 	localParams[6]:setContentSize({width = 0.0, height = 0.0});
 	localParams[6]:setPosition(14.97, 28.59);
@@ -109,7 +106,7 @@ function TaskNode:initView()
 	localParams[7]:setFontSize(22);
 	localParams[7]:setString([[50]]);
 	localParams[7]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[7]:setAnchorPoint(0.00, 1.00);
 	localParams[7]:setContentSize({width = 31.0, height = 26.0});
 	localParams[7]:setPosition(795.27, 95.71);
@@ -122,7 +119,7 @@ function TaskNode:initView()
 	localParams[8]:setFontSize(22);
 	localParams[8]:setString([[50]]);
 	localParams[8]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[8]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[8]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[8]:setAnchorPoint(1.00, 0.00);
 	localParams[8]:setContentSize({width = 31.0, height = 26.0});
 	localParams[8]:setPosition(785.52, 69.13);
@@ -135,7 +132,7 @@ function TaskNode:initView()
 	localParams[9]:setFontSize(20);
 	localParams[9]:setString([[/]]);
 	localParams[9]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[9]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[9]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:setContentSize({width = 15.0, height = 22.0});
 	localParams[9]:setPosition(791.54, 83.4);
@@ -167,7 +164,7 @@ function TaskNode:initView()
 	localParams[12]:setString([[]]);
 	localParams[12]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[12]:setTextAreaSize({width = 276, height = 46});
-	localParams[12]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[12]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[12]:setAnchorPoint(0.00, 1.00);
 	localParams[12]:setContentSize({width = 276.0, height = 46.0});
 	localParams[12]:setPosition(148.6, 61.49);
@@ -191,7 +188,7 @@ function TaskNode:initView()
 	localParams[13].__Name = 'task_bg#prize_bg1';
 	localParams[1]:addChild(localParams[13]);
 
-	localParams[14] = ImageView:create(, 0);
+	localParams[14] = ImageView:create(nil, 0);
 	localParams[14]:setAnchorPoint(0.50, 0.50);
 	localParams[14]:setContentSize({width = 46.0, height = 46.0});
 	localParams[14]:setPosition(55.0, 55.0);
@@ -204,7 +201,7 @@ function TaskNode:initView()
 	localParams[15]:setFontSize(22);
 	localParams[15]:setString([[88]]);
 	localParams[15]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[15]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[15]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[15]:setAnchorPoint(1.00, 0.00);
 	localParams[15]:setScaleX(0.90);
 	localParams[15]:setScaleY(0.90);
@@ -230,7 +227,7 @@ function TaskNode:initView()
 	localParams[16].__Name = 'task_bg#prize_bg2';
 	localParams[1]:addChild(localParams[16]);
 
-	localParams[17] = ImageView:create(, 0);
+	localParams[17] = ImageView:create(nil, 0);
 	localParams[17]:setAnchorPoint(0.50, 0.50);
 	localParams[17]:setContentSize({width = 46.0, height = 46.0});
 	localParams[17]:setPosition(55.0, 55.0);
@@ -243,7 +240,7 @@ function TaskNode:initView()
 	localParams[18]:setFontSize(22);
 	localParams[18]:setString([[88]]);
 	localParams[18]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[18]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[18]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[18]:setAnchorPoint(1.00, 0.00);
 	localParams[18]:setScaleX(0.90);
 	localParams[18]:setScaleY(0.90);
@@ -269,7 +266,7 @@ function TaskNode:initView()
 	localParams[19].__Name = 'task_bg#prize_bg3';
 	localParams[1]:addChild(localParams[19]);
 
-	localParams[20] = ImageView:create(, 0);
+	localParams[20] = ImageView:create(nil, 0);
 	localParams[20]:setAnchorPoint(0.50, 0.50);
 	localParams[20]:setContentSize({width = 46.0, height = 46.0});
 	localParams[20]:setPosition(55.0, 55.0);
@@ -282,7 +279,7 @@ function TaskNode:initView()
 	localParams[21]:setFontSize(22);
 	localParams[21]:setString([[88]]);
 	localParams[21]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[21]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[21]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[21]:setAnchorPoint(1.00, 0.00);
 	localParams[21]:setScaleX(0.90);
 	localParams[21]:setScaleY(0.90);

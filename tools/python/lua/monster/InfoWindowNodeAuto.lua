@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：InfoWindowNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -47,7 +44,7 @@ function InfoWindowNode:initView()
 	localParams[2]:setString([[]]);
 	localParams[2]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[2]:setTextAreaSize({width = 270, height = 0});
-	localParams[2]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[2]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[2]:setAnchorPoint(0.50, 0.00);
 	localParams[2]:setContentSize({width = 270.0, height = 0.0});
 	localParams[2]:setPosition(150.0, 15.0);
@@ -80,7 +77,7 @@ function InfoWindowNode:initView()
 	localParams[5]:setFontSize(40);
 	localParams[5]:setString([[灵魂突袭]]);
 	localParams[5]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[5]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[5]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[5]:setContentSize({width = 164.0, height = 42.0});

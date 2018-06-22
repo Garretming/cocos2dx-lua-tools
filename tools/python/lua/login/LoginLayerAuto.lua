@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：LoginLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -51,7 +48,7 @@ function LoginLayer:initView()
 	localParams[3]:setFontSize(20);
 	localParams[3]:setString([[抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活]]);
 	localParams[3]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[3]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[3]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 1000.0, height = 27.0});
 	localParams[3]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), 32.0);
@@ -80,7 +77,7 @@ function LoginLayer:initView()
 	localParams[5]:setFontSize(20);
 	localParams[5]:setString([[]]);
 	localParams[5]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[5]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[5]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setContentSize({width = 103.0, height = 24.0});
 	localParams[5]:setPosition(175.0, 42.0);
@@ -89,7 +86,7 @@ function LoginLayer:initView()
 	localParams[5].__Name = 'setting#text';
 	localParams[4]:addChild(localParams[5]);
 
-	localParams[6] = Node:create();
+	localParams[6] = Widget:create();
 	localParams[6]:setAnchorPoint(0.00, 0.00);
 	localParams[6]:setScaleX(0.90);
 	localParams[6]:setScaleY(0.90);

@@ -16,18 +16,13 @@ def parse(node, array):
     if array.get('PlaceHolderText'):
         string += "\t%s:setPlaceHolder([[%s]]);\n" % (node, array['PlaceHolderText'])
 
-    if array.get('MaxLengthEnable'):
-        string += "\t%s:setMaxLengthEnabled(true);\n" % (node)
-    else:
-        string += "\t%s:setMaxLengthEnabled(false);\n" % (node)
 
     if array.get('MaxLengthText'):
         string += "\t%s:setMaxLength(%d);\n" % (node, array['MaxLengthText'])
 
     if array.get('PasswordEnable'):
-        string += "\t%s:setPasswordEnabled(true);\n" % (node)
-    else:
-        string += "\t%s:setPasswordEnabled(false);\n" % (node)
+        string += "\t%s:setInputFlag(0);\n" % (node)
+
 
     if array.get('PasswordStyleText'):
         string += "\t%s:setPasswordStyleText(%d);\n" % (node, array['PasswordStyleText'])

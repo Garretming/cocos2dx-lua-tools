@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：PropertyLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -64,7 +61,7 @@ function PropertyLayer:initView()
 	localParams[4]:setFontSize(28);
 	localParams[4]:setString([[作死的大鸟]]);
 	localParams[4]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[4]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[4]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[4]:setContentSize({width = 143.0, height = 30.0});
@@ -290,7 +287,7 @@ function PropertyLayer:initView()
 	localParams[26]:setFontSize(20);
 	localParams[26]:setString([[生   命：]]);
 	localParams[26]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[26]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[26]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[26]:setAnchorPoint(0.00, 0.50);
 	localParams[26]:setContentSize({width = 66.0, height = 25.0});
 	localParams[26]:setPosition(9.0, 14.0);
@@ -303,7 +300,7 @@ function PropertyLayer:initView()
 	localParams[27]:setFontSize(20);
 	localParams[27]:setString([[8888888]]);
 	localParams[27]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[27]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[27]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[27]:setAnchorPoint(1.00, 0.50);
 	localParams[27]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[27]:setContentSize({width = 73.0, height = 22.0});
@@ -329,7 +326,7 @@ function PropertyLayer:initView()
 	localParams[29]:setFontSize(20);
 	localParams[29]:setString([[攻   击：]]);
 	localParams[29]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[29]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[29]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[29]:setAnchorPoint(0.00, 0.50);
 	localParams[29]:setContentSize({width = 66.0, height = 25.0});
 	localParams[29]:setPosition(9.0, 14.0);
@@ -342,7 +339,7 @@ function PropertyLayer:initView()
 	localParams[30]:setFontSize(20);
 	localParams[30]:setString([[8888888]]);
 	localParams[30]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[30]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[30]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[30]:setAnchorPoint(1.00, 0.50);
 	localParams[30]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[30]:setContentSize({width = 73.0, height = 22.0});
@@ -368,7 +365,7 @@ function PropertyLayer:initView()
 	localParams[32]:setFontSize(20);
 	localParams[32]:setString([[护   甲：]]);
 	localParams[32]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[32]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[32]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[32]:setAnchorPoint(0.00, 0.50);
 	localParams[32]:setContentSize({width = 66.0, height = 25.0});
 	localParams[32]:setPosition(9.0, 14.0);
@@ -381,7 +378,7 @@ function PropertyLayer:initView()
 	localParams[33]:setFontSize(20);
 	localParams[33]:setString([[8888888]]);
 	localParams[33]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[33]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[33]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[33]:setAnchorPoint(1.00, 0.50);
 	localParams[33]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[33]:setContentSize({width = 73.0, height = 22.0});
@@ -407,7 +404,7 @@ function PropertyLayer:initView()
 	localParams[35]:setFontSize(20);
 	localParams[35]:setString([[速   度：]]);
 	localParams[35]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[35]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[35]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[35]:setAnchorPoint(0.00, 0.50);
 	localParams[35]:setContentSize({width = 66.0, height = 25.0});
 	localParams[35]:setPosition(9.0, 14.0);
@@ -420,7 +417,7 @@ function PropertyLayer:initView()
 	localParams[36]:setFontSize(20);
 	localParams[36]:setString([[8888888]]);
 	localParams[36]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[36]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[36]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[36]:setAnchorPoint(1.00, 0.50);
 	localParams[36]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[36]:setContentSize({width = 73.0, height = 22.0});
@@ -435,7 +432,7 @@ function PropertyLayer:initView()
 	localParams[37]:setString([[幽灵剑客是一位近战爆发AD刺客，双突进的技能设置，使得他在中单游刃有余，并肯大招在队友的配合下，在团战中能够发挥至关重要的作用。]]);
 	localParams[37]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[37]:setTextAreaSize({width = 360, height = 100});
-	localParams[37]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[37]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[37]:setAnchorPoint(0.50, 0.50);
 	localParams[37]:setContentSize({width = 360.0, height = 100.0});
 	localParams[37]:setPosition(216.11, 269.17);
@@ -448,7 +445,7 @@ function PropertyLayer:initView()
 	localParams[38]:setFontSize(20);
 	localParams[38]:setString([[定位：]]);
 	localParams[38]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[38]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[38]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[38]:setAnchorPoint(0.00, 0.50);
 	localParams[38]:setContentSize({width = 51.0, height = 25.0});
 	localParams[38]:setPosition(35.2, 195.0);
@@ -461,7 +458,7 @@ function PropertyLayer:initView()
 	localParams[39]:setFontSize(20);
 	localParams[39]:setString([[输出]]);
 	localParams[39]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[39]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[39]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[39]:setAnchorPoint(0.00, 0.50);
 	localParams[39]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[39]:setContentSize({width = 43.0, height = 25.0});
@@ -475,7 +472,7 @@ function PropertyLayer:initView()
 	localParams[40]:setFontSize(20);
 	localParams[40]:setString([[数量：]]);
 	localParams[40]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[40]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[40]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[40]:setAnchorPoint(0.00, 0.50);
 	localParams[40]:setContentSize({width = 51.0, height = 25.0});
 	localParams[40]:setPosition(198.0, 195.0);
@@ -488,7 +485,7 @@ function PropertyLayer:initView()
 	localParams[41]:setFontSize(20);
 	localParams[41]:setString([[66666]]);
 	localParams[41]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[41]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[41]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[41]:setAnchorPoint(0.00, 0.50);
 	localParams[41]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[41]:setContentSize({width = 58.0, height = 25.0});
@@ -502,7 +499,7 @@ function PropertyLayer:initView()
 	localParams[42]:setFontSize(20);
 	localParams[42]:setString([[品质：]]);
 	localParams[42]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[42]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[42]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[42]:setAnchorPoint(0.00, 0.50);
 	localParams[42]:setContentSize({width = 51.0, height = 25.0});
 	localParams[42]:setPosition(35.2, 159.0);
@@ -515,7 +512,7 @@ function PropertyLayer:initView()
 	localParams[43]:setFontSize(20);
 	localParams[43]:setString([[3]]);
 	localParams[43]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[43]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[43]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[43]:setAnchorPoint(0.00, 0.50);
 	localParams[43]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[43]:setContentSize({width = 14.0, height = 25.0});
@@ -529,7 +526,7 @@ function PropertyLayer:initView()
 	localParams[44]:setFontSize(20);
 	localParams[44]:setString([[消耗怒气：]]);
 	localParams[44]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[44]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[44]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[44]:setAnchorPoint(0.00, 0.50);
 	localParams[44]:setContentSize({width = 91.0, height = 25.0});
 	localParams[44]:setPosition(198.0, 159.0);
@@ -542,7 +539,7 @@ function PropertyLayer:initView()
 	localParams[45]:setFontSize(20);
 	localParams[45]:setString([[8]]);
 	localParams[45]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[45]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[45]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[45]:setAnchorPoint(0.00, 0.50);
 	localParams[45]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[45]:setContentSize({width = 14.0, height = 25.0});

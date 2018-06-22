@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：DivinationLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -116,7 +113,7 @@ function DivinationLayer:initView()
 	localParams[7].__Name = '__FULL_LAYER#help_btn';
 	localParams[2]:addChild(localParams[7]);
 
-	localParams[8] = Node:create();
+	localParams[8] = Widget:create();
 	localParams[8]:setAnchorPoint(0.00, 0.00);
 	localParams[8]:setScaleX(0.90);
 	localParams[8]:setScaleY(0.90);
@@ -162,7 +159,7 @@ function DivinationLayer:initView()
 	localParams[12]:setFontSize(20);
 	localParams[12]:setString([[999999]]);
 	localParams[12]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[12]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[12]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[12]:setAnchorPoint(1.00, 0.50);
 	localParams[12]:setContentSize({width = 75.0, height = 22.0});
 	localParams[12]:setPosition(143.96, 30.61);
@@ -213,7 +210,7 @@ function DivinationLayer:initView()
 	localParams[16]:setFontSize(20);
 	localParams[16]:setString([[999999]]);
 	localParams[16]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[16]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[16]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[16]:setAnchorPoint(1.00, 0.50);
 	localParams[16]:setContentSize({width = 75.0, height = 22.0});
 	localParams[16]:setPosition(141.77, localParams[15]:getContentSize().height - 18.98);
@@ -286,7 +283,7 @@ function DivinationLayer:initView()
 	localParams[22]:setFontSize(20);
 	localParams[22]:setString([[999999]]);
 	localParams[22]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[22]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[22]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[22]:setAnchorPoint(1.00, 0.50);
 	localParams[22]:setContentSize({width = 75.0, height = 22.0});
 	localParams[22]:setPosition(141.77, localParams[21]:getContentSize().height - 18.98);
@@ -377,7 +374,7 @@ function DivinationLayer:initView()
 	localParams[29]:setFontSize(20);
 	localParams[29]:setString([[9]]);
 	localParams[29]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[29]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[29]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[29]:setAnchorPoint(0.50, 0.50);
 	localParams[29]:setContentSize({width = 15.0, height = 22.0});
 	localParams[29]:setPosition(70.5, 34.0);
@@ -406,7 +403,7 @@ function DivinationLayer:initView()
 	localParams[31].__Name = 'soul_btn#soul_img4';
 	localParams[27]:addChild(localParams[31]);
 
-	localParams[32] = Node:create();
+	localParams[32] = Widget:create();
 	localParams[32]:setAnchorPoint(0.00, 0.00);
 	localParams[32]:setScaleX(0.90);
 	localParams[32]:setScaleY(0.90);
@@ -447,7 +444,7 @@ function DivinationLayer:initView()
 	localParams[35]:setFontSize(20);
 	localParams[35]:setString([[]]);
 	localParams[35]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[35]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[35]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[35]:setAnchorPoint(0.50, 0.50);
 	localParams[35]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[35]:setContentSize({width = 103.0, height = 24.0});
@@ -476,7 +473,7 @@ function DivinationLayer:initView()
 	localParams[37]:setFontSize(20);
 	localParams[37]:setString([[]]);
 	localParams[37]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[37]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[37]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[37]:setAnchorPoint(0.50, 0.50);
 	localParams[37]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[37]:setContentSize({width = 103.0, height = 24.0});
@@ -527,7 +524,7 @@ function DivinationLayer:initView()
 	localParams[41]:setFontSize(20);
 	localParams[41]:setString([[]]);
 	localParams[41]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[41]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[41]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[41]:setAnchorPoint(0.50, 0.50);
 	localParams[41]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[41]:setContentSize({width = 103.0, height = 24.0});
@@ -567,7 +564,7 @@ function DivinationLayer:initView()
 	localParams[44]:setFontSize(20);
 	localParams[44]:setString([[]]);
 	localParams[44]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[44]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[44]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[44]:setAnchorPoint(0.50, 0.50);
 	localParams[44]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[44]:setContentSize({width = 103.0, height = 24.0});
@@ -607,7 +604,7 @@ function DivinationLayer:initView()
 	localParams[47]:setFontSize(20);
 	localParams[47]:setString([[]]);
 	localParams[47]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[47]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[47]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[47]:setAnchorPoint(0.50, 0.50);
 	localParams[47]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[47]:setContentSize({width = 103.0, height = 24.0});
@@ -647,7 +644,7 @@ function DivinationLayer:initView()
 	localParams[50]:setFontSize(20);
 	localParams[50]:setString([[]]);
 	localParams[50]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[50]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[50]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[50]:setAnchorPoint(0.50, 0.50);
 	localParams[50]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[50]:setContentSize({width = 103.0, height = 24.0});
@@ -693,7 +690,7 @@ function DivinationLayer:initView()
 	localParams[54]:setFontSize(16);
 	localParams[54]:setString([[]]);
 	localParams[54]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[54]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[54]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[54]:setAnchorPoint(0.00, 0.50);
 	localParams[54]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[54]:setContentSize({width = 82.0, height = 20.0});
@@ -736,7 +733,7 @@ function DivinationLayer:initView()
 	localParams[58]:setFontSize(16);
 	localParams[58]:setString([[]]);
 	localParams[58]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[58]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[58]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[58]:setAnchorPoint(0.00, 0.50);
 	localParams[58]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[58]:setContentSize({width = 82.0, height = 20.0});
@@ -779,7 +776,7 @@ function DivinationLayer:initView()
 	localParams[62]:setFontSize(16);
 	localParams[62]:setString([[]]);
 	localParams[62]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[62]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[62]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[62]:setAnchorPoint(0.00, 0.50);
 	localParams[62]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[62]:setContentSize({width = 82.0, height = 20.0});
@@ -822,7 +819,7 @@ function DivinationLayer:initView()
 	localParams[66]:setFontSize(16);
 	localParams[66]:setString([[]]);
 	localParams[66]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[66]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[66]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[66]:setAnchorPoint(0.00, 0.50);
 	localParams[66]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[66]:setContentSize({width = 82.0, height = 20.0});
@@ -865,7 +862,7 @@ function DivinationLayer:initView()
 	localParams[70]:setFontSize(16);
 	localParams[70]:setString([[]]);
 	localParams[70]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[70]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[70]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[70]:setAnchorPoint(0.00, 0.50);
 	localParams[70]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[70]:setContentSize({width = 82.0, height = 20.0});
@@ -908,7 +905,7 @@ function DivinationLayer:initView()
 	localParams[74]:setFontSize(16);
 	localParams[74]:setString([[]]);
 	localParams[74]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[74]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[74]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[74]:setAnchorPoint(0.00, 0.50);
 	localParams[74]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[74]:setContentSize({width = 82.0, height = 20.0});
@@ -951,7 +948,7 @@ function DivinationLayer:initView()
 	localParams[78]:setFontSize(16);
 	localParams[78]:setString([[]]);
 	localParams[78]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[78]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[78]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[78]:setAnchorPoint(0.00, 0.50);
 	localParams[78]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[78]:setContentSize({width = 82.0, height = 20.0});

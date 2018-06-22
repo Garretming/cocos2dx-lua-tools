@@ -24,12 +24,9 @@ def parse(node, array):
 
             if (array.get('SingleColor') != None): 
                 SingleColor = [255,255,255]
-                if (array['SingleColor'].get('R') != None):
-                    SingleColor[0] = array['SingleColor']['R']
-                if (array['SingleColor'].get('G') != None):
-                    SingleColor[1] = array['SingleColor']['G']
-                if (array['SingleColor'].get('B') != None):
-                    SingleColor[2] = array['SingleColor']['B']
+                    SingleColor[0] = array['SingleColor'].get('R', 255)
+                    SingleColor[1] = array['SingleColor'].get('G', 255)
+                    SingleColor[2] = array['SingleColor'].get('B', 255)
                 
                 if (SingleColor[0] != 255 or SingleColor[1] != 255 or SingleColor[2] != 255): 
                     string += "\t%s:setBackGroundColor({r = %d, g = %d, b = %d});\n" % (node, SingleColor[0], SingleColor[1], SingleColor[2])
@@ -38,20 +35,14 @@ def parse(node, array):
             string += "\t%s:setBackGroundColorType(2);\n" % (node)
             if (array.get('FirstColor') != None and array.get('EndColor') != None): 
                 FirstColor = [255,255,255]
-                if (array['FirstColor'].get('R') != None):
-                    FirstColor[0] = array['FirstColor']['R']
-                if (array['FirstColor'].get('G') != None):
-                    FirstColor[1] = array['FirstColor']['G']
-                if (array['FirstColor'].get('B') != None):
-                    FirstColor[2] = array['FirstColor']['B']
+                FirstColor[0] = array['FirstColor'].get('R', 255)
+                FirstColor[1] = array['FirstColor'].get('G', 255)
+                FirstColor[2] = array['FirstColor'].get('B', 255)
 
                 EndColor = [255,255,255]
-                if (array['EndColor'].get('R') != None):
-                    EndColor[0] = array['EndColor']['R']
-                if (array['EndColor'].get('G') != None):
-                    EndColor[1] = array['EndColor']['G']
-                if (array['EndColor'].get('B') != None):
-                    EndColor[2] = array['EndColor']['B']
+                EndColor[0] = array['EndColor'].get('R', 255)
+                EndColor[1] = array['EndColor'].get('G', 255)
+                EndColor[2] = array['EndColor'].get('B', 255)
                 
                 string += "\t%s:setBackGroundColor({r = %d, g = %d, b = %d}, {r = %d, g = %d, b = %d});\n" % (node, FirstColor[0], FirstColor[1], FirstColor[2], EndColor[0], EndColor[1], EndColor[2])
 

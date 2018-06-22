@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：ResourcesLoadingLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -50,7 +47,7 @@ function ResourcesLoadingLayer:initView()
 	localParams[2].__Name = 'Sprite_1#loading';
 	localParams[1]:addChild(localParams[2]);
 
-	localParams[3] = LoadingBar:create(''uires/public/sheet_common/other0179.png'', 1, 0.00);
+	localParams[3] = LoadingBar:create('uires/public/sheet_common/other0179.png', 1, 0.00);
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 882.0, height = 26.0});
 	localParams[3]:setPosition(482.0, 19.0);
@@ -63,7 +60,7 @@ function ResourcesLoadingLayer:initView()
 	localParams[4]:setFontSize(24);
 	localParams[4]:setString([[0%]]);
 	localParams[4]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[4]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[4]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setContentSize({width = 38.0, height = 28.0});
 	localParams[4]:setPosition(482.0, 19.0);

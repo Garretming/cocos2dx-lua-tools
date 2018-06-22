@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：ChangeLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -109,7 +106,7 @@ function ChangeLayer:initView()
 	localParams[7]:setFontSize(24);
 	localParams[7]:setString([[变更头像]]);
 	localParams[7]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[7]:setContentSize({width = 100.0, height = 26.0});
@@ -193,7 +190,7 @@ function ChangeLayer:initView()
 	localParams[13].__Name = 'bg#cancel#sure';
 	localParams[12]:addChild(localParams[13]);
 
-	localParams[14] = Node:create();
+	localParams[14] = Widget:create();
 	localParams[14]:setAnchorPoint(0.00, 0.00);
 	localParams[14]:setScaleX(0.90);
 	localParams[14]:setScaleY(0.90);
@@ -230,7 +227,7 @@ function ChangeLayer:initView()
 	localParams[16].__Name = 'bg#sure_btn#sure';
 	localParams[15]:addChild(localParams[16]);
 
-	localParams[17] = Node:create();
+	localParams[17] = Widget:create();
 	localParams[17]:setAnchorPoint(0.00, 0.00);
 	localParams[17]:setScaleX(0.90);
 	localParams[17]:setScaleY(0.90);

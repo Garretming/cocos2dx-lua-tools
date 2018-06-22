@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：TipPopupNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -42,7 +39,7 @@ function TipPopupNode:initView()
 	localParams[1].__Name = 'tip';
 	self:addChild(localParams[1]);
 
-	localParams[2] = Node:create();
+	localParams[2] = Widget:create();
 	localParams[2]:setAnchorPoint(0.00, 0.00);
 	localParams[2]:setContentSize({width = 0.0, height = 0.0});
 	localParams[2]:setPosition(0.0, 200.0);
@@ -67,7 +64,7 @@ function TipPopupNode:initView()
 	localParams[4]:setString([[]]);
 	localParams[4]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[4]:setTextAreaSize({width = 260, height = 0});
-	localParams[4]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[4]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[4]:setAnchorPoint(0.50, 1.00);
 	localParams[4]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[4]:setContentSize({width = 260.0, height = 0.0});
@@ -81,7 +78,7 @@ function TipPopupNode:initView()
 	localParams[5]:setFontSize(22);
 	localParams[5]:setString([[汉谟拉比法典]]);
 	localParams[5]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[5]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[5]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[5]:setAnchorPoint(0.00, 1.00);
 	localParams[5]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[5]:setContentSize({width = 137.0, height = 26.0});
@@ -95,7 +92,7 @@ function TipPopupNode:initView()
 	localParams[6]:setFontSize(20);
 	localParams[6]:setString([[拥有:]]);
 	localParams[6]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[6]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[6]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[6]:setAnchorPoint(0.00, 0.50);
 	localParams[6]:setContentSize({width = 52.0, height = 24.0});
 	localParams[6]:setPosition(110.0, -79.0);
@@ -108,7 +105,7 @@ function TipPopupNode:initView()
 	localParams[7]:setFontSize(22);
 	localParams[7]:setString([[99999]]);
 	localParams[7]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[7]:setAnchorPoint(0.00, 0.50);
 	localParams[7]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[7]:setContentSize({width = 69.0, height = 26.0});
@@ -131,7 +128,7 @@ function TipPopupNode:initView()
 	localParams[8].__Name = 'tip1';
 	self:addChild(localParams[8]);
 
-	localParams[9] = Node:create();
+	localParams[9] = Widget:create();
 	localParams[9]:setAnchorPoint(0.00, 0.00);
 	localParams[9]:setContentSize({width = 0.0, height = 0.0});
 	localParams[9]:setPosition(0.0, 260.0);
@@ -144,7 +141,7 @@ function TipPopupNode:initView()
 	localParams[10]:setFontSize(24);
 	localParams[10]:setString([[重甲奇兵]]);
 	localParams[10]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[10]:setAnchorPoint(0.50, 1.00);
 	localParams[10]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[10]:setContentSize({width = 100.0, height = 26.0});
@@ -158,7 +155,7 @@ function TipPopupNode:initView()
 	localParams[11]:setFontSize(20);
 	localParams[11]:setString([[定位：]]);
 	localParams[11]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[11]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[11]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[11]:setAnchorPoint(0.00, 0.50);
 	localParams[11]:setContentSize({width = 52.0, height = 27.0});
 	localParams[11]:setPosition(20.0, -75.0);
@@ -171,7 +168,7 @@ function TipPopupNode:initView()
 	localParams[12]:setFontSize(20);
 	localParams[12]:setString([[消耗怒气:]]);
 	localParams[12]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[12]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[12]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[12]:setAnchorPoint(0.00, 0.50);
 	localParams[12]:setContentSize({width = 89.0, height = 27.0});
 	localParams[12]:setPosition(146.0, -75.0);
@@ -184,7 +181,7 @@ function TipPopupNode:initView()
 	localParams[13]:setFontSize(20);
 	localParams[13]:setString([[1]]);
 	localParams[13]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[13]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[13]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[13]:setAnchorPoint(0.00, 0.50);
 	localParams[13]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[13]:setContentSize({width = 11.0, height = 27.0});
@@ -198,7 +195,7 @@ function TipPopupNode:initView()
 	localParams[14]:setFontSize(20);
 	localParams[14]:setString([[稀有]]);
 	localParams[14]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[14]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[14]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[14]:setAnchorPoint(0.00, 0.50);
 	localParams[14]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[14]:setContentSize({width = 45.0, height = 27.0});
@@ -213,7 +210,7 @@ function TipPopupNode:initView()
 	localParams[15]:setString([[]]);
 	localParams[15]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[15]:setTextAreaSize({width = 260, height = 0});
-	localParams[15]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[15]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[15]:setAnchorPoint(0.00, 1.00);
 	localParams[15]:setContentSize({width = 260.0, height = 0.0});
 	localParams[15]:setPosition(15.0, -100.0);

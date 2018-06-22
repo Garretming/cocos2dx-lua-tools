@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：DetailsLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -85,7 +82,7 @@ function DetailsLayer:initView()
 	localParams[5]:setFontSize(18);
 	localParams[5]:setString([[昵称：]]);
 	localParams[5]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[5]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[5]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[5]:setAnchorPoint(1.00, 0.50);
 	localParams[5]:setTextColor({r = 155, g = 125, b = 100});
 	localParams[5]:setContentSize({width = 52.0, height = 22.0});
@@ -99,7 +96,7 @@ function DetailsLayer:initView()
 	localParams[6]:setFontSize(18);
 	localParams[6]:setString([[邀请您进行竞技...]]);
 	localParams[6]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[6]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[6]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[6]:setAnchorPoint(0.00, 0.50);
 	localParams[6]:setTextColor({r = 255, g = 255, b = 0});
 	localParams[6]:setContentSize({width = 156.0, height = 22.0});
@@ -133,7 +130,7 @@ function DetailsLayer:initView()
 	localParams[9]:setFontSize(20);
 	localParams[9]:setString([[LV:25]]);
 	localParams[9]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[9]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[9]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:setTextColor({r = 240, g = 202, b = 60});
 	localParams[9]:setContentSize({width = 55.0, height = 24.0});
@@ -159,7 +156,7 @@ function DetailsLayer:initView()
 	localParams[11]:setFontSize(18);
 	localParams[11]:setString([[uid：]]);
 	localParams[11]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[11]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[11]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[11]:setAnchorPoint(1.00, 0.50);
 	localParams[11]:setTextColor({r = 155, g = 125, b = 100});
 	localParams[11]:setContentSize({width = 43.0, height = 22.0});
@@ -173,7 +170,7 @@ function DetailsLayer:initView()
 	localParams[12]:setFontSize(18);
 	localParams[12]:setString([[邀请您进行竞技...]]);
 	localParams[12]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[12]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[12]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[12]:setAnchorPoint(0.00, 0.50);
 	localParams[12]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[12]:setContentSize({width = 156.0, height = 22.0});
@@ -197,7 +194,7 @@ function DetailsLayer:initView()
 	localParams[13].__Name = 'bg_img#friendApply';
 	localParams[1]:addChild(localParams[13]);
 
-	localParams[14] = Node:create();
+	localParams[14] = Widget:create();
 	localParams[14]:setAnchorPoint(0.00, 0.00);
 	localParams[14]:setScaleX(0.90);
 	localParams[14]:setScaleY(0.90);
@@ -231,7 +228,7 @@ function DetailsLayer:initView()
 	localParams[16].__Name = 'bg_img#refuse_btn';
 	localParams[1]:addChild(localParams[16]);
 
-	localParams[17] = Node:create();
+	localParams[17] = Widget:create();
 	localParams[17]:setAnchorPoint(0.00, 0.00);
 	localParams[17]:setScaleX(0.90);
 	localParams[17]:setScaleY(0.90);
@@ -265,7 +262,7 @@ function DetailsLayer:initView()
 	localParams[19].__Name = 'bg_img#personalInfo';
 	localParams[1]:addChild(localParams[19]);
 
-	localParams[20] = Node:create();
+	localParams[20] = Widget:create();
 	localParams[20]:setAnchorPoint(0.00, 0.00);
 	localParams[20]:setScaleX(0.90);
 	localParams[20]:setScaleY(0.90);
@@ -302,7 +299,7 @@ function DetailsLayer:initView()
 	localParams[22].__Name = 'bg_img#close_btn';
 	localParams[1]:addChild(localParams[22]);
 
-	localParams[23] = Node:create();
+	localParams[23] = Widget:create();
 	localParams[23]:setAnchorPoint(0.00, 0.00);
 	localParams[23]:setScaleX(0.90);
 	localParams[23]:setScaleY(0.90);

@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：CheckPopupLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -63,7 +60,7 @@ function CheckPopupLayer:initView()
 	localParams[3]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[3]:setTextAreaSize({width = 340, height = 100});
 	localParams[3]:setTextHorizontalAlignment(1);
-	localParams[3]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[3]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[3]:setDefaultShadow({r = 110, g = 110, b = 110, a = 255}, {width = 2.000000, height = -2.000000});
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 340.0, height = 100.0});
@@ -89,7 +86,7 @@ function CheckPopupLayer:initView()
 	localParams[4].__Name = 'Image_1#Button_1';
 	localParams[1]:addChild(localParams[4]);
 
-	localParams[5] = Node:create();
+	localParams[5] = Widget:create();
 	localParams[5]:setAnchorPoint(0.00, 0.00);
 	localParams[5]:setScaleX(0.90);
 	localParams[5]:setScaleY(0.90);
@@ -125,7 +122,7 @@ function CheckPopupLayer:initView()
 	localParams[7].__Name = 'Image_1#Button_1_0';
 	localParams[1]:addChild(localParams[7]);
 
-	localParams[8] = Node:create();
+	localParams[8] = Widget:create();
 	localParams[8]:setAnchorPoint(0.00, 0.00);
 	localParams[8]:setScaleX(0.90);
 	localParams[8]:setScaleY(0.90);

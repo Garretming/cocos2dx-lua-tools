@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：ChattingLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -86,7 +83,7 @@ function ChattingLayer:initView()
 	localParams[5]:setBackGroundColor({r = 150, g = 150, b = 255});
 	localParams[5]:setBackGroundColorOpacity(0);
 	localParams[5]:setAnchorPoint(0.00, 0.00);
-	localParams[5]:onClick(handler(self, self._onListViewSystem));
+	localParams[5]:setEventCallback(handler(self, self._onListViewSystem));
 	localParams[5]:setTouchEnabled(true);
 	localParams[5]:setContentSize({width = 570.0, height = WinSize.height - 180.00});
 	localParams[5]:setPosition(0.0, localParams[4]:getContentSize().height - 466.48);
@@ -140,7 +137,7 @@ function ChattingLayer:initView()
 	localParams[9]:setBackGroundColor({r = 150, g = 150, b = 255});
 	localParams[9]:setBackGroundColorOpacity(0);
 	localParams[9]:setAnchorPoint(0.00, 0.00);
-	localParams[9]:onClick(handler(self, self._onListViewWorld));
+	localParams[9]:setEventCallback(handler(self, self._onListViewWorld));
 	localParams[9]:setTouchEnabled(true);
 	localParams[9]:setContentSize({width = 570.0, height = WinSize.height - 180.00});
 	localParams[9]:setPosition(-0.0, localParams[8]:getContentSize().height - 466.48);
@@ -165,7 +162,7 @@ function ChattingLayer:initView()
 	localParams[10].__Name = 'bg_img#under_img2#Panel_2#send_btn';
 	localParams[8]:addChild(localParams[10]);
 
-	localParams[11] = Node:create();
+	localParams[11] = Widget:create();
 	localParams[11]:setAnchorPoint(0.00, 0.00);
 	localParams[11]:setScaleX(0.80);
 	localParams[11]:setScaleY(0.80);
@@ -201,9 +198,7 @@ function ChattingLayer:initView()
 	localParams[14]:setFontSize(20);
 	localParams[14]:setPlaceholderFontSize(20);
 	localParams[14]:setPlaceHolder([[点击输入文字]]);
-	localParams[14]:setMaxLengthEnabled(true);
 	localParams[14]:setMaxLength(40);
-	localParams[14]:setPasswordEnabled(false);
 	localParams[14]:setAnchorPoint(0.00, 0.50);
 	localParams[14]:setColor({r = 191, g = 191, b = 191});
 	localParams[14]:registerScriptEditBoxHandler(handler(self, self._onCommentText));
@@ -338,6 +333,22 @@ function ChattingLayer:loadPlistResources()
 end
 
 
+--@callback:('count', listView)                              --总共cell数量
+--@callback:('size', listView, row)                          --每个cell的尺寸
+--@callback:('delay', listView, row, column, index)          --每个cell上item延时创建的时间
+--@callback:('add', listView, row, column, index, cell)      --添加每个item
+--@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
+--@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
+function ChattingLayer:_onListViewSystem(eventName, listView, row, column, index, cell)
+    if self.m_ClickDelegate and self.m_ClickDelegate.onListViewSystem then
+        return self.m_ClickDelegate:onListViewSystem(eventName, listView, row, column, index, cell);
+    end
+    if self.onListViewSystem then
+        return self:onListViewSystem(eventName, listView, row, column, index, cell);
+    end
+end
+
+
 function ChattingLayer:_closeBtn(sender)
     if self.m_ClickDelegate and self.m_ClickDelegate.closeBtn then
         return self.m_ClickDelegate:closeBtn(sender);
@@ -375,6 +386,22 @@ function ChattingLayer:_onTabMenu(sender)
     end
     if self.onTabMenu then
         return self:onTabMenu(sender);
+    end
+end
+
+
+--@callback:('count', listView)                              --总共cell数量
+--@callback:('size', listView, row)                          --每个cell的尺寸
+--@callback:('delay', listView, row, column, index)          --每个cell上item延时创建的时间
+--@callback:('add', listView, row, column, index, cell)      --添加每个item
+--@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
+--@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
+function ChattingLayer:_onListViewWorld(eventName, listView, row, column, index, cell)
+    if self.m_ClickDelegate and self.m_ClickDelegate.onListViewWorld then
+        return self.m_ClickDelegate:onListViewWorld(eventName, listView, row, column, index, cell);
+    end
+    if self.onListViewWorld then
+        return self:onListViewWorld(eventName, listView, row, column, index, cell);
     end
 end
 

@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：LadderLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -76,7 +73,7 @@ function LadderLayer:initView()
 	localParams[5].__Name = 'star#Sprite_2';
 	localParams[3]:addChild(localParams[5]);
 
-	localParams[6] = ImageView:create(, 0);
+	localParams[6] = ImageView:create(nil, 0);
 	localParams[6]:setAnchorPoint(0.50, 0.50);
 	localParams[6]:setContentSize({width = 46.0, height = 46.0});
 	localParams[6]:setPosition(193.0, 193.0);
@@ -107,7 +104,7 @@ function LadderLayer:initView()
 	localParams[8].__Name = 'star#rank_atlasLabel';
 	localParams[3]:addChild(localParams[8]);
 
-	localParams[9] = Node:create();
+	localParams[9] = Widget:create();
 	localParams[9]:setAnchorPoint(0.00, 0.00);
 	localParams[9]:setVisible(false);
 	localParams[9]:setContentSize({width = 0.0, height = 0.0});
@@ -222,7 +219,7 @@ function LadderLayer:initView()
 	localParams[19].__Name = 'star#Node_1#star5#sprite';
 	localParams[18]:addChild(localParams[19]);
 
-	localParams[20] = Node:create();
+	localParams[20] = Widget:create();
 	localParams[20]:setAnchorPoint(0.00, 0.00);
 	localParams[20]:setVisible(false);
 	localParams[20]:setContentSize({width = 0.0, height = 0.0});
@@ -316,7 +313,7 @@ function LadderLayer:initView()
 	localParams[28].__Name = 'star#Node_2#star4#sprite';
 	localParams[27]:addChild(localParams[28]);
 
-	localParams[29] = Node:create();
+	localParams[29] = Widget:create();
 	localParams[29]:setAnchorPoint(0.00, 0.00);
 	localParams[29]:setVisible(false);
 	localParams[29]:setContentSize({width = 0.0, height = 0.0});
@@ -389,7 +386,7 @@ function LadderLayer:initView()
 	localParams[35].__Name = 'star#Node_3#star3#sprite';
 	localParams[34]:addChild(localParams[35]);
 
-	localParams[36] = Node:create();
+	localParams[36] = Widget:create();
 	localParams[36]:setAnchorPoint(0.00, 0.00);
 	localParams[36]:setVisible(false);
 	localParams[36]:setContentSize({width = 0.0, height = 0.0});
@@ -444,7 +441,7 @@ function LadderLayer:initView()
 	localParams[41]:setFontSize(32);
 	localParams[41]:setString([[最强王者]]);
 	localParams[41]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[41]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[41]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[41]:setAnchorPoint(0.50, 0.50);
 	localParams[41]:setContentSize({width = 133.0, height = 36.0});
 	localParams[41]:setPosition(128.5, 40.95);
@@ -528,7 +525,7 @@ function LadderLayer:initView()
 	localParams[47].__Name = '__FULL_LAYER#help_btn';
 	localParams[42]:addChild(localParams[47]);
 
-	localParams[48] = Node:create();
+	localParams[48] = Widget:create();
 	localParams[48]:setAnchorPoint(0.00, 0.00);
 	localParams[48]:setScaleX(0.90);
 	localParams[48]:setScaleY(0.90);
@@ -553,7 +550,7 @@ function LadderLayer:initView()
 	localParams[49].__Name = 'startMatch_btn';
 	self:addChild(localParams[49]);
 
-	localParams[50] = Node:create();
+	localParams[50] = Widget:create();
 	localParams[50]:setAnchorPoint(0.00, 0.00);
 	localParams[50]:setScaleX(0.90);
 	localParams[50]:setScaleY(0.90);
@@ -587,7 +584,7 @@ function LadderLayer:initView()
 	localParams[52].__Name = 'rank_btn';
 	self:addChild(localParams[52]);
 
-	localParams[53] = Node:create();
+	localParams[53] = Widget:create();
 	localParams[53]:setAnchorPoint(0.00, 0.00);
 	localParams[53]:setScaleX(0.90);
 	localParams[53]:setScaleY(0.90);
@@ -623,7 +620,7 @@ function LadderLayer:initView()
 	localParams[56]:setFontSize(20);
 	localParams[56]:setString([[]]);
 	localParams[56]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[56]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[56]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[56]:setAnchorPoint(0.50, 0.50);
 	localParams[56]:setContentSize({width = 0.0, height = 0.0});
 	localParams[56]:setPosition(300.0, 137.0);
@@ -667,7 +664,7 @@ function LadderLayer:initView()
 	localParams[60]:setFontSize(20);
 	localParams[60]:setString([[总场次]]);
 	localParams[60]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[60]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[60]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[60]:setAnchorPoint(0.00, 0.50);
 	localParams[60]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[60]:setContentSize({width = 65.0, height = 24.0});
@@ -681,7 +678,7 @@ function LadderLayer:initView()
 	localParams[61]:setFontSize(22);
 	localParams[61]:setString([[666]]);
 	localParams[61]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[61]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[61]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[61]:setAnchorPoint(0.50, 0.50);
 	localParams[61]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[61]:setContentSize({width = 43.0, height = 24.0});
@@ -706,7 +703,7 @@ function LadderLayer:initView()
 	localParams[63]:setFontSize(20);
 	localParams[63]:setString([[胜 场]]);
 	localParams[63]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[63]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[63]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[63]:setAnchorPoint(0.00, 0.50);
 	localParams[63]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[63]:setContentSize({width = 55.0, height = 24.0});
@@ -720,7 +717,7 @@ function LadderLayer:initView()
 	localParams[64]:setFontSize(22);
 	localParams[64]:setString([[666]]);
 	localParams[64]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[64]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[64]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[64]:setAnchorPoint(0.50, 0.50);
 	localParams[64]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[64]:setContentSize({width = 43.0, height = 24.0});
@@ -745,7 +742,7 @@ function LadderLayer:initView()
 	localParams[66]:setFontSize(20);
 	localParams[66]:setString([[胜 率]]);
 	localParams[66]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[66]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[66]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[66]:setAnchorPoint(0.00, 0.50);
 	localParams[66]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[66]:setContentSize({width = 55.0, height = 24.0});
@@ -759,7 +756,7 @@ function LadderLayer:initView()
 	localParams[67]:setFontSize(22);
 	localParams[67]:setString([[66.66%]]);
 	localParams[67]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[67]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[67]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[67]:setAnchorPoint(0.50, 0.50);
 	localParams[67]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[67]:setContentSize({width = 78.0, height = 24.0});
@@ -787,7 +784,7 @@ function LadderLayer:initView()
 	localParams[69]:setFontSize(16);
 	localParams[69]:setString([[赛季结算奖励]]);
 	localParams[69]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[69]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[69]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[69]:setAnchorPoint(0.50, 0.50);
 	localParams[69]:setTextColor({r = 0, g = 255, b = 0});
 	localParams[69]:setContentSize({width = 101.0, height = 20.0});
@@ -813,7 +810,7 @@ function LadderLayer:initView()
 	localParams[70].__Name = 'formation_btn';
 	self:addChild(localParams[70]);
 
-	localParams[71] = Node:create();
+	localParams[71] = Widget:create();
 	localParams[71]:setAnchorPoint(0.00, 0.00);
 	localParams[71]:setScaleX(0.90);
 	localParams[71]:setScaleY(0.90);
@@ -837,7 +834,7 @@ function LadderLayer:initView()
 	localParams[73]:setFontSize(20);
 	localParams[73]:setString([[灵魂突破三]]);
 	localParams[73]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[73]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[73]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[73]:setAnchorPoint(0.50, 0.50);
 	localParams[73]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[73]:setContentSize({width = 104.0, height = 22.0});
@@ -876,7 +873,7 @@ function LadderLayer:initView()
 	localParams[75].__Name = 'Image_7#Button_1';
 	localParams[74]:addChild(localParams[75]);
 
-	localParams[76] = Node:create();
+	localParams[76] = Widget:create();
 	localParams[76]:setAnchorPoint(0.00, 0.00);
 	localParams[76]:setScaleX(0.90);
 	localParams[76]:setScaleY(0.90);
@@ -903,7 +900,7 @@ function LadderLayer:initView()
 	localParams[78]:setFontSize(18);
 	localParams[78]:setString([[战斗奖励次数]]);
 	localParams[78]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[78]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[78]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[78]:setAnchorPoint(0.50, 0.50);
 	localParams[78]:setContentSize({width = 113.0, height = 22.0});
 	localParams[78]:setPosition(93.99, 38.07);
@@ -916,7 +913,7 @@ function LadderLayer:initView()
 	localParams[79]:setFontSize(16);
 	localParams[79]:setString([[下次回复：00:00:00]]);
 	localParams[79]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[79]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[79]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[79]:setAnchorPoint(0.50, 0.50);
 	localParams[79]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[79]:setContentSize({width = 147.0, height = 22.0});
@@ -943,7 +940,7 @@ function LadderLayer:initView()
 	localParams[80].__Name = 'trainbtn';
 	self:addChild(localParams[80]);
 
-	localParams[81] = Node:create();
+	localParams[81] = Widget:create();
 	localParams[81]:setAnchorPoint(0.00, 0.00);
 	localParams[81]:setScaleX(0.90);
 	localParams[81]:setScaleY(0.90);

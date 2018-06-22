@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：FriendsLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -71,7 +68,7 @@ function FriendsLayer:initView()
 	localParams[3].__Name = 'bg_img#addBg_img#search_btn';
 	localParams[2]:addChild(localParams[3]);
 
-	localParams[4] = Node:create();
+	localParams[4] = Widget:create();
 	localParams[4]:setAnchorPoint(0.00, 0.00);
 	localParams[4]:setScaleX(0.90);
 	localParams[4]:setScaleY(0.90);
@@ -98,9 +95,7 @@ function FriendsLayer:initView()
 	localParams[6]:setFontSize(22);
 	localParams[6]:setPlaceholderFontSize(22);
 	localParams[6]:setPlaceHolder([[可输入名称或用户ID搜索...]]);
-	localParams[6]:setMaxLengthEnabled(true);
 	localParams[6]:setMaxLength(15);
-	localParams[6]:setPasswordEnabled(false);
 	localParams[6]:setAnchorPoint(0.00, 0.50);
 	localParams[6]:setColor({r = 191, g = 191, b = 191});
 	localParams[6]:registerScriptEditBoxHandler(handler(self, self._onCommentSearch));
@@ -151,7 +146,7 @@ function FriendsLayer:initView()
 	localParams[10]:setFontSize(20);
 	localParams[10]:setString([[无推荐好友！]]);
 	localParams[10]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[10]:setAnchorPoint(0.50, 0.50);
 	localParams[10]:setTextColor({r = 155, g = 125, b = 100});
 	localParams[10]:setContentSize({width = 113.0, height = 24.0});
@@ -177,7 +172,7 @@ function FriendsLayer:initView()
 	localParams[12]:setDefaultFontSize(20);
 	localParams[12]:setString([[搜索结果：]]);
 	localParams[12]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[12]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[12]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[12]:setAnchorPoint(0.00, 0.50);
 	localParams[12]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[12]:setContentSize({width = 97.0, height = 24.0});
@@ -240,7 +235,7 @@ function FriendsLayer:initView()
 	localParams[17]:setDefaultFontSize(20);
 	localParams[17]:setString([[好友申请：]]);
 	localParams[17]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[17]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[17]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[17]:setAnchorPoint(0.00, 0.50);
 	localParams[17]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[17]:setContentSize({width = 97.0, height = 24.0});
@@ -303,7 +298,7 @@ function FriendsLayer:initView()
 	localParams[22]:setFontSize(20);
 	localParams[22]:setString([[暂无好友！]]);
 	localParams[22]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[22]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[22]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[22]:setAnchorPoint(0.50, 0.50);
 	localParams[22]:setTextColor({r = 155, g = 125, b = 100});
 	localParams[22]:setContentSize({width = 93.0, height = 24.0});
@@ -329,7 +324,7 @@ function FriendsLayer:initView()
 	localParams[24]:setDefaultFontSize(20);
 	localParams[24]:setString([[好友：]]);
 	localParams[24]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[24]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[24]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[24]:setAnchorPoint(0.00, 0.50);
 	localParams[24]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[24]:setContentSize({width = 57.0, height = 24.0});
@@ -346,7 +341,7 @@ function FriendsLayer:initView()
 	localParams[25]:setBackGroundColor({r = 150, g = 150, b = 255});
 	localParams[25]:setBackGroundColorOpacity(0);
 	localParams[25]:setAnchorPoint(0.00, 0.00);
-	localParams[25]:onClick(handler(self, self._onListViewLeft));
+	localParams[25]:setEventCallback(handler(self, self._onListViewLeft));
 	localParams[25]:setTouchEnabled(true);
 	localParams[25]:setContentSize({width = 280.0, height = 440.0});
 	localParams[25]:setPosition(-2.5, 6.0);
@@ -404,7 +399,7 @@ function FriendsLayer:initView()
 	localParams[30]:setFontSize(26);
 	localParams[30]:setString([[LV:25]]);
 	localParams[30]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[30]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[30]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[30]:setAnchorPoint(0.00, 0.50);
 	localParams[30]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[30]:setContentSize({width = 69.0, height = 30.0});
@@ -430,7 +425,7 @@ function FriendsLayer:initView()
 	localParams[32]:setFontSize(20);
 	localParams[32]:setString([[]]);
 	localParams[32]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[32]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[32]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[32]:setAnchorPoint(0.50, 0.50);
 	localParams[32]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[32]:setContentSize({width = 0.0, height = 0.0});
@@ -456,7 +451,7 @@ function FriendsLayer:initView()
 	localParams[34]:setFontSize(20);
 	localParams[34]:setString([[]]);
 	localParams[34]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[34]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[34]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[34]:setAnchorPoint(0.50, 0.50);
 	localParams[34]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[34]:setContentSize({width = 0.0, height = 0.0});
@@ -485,7 +480,7 @@ function FriendsLayer:initView()
 	localParams[36]:setBackGroundColor({r = 150, g = 150, b = 255});
 	localParams[36]:setBackGroundColorOpacity(0);
 	localParams[36]:setAnchorPoint(0.00, 0.00);
-	localParams[36]:onClick(handler(self, self._onListView));
+	localParams[36]:setEventCallback(handler(self, self._onListView));
 	localParams[36]:setTouchEnabled(true);
 	localParams[36]:setContentSize({width = 520.0, height = 300.0});
 	localParams[36]:setPosition(5.0, 3.72);
@@ -510,7 +505,7 @@ function FriendsLayer:initView()
 	localParams[37].__Name = 'bg_img#friendBg_img#under_img2#Panel_1#send_btn';
 	localParams[27]:addChild(localParams[37]);
 
-	localParams[38] = Node:create();
+	localParams[38] = Widget:create();
 	localParams[38]:setAnchorPoint(0.00, 0.00);
 	localParams[38]:setScaleX(0.80);
 	localParams[38]:setScaleY(0.80);
@@ -546,9 +541,7 @@ function FriendsLayer:initView()
 	localParams[41]:setFontSize(20);
 	localParams[41]:setPlaceholderFontSize(20);
 	localParams[41]:setPlaceHolder([[点击输入文字]]);
-	localParams[41]:setMaxLengthEnabled(true);
 	localParams[41]:setMaxLength(40);
-	localParams[41]:setPasswordEnabled(false);
 	localParams[41]:setAnchorPoint(0.00, 0.50);
 	localParams[41]:setColor({r = 191, g = 191, b = 191});
 	localParams[41]:registerScriptEditBoxHandler(handler(self, self._onCommentText));
@@ -574,7 +567,7 @@ function FriendsLayer:initView()
 	localParams[42].__Name = 'bg_img#friendBg_img#under_img2#Panel_1#fight_btn';
 	localParams[27]:addChild(localParams[42]);
 
-	localParams[43] = Node:create();
+	localParams[43] = Widget:create();
 	localParams[43]:setAnchorPoint(0.00, 0.00);
 	localParams[43]:setScaleX(0.90);
 	localParams[43]:setScaleY(0.90);
@@ -589,7 +582,7 @@ function FriendsLayer:initView()
 	localParams[44]:setFontSize(20);
 	localParams[44]:setString([[决 斗]]);
 	localParams[44]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[44]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[44]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[44]:setAnchorPoint(0.50, 0.50);
 	localParams[44]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[44]:setContentSize({width = 54.0, height = 22.0});
@@ -603,7 +596,7 @@ function FriendsLayer:initView()
 	localParams[45]:setFontSize(20);
 	localParams[45]:setString([[04:25]]);
 	localParams[45]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[45]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[45]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[45]:setAnchorPoint(0.50, 0.50);
 	localParams[45]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[45]:setVisible(false);
@@ -628,7 +621,7 @@ function FriendsLayer:initView()
 	localParams[46].__Name = 'bg_img#friendBg_img#under_img2#Panel_1#data_btn';
 	localParams[27]:addChild(localParams[46]);
 
-	localParams[47] = Node:create();
+	localParams[47] = Widget:create();
 	localParams[47]:setAnchorPoint(0.00, 0.00);
 	localParams[47]:setScaleX(0.90);
 	localParams[47]:setScaleY(0.90);
@@ -643,7 +636,7 @@ function FriendsLayer:initView()
 	localParams[48]:setFontSize(20);
 	localParams[48]:setString([[数 据]]);
 	localParams[48]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[48]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[48]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[48]:setAnchorPoint(0.50, 0.50);
 	localParams[48]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[48]:setContentSize({width = 54.0, height = 22.0});
@@ -667,7 +660,7 @@ function FriendsLayer:initView()
 	localParams[49].__Name = 'bg_img#friendBg_img#under_img2#Panel_1#delete_btn';
 	localParams[27]:addChild(localParams[49]);
 
-	localParams[50] = Node:create();
+	localParams[50] = Widget:create();
 	localParams[50]:setAnchorPoint(0.00, 0.00);
 	localParams[50]:setScaleX(0.90);
 	localParams[50]:setScaleY(0.90);
@@ -682,7 +675,7 @@ function FriendsLayer:initView()
 	localParams[51]:setFontSize(20);
 	localParams[51]:setString([[删 除]]);
 	localParams[51]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[51]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[51]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[51]:setAnchorPoint(0.50, 0.50);
 	localParams[51]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[51]:setContentSize({width = 54.0, height = 22.0});
@@ -735,7 +728,7 @@ function FriendsLayer:initView()
 	localParams[55].__Name = 'bg_img#titleUnder_sprite#help_btn';
 	localParams[53]:addChild(localParams[55]);
 
-	localParams[56] = Node:create();
+	localParams[56] = Widget:create();
 	localParams[56]:setAnchorPoint(0.00, 0.00);
 	localParams[56]:setScaleX(0.90);
 	localParams[56]:setScaleY(0.90);
@@ -761,7 +754,7 @@ function FriendsLayer:initView()
 	localParams[57].__Name = 'bg_img#close_btn';
 	localParams[1]:addChild(localParams[57]);
 
-	localParams[58] = Node:create();
+	localParams[58] = Widget:create();
 	localParams[58]:setAnchorPoint(0.00, 0.00);
 	localParams[58]:setScaleX(0.90);
 	localParams[58]:setScaleY(0.90);
@@ -869,6 +862,22 @@ function FriendsLayer:loadPlistResources()
 end
 
 
+--@callback:('count', listView)                              --总共cell数量
+--@callback:('size', listView, row)                          --每个cell的尺寸
+--@callback:('delay', listView, row, column, index)          --每个cell上item延时创建的时间
+--@callback:('add', listView, row, column, index, cell)      --添加每个item
+--@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
+--@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
+function FriendsLayer:_onListView(eventName, listView, row, column, index, cell)
+    if self.m_ClickDelegate and self.m_ClickDelegate.onListView then
+        return self.m_ClickDelegate:onListView(eventName, listView, row, column, index, cell);
+    end
+    if self.onListView then
+        return self:onListView(eventName, listView, row, column, index, cell);
+    end
+end
+
+
 function FriendsLayer:_onTabMenu(sender)
     if self.m_ClickDelegate and self.m_ClickDelegate.onTabMenu then
         return self.m_ClickDelegate:onTabMenu(sender);
@@ -967,6 +976,22 @@ function FriendsLayer:_onCommentSearch(eventName, editBox)
     end
     if self.onCommentSearch then
         return self:onCommentSearch(eventName, editBox);
+    end
+end
+
+
+--@callback:('count', listView)                              --总共cell数量
+--@callback:('size', listView, row)                          --每个cell的尺寸
+--@callback:('delay', listView, row, column, index)          --每个cell上item延时创建的时间
+--@callback:('add', listView, row, column, index, cell)      --添加每个item
+--@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
+--@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
+function FriendsLayer:_onListViewLeft(eventName, listView, row, column, index, cell)
+    if self.m_ClickDelegate and self.m_ClickDelegate.onListViewLeft then
+        return self.m_ClickDelegate:onListViewLeft(eventName, listView, row, column, index, cell);
+    end
+    if self.onListViewLeft then
+        return self:onListViewLeft(eventName, listView, row, column, index, cell);
     end
 end
 

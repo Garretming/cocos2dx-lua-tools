@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：RegisterLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -47,9 +44,7 @@ function RegisterLayer:initView()
 	localParams[2]:setFontSize(25);
 	localParams[2]:setPlaceholderFontSize(25);
 	localParams[2]:setPlaceHolder([[数字和字母（6-16位）]]);
-	localParams[2]:setMaxLengthEnabled(true);
 	localParams[2]:setMaxLength(20);
-	localParams[2]:setPasswordEnabled(false);
 	localParams[2]:setAnchorPoint(0.00, 0.50);
 	localParams[2]:registerScriptEditBoxHandler(handler(self, self._onAccount));
 	localParams[2]:setTouchEnabled(true);
@@ -60,7 +55,7 @@ function RegisterLayer:initView()
 	localParams[2].__Name = 'account#input';
 	localParams[1]:addChild(localParams[2]);
 
-	localParams[3] = ImageView:create(, 0);
+	localParams[3] = ImageView:create(nil, 0);
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 46.0, height = 46.0});
 	localParams[3]:setPosition(392.0, 25.0);
@@ -81,7 +76,7 @@ function RegisterLayer:initView()
 	localParams[4].__Name = 'password';
 	self:addChild(localParams[4]);
 
-	localParams[5] = ImageView:create(, 0);
+	localParams[5] = ImageView:create(nil, 0);
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setContentSize({width = 46.0, height = 46.0});
 	localParams[5]:setPosition(392.0, 25.0);
@@ -94,9 +89,8 @@ function RegisterLayer:initView()
 	localParams[6]:setFontSize(25);
 	localParams[6]:setPlaceholderFontSize(25);
 	localParams[6]:setPlaceHolder([[最小6位]]);
-	localParams[6]:setMaxLengthEnabled(true);
 	localParams[6]:setMaxLength(20);
-	localParams[6]:setPasswordEnabled(true);
+	localParams[6]:setInputFlag(0);
 	localParams[6]:setAnchorPoint(0.00, 0.50);
 	localParams[6]:registerScriptEditBoxHandler(handler(self, self._onPassWord));
 	localParams[6]:setTouchEnabled(true);
@@ -119,7 +113,7 @@ function RegisterLayer:initView()
 	localParams[7].__Name = 'password1';
 	self:addChild(localParams[7]);
 
-	localParams[8] = ImageView:create(, 0);
+	localParams[8] = ImageView:create(nil, 0);
 	localParams[8]:setAnchorPoint(0.50, 0.50);
 	localParams[8]:setContentSize({width = 46.0, height = 46.0});
 	localParams[8]:setPosition(392.0, 25.0);
@@ -132,9 +126,8 @@ function RegisterLayer:initView()
 	localParams[9]:setFontSize(25);
 	localParams[9]:setPlaceholderFontSize(25);
 	localParams[9]:setPlaceHolder([[最小6位]]);
-	localParams[9]:setMaxLengthEnabled(true);
 	localParams[9]:setMaxLength(20);
-	localParams[9]:setPasswordEnabled(true);
+	localParams[9]:setInputFlag(0);
 	localParams[9]:setAnchorPoint(0.00, 0.50);
 	localParams[9]:registerScriptEditBoxHandler(handler(self, self._onPassWord1));
 	localParams[9]:setTouchEnabled(true);
@@ -159,7 +152,7 @@ function RegisterLayer:initView()
 	localParams[10].__Name = 'Button_3';
 	self:addChild(localParams[10]);
 
-	localParams[11] = Node:create();
+	localParams[11] = Widget:create();
 	localParams[11]:setAnchorPoint(0.00, 0.00);
 	localParams[11]:setScaleX(0.90);
 	localParams[11]:setScaleY(0.90);
@@ -211,7 +204,7 @@ function RegisterLayer:initView()
 	localParams[15].__Name = 'button1';
 	self:addChild(localParams[15]);
 
-	localParams[16] = Node:create();
+	localParams[16] = Widget:create();
 	localParams[16]:setAnchorPoint(0.00, 0.00);
 	localParams[16]:setScaleX(0.90);
 	localParams[16]:setScaleY(0.90);

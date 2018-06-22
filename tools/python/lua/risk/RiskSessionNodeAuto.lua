@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：RiskSessionNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -64,13 +61,14 @@ function RiskSessionNode:initView()
 	self.__children['Button_1#__SELECTED_IMG'] = localParams[3];
 	localParams[3].__children = self.__children;
 	localParams[3].__Name = 'Button_1#__SELECTED_IMG';
+	localParams[1]:setSelectNode(localParams[3]);
 	localParams[1]:addChild(localParams[3]);
 
 	localParams[4] = Text:create();
 	localParams[4]:setFontSize(20);
 	localParams[4]:setString([[]]);
 	localParams[4]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[4]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[4]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setContentSize({width = 103.0, height = 24.0});
 	localParams[4]:setPosition(160.0, 25.0);
@@ -79,7 +77,7 @@ function RiskSessionNode:initView()
 	localParams[4].__Name = 'Button_1#name';
 	localParams[1]:addChild(localParams[4]);
 
-	localParams[5] = Node:create();
+	localParams[5] = Widget:create();
 	localParams[5]:setAnchorPoint(0.00, 0.00);
 	localParams[5]:setContentSize({width = 0.0, height = 0.0});
 	localParams[5]:setPosition(0.0, 0.0);

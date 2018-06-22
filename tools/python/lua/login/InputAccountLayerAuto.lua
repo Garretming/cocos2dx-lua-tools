@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：InputAccountLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -45,7 +42,7 @@ function InputAccountLayer:initView()
 	localParams[1].__Name = 'button1';
 	self:addChild(localParams[1]);
 
-	localParams[2] = Node:create();
+	localParams[2] = Widget:create();
 	localParams[2]:setAnchorPoint(0.00, 0.00);
 	localParams[2]:setScaleX(0.90);
 	localParams[2]:setScaleY(0.90);
@@ -90,9 +87,7 @@ function InputAccountLayer:initView()
 	localParams[6]:setFontSize(25);
 	localParams[6]:setPlaceholderFontSize(25);
 	localParams[6]:setPlaceHolder([[数字和字母（6-16位）]]);
-	localParams[6]:setMaxLengthEnabled(true);
 	localParams[6]:setMaxLength(16);
-	localParams[6]:setPasswordEnabled(false);
 	localParams[6]:setAnchorPoint(0.00, 0.50);
 	localParams[6]:registerScriptEditBoxHandler(handler(self, self._onAccount));
 	localParams[6]:setTouchEnabled(true);
@@ -119,9 +114,8 @@ function InputAccountLayer:initView()
 	localParams[8]:setFontSize(25);
 	localParams[8]:setPlaceholderFontSize(25);
 	localParams[8]:setPlaceHolder([[最小6位]]);
-	localParams[8]:setMaxLengthEnabled(true);
 	localParams[8]:setMaxLength(20);
-	localParams[8]:setPasswordEnabled(true);
+	localParams[8]:setInputFlag(0);
 	localParams[8]:setAnchorPoint(0.00, 0.50);
 	localParams[8]:setColor({r = 0, g = 255, b = 255});
 	localParams[8]:registerScriptEditBoxHandler(handler(self, self._onPassWord));
@@ -147,7 +141,7 @@ function InputAccountLayer:initView()
 	localParams[9].__Name = 'button2';
 	self:addChild(localParams[9]);
 
-	localParams[10] = Node:create();
+	localParams[10] = Widget:create();
 	localParams[10]:setAnchorPoint(0.00, 0.00);
 	localParams[10]:setScaleX(0.90);
 	localParams[10]:setScaleY(0.90);

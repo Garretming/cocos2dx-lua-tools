@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：TaskLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -42,7 +39,7 @@ function TaskLayer:initView()
 	localParams[1].__Name = 'bg';
 	self:addChild(localParams[1]);
 
-	localParams[2] = LoadingBar:create(''uires/public/sheet_other/other0182.png'', 1, 100.00);
+	localParams[2] = LoadingBar:create('uires/public/sheet_other/other0182.png', 1, 100.00);
 	localParams[2]:setAnchorPoint(0.50, 0.50);
 	localParams[2]:setContentSize({width = 694.0, height = 30.0});
 	localParams[2]:setPosition(WinSize.width/2 + (80.49 * ccx.scaleX), WinSize.height - 140.20);
@@ -52,6 +49,7 @@ function TaskLayer:initView()
 	self:addChild(localParams[2]);
 
 	localParams[3] = LoadingBar:create(''uires/public/sheet_other/other0181.png'', 1, 0.00);
+	localParams[3] = LoadingBar:create('uires/public/sheet_other/other0181.png', 1, 0.00);
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 678.0, height = 18.0});
 	localParams[3]:setPosition(346.77, 14.84);
@@ -260,7 +258,7 @@ function TaskLayer:initView()
 	localParams[20]:setBackGroundColor({r = 150, g = 150, b = 255});
 	localParams[20]:setBackGroundColorOpacity(102);
 	localParams[20]:setAnchorPoint(0.00, 0.00);
-	localParams[20]:onClick(handler(self, self._onAchievementListView));
+	localParams[20]:setEventCallback(handler(self, self._onAchievementListView));
 	localParams[20]:setTouchEnabled(true);
 	localParams[20]:setContentSize({width = 870.0, height = WinSize.height - 220.00});
 	localParams[20]:setPosition(15.0, 14.0);
@@ -276,7 +274,7 @@ function TaskLayer:initView()
 	localParams[21]:setBackGroundColor({r = 150, g = 150, b = 255});
 	localParams[21]:setBackGroundColorOpacity(102);
 	localParams[21]:setAnchorPoint(0.00, 0.00);
-	localParams[21]:onClick(handler(self, self._onEverydayListView));
+	localParams[21]:setEventCallback(handler(self, self._onEverydayListView));
 	localParams[21]:setTouchEnabled(true);
 	localParams[21]:setContentSize({width = 870.0, height = WinSize.height - 270.00});
 	localParams[21]:setPosition(15.0, 65.0);
@@ -356,7 +354,7 @@ function TaskLayer:initView()
 	localParams[28]:setFontSize(20);
 	localParams[28]:setString([[999999]]);
 	localParams[28]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[28]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[28]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[28]:setAnchorPoint(1.00, 0.50);
 	localParams[28]:setContentSize({width = 75.0, height = 22.0});
 	localParams[28]:setPosition(141.77, localParams[27]:getContentSize().height - 18.98);
@@ -451,7 +449,7 @@ function TaskLayer:initView()
 	localParams[36]:setFontSize(20);
 	localParams[36]:setString([[999999]]);
 	localParams[36]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[36]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[36]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[36]:setAnchorPoint(1.00, 0.50);
 	localParams[36]:setContentSize({width = 75.0, height = 22.0});
 	localParams[36]:setPosition(143.96, 30.61);
@@ -506,7 +504,7 @@ function TaskLayer:initView()
 	localParams[39].__Name = '__FULL_LAYER#help_btn';
 	localParams[22]:addChild(localParams[39]);
 
-	localParams[40] = Node:create();
+	localParams[40] = Widget:create();
 	localParams[40]:setAnchorPoint(0.00, 0.00);
 	localParams[40]:setScaleX(0.90);
 	localParams[40]:setScaleY(0.90);
@@ -908,6 +906,7 @@ function TaskLayer:_back_btn(sender)
 end
 
 
+
 function TaskLayer:_weekPrizeBox2Btn(sender)
     if self.m_ClickDelegate and self.m_ClickDelegate.weekPrizeBox2Btn then
         return self.m_ClickDelegate:weekPrizeBox2Btn(sender);
@@ -944,6 +943,22 @@ function TaskLayer:_weekPrizeBox1Btn(sender)
     end
     if self.weekPrizeBox1Btn then
         return self:weekPrizeBox1Btn(sender);
+    end
+end
+
+
+--@callback:('count', listView)                              --总共cell数量
+--@callback:('size', listView, row)                          --每个cell的尺寸
+--@callback:('delay', listView, row, column, index)          --每个cell上item延时创建的时间
+--@callback:('add', listView, row, column, index, cell)      --添加每个item
+--@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
+--@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
+function TaskLayer:_onEverydayListView(eventName, listView, row, column, index, cell)
+    if self.m_ClickDelegate and self.m_ClickDelegate.onEverydayListView then
+        return self.m_ClickDelegate:onEverydayListView(eventName, listView, row, column, index, cell);
+    end
+    if self.onEverydayListView then
+        return self:onEverydayListView(eventName, listView, row, column, index, cell);
     end
 end
 

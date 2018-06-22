@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：AchievementNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -76,7 +73,7 @@ function AchievementNode:initView()
 	localParams[5]:setFontSize(16);
 	localParams[5]:setString([[尚未获得]]);
 	localParams[5]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[5]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[5]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setContentSize({width = 69.0, height = 20.0});
 	localParams[5]:setPosition(61.94, 2.36);
@@ -104,7 +101,7 @@ function AchievementNode:initView()
 	localParams[7]:setFontSize(16);
 	localParams[7]:setString([[2017.5.6]]);
 	localParams[7]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[7]:setContentSize({width = 74.0, height = 20.0});
@@ -130,7 +127,7 @@ function AchievementNode:initView()
 	localParams[9]:setFontSize(22);
 	localParams[9]:setString([[天梯进入王者段位]]);
 	localParams[9]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[9]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[9]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:setContentSize({width = 181.0, height = 29.0});
 	localParams[9]:setPosition(220.23, 15.09);
@@ -139,7 +136,7 @@ function AchievementNode:initView()
 	localParams[9].__Name = 'achievement_bg#dec_bg#dec_txt1';
 	localParams[8]:addChild(localParams[9]);
 
-	localParams[10] = LoadingBar:create(''uires/public/sheet_other/other0188.png'', 1, 100.00);
+	localParams[10] = LoadingBar:create('uires/public/sheet_other/other0188.png', 1, 100.00);
 	localParams[10]:setAnchorPoint(0.50, 0.50);
 	localParams[10]:setContentSize({width = 450.0, height = 32.0});
 	localParams[10]:setPosition(453.3, 31.52);
@@ -148,7 +145,7 @@ function AchievementNode:initView()
 	localParams[10].__Name = 'achievement_bg#loading1';
 	localParams[1]:addChild(localParams[10]);
 
-	localParams[11] = LoadingBar:create(''uires/public/sheet_other/other0187.png'', 1, 100.00);
+	localParams[11] = LoadingBar:create('uires/public/sheet_other/other0187.png', 1, 100.00);
 	localParams[11]:setAnchorPoint(0.50, 0.50);
 	localParams[11]:setContentSize({width = 448.0, height = 30.0});
 	localParams[11]:setPosition(225.0, 16.0);
@@ -161,7 +158,7 @@ function AchievementNode:initView()
 	localParams[12]:setFontSize(22);
 	localParams[12]:setString([[50]]);
 	localParams[12]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[12]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[12]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[12]:setAnchorPoint(0.00, 1.00);
 	localParams[12]:setContentSize({width = 31.0, height = 26.0});
 	localParams[12]:setPosition(232.11, 27.86);
@@ -174,7 +171,7 @@ function AchievementNode:initView()
 	localParams[13]:setFontSize(22);
 	localParams[13]:setString([[50]]);
 	localParams[13]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[13]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[13]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[13]:setAnchorPoint(1.00, 0.00);
 	localParams[13]:setContentSize({width = 31.0, height = 26.0});
 	localParams[13]:setPosition(221.04, 1.28);
@@ -187,7 +184,7 @@ function AchievementNode:initView()
 	localParams[14]:setFontSize(20);
 	localParams[14]:setString([[/]]);
 	localParams[14]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[14]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[14]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[14]:setAnchorPoint(0.50, 0.50);
 	localParams[14]:setScaleX(1.28);
 	localParams[14]:setContentSize({width = 15.0, height = 22.0});
@@ -232,7 +229,7 @@ function AchievementNode:initView()
 	localParams[18]:setFontSize(30);
 	localParams[18]:setString([[尚未获得]]);
 	localParams[18]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[18]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[18]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[18]:setAnchorPoint(0.50, 0.50);
 	localParams[18]:setContentSize({width = 125.0, height = 34.0});
 	localParams[18]:setPosition(454.57, 110.35);

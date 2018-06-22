@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：BattleLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -31,7 +28,7 @@ end
 function BattleLayer:initView()
     self.__LAYER_NAME = 'maincity.BattleLayer';
     local localParams = {};
-	localParams[1] = Node:create();
+	localParams[1] = Widget:create();
 	localParams[1]:setAnchorPoint(0.00, 0.00);
 	localParams[1]:setContentSize({width = 0.0, height = 0.0});
 	localParams[1]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), WinSize.height/2 + (-0.00 * ccx.scaleY));
@@ -63,7 +60,7 @@ function BattleLayer:initView()
 	localParams[3].__Name = 'Node_1#Image1#Sprite_43';
 	localParams[2]:addChild(localParams[3]);
 
-	localParams[4] = Node:create();
+	localParams[4] = Widget:create();
 	localParams[4]:setAnchorPoint(0.00, 0.00);
 	localParams[4]:setScaleX(0.98);
 	localParams[4]:setScaleY(0.98);
@@ -87,7 +84,7 @@ function BattleLayer:initView()
 	localParams[6]:setFontSize(20);
 	localParams[6]:setString([[来匹配对战试试自己的实力吧]]);
 	localParams[6]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[6]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[6]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[6]:setAnchorPoint(0.50, 0.50);
 	localParams[6]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[6]:setContentSize({width = 265.0, height = 27.0});
@@ -101,7 +98,7 @@ function BattleLayer:initView()
 	localParams[7]:setFontSize(20);
 	localParams[7]:setString([[战斗失败不影响段位]]);
 	localParams[7]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[7]:setContentSize({width = 185.0, height = 27.0});
@@ -134,7 +131,7 @@ function BattleLayer:initView()
 	localParams[9].__Name = 'Node_1#Image2#Sprite_43';
 	localParams[8]:addChild(localParams[9]);
 
-	localParams[10] = Node:create();
+	localParams[10] = Widget:create();
 	localParams[10]:setAnchorPoint(0.00, 0.00);
 	localParams[10]:setScaleX(0.98);
 	localParams[10]:setScaleY(0.98);
@@ -168,7 +165,7 @@ function BattleLayer:initView()
 	localParams[13]:setFontSize(20);
 	localParams[13]:setString([[更多精彩内容准备中]]);
 	localParams[13]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[13]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[13]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[13]:setAnchorPoint(0.50, 0.50);
 	localParams[13]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[13]:setContentSize({width = 185.0, height = 27.0});
@@ -195,7 +192,7 @@ function BattleLayer:initView()
 	localParams[14].__Name = 'Node_1#formation_btn';
 	localParams[1]:addChild(localParams[14]);
 
-	localParams[15] = Node:create();
+	localParams[15] = Widget:create();
 	localParams[15]:setAnchorPoint(0.00, 0.00);
 	localParams[15]:setScaleX(0.90);
 	localParams[15]:setScaleY(0.90);
@@ -220,7 +217,7 @@ function BattleLayer:initView()
 	localParams[17]:setFontSize(20);
 	localParams[17]:setString([[灵魂突破三]]);
 	localParams[17]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[17]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[17]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[17]:setAnchorPoint(0.50, 0.50);
 	localParams[17]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[17]:setContentSize({width = 104.0, height = 22.0});

@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：MainCityLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -55,7 +52,7 @@ function MainCityLayer:initView()
 	localParams[2].__Name = 'pve';
 	self:addChild(localParams[2]);
 
-	localParams[3] = Node:create();
+	localParams[3] = Widget:create();
 	localParams[3]:setAnchorPoint(0.00, 0.00);
 	localParams[3]:setScaleX(0.50);
 	localParams[3]:setScaleY(0.50);
@@ -82,7 +79,7 @@ function MainCityLayer:initView()
 	localParams[4].__Name = 'pve_0';
 	self:addChild(localParams[4]);
 
-	localParams[5] = Node:create();
+	localParams[5] = Widget:create();
 	localParams[5]:setAnchorPoint(0.00, 0.00);
 	localParams[5]:setScaleX(0.50);
 	localParams[5]:setScaleY(0.50);
@@ -103,7 +100,7 @@ function MainCityLayer:initView()
 	localParams[6].__Name = 'Image_1';
 	self:addChild(localParams[6]);
 
-	localParams[7] = Node:create();
+	localParams[7] = Widget:create();
 	localParams[7]:setAnchorPoint(0.00, 0.00);
 	localParams[7]:setContentSize({width = 0.0, height = 0.0});
 	localParams[7]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), 0.0);
@@ -391,7 +388,7 @@ function MainCityLayer:initView()
 	localParams[30].__Name = 'Node_1#task#lock_sprite';
 	localParams[28]:addChild(localParams[30]);
 
-	localParams[31] = Node:create();
+	localParams[31] = Widget:create();
 	localParams[31]:setAnchorPoint(0.00, 0.00);
 	localParams[31]:setScaleX(0.90);
 	localParams[31]:setScaleY(0.90);
@@ -402,7 +399,7 @@ function MainCityLayer:initView()
 	localParams[31].__Name = 'Node_1#task#__SELECTED_SCALE';
 	localParams[28]:addChild(localParams[31]);
 
-	localParams[32] = Node:create();
+	localParams[32] = Widget:create();
 	localParams[32]:setAnchorPoint(0.00, 0.00);
 	localParams[32]:setContentSize({width = 0.0, height = 0.0});
 	localParams[32]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), WinSize.height/2 + (-0.00 * ccx.scaleY));
@@ -450,7 +447,7 @@ function MainCityLayer:initView()
 	localParams[36]:setFontSize(20);
 	localParams[36]:setString([[等级达到   级解锁]]);
 	localParams[36]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[36]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[36]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[36]:setAnchorPoint(0.50, 0.50);
 	localParams[36]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[36]:setContentSize({width = 175.0, height = 24.0});
@@ -464,7 +461,7 @@ function MainCityLayer:initView()
 	localParams[37]:setFontSize(24);
 	localParams[37]:setString([[6]]);
 	localParams[37]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[37]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[37]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[37]:setAnchorPoint(0.50, 0.50);
 	localParams[37]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[37]:setContentSize({width = 19.0, height = 28.0});
@@ -474,7 +471,7 @@ function MainCityLayer:initView()
 	localParams[37].__Name = 'Node_7#divination#lock#level';
 	localParams[34]:addChild(localParams[37]);
 
-	localParams[38] = Node:create();
+	localParams[38] = Widget:create();
 	localParams[38]:setAnchorPoint(0.00, 0.00);
 	localParams[38]:setScaleX(0.97);
 	localParams[38]:setScaleY(0.97);
@@ -524,7 +521,7 @@ function MainCityLayer:initView()
 	localParams[42]:setFontSize(20);
 	localParams[42]:setString([[等级达到   级解锁]]);
 	localParams[42]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[42]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[42]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[42]:setAnchorPoint(0.50, 0.50);
 	localParams[42]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[42]:setContentSize({width = 175.0, height = 24.0});
@@ -538,7 +535,7 @@ function MainCityLayer:initView()
 	localParams[43]:setFontSize(24);
 	localParams[43]:setString([[6]]);
 	localParams[43]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[43]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[43]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[43]:setAnchorPoint(0.50, 0.50);
 	localParams[43]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[43]:setContentSize({width = 19.0, height = 28.0});
@@ -548,7 +545,7 @@ function MainCityLayer:initView()
 	localParams[43].__Name = 'Node_7#arena#lock#level';
 	localParams[40]:addChild(localParams[43]);
 
-	localParams[44] = Node:create();
+	localParams[44] = Widget:create();
 	localParams[44]:setAnchorPoint(0.00, 0.00);
 	localParams[44]:setScaleX(0.98);
 	localParams[44]:setScaleY(0.98);
@@ -599,7 +596,7 @@ function MainCityLayer:initView()
 	localParams[47].__Name = 'Node_7#activity#sign';
 	localParams[45]:addChild(localParams[47]);
 
-	localParams[48] = Node:create();
+	localParams[48] = Widget:create();
 	localParams[48]:setAnchorPoint(0.00, 0.00);
 	localParams[48]:setScaleX(0.97);
 	localParams[48]:setScaleY(0.97);
@@ -624,7 +621,7 @@ function MainCityLayer:initView()
 	localParams[49].__Name = 'Node_7#risk';
 	localParams[32]:addChild(localParams[49]);
 
-	localParams[50] = Node:create();
+	localParams[50] = Widget:create();
 	localParams[50]:setAnchorPoint(0.00, 0.00);
 	localParams[50]:setScaleX(0.97);
 	localParams[50]:setScaleY(0.97);
@@ -649,7 +646,7 @@ function MainCityLayer:initView()
 	localParams[51].__Name = 'Node_7#battle';
 	localParams[32]:addChild(localParams[51]);
 
-	localParams[52] = Node:create();
+	localParams[52] = Widget:create();
 	localParams[52]:setAnchorPoint(0.00, 0.00);
 	localParams[52]:setScaleX(0.97);
 	localParams[52]:setScaleY(0.97);
@@ -681,7 +678,7 @@ function MainCityLayer:initView()
 	localParams[54]:setString([[]]);
 	localParams[54]:setFontName('uires/public/ttf/jtcs.TTF');
 	localParams[54]:setTextAreaSize({width = 400, height = 25});
-	localParams[54]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[54]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[54]:setAnchorPoint(0.00, 0.50);
 	localParams[54]:setContentSize({width = 400.0, height = 25.0});
 	localParams[54]:setPosition(10.0, 17.0);
@@ -717,7 +714,7 @@ function MainCityLayer:initView()
 	localParams[57]:setFontSize(20);
 	localParams[57]:setString([[每周PVP水晶球掉落上限]]);
 	localParams[57]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[57]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[57]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[57]:setAnchorPoint(0.00, 0.50);
 	localParams[57]:setContentSize({width = 215.0, height = 24.0});
 	localParams[57]:setPosition(30.0, 13.0);
@@ -735,7 +732,7 @@ function MainCityLayer:initView()
 	localParams[58].__Name = 'Node_7#Sprite_14#sprite';
 	localParams[56]:addChild(localParams[58]);
 
-	localParams[59] = LoadingBar:create(''uires/public/sheet_other/other0205.png'', 1, 0.00);
+	localParams[59] = LoadingBar:create('uires/public/sheet_other/other0205.png', 1, 0.00);
 	localParams[59]:setAnchorPoint(0.50, 0.50);
 	localParams[59]:setContentSize({width = 166.0, height = 25.0});
 	localParams[59]:setPosition(91.0, 19.5);
@@ -748,7 +745,7 @@ function MainCityLayer:initView()
 	localParams[60]:setFontSize(18);
 	localParams[60]:setString([[200000/200000]]);
 	localParams[60]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[60]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[60]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[60]:setAnchorPoint(0.50, 0.50);
 	localParams[60]:setContentSize({width = 145.0, height = 22.0});
 	localParams[60]:setPosition(91.0, 19.5);

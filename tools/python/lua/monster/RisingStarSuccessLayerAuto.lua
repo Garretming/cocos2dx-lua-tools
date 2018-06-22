@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：RisingStarSuccessLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -39,7 +36,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[1].__Name = 'bg_img';
 	self:addChild(localParams[1]);
 
-	localParams[2] = ImageView:create(, 0);
+	localParams[2] = ImageView:create(nil, 0);
 	localParams[2]:setAnchorPoint(0.50, 0.00);
 	localParams[2]:setContentSize({width = 46.0, height = 46.0});
 	localParams[2]:setPosition(300.0, 320.0);
@@ -92,7 +89,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[7]:setFontSize(20);
 	localParams[7]:setString([[生   命：]]);
 	localParams[7]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[7]:setAnchorPoint(0.00, 0.50);
 	localParams[7]:setContentSize({width = 66.0, height = 25.0});
 	localParams[7]:setPosition(9.0, 14.0);
@@ -105,7 +102,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[8]:setFontSize(20);
 	localParams[8]:setString([[8888888]]);
 	localParams[8]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[8]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[8]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[8]:setAnchorPoint(1.00, 0.50);
 	localParams[8]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[8]:setContentSize({width = 73.0, height = 22.0});
@@ -132,7 +129,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[10]:setFontSize(20);
 	localParams[10]:setString([[攻   击：]]);
 	localParams[10]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[10]:setAnchorPoint(0.00, 0.50);
 	localParams[10]:setContentSize({width = 66.0, height = 25.0});
 	localParams[10]:setPosition(9.0, 14.0);
@@ -145,7 +142,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[11]:setFontSize(20);
 	localParams[11]:setString([[8888888]]);
 	localParams[11]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[11]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[11]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[11]:setAnchorPoint(1.00, 0.50);
 	localParams[11]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[11]:setContentSize({width = 73.0, height = 22.0});
@@ -172,7 +169,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[13]:setFontSize(20);
 	localParams[13]:setString([[护   甲：]]);
 	localParams[13]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[13]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[13]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[13]:setAnchorPoint(0.00, 0.50);
 	localParams[13]:setContentSize({width = 66.0, height = 25.0});
 	localParams[13]:setPosition(9.0, 14.0);
@@ -185,7 +182,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[14]:setFontSize(20);
 	localParams[14]:setString([[8888888]]);
 	localParams[14]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[14]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[14]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[14]:setAnchorPoint(1.00, 0.50);
 	localParams[14]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[14]:setContentSize({width = 73.0, height = 22.0});
@@ -212,7 +209,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[16]:setFontSize(20);
 	localParams[16]:setString([[速   度：]]);
 	localParams[16]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[16]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[16]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[16]:setAnchorPoint(0.00, 0.50);
 	localParams[16]:setContentSize({width = 66.0, height = 25.0});
 	localParams[16]:setPosition(9.0, 14.0);
@@ -225,7 +222,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[17]:setFontSize(20);
 	localParams[17]:setString([[8888888]]);
 	localParams[17]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[17]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[17]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[17]:setAnchorPoint(1.00, 0.50);
 	localParams[17]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[17]:setContentSize({width = 73.0, height = 22.0});
@@ -252,7 +249,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[19]:setFontSize(20);
 	localParams[19]:setString([[生   命：]]);
 	localParams[19]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[19]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[19]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[19]:setAnchorPoint(0.00, 0.50);
 	localParams[19]:setContentSize({width = 66.0, height = 25.0});
 	localParams[19]:setPosition(9.0, 14.0);
@@ -265,7 +262,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[20]:setFontSize(20);
 	localParams[20]:setString([[8888888]]);
 	localParams[20]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[20]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[20]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[20]:setAnchorPoint(1.00, 0.50);
 	localParams[20]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[20]:setContentSize({width = 73.0, height = 22.0});
@@ -292,7 +289,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[22]:setFontSize(20);
 	localParams[22]:setString([[攻   击：]]);
 	localParams[22]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[22]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[22]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[22]:setAnchorPoint(0.00, 0.50);
 	localParams[22]:setContentSize({width = 66.0, height = 25.0});
 	localParams[22]:setPosition(9.0, 14.0);
@@ -305,7 +302,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[23]:setFontSize(20);
 	localParams[23]:setString([[8888888]]);
 	localParams[23]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[23]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[23]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[23]:setAnchorPoint(1.00, 0.50);
 	localParams[23]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[23]:setContentSize({width = 73.0, height = 22.0});
@@ -332,7 +329,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[25]:setFontSize(20);
 	localParams[25]:setString([[护   甲：]]);
 	localParams[25]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[25]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[25]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[25]:setAnchorPoint(0.00, 0.50);
 	localParams[25]:setContentSize({width = 66.0, height = 25.0});
 	localParams[25]:setPosition(9.0, 14.0);
@@ -345,7 +342,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[26]:setFontSize(20);
 	localParams[26]:setString([[8888888]]);
 	localParams[26]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[26]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[26]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[26]:setAnchorPoint(1.00, 0.50);
 	localParams[26]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[26]:setContentSize({width = 73.0, height = 22.0});
@@ -372,7 +369,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[28]:setFontSize(20);
 	localParams[28]:setString([[速   度：]]);
 	localParams[28]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[28]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[28]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[28]:setAnchorPoint(0.00, 0.50);
 	localParams[28]:setContentSize({width = 66.0, height = 25.0});
 	localParams[28]:setPosition(9.0, 14.0);
@@ -385,7 +382,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[29]:setFontSize(20);
 	localParams[29]:setString([[8888888]]);
 	localParams[29]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[29]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[29]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[29]:setAnchorPoint(1.00, 0.50);
 	localParams[29]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[29]:setContentSize({width = 73.0, height = 22.0});
@@ -426,7 +423,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[33]:setFontSize(28);
 	localParams[33]:setString([[作死的大鸟]]);
 	localParams[33]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[33]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[33]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[33]:setAnchorPoint(0.50, 0.50);
 	localParams[33]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[33]:setContentSize({width = 143.0, height = 30.0});
@@ -653,7 +650,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[55]:setFontSize(20);
 	localParams[55]:setString([[啊！不好意思，小的没有特性.]]);
 	localParams[55]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[55]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[55]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[55]:setAnchorPoint(0.50, 0.50);
 	localParams[55]:setContentSize({width = 268.0, height = 25.0});
 	localParams[55]:setPosition(220.0, 60.0);
@@ -687,7 +684,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[58]:setFontSize(26);
 	localParams[58]:setString([[灵魂突袭]]);
 	localParams[58]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[58]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[58]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[58]:setAnchorPoint(0.50, 0.50);
 	localParams[58]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[58]:setContentSize({width = 108.0, height = 28.0});
@@ -702,7 +699,7 @@ function RisingStarSuccessLayer:initView()
 	localParams[59]:setString([[召唤狐火轰向横排敌人，造成35%伤害，并弹射3个目标，造成444伤害，并持续流血4回合。]]);
 	localParams[59]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[59]:setTextAreaSize({width = 420, height = 50});
-	localParams[59]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[59]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[59]:setAnchorPoint(0.00, 0.50);
 	localParams[59]:setScaleX(1.10);
 	localParams[59]:setScaleY(1.10);

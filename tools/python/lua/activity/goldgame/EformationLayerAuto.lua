@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：EformationLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -58,7 +55,7 @@ function EformationLayer:initView()
 	localParams[3]:setFontSize(22);
 	localParams[3]:setString([[01:02:03后活动结束]]);
 	localParams[3]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[3]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[3]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[3]:setAnchorPoint(0.00, 0.50);
 	localParams[3]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[3]:setContentSize({width = 195.0, height = 29.0});
@@ -116,7 +113,7 @@ function EformationLayer:initView()
 	localParams[8].__Name = 'skill_bg#bar#m_title';
 	localParams[6]:addChild(localParams[8]);
 
-	localParams[9] = ImageView:create(, 0);
+	localParams[9] = ImageView:create(nil, 0);
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:setContentSize({width = 46.0, height = 46.0});
 	localParams[9]:setPosition(localParams[5]:getContentSize().width/2 + (194.50 * ccx.scaleX), localParams[5]:getContentSize().height/2 + (15.00 * ccx.scaleY));
@@ -125,7 +122,7 @@ function EformationLayer:initView()
 	localParams[9].__Name = 'skill_bg#m_image3';
 	localParams[5]:addChild(localParams[9]);
 
-	localParams[10] = ImageView:create(, 0);
+	localParams[10] = ImageView:create(nil, 0);
 	localParams[10]:setAnchorPoint(0.50, 0.50);
 	localParams[10]:setContentSize({width = 46.0, height = 46.0});
 	localParams[10]:setPosition(localParams[5]:getContentSize().width/2 + (-0.00 * ccx.scaleX), localParams[5]:getContentSize().height/2 + (15.00 * ccx.scaleY));
@@ -134,7 +131,7 @@ function EformationLayer:initView()
 	localParams[10].__Name = 'skill_bg#m_image2';
 	localParams[5]:addChild(localParams[10]);
 
-	localParams[11] = ImageView:create(, 0);
+	localParams[11] = ImageView:create(nil, 0);
 	localParams[11]:setAnchorPoint(0.50, 0.50);
 	localParams[11]:setContentSize({width = 46.0, height = 46.0});
 	localParams[11]:setPosition(localParams[5]:getContentSize().width/2 + (-194.50 * ccx.scaleX), localParams[5]:getContentSize().height/2 + (15.00 * ccx.scaleY));
@@ -147,7 +144,7 @@ function EformationLayer:initView()
 	localParams[12]:setFontSize(20);
 	localParams[12]:setString([[请携带两个要携带的技能]]);
 	localParams[12]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[12]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[12]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[12]:setAnchorPoint(0.50, 0.50);
 	localParams[12]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[12]:setContentSize({width = 224.0, height = 22.0});
@@ -184,7 +181,7 @@ function EformationLayer:initView()
 	localParams[14].__Name = 'skill_bg#monster_sure_btn#font';
 	localParams[13]:addChild(localParams[14]);
 
-	localParams[15] = Node:create();
+	localParams[15] = Widget:create();
 	localParams[15]:setAnchorPoint(0.00, 0.00);
 	localParams[15]:setScaleX(0.90);
 	localParams[15]:setScaleY(0.90);
@@ -243,7 +240,7 @@ function EformationLayer:initView()
 	localParams[19].__Name = 'work_m_bg#completeBtn#font';
 	localParams[18]:addChild(localParams[19]);
 
-	localParams[20] = Node:create();
+	localParams[20] = Widget:create();
 	localParams[20]:setAnchorPoint(0.00, 0.00);
 	localParams[20]:setScaleX(0.90);
 	localParams[20]:setScaleY(0.90);
@@ -258,7 +255,7 @@ function EformationLayer:initView()
 	localParams[21]:setFontSize(20);
 	localParams[21]:setString([[已上阵：]]);
 	localParams[21]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[21]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[21]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[21]:setAnchorPoint(0.50, 0.50);
 	localParams[21]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[21]:setContentSize({width = 76.0, height = 22.0});
@@ -272,7 +269,7 @@ function EformationLayer:initView()
 	localParams[22]:setFontSize(20);
 	localParams[22]:setString([[0/5]]);
 	localParams[22]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[22]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[22]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[22]:setAnchorPoint(0.00, 0.50);
 	localParams[22]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[22]:setContentSize({width = 36.0, height = 22.0});
@@ -302,7 +299,7 @@ function EformationLayer:initView()
 	localParams[24]:setFontSize(20);
 	localParams[24]:setString([[九阳神功]]);
 	localParams[24]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[24]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[24]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[24]:setAnchorPoint(0.50, 0.50);
 	localParams[24]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[24]:setContentSize({width = 84.0, height = 22.0});
@@ -365,7 +362,7 @@ function EformationLayer:initView()
 	localParams[29]:setFontSize(20);
 	localParams[29]:setString([[]]);
 	localParams[29]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[29]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[29]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[29]:setAnchorPoint(0.50, 0.50);
 	localParams[29]:setTextColor({r = 255, g = 165, b = 0});
 	localParams[29]:setContentSize({width = 0.0, height = 0.0});
@@ -375,7 +372,7 @@ function EformationLayer:initView()
 	localParams[29].__Name = 'work_m_bg#skill_bg2#skill_level2';
 	localParams[28]:addChild(localParams[29]);
 
-	localParams[30] = ImageView:create(, 0);
+	localParams[30] = ImageView:create(nil, 0);
 	localParams[30]:setAnchorPoint(0.50, 0.50);
 	localParams[30]:setContentSize({width = 46.0, height = 46.0});
 	localParams[30]:setPosition(52.57, 51.42);
@@ -398,7 +395,7 @@ function EformationLayer:initView()
 	localParams[32]:setFontSize(24);
 	localParams[32]:setString([[]]);
 	localParams[32]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[32]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[32]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[32]:setAnchorPoint(0.50, 0.50);
 	localParams[32]:setContentSize({width = 0.0, height = 0.0});
 	localParams[32]:setPosition(17.05, 18.42);
@@ -411,7 +408,7 @@ function EformationLayer:initView()
 	localParams[33]:setFontSize(20);
 	localParams[33]:setString([[]]);
 	localParams[33]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[33]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[33]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[33]:setAnchorPoint(0.50, 0.50);
 	localParams[33]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[33]:setContentSize({width = 0.0, height = 0.0});
@@ -441,7 +438,7 @@ function EformationLayer:initView()
 	localParams[35]:setFontSize(20);
 	localParams[35]:setString([[]]);
 	localParams[35]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[35]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[35]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[35]:setAnchorPoint(0.50, 0.50);
 	localParams[35]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[35]:setContentSize({width = 0.0, height = 0.0});
@@ -451,7 +448,7 @@ function EformationLayer:initView()
 	localParams[35].__Name = 'work_m_bg#skill_bg1#skill_level1';
 	localParams[34]:addChild(localParams[35]);
 
-	localParams[36] = ImageView:create(, 0);
+	localParams[36] = ImageView:create(nil, 0);
 	localParams[36]:setAnchorPoint(0.50, 0.50);
 	localParams[36]:setContentSize({width = 46.0, height = 46.0});
 	localParams[36]:setPosition(52.57, 51.42);
@@ -473,7 +470,7 @@ function EformationLayer:initView()
 	localParams[38]:setFontSize(24);
 	localParams[38]:setString([[]]);
 	localParams[38]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[38]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[38]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[38]:setAnchorPoint(0.50, 0.50);
 	localParams[38]:setContentSize({width = 0.0, height = 0.0});
 	localParams[38]:setPosition(17.05, 18.42);
@@ -486,7 +483,7 @@ function EformationLayer:initView()
 	localParams[39]:setFontSize(20);
 	localParams[39]:setString([[]]);
 	localParams[39]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[39]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[39]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[39]:setAnchorPoint(0.50, 0.50);
 	localParams[39]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[39]:setContentSize({width = 0.0, height = 0.0});
@@ -513,7 +510,7 @@ function EformationLayer:initView()
 	localParams[40].__Name = 'help_btn';
 	self:addChild(localParams[40]);
 
-	localParams[41] = Node:create();
+	localParams[41] = Widget:create();
 	localParams[41]:setAnchorPoint(0.00, 0.00);
 	localParams[41]:setScaleX(1.20);
 	localParams[41]:setScaleY(1.20);
@@ -553,7 +550,7 @@ function EformationLayer:initView()
 	localParams[43].__Name = 'm_message_bg';
 	self:addChild(localParams[43]);
 
-	localParams[44] = Node:create();
+	localParams[44] = Widget:create();
 	localParams[44]:setAnchorPoint(0.00, 0.00);
 	localParams[44]:setContentSize({width = 0.0, height = 0.0});
 	localParams[44]:setPosition(0.0, 360.0);
@@ -566,7 +563,7 @@ function EformationLayer:initView()
 	localParams[45]:setFontSize(24);
 	localParams[45]:setString([[重甲奇兵]]);
 	localParams[45]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[45]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[45]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[45]:setAnchorPoint(0.50, 0.50);
 	localParams[45]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[45]:setContentSize({width = 100.0, height = 26.0});
@@ -580,7 +577,7 @@ function EformationLayer:initView()
 	localParams[46]:setFontSize(20);
 	localParams[46]:setString([[攻  击:]]);
 	localParams[46]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[46]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[46]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[46]:setAnchorPoint(0.00, 0.50);
 	localParams[46]:setContentSize({width = 58.0, height = 25.0});
 	localParams[46]:setPosition(13.23, -60.31);
@@ -594,7 +591,7 @@ function EformationLayer:initView()
 	localParams[47]:setString([[d]]);
 	localParams[47]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[47]:setTextAreaSize({width = 240, height = 0});
-	localParams[47]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[47]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[47]:setAnchorPoint(0.00, 1.00);
 	localParams[47]:setContentSize({width = 240.0, height = 0.0});
 	localParams[47]:setPosition(15.0, -110.0);
@@ -607,7 +604,7 @@ function EformationLayer:initView()
 	localParams[48]:setFontSize(20);
 	localParams[48]:setString([[血  量:]]);
 	localParams[48]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[48]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[48]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[48]:setAnchorPoint(0.00, 0.50);
 	localParams[48]:setContentSize({width = 58.0, height = 25.0});
 	localParams[48]:setPosition(13.23, -87.5);
@@ -620,7 +617,7 @@ function EformationLayer:initView()
 	localParams[49]:setFontSize(20);
 	localParams[49]:setString([[护  甲:]]);
 	localParams[49]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[49]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[49]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[49]:setAnchorPoint(0.00, 0.50);
 	localParams[49]:setContentSize({width = 58.0, height = 25.0});
 	localParams[49]:setPosition(135.97, -60.31);
@@ -633,7 +630,7 @@ function EformationLayer:initView()
 	localParams[50]:setFontSize(20);
 	localParams[50]:setString([[速  度:]]);
 	localParams[50]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[50]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[50]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[50]:setAnchorPoint(0.00, 0.50);
 	localParams[50]:setContentSize({width = 58.0, height = 25.0});
 	localParams[50]:setPosition(135.97, -87.5);
@@ -646,7 +643,7 @@ function EformationLayer:initView()
 	localParams[51]:setFontSize(20);
 	localParams[51]:setString([[99999]]);
 	localParams[51]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[51]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[51]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[51]:setAnchorPoint(0.00, 0.50);
 	localParams[51]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[51]:setContentSize({width = 58.0, height = 25.0});
@@ -660,7 +657,7 @@ function EformationLayer:initView()
 	localParams[52]:setFontSize(20);
 	localParams[52]:setString([[99999]]);
 	localParams[52]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[52]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[52]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[52]:setAnchorPoint(0.00, 0.39);
 	localParams[52]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[52]:setContentSize({width = 58.0, height = 25.0});
@@ -674,7 +671,7 @@ function EformationLayer:initView()
 	localParams[53]:setFontSize(20);
 	localParams[53]:setString([[99999]]);
 	localParams[53]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[53]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[53]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[53]:setAnchorPoint(0.00, 0.50);
 	localParams[53]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[53]:setContentSize({width = 58.0, height = 25.0});
@@ -688,7 +685,7 @@ function EformationLayer:initView()
 	localParams[54]:setFontSize(20);
 	localParams[54]:setString([[99999]]);
 	localParams[54]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[54]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[54]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[54]:setAnchorPoint(0.00, 0.50);
 	localParams[54]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[54]:setContentSize({width = 58.0, height = 25.0});
@@ -703,7 +700,7 @@ function EformationLayer:initView()
 	localParams[55]:setString([[]]);
 	localParams[55]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[55]:setTextAreaSize({width = 240, height = 0});
-	localParams[55]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[55]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[55]:setAnchorPoint(0.00, 1.00);
 	localParams[55]:setContentSize({width = 240.0, height = 0.0});
 	localParams[55]:setPosition(15.0, -227.94);
@@ -717,7 +714,7 @@ function EformationLayer:initView()
 	localParams[56]:setString([[]]);
 	localParams[56]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[56]:setTextAreaSize({width = 240, height = 0});
-	localParams[56]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[56]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[56]:setAnchorPoint(0.00, 1.00);
 	localParams[56]:setContentSize({width = 240.0, height = 0.0});
 	localParams[56]:setPosition(15.0, -338.34);
@@ -738,7 +735,7 @@ function EformationLayer:initView()
 	localParams[57].__Name = 's_message_bg';
 	self:addChild(localParams[57]);
 
-	localParams[58] = Node:create();
+	localParams[58] = Widget:create();
 	localParams[58]:setAnchorPoint(0.00, 0.00);
 	localParams[58]:setContentSize({width = 0.0, height = 0.0});
 	localParams[58]:setPosition(0.0, 230.0);
@@ -751,7 +748,7 @@ function EformationLayer:initView()
 	localParams[59]:setFontSize(24);
 	localParams[59]:setString([[风华之身]]);
 	localParams[59]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[59]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[59]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[59]:setAnchorPoint(0.50, 0.50);
 	localParams[59]:setTextColor({r = 250, g = 240, b = 155});
 	localParams[59]:setContentSize({width = 100.0, height = 26.0});
@@ -766,7 +763,7 @@ function EformationLayer:initView()
 	localParams[60]:setString([[技能说明:小体型 近距离小体型 近距离小体型 近距离小体型 近距离]]);
 	localParams[60]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[60]:setTextAreaSize({width = 235, height = 0});
-	localParams[60]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[60]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[60]:setAnchorPoint(0.50, 1.00);
 	localParams[60]:setContentSize({width = 235.0, height = 0.0});
 	localParams[60]:setPosition(135.0, localParams[58]:getContentSize().height - 110.00);
@@ -779,7 +776,7 @@ function EformationLayer:initView()
 	localParams[61]:setFontSize(20);
 	localParams[61]:setString([[技能说明：]]);
 	localParams[61]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[61]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[61]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[61]:setAnchorPoint(0.50, 0.50);
 	localParams[61]:setContentSize({width = 91.0, height = 25.0});
 	localParams[61]:setPosition(63.08, localParams[58]:getContentSize().height - 82.50);

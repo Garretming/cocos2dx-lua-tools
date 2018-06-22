@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：PackagePopUpLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -72,7 +69,7 @@ function PackagePopUpLayer:initView()
 	localParams[4]:setString([[]]);
 	localParams[4]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[4]:setTextAreaSize({width = 240, height = 80});
-	localParams[4]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[4]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[4]:setAnchorPoint(0.00, 0.50);
 	localParams[4]:setContentSize({width = 240.0, height = 80.0});
 	localParams[4]:setPosition(13.25, 55.0);
@@ -112,7 +109,7 @@ function PackagePopUpLayer:initView()
 	localParams[8]:setDefaultFontSize(24);
 	localParams[8]:setString([[初学者礼包]]);
 	localParams[8]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[8]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[8]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[8]:setAnchorPoint(0.50, 0.50);
 	localParams[8]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[8]:setContentSize({width = 124.0, height = 26.0});
@@ -138,7 +135,7 @@ function PackagePopUpLayer:initView()
 	localParams[9].__Name = 'bg_img#buy_btn';
 	localParams[1]:addChild(localParams[9]);
 
-	localParams[10] = Node:create();
+	localParams[10] = Widget:create();
 	localParams[10]:setAnchorPoint(0.00, 0.00);
 	localParams[10]:setScaleX(0.90);
 	localParams[10]:setScaleY(0.90);
@@ -174,7 +171,7 @@ function PackagePopUpLayer:initView()
 	localParams[12].__Name = 'bg_img#cancel_btn';
 	localParams[1]:addChild(localParams[12]);
 
-	localParams[13] = Node:create();
+	localParams[13] = Widget:create();
 	localParams[13]:setAnchorPoint(0.00, 0.00);
 	localParams[13]:setScaleX(0.90);
 	localParams[13]:setScaleY(0.90);

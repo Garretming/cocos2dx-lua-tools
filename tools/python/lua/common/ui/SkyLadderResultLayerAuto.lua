@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：SkyLadderResultLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -56,7 +53,7 @@ function SkyLadderResultLayer:initView()
 	localParams[3].__Name = 'star#Sprite_2';
 	localParams[1]:addChild(localParams[3]);
 
-	localParams[4] = ImageView:create(, 0);
+	localParams[4] = ImageView:create(nil, 0);
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setContentSize({width = 46.0, height = 46.0});
 	localParams[4]:setPosition(193.0, 193.0);
@@ -65,7 +62,7 @@ function SkyLadderResultLayer:initView()
 	localParams[4].__Name = 'star#icon';
 	localParams[1]:addChild(localParams[4]);
 
-	localParams[5] = Node:create();
+	localParams[5] = Widget:create();
 	localParams[5]:setAnchorPoint(0.00, 0.00);
 	localParams[5]:setVisible(false);
 	localParams[5]:setContentSize({width = 0.0, height = 0.0});
@@ -180,7 +177,7 @@ function SkyLadderResultLayer:initView()
 	localParams[15].__Name = 'star#Node_1#star5#sprite';
 	localParams[14]:addChild(localParams[15]);
 
-	localParams[16] = Node:create();
+	localParams[16] = Widget:create();
 	localParams[16]:setAnchorPoint(0.00, 0.00);
 	localParams[16]:setVisible(false);
 	localParams[16]:setContentSize({width = 0.0, height = 0.0});
@@ -274,7 +271,7 @@ function SkyLadderResultLayer:initView()
 	localParams[24].__Name = 'star#Node_2#star4#sprite';
 	localParams[23]:addChild(localParams[24]);
 
-	localParams[25] = Node:create();
+	localParams[25] = Widget:create();
 	localParams[25]:setAnchorPoint(0.00, 0.00);
 	localParams[25]:setVisible(false);
 	localParams[25]:setContentSize({width = 0.0, height = 0.0});
@@ -347,7 +344,7 @@ function SkyLadderResultLayer:initView()
 	localParams[31].__Name = 'star#Node_3#star3#sprite';
 	localParams[30]:addChild(localParams[31]);
 
-	localParams[32] = Node:create();
+	localParams[32] = Widget:create();
 	localParams[32]:setAnchorPoint(0.00, 0.00);
 	localParams[32]:setVisible(false);
 	localParams[32]:setContentSize({width = 0.0, height = 0.0});
@@ -402,7 +399,7 @@ function SkyLadderResultLayer:initView()
 	localParams[37]:setFontSize(32);
 	localParams[37]:setString([[最强王者]]);
 	localParams[37]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[37]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[37]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[37]:setAnchorPoint(0.50, 0.50);
 	localParams[37]:setContentSize({width = 133.0, height = 36.0});
 	localParams[37]:setPosition(128.5, 40.95);
@@ -480,7 +477,7 @@ function SkyLadderResultLayer:initView()
 	localParams[45]:setFontSize(24);
 	localParams[45]:setString([[9]]);
 	localParams[45]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[45]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[45]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[45]:setAnchorPoint(0.50, 0.50);
 	localParams[45]:setContentSize({width = 19.0, height = 28.0});
 	localParams[45]:setPosition(17.65, 19.0);
@@ -522,7 +519,7 @@ function SkyLadderResultLayer:initView()
 	localParams[49]:setFontSize(24);
 	localParams[49]:setString([[9]]);
 	localParams[49]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[49]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[49]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[49]:setAnchorPoint(0.50, 0.50);
 	localParams[49]:setContentSize({width = 19.0, height = 28.0});
 	localParams[49]:setPosition(17.65, 19.0);
@@ -564,7 +561,7 @@ function SkyLadderResultLayer:initView()
 	localParams[53]:setFontSize(24);
 	localParams[53]:setString([[9]]);
 	localParams[53]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[53]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[53]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[53]:setAnchorPoint(0.50, 0.50);
 	localParams[53]:setContentSize({width = 19.0, height = 28.0});
 	localParams[53]:setPosition(17.65, 19.0);
@@ -606,7 +603,7 @@ function SkyLadderResultLayer:initView()
 	localParams[57]:setFontSize(24);
 	localParams[57]:setString([[9]]);
 	localParams[57]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[57]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[57]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[57]:setAnchorPoint(0.50, 0.50);
 	localParams[57]:setContentSize({width = 19.0, height = 28.0});
 	localParams[57]:setPosition(17.65, 19.0);
@@ -648,7 +645,7 @@ function SkyLadderResultLayer:initView()
 	localParams[61]:setFontSize(24);
 	localParams[61]:setString([[9]]);
 	localParams[61]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[61]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[61]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[61]:setAnchorPoint(0.50, 0.50);
 	localParams[61]:setContentSize({width = 19.0, height = 28.0});
 	localParams[61]:setPosition(17.65, 19.0);
@@ -690,7 +687,7 @@ function SkyLadderResultLayer:initView()
 	localParams[65]:setFontSize(24);
 	localParams[65]:setString([[9]]);
 	localParams[65]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[65]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[65]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[65]:setAnchorPoint(0.50, 0.50);
 	localParams[65]:setContentSize({width = 19.0, height = 28.0});
 	localParams[65]:setPosition(17.65, 19.0);
@@ -732,7 +729,7 @@ function SkyLadderResultLayer:initView()
 	localParams[69]:setFontSize(24);
 	localParams[69]:setString([[9]]);
 	localParams[69]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[69]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[69]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[69]:setAnchorPoint(0.50, 0.50);
 	localParams[69]:setContentSize({width = 19.0, height = 28.0});
 	localParams[69]:setPosition(17.65, 19.0);

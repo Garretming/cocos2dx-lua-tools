@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：CallbackLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -58,7 +55,7 @@ function CallbackLayer:initView()
 	localParams[3]:setBackGroundColor({r = 150, g = 150, b = 255});
 	localParams[3]:setBackGroundColorOpacity(102);
 	localParams[3]:setAnchorPoint(0.00, 0.00);
-	localParams[3]:onClick(handler(self, self._onTableView));
+	localParams[3]:setEventCallback(handler(self, self._onTableView));
 	localParams[3]:setTouchEnabled(true);
 	localParams[3]:setContentSize({width = 500.0, height = 400.0});
 	localParams[3]:setPosition(200.0, 100.0);
@@ -94,6 +91,22 @@ function CallbackLayer:loadPlistResources()
 
     if (table.nums(self._plistList) > 0) then
         ccx.ResourcesMgr:getInstance():addSpriteFramesWithFiles(self._plistList)
+    end
+end
+
+
+--@callback:('count', listView)                              --总共cell数量
+--@callback:('size', listView, row)                          --每个cell的尺寸
+--@callback:('delay', listView, row, column, index)          --每个cell上item延时创建的时间
+--@callback:('add', listView, row, column, index, cell)      --添加每个item
+--@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
+--@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
+function CallbackLayer:_onTableView(eventName, listView, row, column, index, cell)
+    if self.m_ClickDelegate and self.m_ClickDelegate.onTableView then
+        return self.m_ClickDelegate:onTableView(eventName, listView, row, column, index, cell);
+    end
+    if self.onTableView then
+        return self:onTableView(eventName, listView, row, column, index, cell);
     end
 end
 

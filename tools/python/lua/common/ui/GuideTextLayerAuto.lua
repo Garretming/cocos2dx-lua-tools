@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：GuideTextLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -45,7 +42,7 @@ function GuideTextLayer:initView()
 	localParams[2]:setString([[Text LabelText LabelText LabelText L]]);
 	localParams[2]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
 	localParams[2]:setTextAreaSize({width = 250, height = 80});
-	localParams[2]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[2]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[2]:setAnchorPoint(0.00, 0.50);
 	localParams[2]:setContentSize({width = 250.0, height = 80.0});
 	localParams[2]:setPosition(20.0, 66.5);
@@ -68,7 +65,7 @@ function GuideTextLayer:initView()
 	localParams[4]:setString([[Text LabelText LabelText LabelText L]]);
 	localParams[4]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
 	localParams[4]:setTextAreaSize({width = 250, height = 80});
-	localParams[4]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[4]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[4]:setAnchorPoint(0.00, 0.50);
 	localParams[4]:setContentSize({width = 250.0, height = 80.0});
 	localParams[4]:setPosition(20.0, 66.5);
@@ -92,7 +89,7 @@ function GuideTextLayer:initView()
 	localParams[6]:setString([[Text LabelText LabelText LabelText L]]);
 	localParams[6]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
 	localParams[6]:setTextAreaSize({width = 250, height = 80});
-	localParams[6]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[6]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[6]:setAnchorPoint(0.00, 0.50);
 	localParams[6]:setContentSize({width = 250.0, height = 80.0});
 	localParams[6]:setPosition(272.0, 66.5);
@@ -116,7 +113,7 @@ function GuideTextLayer:initView()
 	localParams[8]:setString([[Text LabelText LabelText LabelText L]]);
 	localParams[8]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
 	localParams[8]:setTextAreaSize({width = 250, height = 80});
-	localParams[8]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[8]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[8]:setAnchorPoint(0.00, 0.50);
 	localParams[8]:setContentSize({width = 250.0, height = 80.0});
 	localParams[8]:setPosition(272.0, 66.5);

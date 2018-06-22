@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：RankItemNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -77,7 +74,7 @@ function RankItemNode:initView()
 	localParams[5]:setFontSize(20);
 	localParams[5]:setString([[最强王者]]);
 	localParams[5]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[5]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[5]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[5]:setContentSize({width = 84.0, height = 22.0});
@@ -102,7 +99,7 @@ function RankItemNode:initView()
 	localParams[7]:setFontSize(20);
 	localParams[7]:setString([[x6]]);
 	localParams[7]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[7]:setContentSize({width = 25.0, height = 22.0});
@@ -112,7 +109,7 @@ function RankItemNode:initView()
 	localParams[7].__Name = 'under_img#under_1#count_txt';
 	localParams[4]:addChild(localParams[7]);
 
-	localParams[8] = ImageView:create(, 0);
+	localParams[8] = ImageView:create(nil, 0);
 	localParams[8]:setAnchorPoint(0.50, 0.50);
 	localParams[8]:setScaleX(0.75);
 	localParams[8]:setScaleY(0.75);
@@ -127,7 +124,7 @@ function RankItemNode:initView()
 	localParams[9]:setFontSize(22);
 	localParams[9]:setString([[胜率：]]);
 	localParams[9]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[9]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[9]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[9]:setAnchorPoint(1.00, 0.50);
 	localParams[9]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[9]:setContentSize({width = 57.0, height = 29.0});
@@ -141,7 +138,7 @@ function RankItemNode:initView()
 	localParams[10]:setFontSize(22);
 	localParams[10]:setString([[50.00%]]);
 	localParams[10]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[10]:setAnchorPoint(0.00, 0.50);
 	localParams[10]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[10]:setContentSize({width = 75.0, height = 29.0});
@@ -155,7 +152,7 @@ function RankItemNode:initView()
 	localParams[11]:setFontSize(22);
 	localParams[11]:setString([[LV.25]]);
 	localParams[11]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[11]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[11]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[11]:setAnchorPoint(0.50, 0.50);
 	localParams[11]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[11]:setContentSize({width = 59.0, height = 26.0});
@@ -169,7 +166,7 @@ function RankItemNode:initView()
 	localParams[12]:setFontSize(22);
 	localParams[12]:setString([[大鸟大鸟大鸟]]);
 	localParams[12]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[12]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[12]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[12]:setAnchorPoint(0.00, 0.50);
 	localParams[12]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[12]:setContentSize({width = 136.0, height = 26.0});

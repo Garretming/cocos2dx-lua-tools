@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：SkillItemNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -69,7 +66,7 @@ function SkillItemNode:initView()
 	localParams[4]:setFontSize(20);
 	localParams[4]:setString([[LV:25]]);
 	localParams[4]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[4]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[4]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[4]:setContentSize({width = 54.0, height = 22.0});
@@ -83,7 +80,7 @@ function SkillItemNode:initView()
 	localParams[5]:setFontSize(20);
 	localParams[5]:setString([[灵魂出窍]]);
 	localParams[5]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[5]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[5]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[5]:setContentSize({width = 84.0, height = 22.0});
@@ -106,7 +103,7 @@ function SkillItemNode:initView()
 	localParams[7]:setFontSize(20);
 	localParams[7]:setString([[2]]);
 	localParams[7]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setContentSize({width = 15.0, height = 22.0});
 	localParams[7]:setPosition(18.65, 19.0);

@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：BattleOperatorLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -39,7 +36,7 @@ function BattleOperatorLayer:initView()
 	localParams[1].__Name = 'teamA';
 	self:addChild(localParams[1]);
 
-	localParams[2] = LoadingBar:create(''uires/battle/sheet/btn0088.png'', 1, 100.00);
+	localParams[2] = LoadingBar:create('uires/battle/sheet/btn0088.png', 1, 100.00);
 	localParams[2]:setAnchorPoint(0.50, 0.50);
 	localParams[2]:setContentSize({width = 244.0, height = 11.0});
 	localParams[2]:setPosition(163.0, 17.5);
@@ -79,7 +76,7 @@ function BattleOperatorLayer:initView()
 	localParams[5].__Name = 'teamB';
 	self:addChild(localParams[5]);
 
-	localParams[6] = LoadingBar:create(''uires/battle/sheet/btn0087.png'', 1, 100.00);
+	localParams[6] = LoadingBar:create('uires/battle/sheet/btn0087.png', 1, 100.00);
 	localParams[6]:setDirection(1);
 	localParams[6]:setAnchorPoint(0.50, 0.50);
 	localParams[6]:setContentSize({width = 244.0, height = 11.0});
@@ -161,7 +158,7 @@ function BattleOperatorLayer:initView()
 	localParams[12].__Name = 'skill1';
 	self:addChild(localParams[12]);
 
-	localParams[13] = ImageView:create(, 0);
+	localParams[13] = ImageView:create(nil, 0);
 	localParams[13]:setAnchorPoint(0.50, 0.50);
 	localParams[13]:setContentSize({width = 46.0, height = 46.0});
 	localParams[13]:setPosition(59.0, 59.5);
@@ -195,7 +192,7 @@ function BattleOperatorLayer:initView()
 	localParams[16]:setFontSize(26);
 	localParams[16]:setString([[0]]);
 	localParams[16]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[16]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[16]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[16]:setAnchorPoint(0.50, 0.50);
 	localParams[16]:setTextColor({r = 59, g = 225, b = 220});
 	localParams[16]:setContentSize({width = 20.0, height = 30.0});
@@ -214,7 +211,7 @@ function BattleOperatorLayer:initView()
 	localParams[17].__Name = 'skill2';
 	self:addChild(localParams[17]);
 
-	localParams[18] = ImageView:create(, 0);
+	localParams[18] = ImageView:create(nil, 0);
 	localParams[18]:setAnchorPoint(0.50, 0.50);
 	localParams[18]:setContentSize({width = 46.0, height = 46.0});
 	localParams[18]:setPosition(59.0, 59.5);
@@ -248,7 +245,7 @@ function BattleOperatorLayer:initView()
 	localParams[21]:setFontSize(26);
 	localParams[21]:setString([[0]]);
 	localParams[21]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[21]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[21]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[21]:setAnchorPoint(0.50, 0.50);
 	localParams[21]:setTextColor({r = 59, g = 225, b = 220});
 	localParams[21]:setContentSize({width = 20.0, height = 30.0});
@@ -267,7 +264,7 @@ function BattleOperatorLayer:initView()
 	localParams[22].__Name = 'anger';
 	self:addChild(localParams[22]);
 
-	localParams[23] = LoadingBar:create(''uires/battle/sheet/other0056.png'', 1, 0.00);
+	localParams[23] = LoadingBar:create('uires/battle/sheet/other0056.png', 1, 0.00);
 	localParams[23]:setAnchorPoint(0.50, 0.50);
 	localParams[23]:setContentSize({width = 909.0, height = 12.0});
 	localParams[23]:setPosition(487.54, 12.5);

@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：UpgradePopupLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -30,7 +27,7 @@ end
 function UpgradePopupLayer:initView()
     self.__LAYER_NAME = 'common.ui.UpgradePopupLayer';
     local localParams = {};
-	localParams[1] = Node:create();
+	localParams[1] = Widget:create();
 	localParams[1]:setAnchorPoint(0.00, 0.00);
 	localParams[1]:setContentSize({width = 0.0, height = 0.0});
 	localParams[1]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), WinSize.height/2 + (-0.00 * ccx.scaleY));
@@ -130,7 +127,7 @@ function UpgradePopupLayer:initView()
 	localParams[10]:setFontSize(20);
 	localParams[10]:setString([[]]);
 	localParams[10]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[10]:setAnchorPoint(0.00, 0.50);
 	localParams[10]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[10]:setContentSize({width = 0.0, height = 0.0});
@@ -140,7 +137,7 @@ function UpgradePopupLayer:initView()
 	localParams[10].__Name = 'Node_2#skill1#item#name';
 	localParams[9]:addChild(localParams[10]);
 
-	localParams[11] = ImageView:create(, 0);
+	localParams[11] = ImageView:create(nil, 0);
 	localParams[11]:setAnchorPoint(0.50, 0.50);
 	localParams[11]:setContentSize({width = 46.0, height = 46.0});
 	localParams[11]:setPosition(59.0, 59.5);
@@ -154,7 +151,7 @@ function UpgradePopupLayer:initView()
 	localParams[12]:setString([[]]);
 	localParams[12]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[12]:setTextAreaSize({width = 175, height = 75});
-	localParams[12]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[12]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[12]:setAnchorPoint(0.00, 1.00);
 	localParams[12]:setContentSize({width = 175.0, height = 75.0});
 	localParams[12]:setPosition(130.0, 80.0);
@@ -176,7 +173,7 @@ function UpgradePopupLayer:initView()
 	localParams[14]:setFontSize(24);
 	localParams[14]:setString([[]]);
 	localParams[14]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[14]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[14]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[14]:setAnchorPoint(0.50, 0.50);
 	localParams[14]:setContentSize({width = 0.0, height = 0.0});
 	localParams[14]:setPosition(19.0, 20.0);
@@ -217,7 +214,7 @@ function UpgradePopupLayer:initView()
 	localParams[17]:setFontSize(20);
 	localParams[17]:setString([[]]);
 	localParams[17]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[17]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[17]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[17]:setAnchorPoint(0.00, 0.50);
 	localParams[17]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[17]:setContentSize({width = 0.0, height = 0.0});
@@ -227,7 +224,7 @@ function UpgradePopupLayer:initView()
 	localParams[17].__Name = 'Node_2#skill2#item#name';
 	localParams[16]:addChild(localParams[17]);
 
-	localParams[18] = ImageView:create(, 0);
+	localParams[18] = ImageView:create(nil, 0);
 	localParams[18]:setAnchorPoint(0.50, 0.50);
 	localParams[18]:setContentSize({width = 46.0, height = 46.0});
 	localParams[18]:setPosition(59.0, 59.5);
@@ -241,7 +238,7 @@ function UpgradePopupLayer:initView()
 	localParams[19]:setString([[]]);
 	localParams[19]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[19]:setTextAreaSize({width = 175, height = 75});
-	localParams[19]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[19]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[19]:setAnchorPoint(0.00, 1.00);
 	localParams[19]:setContentSize({width = 175.0, height = 75.0});
 	localParams[19]:setPosition(130.0, 80.0);
@@ -263,7 +260,7 @@ function UpgradePopupLayer:initView()
 	localParams[21]:setFontSize(24);
 	localParams[21]:setString([[]]);
 	localParams[21]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[21]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[21]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[21]:setAnchorPoint(0.50, 0.50);
 	localParams[21]:setContentSize({width = 0.0, height = 0.0});
 	localParams[21]:setPosition(19.0, 20.0);
@@ -304,7 +301,7 @@ function UpgradePopupLayer:initView()
 	localParams[24]:setFontSize(20);
 	localParams[24]:setString([[]]);
 	localParams[24]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[24]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[24]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[24]:setAnchorPoint(0.00, 0.50);
 	localParams[24]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[24]:setContentSize({width = 0.0, height = 0.0});
@@ -314,7 +311,7 @@ function UpgradePopupLayer:initView()
 	localParams[24].__Name = 'Node_2#skill3#item#name';
 	localParams[23]:addChild(localParams[24]);
 
-	localParams[25] = ImageView:create(, 0);
+	localParams[25] = ImageView:create(nil, 0);
 	localParams[25]:setAnchorPoint(0.50, 0.50);
 	localParams[25]:setContentSize({width = 46.0, height = 46.0});
 	localParams[25]:setPosition(59.0, 59.5);
@@ -328,7 +325,7 @@ function UpgradePopupLayer:initView()
 	localParams[26]:setString([[]]);
 	localParams[26]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[26]:setTextAreaSize({width = 175, height = 75});
-	localParams[26]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[26]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[26]:setAnchorPoint(0.00, 1.00);
 	localParams[26]:setContentSize({width = 175.0, height = 75.0});
 	localParams[26]:setPosition(130.0, 80.0);
@@ -350,7 +347,7 @@ function UpgradePopupLayer:initView()
 	localParams[28]:setFontSize(24);
 	localParams[28]:setString([[]]);
 	localParams[28]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[28]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[28]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[28]:setAnchorPoint(0.50, 0.50);
 	localParams[28]:setContentSize({width = 0.0, height = 0.0});
 	localParams[28]:setPosition(19.0, 20.0);
@@ -391,7 +388,7 @@ function UpgradePopupLayer:initView()
 	localParams[31]:setFontSize(20);
 	localParams[31]:setString([[]]);
 	localParams[31]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[31]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[31]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[31]:setAnchorPoint(0.00, 0.50);
 	localParams[31]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[31]:setContentSize({width = 0.0, height = 0.0});
@@ -401,7 +398,7 @@ function UpgradePopupLayer:initView()
 	localParams[31].__Name = 'Node_2#skill4#item#name';
 	localParams[30]:addChild(localParams[31]);
 
-	localParams[32] = ImageView:create(, 0);
+	localParams[32] = ImageView:create(nil, 0);
 	localParams[32]:setAnchorPoint(0.50, 0.50);
 	localParams[32]:setContentSize({width = 46.0, height = 46.0});
 	localParams[32]:setPosition(59.0, 59.5);
@@ -415,7 +412,7 @@ function UpgradePopupLayer:initView()
 	localParams[33]:setString([[]]);
 	localParams[33]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[33]:setTextAreaSize({width = 175, height = 75});
-	localParams[33]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[33]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[33]:setAnchorPoint(0.00, 1.00);
 	localParams[33]:setContentSize({width = 175.0, height = 75.0});
 	localParams[33]:setPosition(130.0, 80.0);
@@ -437,7 +434,7 @@ function UpgradePopupLayer:initView()
 	localParams[35]:setFontSize(24);
 	localParams[35]:setString([[]]);
 	localParams[35]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[35]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[35]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[35]:setAnchorPoint(0.50, 0.50);
 	localParams[35]:setContentSize({width = 0.0, height = 0.0});
 	localParams[35]:setPosition(19.0, 20.0);
@@ -478,7 +475,7 @@ function UpgradePopupLayer:initView()
 	localParams[38]:setFontSize(20);
 	localParams[38]:setString([[]]);
 	localParams[38]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[38]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[38]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[38]:setAnchorPoint(0.00, 0.50);
 	localParams[38]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[38]:setContentSize({width = 0.0, height = 0.0});
@@ -488,7 +485,7 @@ function UpgradePopupLayer:initView()
 	localParams[38].__Name = 'Node_2#skill5#item#name';
 	localParams[37]:addChild(localParams[38]);
 
-	localParams[39] = ImageView:create(, 0);
+	localParams[39] = ImageView:create(nil, 0);
 	localParams[39]:setAnchorPoint(0.50, 0.50);
 	localParams[39]:setContentSize({width = 46.0, height = 46.0});
 	localParams[39]:setPosition(59.0, 59.5);
@@ -502,7 +499,7 @@ function UpgradePopupLayer:initView()
 	localParams[40]:setString([[]]);
 	localParams[40]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[40]:setTextAreaSize({width = 175, height = 75});
-	localParams[40]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[40]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[40]:setAnchorPoint(0.00, 1.00);
 	localParams[40]:setContentSize({width = 175.0, height = 75.0});
 	localParams[40]:setPosition(130.0, 80.0);
@@ -524,7 +521,7 @@ function UpgradePopupLayer:initView()
 	localParams[42]:setFontSize(24);
 	localParams[42]:setString([[]]);
 	localParams[42]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[42]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[42]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[42]:setAnchorPoint(0.50, 0.50);
 	localParams[42]:setContentSize({width = 0.0, height = 0.0});
 	localParams[42]:setPosition(19.0, 20.0);
@@ -565,7 +562,7 @@ function UpgradePopupLayer:initView()
 	localParams[45]:setFontSize(20);
 	localParams[45]:setString([[]]);
 	localParams[45]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[45]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[45]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[45]:setAnchorPoint(0.00, 0.50);
 	localParams[45]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[45]:setContentSize({width = 0.0, height = 0.0});
@@ -575,7 +572,7 @@ function UpgradePopupLayer:initView()
 	localParams[45].__Name = 'Node_2#skill6#item#name';
 	localParams[44]:addChild(localParams[45]);
 
-	localParams[46] = ImageView:create(, 0);
+	localParams[46] = ImageView:create(nil, 0);
 	localParams[46]:setAnchorPoint(0.50, 0.50);
 	localParams[46]:setContentSize({width = 46.0, height = 46.0});
 	localParams[46]:setPosition(59.0, 59.5);
@@ -589,7 +586,7 @@ function UpgradePopupLayer:initView()
 	localParams[47]:setString([[]]);
 	localParams[47]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[47]:setTextAreaSize({width = 175, height = 75});
-	localParams[47]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[47]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[47]:setAnchorPoint(0.00, 1.00);
 	localParams[47]:setContentSize({width = 175.0, height = 75.0});
 	localParams[47]:setPosition(130.0, 80.0);
@@ -611,7 +608,7 @@ function UpgradePopupLayer:initView()
 	localParams[49]:setFontSize(24);
 	localParams[49]:setString([[]]);
 	localParams[49]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[49]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[49]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[49]:setAnchorPoint(0.50, 0.50);
 	localParams[49]:setContentSize({width = 0.0, height = 0.0});
 	localParams[49]:setPosition(19.0, 20.0);
@@ -620,7 +617,7 @@ function UpgradePopupLayer:initView()
 	localParams[49].__Name = 'Node_2#skill6#anger#value';
 	localParams[48]:addChild(localParams[49]);
 
-	localParams[50] = Node:create();
+	localParams[50] = Widget:create();
 	localParams[50]:setAnchorPoint(0.00, 0.00);
 	localParams[50]:setContentSize({width = 0.0, height = 0.0});
 	localParams[50]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), 0.0);
@@ -642,7 +639,7 @@ function UpgradePopupLayer:initView()
 	localParams[52]:setFontSize(24);
 	localParams[52]:setString([[恭喜你，账号达到了   级]]);
 	localParams[52]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[52]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[52]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[52]:setAnchorPoint(0.50, 0.50);
 	localParams[52]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[52]:setContentSize({width = 281.0, height = 28.0});
@@ -656,7 +653,7 @@ function UpgradePopupLayer:initView()
 	localParams[53]:setFontSize(24);
 	localParams[53]:setString([[15]]);
 	localParams[53]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[53]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[53]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[53]:setAnchorPoint(0.50, 0.50);
 	localParams[53]:setTextColor({r = 0, g = 235, b = 255});
 	localParams[53]:setContentSize({width = 33.0, height = 28.0});

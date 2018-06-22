@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：MonsterDetailLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -140,7 +137,7 @@ function MonsterDetailLayer:initView()
 	localParams[9].__Name = 'Image_2#skill_btn1#skillIcon_sprite';
 	localParams[8]:addChild(localParams[9]);
 
-	localParams[10] = ImageView:create(, 0);
+	localParams[10] = ImageView:create(nil, 0);
 	localParams[10]:setAnchorPoint(0.50, 0.00);
 	localParams[10]:setContentSize({width = 46.0, height = 46.0});
 	localParams[10]:setPosition(180.0, 110.0);
@@ -183,7 +180,7 @@ function MonsterDetailLayer:initView()
 	localParams[14]:setFontSize(28);
 	localParams[14]:setString([[作死的大鸟]]);
 	localParams[14]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[14]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[14]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[14]:setAnchorPoint(0.50, 0.50);
 	localParams[14]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[14]:setContentSize({width = 143.0, height = 30.0});
@@ -209,7 +206,7 @@ function MonsterDetailLayer:initView()
 	localParams[16]:setFontSize(20);
 	localParams[16]:setString([[消耗怒气：]]);
 	localParams[16]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[16]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[16]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[16]:setAnchorPoint(0.00, 0.50);
 	localParams[16]:setContentSize({width = 91.0, height = 25.0});
 	localParams[16]:setPosition(171.0, 145.0);
@@ -222,7 +219,7 @@ function MonsterDetailLayer:initView()
 	localParams[17]:setFontSize(20);
 	localParams[17]:setString([[8]]);
 	localParams[17]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[17]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[17]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[17]:setAnchorPoint(0.00, 0.50);
 	localParams[17]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[17]:setContentSize({width = 14.0, height = 25.0});
@@ -238,7 +235,7 @@ function MonsterDetailLayer:initView()
 	localParams[18]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[18]:setTextAreaSize({width = 340, height = 100});
 	localParams[18]:setTextVerticalAlignment(1);
-	localParams[18]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[18]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[18]:setAnchorPoint(0.50, 0.50);
 	localParams[18]:setContentSize({width = 340.0, height = 100.0});
 	localParams[18]:setPosition(190.0, 226.0);
@@ -253,7 +250,7 @@ function MonsterDetailLayer:initView()
 	localParams[19]:setFontName('uires/public/ttf/jtcs.TTF');
 	localParams[19]:setTextAreaSize({width = 340, height = 80});
 	localParams[19]:setTextVerticalAlignment(1);
-	localParams[19]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[19]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[19]:setAnchorPoint(0.50, 0.50);
 	localParams[19]:setTextColor({r = 255, g = 255, b = 0});
 	localParams[19]:setContentSize({width = 340.0, height = 80.0});
@@ -267,7 +264,7 @@ function MonsterDetailLayer:initView()
 	localParams[20]:setFontSize(20);
 	localParams[20]:setString([[定位：]]);
 	localParams[20]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[20]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[20]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[20]:setAnchorPoint(0.00, 0.50);
 	localParams[20]:setContentSize({width = 51.0, height = 25.0});
 	localParams[20]:setPosition(20.0, 145.0);
@@ -280,7 +277,7 @@ function MonsterDetailLayer:initView()
 	localParams[21]:setFontSize(20);
 	localParams[21]:setString([[输出]]);
 	localParams[21]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[21]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[21]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[21]:setAnchorPoint(0.00, 0.50);
 	localParams[21]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[21]:setContentSize({width = 43.0, height = 25.0});
@@ -507,7 +504,7 @@ function MonsterDetailLayer:initView()
 	localParams[42].__Name = 'Image_2#close';
 	localParams[2]:addChild(localParams[42]);
 
-	localParams[43] = Node:create();
+	localParams[43] = Widget:create();
 	localParams[43]:setAnchorPoint(0.00, 0.00);
 	localParams[43]:setScaleX(0.90);
 	localParams[43]:setScaleY(0.90);

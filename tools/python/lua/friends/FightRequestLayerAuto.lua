@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：FightRequestLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -91,7 +88,7 @@ function FightRequestLayer:initView()
 	localParams[6]:setFontSize(20);
 	localParams[6]:setString([[邀请您进行竞技...]]);
 	localParams[6]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[6]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[6]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[6]:setAnchorPoint(0.50, 0.50);
 	localParams[6]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[6]:setContentSize({width = 173.0, height = 24.0});
@@ -125,7 +122,7 @@ function FightRequestLayer:initView()
 	localParams[9]:setFontSize(24);
 	localParams[9]:setString([[]]);
 	localParams[9]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[9]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[9]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[9]:setContentSize({width = 0.0, height = 0.0});
@@ -139,7 +136,7 @@ function FightRequestLayer:initView()
 	localParams[10]:setFontSize(26);
 	localParams[10]:setString([[]]);
 	localParams[10]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[10]:setAnchorPoint(0.00, 0.50);
 	localParams[10]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[10]:setContentSize({width = 0.0, height = 0.0});
@@ -173,7 +170,7 @@ function FightRequestLayer:initView()
 	localParams[13]:setFontSize(24);
 	localParams[13]:setString([[]]);
 	localParams[13]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[13]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[13]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[13]:setAnchorPoint(0.50, 0.50);
 	localParams[13]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[13]:setContentSize({width = 0.0, height = 0.0});
@@ -187,7 +184,7 @@ function FightRequestLayer:initView()
 	localParams[14]:setFontSize(26);
 	localParams[14]:setString([[]]);
 	localParams[14]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[14]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[14]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[14]:setAnchorPoint(0.00, 0.50);
 	localParams[14]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[14]:setContentSize({width = 0.0, height = 0.0});
@@ -210,7 +207,7 @@ function FightRequestLayer:initView()
 	localParams[16]:setFontSize(24);
 	localParams[16]:setString([[竞技邀请]]);
 	localParams[16]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[16]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[16]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[16]:setAnchorPoint(0.50, 0.50);
 	localParams[16]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[16]:setContentSize({width = 101.0, height = 28.0});
@@ -234,7 +231,7 @@ function FightRequestLayer:initView()
 	localParams[17].__Name = 'bg_img#accept_btn';
 	localParams[1]:addChild(localParams[17]);
 
-	localParams[18] = Node:create();
+	localParams[18] = Widget:create();
 	localParams[18]:setAnchorPoint(0.00, 0.00);
 	localParams[18]:setScaleX(0.90);
 	localParams[18]:setScaleY(0.90);
@@ -268,7 +265,7 @@ function FightRequestLayer:initView()
 	localParams[20].__Name = 'bg_img#refuse_btn';
 	localParams[1]:addChild(localParams[20]);
 
-	localParams[21] = Node:create();
+	localParams[21] = Widget:create();
 	localParams[21]:setAnchorPoint(0.00, 0.00);
 	localParams[21]:setScaleX(0.90);
 	localParams[21]:setScaleY(0.90);
@@ -303,7 +300,7 @@ function FightRequestLayer:initView()
 	localParams[23].__Name = 'bg_img#cancel_btn';
 	localParams[1]:addChild(localParams[23]);
 
-	localParams[24] = Node:create();
+	localParams[24] = Widget:create();
 	localParams[24]:setAnchorPoint(0.00, 0.00);
 	localParams[24]:setScaleX(0.90);
 	localParams[24]:setScaleY(0.90);

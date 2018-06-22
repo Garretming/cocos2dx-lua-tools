@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：SettingLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -101,7 +98,7 @@ function SettingLayer:initView()
 	localParams[6].__Name = 'bg#close';
 	localParams[1]:addChild(localParams[6]);
 
-	localParams[7] = Node:create();
+	localParams[7] = Widget:create();
 	localParams[7]:setAnchorPoint(0.00, 0.00);
 	localParams[7]:setScaleX(0.90);
 	localParams[7]:setScaleY(0.90);
@@ -143,7 +140,7 @@ function SettingLayer:initView()
 	localParams[11]:setFontSize(20);
 	localParams[11]:setString([[99]]);
 	localParams[11]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[11]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[11]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[11]:setAnchorPoint(0.00, 0.50);
 	localParams[11]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[11]:setContentSize({width = 27.0, height = 22.0});
@@ -181,7 +178,7 @@ function SettingLayer:initView()
 	localParams[13].__Name = 'bg#head#change#Sprite_30';
 	localParams[12]:addChild(localParams[13]);
 
-	localParams[14] = Node:create();
+	localParams[14] = Widget:create();
 	localParams[14]:setAnchorPoint(0.00, 0.00);
 	localParams[14]:setScaleX(0.55);
 	localParams[14]:setScaleY(0.55);
@@ -259,7 +256,7 @@ function SettingLayer:initView()
 	localParams[20]:setFontSize(20);
 	localParams[20]:setString([[万里长征万]]);
 	localParams[20]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[20]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[20]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[20]:setAnchorPoint(0.00, 1.00);
 	localParams[20]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[20]:setContentSize({width = 104.0, height = 22.0});
@@ -285,7 +282,7 @@ function SettingLayer:initView()
 	localParams[22]:setFontSize(20);
 	localParams[22]:setString([[当前]]);
 	localParams[22]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[22]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[22]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[22]:setAnchorPoint(0.50, 0.50);
 	localParams[22]:setContentSize({width = 44.0, height = 22.0});
 	localParams[22]:setPosition(72.05, 17.63);
@@ -294,7 +291,7 @@ function SettingLayer:initView()
 	localParams[22].__Name = 'bg#honor_bg#Text_11';
 	localParams[21]:addChild(localParams[22]);
 
-	localParams[23] = ImageView:create(, 0);
+	localParams[23] = ImageView:create(nil, 0);
 	localParams[23]:setAnchorPoint(0.50, 0.50);
 	localParams[23]:setScaleX(0.90);
 	localParams[23]:setScaleY(0.90);
@@ -309,7 +306,7 @@ function SettingLayer:initView()
 	localParams[24]:setFontSize(20);
 	localParams[24]:setString([[最高]]);
 	localParams[24]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[24]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[24]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[24]:setAnchorPoint(0.50, 0.50);
 	localParams[24]:setContentSize({width = 44.0, height = 22.0});
 	localParams[24]:setPosition(184.05, 17.48);
@@ -318,7 +315,7 @@ function SettingLayer:initView()
 	localParams[24].__Name = 'bg#honor_bg#Text_11_0';
 	localParams[21]:addChild(localParams[24]);
 
-	localParams[25] = ImageView:create(, 0);
+	localParams[25] = ImageView:create(nil, 0);
 	localParams[25]:setAnchorPoint(0.50, 0.50);
 	localParams[25]:setScaleX(0.90);
 	localParams[25]:setScaleY(0.90);
@@ -333,7 +330,7 @@ function SettingLayer:initView()
 	localParams[26]:setFontSize(20);
 	localParams[26]:setString([[印记]]);
 	localParams[26]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[26]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[26]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[26]:setAnchorPoint(0.50, 0.50);
 	localParams[26]:setContentSize({width = 44.0, height = 22.0});
 	localParams[26]:setPosition(294.3, 18.2);
@@ -378,7 +375,7 @@ function SettingLayer:initView()
 	localParams[29].__Name = 'bg#amend';
 	localParams[1]:addChild(localParams[29]);
 
-	localParams[30] = Node:create();
+	localParams[30] = Widget:create();
 	localParams[30]:setAnchorPoint(0.00, 0.00);
 	localParams[30]:setScaleX(0.90);
 	localParams[30]:setScaleY(0.90);

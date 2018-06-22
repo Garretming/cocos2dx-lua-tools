@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：EmbattleLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -78,7 +75,7 @@ function EmbattleLayer:initView()
 	localParams[4].__Name = 'work_m_bg#complete_btn#font';
 	localParams[3]:addChild(localParams[4]);
 
-	localParams[5] = Node:create();
+	localParams[5] = Widget:create();
 	localParams[5]:setAnchorPoint(0.00, 0.00);
 	localParams[5]:setScaleX(0.90);
 	localParams[5]:setScaleY(0.90);
@@ -93,7 +90,7 @@ function EmbattleLayer:initView()
 	localParams[6]:setFontSize(20);
 	localParams[6]:setString([[已上阵：]]);
 	localParams[6]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[6]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[6]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[6]:setAnchorPoint(0.50, 0.50);
 	localParams[6]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[6]:setContentSize({width = 76.0, height = 22.0});
@@ -107,7 +104,7 @@ function EmbattleLayer:initView()
 	localParams[7]:setFontSize(20);
 	localParams[7]:setString([[0/5]]);
 	localParams[7]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[7]:setAnchorPoint(0.00, 0.50);
 	localParams[7]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[7]:setContentSize({width = 36.0, height = 22.0});
@@ -137,7 +134,7 @@ function EmbattleLayer:initView()
 	localParams[9]:setFontSize(20);
 	localParams[9]:setString([[灵]]);
 	localParams[9]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[9]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[9]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[9]:setContentSize({width = 24.0, height = 22.0});
@@ -200,7 +197,7 @@ function EmbattleLayer:initView()
 	localParams[14]:setFontSize(20);
 	localParams[14]:setString([[]]);
 	localParams[14]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[14]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[14]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[14]:setAnchorPoint(0.50, 0.50);
 	localParams[14]:setTextColor({r = 255, g = 165, b = 0});
 	localParams[14]:setContentSize({width = 0.0, height = 0.0});
@@ -210,7 +207,7 @@ function EmbattleLayer:initView()
 	localParams[14].__Name = 'work_m_bg#skill_bg2#skill_level2';
 	localParams[13]:addChild(localParams[14]);
 
-	localParams[15] = ImageView:create(, 0);
+	localParams[15] = ImageView:create(nil, 0);
 	localParams[15]:setAnchorPoint(0.50, 0.50);
 	localParams[15]:setContentSize({width = 46.0, height = 46.0});
 	localParams[15]:setPosition(51.57, 51.42);
@@ -233,7 +230,7 @@ function EmbattleLayer:initView()
 	localParams[17]:setFontSize(24);
 	localParams[17]:setString([[]]);
 	localParams[17]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[17]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[17]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[17]:setAnchorPoint(0.50, 0.50);
 	localParams[17]:setContentSize({width = 0.0, height = 0.0});
 	localParams[17]:setPosition(17.05, 18.42);
@@ -246,7 +243,7 @@ function EmbattleLayer:initView()
 	localParams[18]:setFontSize(20);
 	localParams[18]:setString([[]]);
 	localParams[18]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[18]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[18]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[18]:setAnchorPoint(0.50, 0.50);
 	localParams[18]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[18]:setContentSize({width = 0.0, height = 0.0});
@@ -276,7 +273,7 @@ function EmbattleLayer:initView()
 	localParams[20]:setFontSize(20);
 	localParams[20]:setString([[]]);
 	localParams[20]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[20]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[20]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[20]:setAnchorPoint(0.50, 0.50);
 	localParams[20]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[20]:setContentSize({width = 0.0, height = 0.0});
@@ -286,7 +283,7 @@ function EmbattleLayer:initView()
 	localParams[20].__Name = 'work_m_bg#skill_bg1#skill_level1';
 	localParams[19]:addChild(localParams[20]);
 
-	localParams[21] = ImageView:create(, 0);
+	localParams[21] = ImageView:create(nil, 0);
 	localParams[21]:setAnchorPoint(0.50, 0.50);
 	localParams[21]:setContentSize({width = 46.0, height = 46.0});
 	localParams[21]:setPosition(51.57, 52.42);
@@ -308,7 +305,7 @@ function EmbattleLayer:initView()
 	localParams[23]:setFontSize(24);
 	localParams[23]:setString([[]]);
 	localParams[23]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[23]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[23]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[23]:setAnchorPoint(0.50, 0.50);
 	localParams[23]:setContentSize({width = 0.0, height = 0.0});
 	localParams[23]:setPosition(17.05, 18.42);
@@ -321,7 +318,7 @@ function EmbattleLayer:initView()
 	localParams[24]:setFontSize(20);
 	localParams[24]:setString([[]]);
 	localParams[24]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[24]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[24]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[24]:setAnchorPoint(0.50, 0.50);
 	localParams[24]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[24]:setContentSize({width = 0.0, height = 0.0});
@@ -360,7 +357,7 @@ function EmbattleLayer:initView()
 	localParams[26].__Name = 'help_btn';
 	self:addChild(localParams[26]);
 
-	localParams[27] = Node:create();
+	localParams[27] = Widget:create();
 	localParams[27]:setAnchorPoint(0.00, 0.00);
 	localParams[27]:setScaleX(1.20);
 	localParams[27]:setScaleY(1.20);
@@ -458,7 +455,7 @@ function EmbattleLayer:initView()
 	localParams[34].__Name = 'skill_bg#m_PageView#Panel1';
 	localParams[33]:addChild(localParams[34]);
 
-	localParams[35] = ImageView:create(, 0);
+	localParams[35] = ImageView:create(nil, 0);
 	localParams[35]:setAnchorPoint(0.50, 0.50);
 	localParams[35]:setContentSize({width = 46.0, height = 46.0});
 	localParams[35]:setPosition(localParams[34]:getContentSize().width/2 + (-255.02 * ccx.scaleX), localParams[34]:getContentSize().height/2 + (95.76 * ccx.scaleY));
@@ -467,7 +464,7 @@ function EmbattleLayer:initView()
 	localParams[35].__Name = 'skill_bg#m_PageView#Panel1#m_image1';
 	localParams[34]:addChild(localParams[35]);
 
-	localParams[36] = ImageView:create(, 0);
+	localParams[36] = ImageView:create(nil, 0);
 	localParams[36]:setAnchorPoint(0.50, 0.50);
 	localParams[36]:setContentSize({width = 46.0, height = 46.0});
 	localParams[36]:setPosition(localParams[34]:getContentSize().width/2 + (-85.03 * ccx.scaleX), localParams[34]:getContentSize().height/2 + (96.64 * ccx.scaleY));
@@ -476,7 +473,7 @@ function EmbattleLayer:initView()
 	localParams[36].__Name = 'skill_bg#m_PageView#Panel1#m_image2';
 	localParams[34]:addChild(localParams[36]);
 
-	localParams[37] = ImageView:create(, 0);
+	localParams[37] = ImageView:create(nil, 0);
 	localParams[37]:setAnchorPoint(0.50, 0.50);
 	localParams[37]:setContentSize({width = 46.0, height = 46.0});
 	localParams[37]:setPosition(localParams[34]:getContentSize().width/2 + (85.03 * ccx.scaleX), localParams[34]:getContentSize().height/2 + (96.52 * ccx.scaleY));
@@ -485,7 +482,7 @@ function EmbattleLayer:initView()
 	localParams[37].__Name = 'skill_bg#m_PageView#Panel1#m_image3';
 	localParams[34]:addChild(localParams[37]);
 
-	localParams[38] = ImageView:create(, 0);
+	localParams[38] = ImageView:create(nil, 0);
 	localParams[38]:setAnchorPoint(0.50, 0.50);
 	localParams[38]:setContentSize({width = 46.0, height = 46.0});
 	localParams[38]:setPosition(localParams[34]:getContentSize().width/2 + (245.02 * ccx.scaleX), localParams[34]:getContentSize().height/2 + (96.81 * ccx.scaleY));
@@ -494,7 +491,7 @@ function EmbattleLayer:initView()
 	localParams[38].__Name = 'skill_bg#m_PageView#Panel1#m_image4';
 	localParams[34]:addChild(localParams[38]);
 
-	localParams[39] = ImageView:create(, 0);
+	localParams[39] = ImageView:create(nil, 0);
 	localParams[39]:setAnchorPoint(0.50, 0.50);
 	localParams[39]:setContentSize({width = 46.0, height = 46.0});
 	localParams[39]:setPosition(localParams[34]:getContentSize().width/2 + (-255.02 * ccx.scaleX), localParams[34]:getContentSize().height/2 + (-107.98 * ccx.scaleY));
@@ -503,7 +500,7 @@ function EmbattleLayer:initView()
 	localParams[39].__Name = 'skill_bg#m_PageView#Panel1#m_image5';
 	localParams[34]:addChild(localParams[39]);
 
-	localParams[40] = ImageView:create(, 0);
+	localParams[40] = ImageView:create(nil, 0);
 	localParams[40]:setAnchorPoint(0.50, 0.50);
 	localParams[40]:setContentSize({width = 46.0, height = 46.0});
 	localParams[40]:setPosition(localParams[34]:getContentSize().width/2 + (-85.03 * ccx.scaleX), localParams[34]:getContentSize().height/2 + (-107.98 * ccx.scaleY));
@@ -512,7 +509,7 @@ function EmbattleLayer:initView()
 	localParams[40].__Name = 'skill_bg#m_PageView#Panel1#m_image6';
 	localParams[34]:addChild(localParams[40]);
 
-	localParams[41] = ImageView:create(, 0);
+	localParams[41] = ImageView:create(nil, 0);
 	localParams[41]:setAnchorPoint(0.50, 0.50);
 	localParams[41]:setContentSize({width = 46.0, height = 46.0});
 	localParams[41]:setPosition(localParams[34]:getContentSize().width/2 + (85.03 * ccx.scaleX), localParams[34]:getContentSize().height/2 + (-107.98 * ccx.scaleY));
@@ -521,7 +518,7 @@ function EmbattleLayer:initView()
 	localParams[41].__Name = 'skill_bg#m_PageView#Panel1#m_image7';
 	localParams[34]:addChild(localParams[41]);
 
-	localParams[42] = ImageView:create(, 0);
+	localParams[42] = ImageView:create(nil, 0);
 	localParams[42]:setAnchorPoint(0.50, 0.50);
 	localParams[42]:setContentSize({width = 46.0, height = 46.0});
 	localParams[42]:setPosition(localParams[34]:getContentSize().width/2 + (245.02 * ccx.scaleX), localParams[34]:getContentSize().height/2 + (-107.98 * ccx.scaleY));
@@ -546,7 +543,7 @@ function EmbattleLayer:initView()
 	localParams[43].__Name = 'skill_bg#m_PageView#Panel1#right_btn';
 	localParams[34]:addChild(localParams[43]);
 
-	localParams[44] = Node:create();
+	localParams[44] = Widget:create();
 	localParams[44]:setAnchorPoint(0.00, 0.00);
 	localParams[44]:setScaleX(1.20);
 	localParams[44]:setScaleY(1.20);
@@ -573,7 +570,7 @@ function EmbattleLayer:initView()
 	localParams[45].__Name = 'skill_bg#m_PageView#Panel1#left_btn';
 	localParams[34]:addChild(localParams[45]);
 
-	localParams[46] = Node:create();
+	localParams[46] = Widget:create();
 	localParams[46]:setAnchorPoint(0.00, 0.00);
 	localParams[46]:setScaleX(1.20);
 	localParams[46]:setScaleY(1.20);
@@ -611,7 +608,7 @@ function EmbattleLayer:initView()
 	localParams[48].__Name = 'skill_bg#s_PageView#Panel2';
 	localParams[47]:addChild(localParams[48]);
 
-	localParams[49] = ImageView:create(, 0);
+	localParams[49] = ImageView:create(nil, 0);
 	localParams[49]:setAnchorPoint(0.50, 0.50);
 	localParams[49]:setContentSize({width = 46.0, height = 46.0});
 	localParams[49]:setPosition(localParams[48]:getContentSize().width/2 + (-215.06 * ccx.scaleX), localParams[48]:getContentSize().height/2 + (106.64 * ccx.scaleY));
@@ -620,7 +617,7 @@ function EmbattleLayer:initView()
 	localParams[49].__Name = 'skill_bg#s_PageView#Panel2#m_image1';
 	localParams[48]:addChild(localParams[49]);
 
-	localParams[50] = ImageView:create(, 0);
+	localParams[50] = ImageView:create(nil, 0);
 	localParams[50]:setAnchorPoint(0.50, 0.50);
 	localParams[50]:setContentSize({width = 46.0, height = 46.0});
 	localParams[50]:setPosition(localParams[48]:getContentSize().width/2 + (4.97 * ccx.scaleX), localParams[48]:getContentSize().height/2 + (106.51 * ccx.scaleY));
@@ -629,7 +626,7 @@ function EmbattleLayer:initView()
 	localParams[50].__Name = 'skill_bg#s_PageView#Panel2#m_image2';
 	localParams[48]:addChild(localParams[50]);
 
-	localParams[51] = ImageView:create(, 0);
+	localParams[51] = ImageView:create(nil, 0);
 	localParams[51]:setAnchorPoint(0.50, 0.50);
 	localParams[51]:setContentSize({width = 46.0, height = 46.0});
 	localParams[51]:setPosition(localParams[48]:getContentSize().width/2 + (226.01 * ccx.scaleX), localParams[48]:getContentSize().height/2 + (106.39 * ccx.scaleY));
@@ -638,7 +635,7 @@ function EmbattleLayer:initView()
 	localParams[51].__Name = 'skill_bg#s_PageView#Panel2#m_image3';
 	localParams[48]:addChild(localParams[51]);
 
-	localParams[52] = ImageView:create(, 0);
+	localParams[52] = ImageView:create(nil, 0);
 	localParams[52]:setAnchorPoint(0.50, 0.50);
 	localParams[52]:setContentSize({width = 46.0, height = 46.0});
 	localParams[52]:setPosition(localParams[48]:getContentSize().width/2 + (-215.78 * ccx.scaleX), 98.8);
@@ -647,7 +644,7 @@ function EmbattleLayer:initView()
 	localParams[52].__Name = 'skill_bg#s_PageView#Panel2#m_image4';
 	localParams[48]:addChild(localParams[52]);
 
-	localParams[53] = ImageView:create(, 0);
+	localParams[53] = ImageView:create(nil, 0);
 	localParams[53]:setAnchorPoint(0.50, 0.50);
 	localParams[53]:setContentSize({width = 46.0, height = 46.0});
 	localParams[53]:setPosition(localParams[48]:getContentSize().width/2 + (4.82 * ccx.scaleX), 98.08);
@@ -656,7 +653,7 @@ function EmbattleLayer:initView()
 	localParams[53].__Name = 'skill_bg#s_PageView#Panel2#m_image5';
 	localParams[48]:addChild(localParams[53]);
 
-	localParams[54] = ImageView:create(, 0);
+	localParams[54] = ImageView:create(nil, 0);
 	localParams[54]:setAnchorPoint(0.50, 0.50);
 	localParams[54]:setContentSize({width = 46.0, height = 46.0});
 	localParams[54]:setPosition(localParams[48]:getContentSize().width/2 + (226.87 * ccx.scaleX), 98.65);
@@ -735,7 +732,7 @@ function EmbattleLayer:initView()
 	localParams[60].__Name = 'm_message_bg';
 	self:addChild(localParams[60]);
 
-	localParams[61] = Node:create();
+	localParams[61] = Widget:create();
 	localParams[61]:setAnchorPoint(0.00, 0.00);
 	localParams[61]:setContentSize({width = 0.0, height = 0.0});
 	localParams[61]:setPosition(0.0, 360.0);
@@ -748,7 +745,7 @@ function EmbattleLayer:initView()
 	localParams[62]:setFontSize(24);
 	localParams[62]:setString([[重甲奇兵]]);
 	localParams[62]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[62]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[62]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[62]:setAnchorPoint(0.50, 0.50);
 	localParams[62]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[62]:setContentSize({width = 100.0, height = 26.0});
@@ -762,7 +759,7 @@ function EmbattleLayer:initView()
 	localParams[63]:setFontSize(20);
 	localParams[63]:setString([[攻  击:]]);
 	localParams[63]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[63]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[63]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[63]:setAnchorPoint(0.00, 0.50);
 	localParams[63]:setContentSize({width = 58.0, height = 25.0});
 	localParams[63]:setPosition(13.23, -60.31);
@@ -776,7 +773,7 @@ function EmbattleLayer:initView()
 	localParams[64]:setString([[d]]);
 	localParams[64]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[64]:setTextAreaSize({width = 240, height = 0});
-	localParams[64]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[64]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[64]:setAnchorPoint(0.00, 1.00);
 	localParams[64]:setContentSize({width = 240.0, height = 0.0});
 	localParams[64]:setPosition(15.0, -110.0);
@@ -789,7 +786,7 @@ function EmbattleLayer:initView()
 	localParams[65]:setFontSize(20);
 	localParams[65]:setString([[血  量:]]);
 	localParams[65]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[65]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[65]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[65]:setAnchorPoint(0.00, 0.50);
 	localParams[65]:setContentSize({width = 58.0, height = 25.0});
 	localParams[65]:setPosition(13.23, -87.5);
@@ -802,7 +799,7 @@ function EmbattleLayer:initView()
 	localParams[66]:setFontSize(20);
 	localParams[66]:setString([[护  甲:]]);
 	localParams[66]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[66]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[66]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[66]:setAnchorPoint(0.00, 0.50);
 	localParams[66]:setContentSize({width = 58.0, height = 25.0});
 	localParams[66]:setPosition(135.97, -60.31);
@@ -815,7 +812,7 @@ function EmbattleLayer:initView()
 	localParams[67]:setFontSize(20);
 	localParams[67]:setString([[速  度:]]);
 	localParams[67]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[67]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[67]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[67]:setAnchorPoint(0.00, 0.50);
 	localParams[67]:setContentSize({width = 58.0, height = 25.0});
 	localParams[67]:setPosition(135.97, -87.5);
@@ -828,7 +825,7 @@ function EmbattleLayer:initView()
 	localParams[68]:setFontSize(20);
 	localParams[68]:setString([[99999]]);
 	localParams[68]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[68]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[68]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[68]:setAnchorPoint(0.00, 0.50);
 	localParams[68]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[68]:setContentSize({width = 58.0, height = 25.0});
@@ -842,7 +839,7 @@ function EmbattleLayer:initView()
 	localParams[69]:setFontSize(20);
 	localParams[69]:setString([[99999]]);
 	localParams[69]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[69]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[69]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[69]:setAnchorPoint(0.00, 0.39);
 	localParams[69]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[69]:setContentSize({width = 58.0, height = 25.0});
@@ -856,7 +853,7 @@ function EmbattleLayer:initView()
 	localParams[70]:setFontSize(20);
 	localParams[70]:setString([[99999]]);
 	localParams[70]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[70]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[70]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[70]:setAnchorPoint(0.00, 0.50);
 	localParams[70]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[70]:setContentSize({width = 58.0, height = 25.0});
@@ -870,7 +867,7 @@ function EmbattleLayer:initView()
 	localParams[71]:setFontSize(20);
 	localParams[71]:setString([[99999]]);
 	localParams[71]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[71]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[71]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[71]:setAnchorPoint(0.00, 0.50);
 	localParams[71]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[71]:setContentSize({width = 58.0, height = 25.0});
@@ -885,7 +882,7 @@ function EmbattleLayer:initView()
 	localParams[72]:setString([[]]);
 	localParams[72]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[72]:setTextAreaSize({width = 240, height = 0});
-	localParams[72]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[72]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[72]:setAnchorPoint(0.00, 1.00);
 	localParams[72]:setContentSize({width = 240.0, height = 0.0});
 	localParams[72]:setPosition(15.0, -227.94);
@@ -899,7 +896,7 @@ function EmbattleLayer:initView()
 	localParams[73]:setString([[]]);
 	localParams[73]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[73]:setTextAreaSize({width = 240, height = 0});
-	localParams[73]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[73]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[73]:setAnchorPoint(0.00, 1.00);
 	localParams[73]:setContentSize({width = 240.0, height = 0.0});
 	localParams[73]:setPosition(15.0, -338.34);
@@ -920,7 +917,7 @@ function EmbattleLayer:initView()
 	localParams[74].__Name = 's_message_bg';
 	self:addChild(localParams[74]);
 
-	localParams[75] = Node:create();
+	localParams[75] = Widget:create();
 	localParams[75]:setAnchorPoint(0.00, 0.00);
 	localParams[75]:setContentSize({width = 0.0, height = 0.0});
 	localParams[75]:setPosition(0.0, 230.0);
@@ -933,7 +930,7 @@ function EmbattleLayer:initView()
 	localParams[76]:setFontSize(24);
 	localParams[76]:setString([[风华之身]]);
 	localParams[76]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[76]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[76]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[76]:setAnchorPoint(0.50, 0.50);
 	localParams[76]:setTextColor({r = 250, g = 240, b = 155});
 	localParams[76]:setContentSize({width = 100.0, height = 26.0});
@@ -948,7 +945,7 @@ function EmbattleLayer:initView()
 	localParams[77]:setString([[技能说明:小体型 近距离小体型 近距离小体型 近距离小体型 近距离]]);
 	localParams[77]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[77]:setTextAreaSize({width = 235, height = 0});
-	localParams[77]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[77]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[77]:setAnchorPoint(0.50, 1.00);
 	localParams[77]:setContentSize({width = 235.0, height = 0.0});
 	localParams[77]:setPosition(135.0, localParams[75]:getContentSize().height - 110.00);
@@ -961,7 +958,7 @@ function EmbattleLayer:initView()
 	localParams[78]:setFontSize(20);
 	localParams[78]:setString([[技能说明：]]);
 	localParams[78]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[78]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[78]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[78]:setAnchorPoint(0.50, 0.50);
 	localParams[78]:setContentSize({width = 91.0, height = 25.0});
 	localParams[78]:setPosition(63.08, localParams[75]:getContentSize().height - 82.50);
@@ -1018,13 +1015,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#positionBg_img#Button_1#__SELECTED_IMG'] = localParams[82];
 	localParams[82].__children = self.__children;
 	localParams[82].__Name = 'Image_1#positionBg_img#Button_1#__SELECTED_IMG';
+	localParams[81]:setSelectNode(localParams[82]);
 	localParams[81]:addChild(localParams[82]);
 
 	localParams[83] = Text:create();
 	localParams[83]:setFontSize(18);
 	localParams[83]:setString([[全部]]);
 	localParams[83]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[83]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[83]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[83]:setAnchorPoint(0.50, 0.50);
 	localParams[83]:setContentSize({width = 40.0, height = 20.0});
 	localParams[83]:setPosition(45.0, 18.5);
@@ -1057,13 +1055,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#positionBg_img#Button_2#__SELECTED_IMG'] = localParams[85];
 	localParams[85].__children = self.__children;
 	localParams[85].__Name = 'Image_1#positionBg_img#Button_2#__SELECTED_IMG';
+	localParams[84]:setSelectNode(localParams[85]);
 	localParams[84]:addChild(localParams[85]);
 
 	localParams[86] = Text:create();
 	localParams[86]:setFontSize(18);
 	localParams[86]:setString([[坦克]]);
 	localParams[86]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[86]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[86]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[86]:setAnchorPoint(0.50, 0.50);
 	localParams[86]:setContentSize({width = 40.0, height = 20.0});
 	localParams[86]:setPosition(45.0, 18.5);
@@ -1096,13 +1095,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#positionBg_img#Button_3#__SELECTED_IMG'] = localParams[88];
 	localParams[88].__children = self.__children;
 	localParams[88].__Name = 'Image_1#positionBg_img#Button_3#__SELECTED_IMG';
+	localParams[87]:setSelectNode(localParams[88]);
 	localParams[87]:addChild(localParams[88]);
 
 	localParams[89] = Text:create();
 	localParams[89]:setFontSize(18);
 	localParams[89]:setString([[输出]]);
 	localParams[89]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[89]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[89]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[89]:setAnchorPoint(0.50, 0.50);
 	localParams[89]:setContentSize({width = 39.0, height = 20.0});
 	localParams[89]:setPosition(45.0, 18.5);
@@ -1135,13 +1135,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#positionBg_img#Button_4#__SELECTED_IMG'] = localParams[91];
 	localParams[91].__children = self.__children;
 	localParams[91].__Name = 'Image_1#positionBg_img#Button_4#__SELECTED_IMG';
+	localParams[90]:setSelectNode(localParams[91]);
 	localParams[90]:addChild(localParams[91]);
 
 	localParams[92] = Text:create();
 	localParams[92]:setFontSize(18);
 	localParams[92]:setString([[突袭]]);
 	localParams[92]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[92]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[92]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[92]:setAnchorPoint(0.50, 0.50);
 	localParams[92]:setContentSize({width = 40.0, height = 20.0});
 	localParams[92]:setPosition(45.0, 18.5);
@@ -1213,13 +1214,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#qualityBg_img#Button_1#__SELECTED_IMG'] = localParams[98];
 	localParams[98].__children = self.__children;
 	localParams[98].__Name = 'Image_1#qualityBg_img#Button_1#__SELECTED_IMG';
+	localParams[97]:setSelectNode(localParams[98]);
 	localParams[97]:addChild(localParams[98]);
 
 	localParams[99] = Text:create();
 	localParams[99]:setFontSize(18);
 	localParams[99]:setString([[全部]]);
 	localParams[99]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[99]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[99]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[99]:setAnchorPoint(0.50, 0.50);
 	localParams[99]:setContentSize({width = 40.0, height = 20.0});
 	localParams[99]:setPosition(45.0, 18.5);
@@ -1252,13 +1254,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#qualityBg_img#Button_2#__SELECTED_IMG'] = localParams[101];
 	localParams[101].__children = self.__children;
 	localParams[101].__Name = 'Image_1#qualityBg_img#Button_2#__SELECTED_IMG';
+	localParams[100]:setSelectNode(localParams[101]);
 	localParams[100]:addChild(localParams[101]);
 
 	localParams[102] = Text:create();
 	localParams[102]:setFontSize(18);
 	localParams[102]:setString([[传说]]);
 	localParams[102]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[102]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[102]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[102]:setAnchorPoint(0.50, 0.50);
 	localParams[102]:setContentSize({width = 40.0, height = 20.0});
 	localParams[102]:setPosition(45.0, 18.5);
@@ -1291,13 +1294,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#qualityBg_img#Button_3#__SELECTED_IMG'] = localParams[104];
 	localParams[104].__children = self.__children;
 	localParams[104].__Name = 'Image_1#qualityBg_img#Button_3#__SELECTED_IMG';
+	localParams[103]:setSelectNode(localParams[104]);
 	localParams[103]:addChild(localParams[104]);
 
 	localParams[105] = Text:create();
 	localParams[105]:setFontSize(18);
 	localParams[105]:setString([[史诗]]);
 	localParams[105]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[105]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[105]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[105]:setAnchorPoint(0.50, 0.50);
 	localParams[105]:setContentSize({width = 40.0, height = 20.0});
 	localParams[105]:setPosition(45.0, 18.5);
@@ -1330,13 +1334,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#qualityBg_img#Button_4#__SELECTED_IMG'] = localParams[107];
 	localParams[107].__children = self.__children;
 	localParams[107].__Name = 'Image_1#qualityBg_img#Button_4#__SELECTED_IMG';
+	localParams[106]:setSelectNode(localParams[107]);
 	localParams[106]:addChild(localParams[107]);
 
 	localParams[108] = Text:create();
 	localParams[108]:setFontSize(18);
 	localParams[108]:setString([[稀有]]);
 	localParams[108]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[108]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[108]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[108]:setAnchorPoint(0.50, 0.50);
 	localParams[108]:setContentSize({width = 40.0, height = 20.0});
 	localParams[108]:setPosition(45.0, 18.5);
@@ -1369,13 +1374,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#qualityBg_img#Button_5#__SELECTED_IMG'] = localParams[110];
 	localParams[110].__children = self.__children;
 	localParams[110].__Name = 'Image_1#qualityBg_img#Button_5#__SELECTED_IMG';
+	localParams[109]:setSelectNode(localParams[110]);
 	localParams[109]:addChild(localParams[110]);
 
 	localParams[111] = Text:create();
 	localParams[111]:setFontSize(18);
 	localParams[111]:setString([[普通]]);
 	localParams[111]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[111]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[111]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[111]:setAnchorPoint(0.50, 0.50);
 	localParams[111]:setContentSize({width = 40.0, height = 20.0});
 	localParams[111]:setPosition(45.0, 18.5);
@@ -1456,13 +1462,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#starBg_img#Button_1#__SELECTED_IMG'] = localParams[118];
 	localParams[118].__children = self.__children;
 	localParams[118].__Name = 'Image_1#starBg_img#Button_1#__SELECTED_IMG';
+	localParams[117]:setSelectNode(localParams[118]);
 	localParams[117]:addChild(localParams[118]);
 
 	localParams[119] = Text:create();
 	localParams[119]:setFontSize(18);
 	localParams[119]:setString([[全部]]);
 	localParams[119]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[119]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[119]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[119]:setAnchorPoint(0.50, 0.50);
 	localParams[119]:setContentSize({width = 40.0, height = 20.0});
 	localParams[119]:setPosition(45.0, 18.5);
@@ -1495,13 +1502,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#starBg_img#Button_2#__SELECTED_IMG'] = localParams[121];
 	localParams[121].__children = self.__children;
 	localParams[121].__Name = 'Image_1#starBg_img#Button_2#__SELECTED_IMG';
+	localParams[120]:setSelectNode(localParams[121]);
 	localParams[120]:addChild(localParams[121]);
 
 	localParams[122] = Text:create();
 	localParams[122]:setFontSize(18);
 	localParams[122]:setString([[9~10星]]);
 	localParams[122]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[122]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[122]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[122]:setAnchorPoint(0.50, 0.50);
 	localParams[122]:setContentSize({width = 58.0, height = 20.0});
 	localParams[122]:setPosition(45.0, 18.5);
@@ -1534,13 +1542,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#starBg_img#Button_3#__SELECTED_IMG'] = localParams[124];
 	localParams[124].__children = self.__children;
 	localParams[124].__Name = 'Image_1#starBg_img#Button_3#__SELECTED_IMG';
+	localParams[123]:setSelectNode(localParams[124]);
 	localParams[123]:addChild(localParams[124]);
 
 	localParams[125] = Text:create();
 	localParams[125]:setFontSize(18);
 	localParams[125]:setString([[7~8星]]);
 	localParams[125]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[125]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[125]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[125]:setAnchorPoint(0.50, 0.50);
 	localParams[125]:setContentSize({width = 49.0, height = 20.0});
 	localParams[125]:setPosition(45.0, 18.5);
@@ -1573,13 +1582,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#starBg_img#Button_4#__SELECTED_IMG'] = localParams[127];
 	localParams[127].__children = self.__children;
 	localParams[127].__Name = 'Image_1#starBg_img#Button_4#__SELECTED_IMG';
+	localParams[126]:setSelectNode(localParams[127]);
 	localParams[126]:addChild(localParams[127]);
 
 	localParams[128] = Text:create();
 	localParams[128]:setFontSize(18);
 	localParams[128]:setString([[5~6星]]);
 	localParams[128]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[128]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[128]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[128]:setAnchorPoint(0.50, 0.50);
 	localParams[128]:setContentSize({width = 49.0, height = 20.0});
 	localParams[128]:setPosition(45.0, 18.5);
@@ -1612,13 +1622,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#starBg_img#Button_5#__SELECTED_IMG'] = localParams[130];
 	localParams[130].__children = self.__children;
 	localParams[130].__Name = 'Image_1#starBg_img#Button_5#__SELECTED_IMG';
+	localParams[129]:setSelectNode(localParams[130]);
 	localParams[129]:addChild(localParams[130]);
 
 	localParams[131] = Text:create();
 	localParams[131]:setFontSize(18);
 	localParams[131]:setString([[3~4星]]);
 	localParams[131]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[131]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[131]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[131]:setAnchorPoint(0.50, 0.50);
 	localParams[131]:setContentSize({width = 49.0, height = 20.0});
 	localParams[131]:setPosition(45.0, 18.5);
@@ -1651,13 +1662,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#starBg_img#Button_6#__SELECTED_IMG'] = localParams[133];
 	localParams[133].__children = self.__children;
 	localParams[133].__Name = 'Image_1#starBg_img#Button_6#__SELECTED_IMG';
+	localParams[132]:setSelectNode(localParams[133]);
 	localParams[132]:addChild(localParams[133]);
 
 	localParams[134] = Text:create();
 	localParams[134]:setFontSize(18);
 	localParams[134]:setString([[1~2星]]);
 	localParams[134]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[134]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[134]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[134]:setAnchorPoint(0.50, 0.50);
 	localParams[134]:setContentSize({width = 49.0, height = 20.0});
 	localParams[134]:setPosition(45.0, 18.5);
@@ -1801,13 +1813,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#costBg_img#Button_1#__SELECTED_IMG'] = localParams[148];
 	localParams[148].__children = self.__children;
 	localParams[148].__Name = 'Image_1#costBg_img#Button_1#__SELECTED_IMG';
+	localParams[147]:setSelectNode(localParams[148]);
 	localParams[147]:addChild(localParams[148]);
 
 	localParams[149] = Text:create();
 	localParams[149]:setFontSize(18);
 	localParams[149]:setString([[全部]]);
 	localParams[149]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[149]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[149]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[149]:setAnchorPoint(0.50, 0.50);
 	localParams[149]:setContentSize({width = 40.0, height = 20.0});
 	localParams[149]:setPosition(45.0, 18.5);
@@ -1840,13 +1853,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#costBg_img#Button_2#__SELECTED_IMG'] = localParams[151];
 	localParams[151].__children = self.__children;
 	localParams[151].__Name = 'Image_1#costBg_img#Button_2#__SELECTED_IMG';
+	localParams[150]:setSelectNode(localParams[151]);
 	localParams[150]:addChild(localParams[151]);
 
 	localParams[152] = Text:create();
 	localParams[152]:setFontSize(18);
 	localParams[152]:setString([[6怒]]);
 	localParams[152]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[152]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[152]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[152]:setAnchorPoint(0.50, 0.50);
 	localParams[152]:setContentSize({width = 31.0, height = 20.0});
 	localParams[152]:setPosition(45.0, 18.5);
@@ -1879,13 +1893,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#costBg_img#Button_3#__SELECTED_IMG'] = localParams[154];
 	localParams[154].__children = self.__children;
 	localParams[154].__Name = 'Image_1#costBg_img#Button_3#__SELECTED_IMG';
+	localParams[153]:setSelectNode(localParams[154]);
 	localParams[153]:addChild(localParams[154]);
 
 	localParams[155] = Text:create();
 	localParams[155]:setFontSize(18);
 	localParams[155]:setString([[5怒]]);
 	localParams[155]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[155]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[155]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[155]:setAnchorPoint(0.50, 0.50);
 	localParams[155]:setContentSize({width = 31.0, height = 20.0});
 	localParams[155]:setPosition(45.0, 17.5);
@@ -1918,13 +1933,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#costBg_img#Button_4#__SELECTED_IMG'] = localParams[157];
 	localParams[157].__children = self.__children;
 	localParams[157].__Name = 'Image_1#costBg_img#Button_4#__SELECTED_IMG';
+	localParams[156]:setSelectNode(localParams[157]);
 	localParams[156]:addChild(localParams[157]);
 
 	localParams[158] = Text:create();
 	localParams[158]:setFontSize(18);
 	localParams[158]:setString([[4怒]]);
 	localParams[158]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[158]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[158]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[158]:setAnchorPoint(0.50, 0.50);
 	localParams[158]:setContentSize({width = 31.0, height = 20.0});
 	localParams[158]:setPosition(45.0, 18.5);
@@ -1957,13 +1973,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#costBg_img#Button_5#__SELECTED_IMG'] = localParams[160];
 	localParams[160].__children = self.__children;
 	localParams[160].__Name = 'Image_1#costBg_img#Button_5#__SELECTED_IMG';
+	localParams[159]:setSelectNode(localParams[160]);
 	localParams[159]:addChild(localParams[160]);
 
 	localParams[161] = Text:create();
 	localParams[161]:setFontSize(18);
 	localParams[161]:setString([[3怒]]);
 	localParams[161]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[161]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[161]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[161]:setAnchorPoint(0.50, 0.50);
 	localParams[161]:setContentSize({width = 31.0, height = 20.0});
 	localParams[161]:setPosition(45.0, 18.5);
@@ -1996,13 +2013,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#costBg_img#Button_6#__SELECTED_IMG'] = localParams[163];
 	localParams[163].__children = self.__children;
 	localParams[163].__Name = 'Image_1#costBg_img#Button_6#__SELECTED_IMG';
+	localParams[162]:setSelectNode(localParams[163]);
 	localParams[162]:addChild(localParams[163]);
 
 	localParams[164] = Text:create();
 	localParams[164]:setFontSize(18);
 	localParams[164]:setString([[2怒]]);
 	localParams[164]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[164]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[164]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[164]:setAnchorPoint(0.50, 0.50);
 	localParams[164]:setContentSize({width = 31.0, height = 20.0});
 	localParams[164]:setPosition(45.0, 18.5);
@@ -2035,13 +2053,14 @@ function EmbattleLayer:initView()
 	self.__children['Image_1#costBg_img#Button_7#__SELECTED_IMG'] = localParams[166];
 	localParams[166].__children = self.__children;
 	localParams[166].__Name = 'Image_1#costBg_img#Button_7#__SELECTED_IMG';
+	localParams[165]:setSelectNode(localParams[166]);
 	localParams[165]:addChild(localParams[166]);
 
 	localParams[167] = Text:create();
 	localParams[167]:setFontSize(18);
 	localParams[167]:setString([[1怒]]);
 	localParams[167]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[167]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[167]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[167]:setAnchorPoint(0.50, 0.50);
 	localParams[167]:setContentSize({width = 31.0, height = 20.0});
 	localParams[167]:setPosition(45.0, 18.5);
@@ -2165,7 +2184,7 @@ function EmbattleLayer:initView()
 	localParams[177]:setFontSize(18);
 	localParams[177]:setString([[全部]]);
 	localParams[177]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[177]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[177]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[177]:setAnchorPoint(1.00, 0.50);
 	localParams[177]:setContentSize({width = 40.0, height = 20.0});
 	localParams[177]:setPosition(62.2, 23.0);

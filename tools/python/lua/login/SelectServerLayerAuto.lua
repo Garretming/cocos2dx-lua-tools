@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：SelectServerLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -45,7 +42,7 @@ function SelectServerLayer:initView()
 	localParams[1].__Name = 'button1';
 	self:addChild(localParams[1]);
 
-	localParams[2] = Node:create();
+	localParams[2] = Widget:create();
 	localParams[2]:setAnchorPoint(0.00, 0.00);
 	localParams[2]:setScaleX(0.90);
 	localParams[2]:setScaleY(0.90);
@@ -248,7 +245,7 @@ function SelectServerLayer:initView()
 	localParams[20].__Name = 'Image_2#Image_4#PageView_1';
 	localParams[19]:addChild(localParams[20]);
 
-	localParams[21] = ImageView:create(, 0);
+	localParams[21] = ImageView:create(nil, 0);
 	localParams[21]:setAnchorPoint(0.50, 0.50);
 	localParams[21]:setContentSize({width = 46.0, height = 46.0});
 	localParams[21]:setPosition(200.0, -10.0);
@@ -257,7 +254,7 @@ function SelectServerLayer:initView()
 	localParams[21].__Name = 'Image_2#Image_4#normal_dot';
 	localParams[19]:addChild(localParams[21]);
 
-	localParams[22] = ImageView:create(, 0);
+	localParams[22] = ImageView:create(nil, 0);
 	localParams[22]:setAnchorPoint(0.50, 0.50);
 	localParams[22]:setContentSize({width = 46.0, height = 46.0});
 	localParams[22]:setPosition(300.0, -10.0);
@@ -280,7 +277,7 @@ function SelectServerLayer:initView()
 	localParams[23].__Name = 'button2';
 	self:addChild(localParams[23]);
 
-	localParams[24] = Node:create();
+	localParams[24] = Widget:create();
 	localParams[24]:setAnchorPoint(0.00, 0.00);
 	localParams[24]:setScaleX(0.90);
 	localParams[24]:setScaleY(0.90);

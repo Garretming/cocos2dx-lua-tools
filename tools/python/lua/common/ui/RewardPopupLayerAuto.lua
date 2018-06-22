@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：RewardPopupLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -84,7 +81,7 @@ function RewardPopupLayer:initView()
 	localParams[4].__Name = 'Image_1#Button_1';
 	localParams[1]:addChild(localParams[4]);
 
-	localParams[5] = Node:create();
+	localParams[5] = Widget:create();
 	localParams[5]:setAnchorPoint(0.00, 0.00);
 	localParams[5]:setScaleX(0.90);
 	localParams[5]:setScaleY(0.90);
@@ -147,7 +144,7 @@ function RewardPopupLayer:initView()
 	localParams[10].__Name = 'Image_1#Button1';
 	localParams[1]:addChild(localParams[10]);
 
-	localParams[11] = ImageView:create(, 0);
+	localParams[11] = ImageView:create(nil, 0);
 	localParams[11]:setAnchorPoint(0.50, 0.50);
 	localParams[11]:setContentSize({width = 46.0, height = 46.0});
 	localParams[11]:setPosition(60.0, 60.0);
@@ -160,7 +157,7 @@ function RewardPopupLayer:initView()
 	localParams[12]:setFontSize(22);
 	localParams[12]:setString([[999999]]);
 	localParams[12]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[12]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[12]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[12]:setAnchorPoint(1.00, 0.00);
 	localParams[12]:setScaleX(1.10);
 	localParams[12]:setScaleY(1.10);
@@ -176,7 +173,7 @@ function RewardPopupLayer:initView()
 	localParams[13]:setFontSize(18);
 	localParams[13]:setString([[冰霜忍足]]);
 	localParams[13]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[13]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[13]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[13]:setAnchorPoint(0.50, 0.50);
 	localParams[13]:setVisible(false);
 	localParams[13]:setContentSize({width = 77.0, height = 24.0});
@@ -202,7 +199,7 @@ function RewardPopupLayer:initView()
 	localParams[14].__Name = 'Image_1#Button2';
 	localParams[1]:addChild(localParams[14]);
 
-	localParams[15] = ImageView:create(, 0);
+	localParams[15] = ImageView:create(nil, 0);
 	localParams[15]:setAnchorPoint(0.50, 0.50);
 	localParams[15]:setContentSize({width = 46.0, height = 46.0});
 	localParams[15]:setPosition(60.0, 60.0);
@@ -215,7 +212,7 @@ function RewardPopupLayer:initView()
 	localParams[16]:setFontSize(22);
 	localParams[16]:setString([[999999]]);
 	localParams[16]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[16]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[16]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[16]:setAnchorPoint(1.00, 0.00);
 	localParams[16]:setVisible(false);
 	localParams[16]:setContentSize({width = 82.0, height = 26.0});
@@ -229,7 +226,7 @@ function RewardPopupLayer:initView()
 	localParams[17]:setFontSize(18);
 	localParams[17]:setString([[冰霜忍足]]);
 	localParams[17]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[17]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[17]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[17]:setAnchorPoint(0.50, 0.50);
 	localParams[17]:setVisible(false);
 	localParams[17]:setContentSize({width = 77.0, height = 24.0});
@@ -255,7 +252,7 @@ function RewardPopupLayer:initView()
 	localParams[18].__Name = 'Image_1#Button3';
 	localParams[1]:addChild(localParams[18]);
 
-	localParams[19] = ImageView:create(, 0);
+	localParams[19] = ImageView:create(nil, 0);
 	localParams[19]:setAnchorPoint(0.50, 0.50);
 	localParams[19]:setContentSize({width = 46.0, height = 46.0});
 	localParams[19]:setPosition(60.0, 60.0);
@@ -268,7 +265,7 @@ function RewardPopupLayer:initView()
 	localParams[20]:setFontSize(22);
 	localParams[20]:setString([[999999]]);
 	localParams[20]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[20]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[20]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[20]:setAnchorPoint(1.00, 0.00);
 	localParams[20]:setVisible(false);
 	localParams[20]:setContentSize({width = 82.0, height = 26.0});
@@ -282,7 +279,7 @@ function RewardPopupLayer:initView()
 	localParams[21]:setFontSize(18);
 	localParams[21]:setString([[冰霜忍足]]);
 	localParams[21]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[21]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[21]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[21]:setAnchorPoint(0.50, 0.50);
 	localParams[21]:setVisible(false);
 	localParams[21]:setContentSize({width = 77.0, height = 24.0});
@@ -308,7 +305,7 @@ function RewardPopupLayer:initView()
 	localParams[22].__Name = 'Image_1#Button4';
 	localParams[1]:addChild(localParams[22]);
 
-	localParams[23] = ImageView:create(, 0);
+	localParams[23] = ImageView:create(nil, 0);
 	localParams[23]:setAnchorPoint(0.50, 0.50);
 	localParams[23]:setContentSize({width = 46.0, height = 46.0});
 	localParams[23]:setPosition(60.0, 60.0);
@@ -321,7 +318,7 @@ function RewardPopupLayer:initView()
 	localParams[24]:setFontSize(22);
 	localParams[24]:setString([[999999]]);
 	localParams[24]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[24]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[24]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[24]:setAnchorPoint(1.00, 0.00);
 	localParams[24]:setVisible(false);
 	localParams[24]:setContentSize({width = 82.0, height = 26.0});
@@ -335,7 +332,7 @@ function RewardPopupLayer:initView()
 	localParams[25]:setFontSize(18);
 	localParams[25]:setString([[冰霜忍足]]);
 	localParams[25]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[25]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[25]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[25]:setAnchorPoint(0.50, 0.50);
 	localParams[25]:setVisible(false);
 	localParams[25]:setContentSize({width = 77.0, height = 24.0});
@@ -361,7 +358,7 @@ function RewardPopupLayer:initView()
 	localParams[26].__Name = 'Image_1#Button5';
 	localParams[1]:addChild(localParams[26]);
 
-	localParams[27] = ImageView:create(, 0);
+	localParams[27] = ImageView:create(nil, 0);
 	localParams[27]:setAnchorPoint(0.50, 0.50);
 	localParams[27]:setContentSize({width = 46.0, height = 46.0});
 	localParams[27]:setPosition(60.0, 60.0);
@@ -374,7 +371,7 @@ function RewardPopupLayer:initView()
 	localParams[28]:setFontSize(22);
 	localParams[28]:setString([[999999]]);
 	localParams[28]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[28]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[28]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[28]:setAnchorPoint(1.00, 0.00);
 	localParams[28]:setVisible(false);
 	localParams[28]:setContentSize({width = 82.0, height = 26.0});
@@ -388,7 +385,7 @@ function RewardPopupLayer:initView()
 	localParams[29]:setFontSize(18);
 	localParams[29]:setString([[冰霜忍足]]);
 	localParams[29]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[29]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[29]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[29]:setAnchorPoint(0.50, 0.50);
 	localParams[29]:setVisible(false);
 	localParams[29]:setContentSize({width = 77.0, height = 24.0});
@@ -414,7 +411,7 @@ function RewardPopupLayer:initView()
 	localParams[30].__Name = 'Image_1#Button6';
 	localParams[1]:addChild(localParams[30]);
 
-	localParams[31] = ImageView:create(, 0);
+	localParams[31] = ImageView:create(nil, 0);
 	localParams[31]:setAnchorPoint(0.50, 0.50);
 	localParams[31]:setContentSize({width = 46.0, height = 46.0});
 	localParams[31]:setPosition(60.0, 60.0);
@@ -427,7 +424,7 @@ function RewardPopupLayer:initView()
 	localParams[32]:setFontSize(22);
 	localParams[32]:setString([[999999]]);
 	localParams[32]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[32]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[32]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[32]:setAnchorPoint(1.00, 0.00);
 	localParams[32]:setVisible(false);
 	localParams[32]:setContentSize({width = 82.0, height = 26.0});
@@ -441,7 +438,7 @@ function RewardPopupLayer:initView()
 	localParams[33]:setFontSize(18);
 	localParams[33]:setString([[冰霜忍足]]);
 	localParams[33]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[33]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[33]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[33]:setAnchorPoint(0.50, 0.50);
 	localParams[33]:setVisible(false);
 	localParams[33]:setContentSize({width = 77.0, height = 24.0});

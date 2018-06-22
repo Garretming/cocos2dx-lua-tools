@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：GoodsNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -53,7 +50,7 @@ function GoodsNode:initView()
 	localParams[2].__Name = 'item_btn#IconBackImage';
 	localParams[1]:addChild(localParams[2]);
 
-	localParams[3] = ImageView:create(, 0);
+	localParams[3] = ImageView:create(nil, 0);
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setContentSize({width = 46.0, height = 46.0});
 	localParams[3]:setPosition(61.5, 90.0);
@@ -66,7 +63,7 @@ function GoodsNode:initView()
 	localParams[4]:setFontSize(20);
 	localParams[4]:setString([[aaab]]);
 	localParams[4]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[4]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[4]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[4]:setContentSize({width = 44.0, height = 22.0});
@@ -105,7 +102,7 @@ function GoodsNode:initView()
 	localParams[7]:setFontSize(24);
 	localParams[7]:setString([[¥ 100]]);
 	localParams[7]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[7]:setVisible(false);
@@ -120,7 +117,7 @@ function GoodsNode:initView()
 	localParams[8]:setFontSize(24);
 	localParams[8]:setString([[55555]]);
 	localParams[8]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[8]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[8]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[8]:setAnchorPoint(0.50, 0.50);
 	localParams[8]:setVisible(false);
 	localParams[8]:setContentSize({width = 77.0, height = 26.0});
@@ -134,7 +131,7 @@ function GoodsNode:initView()
 	localParams[9]:setFontSize(20);
 	localParams[9]:setString([[已售罄]]);
 	localParams[9]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[9]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[9]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:setTextColor({r = 155, g = 125, b = 100});
 	localParams[9]:setVisible(false);

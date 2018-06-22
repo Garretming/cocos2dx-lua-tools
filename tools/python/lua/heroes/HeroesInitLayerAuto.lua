@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：HeroesInitLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -212,7 +209,7 @@ function HeroesInitLayer:initView()
 	localParams[15]:setFontSize(20);
 	localParams[15]:setString([[999999]]);
 	localParams[15]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[15]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[15]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[15]:setAnchorPoint(1.00, 0.50);
 	localParams[15]:setContentSize({width = 75.0, height = 22.0});
 	localParams[15]:setPosition(141.77, localParams[14]:getContentSize().height - 18.98);
@@ -289,7 +286,7 @@ function HeroesInitLayer:initView()
 	localParams[20].__Name = '__FULL_LAYER#help_btn';
 	localParams[9]:addChild(localParams[20]);
 
-	localParams[21] = Node:create();
+	localParams[21] = Widget:create();
 	localParams[21]:setAnchorPoint(0.00, 0.00);
 	localParams[21]:setScaleX(0.90);
 	localParams[21]:setScaleY(0.90);
@@ -300,7 +297,7 @@ function HeroesInitLayer:initView()
 	localParams[21].__Name = '__FULL_LAYER#help_btn#__SELECTED_SCALE';
 	localParams[20]:addChild(localParams[21]);
 
-	localParams[22] = Node:create();
+	localParams[22] = Widget:create();
 	localParams[22]:setAnchorPoint(0.00, 0.00);
 	localParams[22]:setContentSize({width = 0.0, height = 0.0});
 	localParams[22]:setPosition(localParams[9]:getContentSize().width/2 + (-52.02 * ccx.scaleX), localParams[9]:getContentSize().height - 1.65);
@@ -318,7 +315,7 @@ function HeroesInitLayer:initView()
 	localParams[23].__Name = '__FULL_LAYER#Node_12#expUnder_sprite';
 	localParams[22]:addChild(localParams[23]);
 
-	localParams[24] = LoadingBar:create(''uires/public/sheet_other/other0082.png'', 1, 100.00);
+	localParams[24] = LoadingBar:create('uires/public/sheet_other/other0082.png', 1, 100.00);
 	localParams[24]:setAnchorPoint(0.50, 0.50);
 	localParams[24]:setContentSize({width = 151.0, height = 14.0});
 	localParams[24]:setPosition(79.0, 9.0);
@@ -352,7 +349,7 @@ function HeroesInitLayer:initView()
 	localParams[27]:setDefaultFontSize(20);
 	localParams[27]:setString([[这作死的大鸟]]);
 	localParams[27]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[27]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[27]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[27]:setAnchorPoint(0.00, 0.50);
 	localParams[27]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[27]:setContentSize({width = 123.0, height = 22.0});
@@ -375,7 +372,7 @@ function HeroesInitLayer:initView()
 	localParams[29]:setFontSize(20);
 	localParams[29]:setString([[999999]]);
 	localParams[29]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[29]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[29]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[29]:setAnchorPoint(1.00, 0.50);
 	localParams[29]:setContentSize({width = 75.0, height = 22.0});
 	localParams[29]:setPosition(141.77, localParams[28]:getContentSize().height - 18.98);
@@ -470,7 +467,7 @@ function HeroesInitLayer:initView()
 	localParams[37]:setFontSize(20);
 	localParams[37]:setString([[999999]]);
 	localParams[37]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[37]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[37]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[37]:setAnchorPoint(1.00, 0.50);
 	localParams[37]:setContentSize({width = 75.0, height = 22.0});
 	localParams[37]:setPosition(143.96, 30.61);

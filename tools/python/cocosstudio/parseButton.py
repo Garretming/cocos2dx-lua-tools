@@ -44,13 +44,10 @@ def parse(node, array):
 
     if (array.get('TextColor') != None):
         color = [255, 255, 255]
-        if (array['TextColor'].get('R')):
-            color[0] = array['TextColor']['R']
-        if (array['TextColor'].get('G')):
-            color[1] = array['TextColor']['G']
-        if (array['TextColor'].get('B')):
-            color[2] = array['TextColor']['B']
-    
+        color[0] = array['TextColor'].get('R', 255)
+        color[1] = array['TextColor'].get('G', 255)
+        color[2] = array['TextColor'].get('B', 255)
+
         string += "\t%s:setTitleColor({r = %d, g = %d, b = %d});\n" % (node, color[0], color[1], color[2])
     
 

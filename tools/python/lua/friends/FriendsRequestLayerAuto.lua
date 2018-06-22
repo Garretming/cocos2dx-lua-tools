@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：FriendsRequestLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -70,7 +67,7 @@ function FriendsRequestLayer:initView()
 	localParams[4]:setFontSize(30);
 	localParams[4]:setString([[好友申请]]);
 	localParams[4]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[4]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[4]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[4]:setContentSize({width = 125.0, height = 34.0});
@@ -95,7 +92,7 @@ function FriendsRequestLayer:initView()
 	localParams[5].__Name = 'bg#request_btn';
 	localParams[1]:addChild(localParams[5]);
 
-	localParams[6] = Node:create();
+	localParams[6] = Widget:create();
 	localParams[6]:setAnchorPoint(0.00, 0.00);
 	localParams[6]:setScaleX(0.90);
 	localParams[6]:setScaleY(0.90);
@@ -110,7 +107,7 @@ function FriendsRequestLayer:initView()
 	localParams[7]:setFontSize(30);
 	localParams[7]:setString([[申 请]]);
 	localParams[7]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setTextColor({r = 230, g = 230, b = 250});
 	localParams[7]:setContentSize({width = 79.0, height = 32.0});
@@ -134,7 +131,7 @@ function FriendsRequestLayer:initView()
 	localParams[8].__Name = 'bg#cancel_btn';
 	localParams[1]:addChild(localParams[8]);
 
-	localParams[9] = Node:create();
+	localParams[9] = Widget:create();
 	localParams[9]:setAnchorPoint(0.00, 0.00);
 	localParams[9]:setScaleX(0.90);
 	localParams[9]:setScaleY(0.90);
@@ -149,7 +146,7 @@ function FriendsRequestLayer:initView()
 	localParams[10]:setFontSize(30);
 	localParams[10]:setString([[取 消]]);
 	localParams[10]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[10]:setAnchorPoint(0.50, 0.50);
 	localParams[10]:setTextColor({r = 230, g = 230, b = 250});
 	localParams[10]:setContentSize({width = 80.0, height = 34.0});
@@ -163,7 +160,7 @@ function FriendsRequestLayer:initView()
 	localParams[11]:setFontSize(20);
 	localParams[11]:setString([[申请后需等待对方通过]]);
 	localParams[11]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[11]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[11]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[11]:setAnchorPoint(0.50, 0.50);
 	localParams[11]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[11]:setContentSize({width = 205.0, height = 24.0});
@@ -189,9 +186,7 @@ function FriendsRequestLayer:initView()
 	localParams[13]:setFontSize(18);
 	localParams[13]:setPlaceholderFontSize(18);
 	localParams[13]:setPlaceHolder([[点击输入文字]]);
-	localParams[13]:setMaxLengthEnabled(true);
 	localParams[13]:setMaxLength(12);
-	localParams[13]:setPasswordEnabled(false);
 	localParams[13]:setAnchorPoint(0.50, 0.50);
 	localParams[13]:registerScriptEditBoxHandler(handler(self, self._onInputApply));
 	localParams[13]:setTouchEnabled(true);

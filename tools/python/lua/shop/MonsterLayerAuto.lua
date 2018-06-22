@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：MonsterLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -67,7 +64,7 @@ function MonsterLayer:initView()
 	localParams[3].__Name = 'Sprite#ButtonLeft';
 	localParams[1]:addChild(localParams[3]);
 
-	localParams[4] = Node:create();
+	localParams[4] = Widget:create();
 	localParams[4]:setAnchorPoint(0.00, 0.00);
 	localParams[4]:setScaleX(0.95);
 	localParams[4]:setScaleY(0.95);
@@ -82,7 +79,7 @@ function MonsterLayer:initView()
 	localParams[5]:setFontSize(30);
 	localParams[5]:setString([[点击查看]]);
 	localParams[5]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[5]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[5]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[5]:setContentSize({width = 124.0, height = 34.0});
@@ -123,7 +120,7 @@ function MonsterLayer:initView()
 	localParams[8]:setFontSize(20);
 	localParams[8]:setString([[9]]);
 	localParams[8]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[8]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[8]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[8]:setAnchorPoint(0.50, 0.50);
 	localParams[8]:setContentSize({width = 15.0, height = 22.0});
 	localParams[8]:setPosition(70.5, 34.0);
@@ -152,7 +149,7 @@ function MonsterLayer:initView()
 	localParams[10].__Name = 'Sprite#Button1#soul_img4';
 	localParams[6]:addChild(localParams[10]);
 
-	localParams[11] = Node:create();
+	localParams[11] = Widget:create();
 	localParams[11]:setAnchorPoint(0.00, 0.00);
 	localParams[11]:setScaleX(0.90);
 	localParams[11]:setScaleY(0.90);
@@ -194,7 +191,7 @@ function MonsterLayer:initView()
 	localParams[14]:setFontSize(20);
 	localParams[14]:setString([[9]]);
 	localParams[14]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[14]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[14]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[14]:setAnchorPoint(0.50, 0.50);
 	localParams[14]:setContentSize({width = 15.0, height = 22.0});
 	localParams[14]:setPosition(70.5, 34.0);
@@ -223,7 +220,7 @@ function MonsterLayer:initView()
 	localParams[16].__Name = 'Sprite#Button2#soul_img4';
 	localParams[12]:addChild(localParams[16]);
 
-	localParams[17] = Node:create();
+	localParams[17] = Widget:create();
 	localParams[17]:setAnchorPoint(0.00, 0.00);
 	localParams[17]:setScaleX(0.90);
 	localParams[17]:setScaleY(0.90);
@@ -253,7 +250,7 @@ function MonsterLayer:initView()
 	localParams[19]:setFontSize(30);
 	localParams[19]:setString([[点击查看]]);
 	localParams[19]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[19]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[19]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[19]:setAnchorPoint(0.50, 0.50);
 	localParams[19]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[19]:setContentSize({width = 124.0, height = 34.0});
@@ -263,7 +260,7 @@ function MonsterLayer:initView()
 	localParams[19].__Name = 'Sprite#ButtonRight#Text_20';
 	localParams[18]:addChild(localParams[19]);
 
-	localParams[20] = Node:create();
+	localParams[20] = Widget:create();
 	localParams[20]:setAnchorPoint(0.00, 0.00);
 	localParams[20]:setScaleX(0.95);
 	localParams[20]:setScaleY(0.95);

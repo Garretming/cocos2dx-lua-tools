@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：PreviewLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -251,7 +248,7 @@ function PreviewLayer:initView()
 	localParams[16]:setFontSize(20);
 	localParams[16]:setString([[灵魂突破]]);
 	localParams[16]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[16]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[16]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[16]:setAnchorPoint(0.50, 0.50);
 	localParams[16]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[16]:setContentSize({width = 84.0, height = 22.0});
@@ -288,7 +285,7 @@ function PreviewLayer:initView()
 	localParams[18].__Name = 'battle_edit#fight_btn#font1';
 	localParams[17]:addChild(localParams[18]);
 
-	localParams[19] = Node:create();
+	localParams[19] = Widget:create();
 	localParams[19]:setAnchorPoint(0.00, 0.00);
 	localParams[19]:setScaleX(0.90);
 	localParams[19]:setScaleY(0.90);
@@ -315,7 +312,7 @@ function PreviewLayer:initView()
 	localParams[21]:setFontSize(20);
 	localParams[21]:setString([[0]]);
 	localParams[21]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[21]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[21]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[21]:setAnchorPoint(0.00, 0.50);
 	localParams[21]:setContentSize({width = 16.0, height = 22.0});
 	localParams[21]:setPosition(106.0, 27.0);
@@ -328,7 +325,7 @@ function PreviewLayer:initView()
 	localParams[22]:setFontSize(20);
 	localParams[22]:setString([[胜场：]]);
 	localParams[22]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[22]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[22]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[22]:setAnchorPoint(0.50, 0.50);
 	localParams[22]:setContentSize({width = 56.0, height = 22.0});
 	localParams[22]:setPosition(69.25, 27.87);
@@ -353,7 +350,7 @@ function PreviewLayer:initView()
 	localParams[24]:setFontSize(20);
 	localParams[24]:setString([[0]]);
 	localParams[24]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[24]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[24]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[24]:setAnchorPoint(0.00, 0.50);
 	localParams[24]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[24]:setContentSize({width = 16.0, height = 22.0});
@@ -367,7 +364,7 @@ function PreviewLayer:initView()
 	localParams[25]:setFontSize(20);
 	localParams[25]:setString([[败场：]]);
 	localParams[25]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[25]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[25]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[25]:setAnchorPoint(0.50, 0.50);
 	localParams[25]:setTextColor({r = 255, g = 0, b = 0});
 	localParams[25]:setContentSize({width = 56.0, height = 22.0});
@@ -477,7 +474,7 @@ function PreviewLayer:initView()
 	localParams[34]:setFontSize(22);
 	localParams[34]:setString([[01:02:03后活动结束]]);
 	localParams[34]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[34]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[34]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[34]:setAnchorPoint(0.00, 0.50);
 	localParams[34]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[34]:setContentSize({width = 195.0, height = 29.0});
@@ -539,7 +536,7 @@ function PreviewLayer:initView()
 	localParams[38].__Name = 'help_btn';
 	self:addChild(localParams[38]);
 
-	localParams[39] = Node:create();
+	localParams[39] = Widget:create();
 	localParams[39]:setAnchorPoint(0.00, 0.00);
 	localParams[39]:setScaleX(1.20);
 	localParams[39]:setScaleY(1.20);
@@ -559,7 +556,7 @@ function PreviewLayer:initView()
 	localParams[40].__Name = 'head_bg';
 	self:addChild(localParams[40]);
 
-	localParams[41] = ImageView:create(, 0);
+	localParams[41] = ImageView:create(nil, 0);
 	localParams[41]:setAnchorPoint(0.50, 0.50);
 	localParams[41]:setContentSize({width = 46.0, height = 46.0});
 	localParams[41]:setPosition(53.96, 55.62);
@@ -568,7 +565,7 @@ function PreviewLayer:initView()
 	localParams[41].__Name = 'head_bg#head';
 	localParams[40]:addChild(localParams[41]);
 
-	localParams[42] = ImageView:create(, 0);
+	localParams[42] = ImageView:create(nil, 0);
 	localParams[42]:setAnchorPoint(0.50, 0.50);
 	localParams[42]:setScaleX(0.70);
 	localParams[42]:setScaleY(0.70);
@@ -595,7 +592,7 @@ function PreviewLayer:initView()
 	localParams[44]:setFontSize(20);
 	localParams[44]:setString([[攻  击：]]);
 	localParams[44]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[44]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[44]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[44]:setAnchorPoint(0.50, 0.50);
 	localParams[44]:setContentSize({width = 76.0, height = 22.0});
 	localParams[44]:setPosition(49.45, 149.8);
@@ -608,7 +605,7 @@ function PreviewLayer:initView()
 	localParams[45]:setFontSize(20);
 	localParams[45]:setString([[护  甲：]]);
 	localParams[45]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[45]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[45]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[45]:setAnchorPoint(0.50, 0.50);
 	localParams[45]:setContentSize({width = 76.0, height = 22.0});
 	localParams[45]:setPosition(49.65, 117.29);
@@ -621,7 +618,7 @@ function PreviewLayer:initView()
 	localParams[46]:setFontSize(20);
 	localParams[46]:setString([[血  量：]]);
 	localParams[46]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[46]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[46]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[46]:setAnchorPoint(0.50, 0.50);
 	localParams[46]:setContentSize({width = 76.0, height = 22.0});
 	localParams[46]:setPosition(49.38, 84.55);
@@ -634,7 +631,7 @@ function PreviewLayer:initView()
 	localParams[47]:setFontSize(20);
 	localParams[47]:setString([[速  度：]]);
 	localParams[47]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[47]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[47]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[47]:setAnchorPoint(0.50, 0.50);
 	localParams[47]:setContentSize({width = 76.0, height = 22.0});
 	localParams[47]:setPosition(49.3, 52.77);
@@ -647,7 +644,7 @@ function PreviewLayer:initView()
 	localParams[48]:setFontSize(20);
 	localParams[48]:setString([[0]]);
 	localParams[48]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[48]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[48]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[48]:setAnchorPoint(1.00, 0.50);
 	localParams[48]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[48]:setContentSize({width = 15.0, height = 25.0});
@@ -661,7 +658,7 @@ function PreviewLayer:initView()
 	localParams[49]:setFontSize(20);
 	localParams[49]:setString([[0]]);
 	localParams[49]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[49]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[49]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[49]:setAnchorPoint(1.00, 0.50);
 	localParams[49]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[49]:setContentSize({width = 15.0, height = 25.0});
@@ -675,7 +672,7 @@ function PreviewLayer:initView()
 	localParams[50]:setFontSize(20);
 	localParams[50]:setString([[0]]);
 	localParams[50]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[50]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[50]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[50]:setAnchorPoint(1.00, 0.50);
 	localParams[50]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[50]:setContentSize({width = 15.0, height = 25.0});
@@ -689,7 +686,7 @@ function PreviewLayer:initView()
 	localParams[51]:setFontSize(20);
 	localParams[51]:setString([[0]]);
 	localParams[51]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[51]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[51]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[51]:setAnchorPoint(1.00, 0.50);
 	localParams[51]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[51]:setContentSize({width = 15.0, height = 25.0});
@@ -703,7 +700,7 @@ function PreviewLayer:initView()
 	localParams[52]:setFontSize(20);
 	localParams[52]:setString([[智  慧：]]);
 	localParams[52]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[52]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[52]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[52]:setAnchorPoint(0.50, 0.50);
 	localParams[52]:setContentSize({width = 76.0, height = 22.0});
 	localParams[52]:setPosition(49.3, 22.77);
@@ -716,7 +713,7 @@ function PreviewLayer:initView()
 	localParams[53]:setFontSize(20);
 	localParams[53]:setString([[0]]);
 	localParams[53]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[53]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[53]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[53]:setAnchorPoint(1.00, 0.50);
 	localParams[53]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[53]:setContentSize({width = 15.0, height = 25.0});
@@ -768,7 +765,7 @@ function PreviewLayer:initView()
 	localParams[56].__Name = 'skill_img#use_skill_bg2';
 	localParams[54]:addChild(localParams[56]);
 
-	localParams[57] = ImageView:create(, 0);
+	localParams[57] = ImageView:create(nil, 0);
 	localParams[57]:setAnchorPoint(0.50, 0.50);
 	localParams[57]:setScaleX(0.85);
 	localParams[57]:setScaleY(0.85);
@@ -814,7 +811,7 @@ function PreviewLayer:initView()
 	localParams[60]:setString([[]]);
 	localParams[60]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[60]:setTextAreaSize({width = 180, height = 69});
-	localParams[60]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[60]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[60]:setAnchorPoint(0.00, 0.50);
 	localParams[60]:setContentSize({width = 180.0, height = 69.0});
 	localParams[60]:setPosition(localParams[54]:getContentSize().width - 408.00, 39.5);
@@ -828,7 +825,7 @@ function PreviewLayer:initView()
 	localParams[61]:setString([[]]);
 	localParams[61]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[61]:setTextAreaSize({width = 180, height = 69});
-	localParams[61]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[61]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[61]:setAnchorPoint(0.50, 0.50);
 	localParams[61]:setContentSize({width = 180.0, height = 69.0});
 	localParams[61]:setPosition(317.0, 39.5);
@@ -841,7 +838,7 @@ function PreviewLayer:initView()
 	localParams[62]:setFontSize(16);
 	localParams[62]:setString([[]]);
 	localParams[62]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[62]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[62]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[62]:setAnchorPoint(0.50, 0.50);
 	localParams[62]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[62]:setContentSize({width = 0.0, height = 0.0});
@@ -851,7 +848,7 @@ function PreviewLayer:initView()
 	localParams[62].__Name = 'skill_img#skill_level2';
 	localParams[54]:addChild(localParams[62]);
 
-	localParams[63] = ImageView:create(, 0);
+	localParams[63] = ImageView:create(nil, 0);
 	localParams[63]:setAnchorPoint(0.50, 0.50);
 	localParams[63]:setScaleX(0.85);
 	localParams[63]:setScaleY(0.85);
@@ -866,7 +863,7 @@ function PreviewLayer:initView()
 	localParams[64]:setFontSize(16);
 	localParams[64]:setString([[]]);
 	localParams[64]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[64]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[64]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[64]:setAnchorPoint(0.50, 0.50);
 	localParams[64]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[64]:setContentSize({width = 0.0, height = 0.0});
@@ -880,7 +877,7 @@ function PreviewLayer:initView()
 	localParams[65]:setFontSize(16);
 	localParams[65]:setString([[]]);
 	localParams[65]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[65]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[65]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[65]:setAnchorPoint(0.50, 0.50);
 	localParams[65]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[65]:setContentSize({width = 0.0, height = 0.0});
@@ -905,7 +902,7 @@ function PreviewLayer:initView()
 	localParams[67]:setFontSize(24);
 	localParams[67]:setString([[]]);
 	localParams[67]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[67]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[67]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[67]:setAnchorPoint(0.50, 0.50);
 	localParams[67]:setContentSize({width = 0.0, height = 0.0});
 	localParams[67]:setPosition(19.0, 20.0);
@@ -918,7 +915,7 @@ function PreviewLayer:initView()
 	localParams[68]:setFontSize(16);
 	localParams[68]:setString([[]]);
 	localParams[68]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[68]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[68]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[68]:setAnchorPoint(0.50, 0.50);
 	localParams[68]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[68]:setContentSize({width = 0.0, height = 0.0});
@@ -943,7 +940,7 @@ function PreviewLayer:initView()
 	localParams[70]:setFontSize(24);
 	localParams[70]:setString([[]]);
 	localParams[70]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[70]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[70]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[70]:setAnchorPoint(0.50, 0.50);
 	localParams[70]:setContentSize({width = 0.0, height = 0.0});
 	localParams[70]:setPosition(19.0, 20.0);
@@ -964,7 +961,7 @@ function PreviewLayer:initView()
 	localParams[71].__Name = 'm_message_bg';
 	self:addChild(localParams[71]);
 
-	localParams[72] = Node:create();
+	localParams[72] = Widget:create();
 	localParams[72]:setAnchorPoint(0.00, 0.00);
 	localParams[72]:setContentSize({width = 0.0, height = 0.0});
 	localParams[72]:setPosition(0.0, 360.0);
@@ -977,7 +974,7 @@ function PreviewLayer:initView()
 	localParams[73]:setFontSize(24);
 	localParams[73]:setString([[重甲奇兵]]);
 	localParams[73]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[73]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[73]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[73]:setAnchorPoint(0.50, 0.50);
 	localParams[73]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[73]:setContentSize({width = 100.0, height = 26.0});
@@ -991,7 +988,7 @@ function PreviewLayer:initView()
 	localParams[74]:setFontSize(20);
 	localParams[74]:setString([[攻  击:]]);
 	localParams[74]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[74]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[74]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[74]:setAnchorPoint(0.00, 0.50);
 	localParams[74]:setContentSize({width = 58.0, height = 25.0});
 	localParams[74]:setPosition(13.23, -60.31);
@@ -1005,7 +1002,7 @@ function PreviewLayer:initView()
 	localParams[75]:setString([[d]]);
 	localParams[75]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[75]:setTextAreaSize({width = 240, height = 0});
-	localParams[75]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[75]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[75]:setAnchorPoint(0.00, 1.00);
 	localParams[75]:setContentSize({width = 240.0, height = 0.0});
 	localParams[75]:setPosition(15.0, -110.0);
@@ -1018,7 +1015,7 @@ function PreviewLayer:initView()
 	localParams[76]:setFontSize(20);
 	localParams[76]:setString([[血  量:]]);
 	localParams[76]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[76]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[76]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[76]:setAnchorPoint(0.00, 0.50);
 	localParams[76]:setContentSize({width = 58.0, height = 25.0});
 	localParams[76]:setPosition(13.23, -87.5);
@@ -1031,7 +1028,7 @@ function PreviewLayer:initView()
 	localParams[77]:setFontSize(20);
 	localParams[77]:setString([[护  甲:]]);
 	localParams[77]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[77]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[77]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[77]:setAnchorPoint(0.00, 0.50);
 	localParams[77]:setContentSize({width = 58.0, height = 25.0});
 	localParams[77]:setPosition(135.97, -60.31);
@@ -1044,7 +1041,7 @@ function PreviewLayer:initView()
 	localParams[78]:setFontSize(20);
 	localParams[78]:setString([[速  度:]]);
 	localParams[78]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[78]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[78]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[78]:setAnchorPoint(0.00, 0.50);
 	localParams[78]:setContentSize({width = 58.0, height = 25.0});
 	localParams[78]:setPosition(135.97, -87.5);
@@ -1057,7 +1054,7 @@ function PreviewLayer:initView()
 	localParams[79]:setFontSize(20);
 	localParams[79]:setString([[99999]]);
 	localParams[79]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[79]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[79]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[79]:setAnchorPoint(0.00, 0.50);
 	localParams[79]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[79]:setContentSize({width = 58.0, height = 25.0});
@@ -1071,7 +1068,7 @@ function PreviewLayer:initView()
 	localParams[80]:setFontSize(20);
 	localParams[80]:setString([[99999]]);
 	localParams[80]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[80]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[80]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[80]:setAnchorPoint(0.00, 0.39);
 	localParams[80]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[80]:setContentSize({width = 58.0, height = 25.0});
@@ -1085,7 +1082,7 @@ function PreviewLayer:initView()
 	localParams[81]:setFontSize(20);
 	localParams[81]:setString([[99999]]);
 	localParams[81]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[81]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[81]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[81]:setAnchorPoint(0.00, 0.50);
 	localParams[81]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[81]:setContentSize({width = 58.0, height = 25.0});
@@ -1099,7 +1096,7 @@ function PreviewLayer:initView()
 	localParams[82]:setFontSize(20);
 	localParams[82]:setString([[99999]]);
 	localParams[82]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[82]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[82]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[82]:setAnchorPoint(0.00, 0.50);
 	localParams[82]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[82]:setContentSize({width = 58.0, height = 25.0});
@@ -1114,7 +1111,7 @@ function PreviewLayer:initView()
 	localParams[83]:setString([[]]);
 	localParams[83]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[83]:setTextAreaSize({width = 240, height = 0});
-	localParams[83]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[83]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[83]:setAnchorPoint(0.00, 1.00);
 	localParams[83]:setContentSize({width = 240.0, height = 0.0});
 	localParams[83]:setPosition(15.0, -227.94);
@@ -1128,7 +1125,7 @@ function PreviewLayer:initView()
 	localParams[84]:setString([[]]);
 	localParams[84]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[84]:setTextAreaSize({width = 240, height = 0});
-	localParams[84]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[84]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[84]:setAnchorPoint(0.00, 1.00);
 	localParams[84]:setContentSize({width = 240.0, height = 0.0});
 	localParams[84]:setPosition(15.0, -338.34);

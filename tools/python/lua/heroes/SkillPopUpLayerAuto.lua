@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：SkillPopUpLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -98,7 +95,7 @@ function SkillPopUpLayer:initView()
 	localParams[5].__Name = 'bg_img#close_btn';
 	localParams[1]:addChild(localParams[5]);
 
-	localParams[6] = Node:create();
+	localParams[6] = Widget:create();
 	localParams[6]:setAnchorPoint(0.00, 0.00);
 	localParams[6]:setScaleX(0.90);
 	localParams[6]:setScaleY(0.90);
@@ -127,7 +124,7 @@ function SkillPopUpLayer:initView()
 	localParams[8].__Name = 'bg_img#under_sprite';
 	localParams[1]:addChild(localParams[8]);
 
-	localParams[9] = ImageView:create(, 0);
+	localParams[9] = ImageView:create(nil, 0);
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:setContentSize({width = 46.0, height = 46.0});
 	localParams[9]:setPosition(59.0, 59.5);
@@ -140,7 +137,7 @@ function SkillPopUpLayer:initView()
 	localParams[10]:setDefaultFontSize(24);
 	localParams[10]:setString([[能量倾泻]]);
 	localParams[10]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[10]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[10]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[10]:setAnchorPoint(0.00, 0.50);
 	localParams[10]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[10]:setContentSize({width = 100.0, height = 26.0});
@@ -154,7 +151,7 @@ function SkillPopUpLayer:initView()
 	localParams[11]:setFontSize(20);
 	localParams[11]:setString([[消耗怒气：]]);
 	localParams[11]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[11]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[11]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[11]:setAnchorPoint(0.50, 0.50);
 	localParams[11]:setContentSize({width = 96.0, height = 22.0});
 	localParams[11]:setPosition(176.86, 46.41);
@@ -167,7 +164,7 @@ function SkillPopUpLayer:initView()
 	localParams[12]:setFontSize(20);
 	localParams[12]:setString([[80]]);
 	localParams[12]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[12]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[12]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[12]:setAnchorPoint(0.50, 0.50);
 	localParams[12]:setTextColor({r = 0, g = 235, b = 255});
 	localParams[12]:setContentSize({width = 28.0, height = 22.0});
@@ -212,7 +209,7 @@ function SkillPopUpLayer:initView()
 	localParams[15].__Name = 'bg_img#unlock_btn';
 	localParams[1]:addChild(localParams[15]);
 
-	localParams[16] = Node:create();
+	localParams[16] = Widget:create();
 	localParams[16]:setAnchorPoint(0.00, 0.00);
 	localParams[16]:setScaleX(0.90);
 	localParams[16]:setScaleY(0.90);
@@ -254,7 +251,7 @@ function SkillPopUpLayer:initView()
 	localParams[20]:setFontSize(20);
 	localParams[20]:setString([[35000]]);
 	localParams[20]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[20]:enableOutline({r = 255, g = 255, b = 255, a = 255}, 1.000000);
+	localParams[20]:enableOutline({r = 0, g = 0, b = 0, a = 255}, 1.00);
 	localParams[20]:setAnchorPoint(0.50, 0.50);
 	localParams[20]:setContentSize({width = 53.0, height = 22.0});
 	localParams[20]:setPosition(96.0, 34.0);
@@ -281,7 +278,7 @@ function SkillPopUpLayer:initView()
 	localParams[22].__Name = 'bg_img#expendUnder_sprite#bg';
 	localParams[21]:addChild(localParams[22]);
 
-	localParams[23] = ImageView:create(, 0);
+	localParams[23] = ImageView:create(nil, 0);
 	localParams[23]:setAnchorPoint(0.50, 0.50);
 	localParams[23]:setContentSize({width = 46.0, height = 46.0});
 	localParams[23]:setPosition(50.0, 50.0);
@@ -312,7 +309,7 @@ function SkillPopUpLayer:initView()
 	localParams[26]:setDefaultFontSize(20);
 	localParams[26]:setString([[12/10]]);
 	localParams[26]:setDefaultFontName('uires/public/ttf/jzy.ttf');
-	localParams[26]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[26]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[26]:setAnchorPoint(0.50, 0.50);
 	localParams[26]:setContentSize({width = 48.0, height = 25.0});
 	localParams[26]:setPosition(43.0, 14.0);
@@ -338,7 +335,7 @@ function SkillPopUpLayer:initView()
 	localParams[27].__Name = 'bg_img#upgrade_btn';
 	localParams[1]:addChild(localParams[27]);
 
-	localParams[28] = Node:create();
+	localParams[28] = Widget:create();
 	localParams[28]:setAnchorPoint(0.00, 0.00);
 	localParams[28]:setScaleX(0.90);
 	localParams[28]:setScaleY(0.90);
@@ -380,7 +377,7 @@ function SkillPopUpLayer:initView()
 	localParams[32]:setFontSize(20);
 	localParams[32]:setString([[35000]]);
 	localParams[32]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[32]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[32]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[32]:setAnchorPoint(0.50, 0.50);
 	localParams[32]:setContentSize({width = 59.0, height = 25.0});
 	localParams[32]:setPosition(96.0, 34.0);
@@ -403,7 +400,7 @@ function SkillPopUpLayer:initView()
 	localParams[34]:setString([[辛德瑞拉释放洪流一般的能量，驱使所有暗黑法球来轰向目标英雄。]]);
 	localParams[34]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[34]:setTextAreaSize({width = 290, height = 140});
-	localParams[34]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[34]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[34]:setAnchorPoint(0.50, 0.50);
 	localParams[34]:setContentSize({width = 290.0, height = 140.0});
 	localParams[34]:setPosition(215.0, 280.0);

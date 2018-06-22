@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：RiskDetailLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -113,7 +110,7 @@ function RiskDetailLayer:initView()
 	localParams[7].__Name = '__FULL_LAYER#help_btn';
 	localParams[2]:addChild(localParams[7]);
 
-	localParams[8] = Node:create();
+	localParams[8] = Widget:create();
 	localParams[8]:setAnchorPoint(0.00, 0.00);
 	localParams[8]:setScaleX(0.90);
 	localParams[8]:setScaleY(0.90);
@@ -159,7 +156,7 @@ function RiskDetailLayer:initView()
 	localParams[12]:setFontSize(20);
 	localParams[12]:setString([[999999]]);
 	localParams[12]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[12]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[12]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[12]:setAnchorPoint(1.00, 0.50);
 	localParams[12]:setContentSize({width = 75.0, height = 22.0});
 	localParams[12]:setPosition(143.96, 30.61);
@@ -210,7 +207,7 @@ function RiskDetailLayer:initView()
 	localParams[16]:setFontSize(20);
 	localParams[16]:setString([[999999]]);
 	localParams[16]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[16]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[16]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[16]:setAnchorPoint(1.00, 0.50);
 	localParams[16]:setContentSize({width = 75.0, height = 22.0});
 	localParams[16]:setPosition(141.77, localParams[15]:getContentSize().height - 18.98);
@@ -270,7 +267,7 @@ function RiskDetailLayer:initView()
 	localParams[20].__Name = '__FULL_LAYER#rmb_money#btn_desc';
 	localParams[15]:addChild(localParams[20]);
 
-	localParams[21] = Node:create();
+	localParams[21] = Widget:create();
 	localParams[21]:setAnchorPoint(0.00, 0.00);
 	localParams[21]:setContentSize({width = 0.0, height = 0.0});
 	localParams[21]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), WinSize.height - 320.00);
@@ -348,7 +345,7 @@ function RiskDetailLayer:initView()
 	localParams[28]:setFontSize(20);
 	localParams[28]:setString([[9]]);
 	localParams[28]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[28]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[28]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[28]:setAnchorPoint(0.50, 0.50);
 	localParams[28]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[28]:setContentSize({width = 16.0, height = 24.0});
@@ -396,7 +393,7 @@ function RiskDetailLayer:initView()
 	localParams[32]:setFontSize(20);
 	localParams[32]:setString([[9]]);
 	localParams[32]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[32]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[32]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[32]:setAnchorPoint(0.50, 0.50);
 	localParams[32]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[32]:setContentSize({width = 16.0, height = 24.0});
@@ -444,7 +441,7 @@ function RiskDetailLayer:initView()
 	localParams[36]:setFontSize(20);
 	localParams[36]:setString([[9]]);
 	localParams[36]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[36]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[36]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[36]:setAnchorPoint(0.50, 0.50);
 	localParams[36]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[36]:setContentSize({width = 16.0, height = 24.0});
@@ -492,7 +489,7 @@ function RiskDetailLayer:initView()
 	localParams[40]:setFontSize(20);
 	localParams[40]:setString([[9]]);
 	localParams[40]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[40]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[40]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[40]:setAnchorPoint(0.50, 0.50);
 	localParams[40]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[40]:setContentSize({width = 16.0, height = 24.0});
@@ -540,7 +537,7 @@ function RiskDetailLayer:initView()
 	localParams[44]:setFontSize(20);
 	localParams[44]:setString([[9]]);
 	localParams[44]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[44]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[44]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[44]:setAnchorPoint(0.50, 0.50);
 	localParams[44]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[44]:setContentSize({width = 16.0, height = 24.0});
@@ -588,7 +585,7 @@ function RiskDetailLayer:initView()
 	localParams[48]:setFontSize(20);
 	localParams[48]:setString([[9]]);
 	localParams[48]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[48]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[48]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[48]:setAnchorPoint(0.50, 0.50);
 	localParams[48]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[48]:setContentSize({width = 16.0, height = 24.0});
@@ -636,7 +633,7 @@ function RiskDetailLayer:initView()
 	localParams[52]:setFontSize(20);
 	localParams[52]:setString([[9]]);
 	localParams[52]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[52]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[52]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[52]:setAnchorPoint(0.50, 0.50);
 	localParams[52]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[52]:setContentSize({width = 16.0, height = 24.0});
@@ -684,7 +681,7 @@ function RiskDetailLayer:initView()
 	localParams[56]:setFontSize(20);
 	localParams[56]:setString([[9]]);
 	localParams[56]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[56]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[56]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[56]:setAnchorPoint(0.50, 0.50);
 	localParams[56]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[56]:setContentSize({width = 16.0, height = 24.0});
@@ -732,7 +729,7 @@ function RiskDetailLayer:initView()
 	localParams[60]:setFontSize(20);
 	localParams[60]:setString([[9]]);
 	localParams[60]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[60]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[60]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[60]:setAnchorPoint(0.50, 0.50);
 	localParams[60]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[60]:setContentSize({width = 16.0, height = 24.0});
@@ -780,7 +777,7 @@ function RiskDetailLayer:initView()
 	localParams[64]:setFontSize(20);
 	localParams[64]:setString([[9]]);
 	localParams[64]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[64]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[64]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[64]:setAnchorPoint(0.50, 0.50);
 	localParams[64]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[64]:setContentSize({width = 16.0, height = 24.0});
@@ -828,7 +825,7 @@ function RiskDetailLayer:initView()
 	localParams[68]:setFontSize(20);
 	localParams[68]:setString([[9]]);
 	localParams[68]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[68]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[68]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[68]:setAnchorPoint(0.50, 0.50);
 	localParams[68]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[68]:setContentSize({width = 16.0, height = 24.0});
@@ -876,7 +873,7 @@ function RiskDetailLayer:initView()
 	localParams[72]:setFontSize(20);
 	localParams[72]:setString([[9]]);
 	localParams[72]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[72]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[72]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[72]:setAnchorPoint(0.50, 0.50);
 	localParams[72]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[72]:setContentSize({width = 16.0, height = 24.0});
@@ -895,7 +892,7 @@ function RiskDetailLayer:initView()
 	localParams[73].__Name = 'Node_1#head';
 	localParams[21]:addChild(localParams[73]);
 
-	localParams[74] = ImageView:create(, 0);
+	localParams[74] = ImageView:create(nil, 0);
 	localParams[74]:setAnchorPoint(0.50, 0.50);
 	localParams[74]:setContentSize({width = 46.0, height = 46.0});
 	localParams[74]:setPosition(53.96, 55.62);
@@ -908,7 +905,7 @@ function RiskDetailLayer:initView()
 	localParams[75]:setFontSize(20);
 	localParams[75]:setString([[LV:25]]);
 	localParams[75]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[75]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[75]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[75]:setAnchorPoint(0.50, 0.50);
 	localParams[75]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[75]:setContentSize({width = 54.0, height = 22.0});
@@ -936,7 +933,7 @@ function RiskDetailLayer:initView()
 	localParams[76].__Name = 'Node_1#head#skill1';
 	localParams[73]:addChild(localParams[76]);
 
-	localParams[77] = ImageView:create(, 0);
+	localParams[77] = ImageView:create(nil, 0);
 	localParams[77]:setAnchorPoint(0.50, 0.50);
 	localParams[77]:setContentSize({width = 46.0, height = 46.0});
 	localParams[77]:setPosition(59.0, 59.5);
@@ -949,7 +946,7 @@ function RiskDetailLayer:initView()
 	localParams[78]:setFontSize(20);
 	localParams[78]:setString([[]]);
 	localParams[78]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[78]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[78]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[78]:setAnchorPoint(0.50, 0.50);
 	localParams[78]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[78]:setContentSize({width = 0.0, height = 0.0});
@@ -977,7 +974,7 @@ function RiskDetailLayer:initView()
 	localParams[79].__Name = 'Node_1#head#skill2';
 	localParams[73]:addChild(localParams[79]);
 
-	localParams[80] = ImageView:create(, 0);
+	localParams[80] = ImageView:create(nil, 0);
 	localParams[80]:setAnchorPoint(0.50, 0.50);
 	localParams[80]:setContentSize({width = 46.0, height = 46.0});
 	localParams[80]:setPosition(59.0, 59.5);
@@ -990,7 +987,7 @@ function RiskDetailLayer:initView()
 	localParams[81]:setFontSize(20);
 	localParams[81]:setString([[]]);
 	localParams[81]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[81]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[81]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[81]:setAnchorPoint(0.50, 0.50);
 	localParams[81]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[81]:setContentSize({width = 0.0, height = 0.0});
@@ -1012,7 +1009,7 @@ function RiskDetailLayer:initView()
 	localParams[82].__Name = 'Node_1#head#s_message_bg';
 	localParams[73]:addChild(localParams[82]);
 
-	localParams[83] = Node:create();
+	localParams[83] = Widget:create();
 	localParams[83]:setAnchorPoint(0.00, 0.00);
 	localParams[83]:setContentSize({width = 0.0, height = 0.0});
 	localParams[83]:setPosition(0.0, 230.0);
@@ -1025,7 +1022,7 @@ function RiskDetailLayer:initView()
 	localParams[84]:setFontSize(24);
 	localParams[84]:setString([[风华之身]]);
 	localParams[84]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[84]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[84]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[84]:setAnchorPoint(0.50, 0.50);
 	localParams[84]:setTextColor({r = 250, g = 240, b = 155});
 	localParams[84]:setContentSize({width = 100.0, height = 26.0});
@@ -1040,7 +1037,7 @@ function RiskDetailLayer:initView()
 	localParams[85]:setString([[技能说明:小体型 近距离小体型 近距离小体型 近距离小体型 近距离]]);
 	localParams[85]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[85]:setTextAreaSize({width = 235, height = 0});
-	localParams[85]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[85]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[85]:setAnchorPoint(0.50, 1.00);
 	localParams[85]:setContentSize({width = 235.0, height = 0.0});
 	localParams[85]:setPosition(135.0, localParams[83]:getContentSize().height - 110.00);
@@ -1053,7 +1050,7 @@ function RiskDetailLayer:initView()
 	localParams[86]:setFontSize(20);
 	localParams[86]:setString([[技能说明：]]);
 	localParams[86]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[86]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[86]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[86]:setAnchorPoint(0.50, 0.50);
 	localParams[86]:setContentSize({width = 91.0, height = 25.0});
 	localParams[86]:setPosition(63.08, localParams[83]:getContentSize().height - 82.50);
@@ -1098,7 +1095,7 @@ function RiskDetailLayer:initView()
 	localParams[90]:setString([[首通
 奖励]]);
 	localParams[90]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[90]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[90]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[90]:setAnchorPoint(0.50, 0.50);
 	localParams[90]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[90]:setContentSize({width = 45.0, height = 48.0});
@@ -1125,7 +1122,7 @@ function RiskDetailLayer:initView()
 	localParams[91].__Name = 'Node_1#Image_5#item1';
 	localParams[89]:addChild(localParams[91]);
 
-	localParams[92] = ImageView:create(, 0);
+	localParams[92] = ImageView:create(nil, 0);
 	localParams[92]:setAnchorPoint(0.50, 0.50);
 	localParams[92]:setContentSize({width = 46.0, height = 46.0});
 	localParams[92]:setPosition(50.0, 50.0);
@@ -1138,7 +1135,7 @@ function RiskDetailLayer:initView()
 	localParams[93]:setFontSize(20);
 	localParams[93]:setString([[]]);
 	localParams[93]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[93]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[93]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[93]:setAnchorPoint(0.50, 0.50);
 	localParams[93]:setContentSize({width = 86.0, height = 27.0});
 	localParams[93]:setPosition(50.0, -10.0);
@@ -1174,7 +1171,7 @@ function RiskDetailLayer:initView()
 	localParams[95].__Name = 'Node_1#Image_5#item2';
 	localParams[89]:addChild(localParams[95]);
 
-	localParams[96] = ImageView:create(, 0);
+	localParams[96] = ImageView:create(nil, 0);
 	localParams[96]:setAnchorPoint(0.50, 0.50);
 	localParams[96]:setContentSize({width = 46.0, height = 46.0});
 	localParams[96]:setPosition(50.0, 50.0);
@@ -1187,7 +1184,7 @@ function RiskDetailLayer:initView()
 	localParams[97]:setFontSize(20);
 	localParams[97]:setString([[]]);
 	localParams[97]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[97]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[97]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[97]:setAnchorPoint(0.50, 0.50);
 	localParams[97]:setContentSize({width = 86.0, height = 27.0});
 	localParams[97]:setPosition(50.0, -10.0);
@@ -1223,7 +1220,7 @@ function RiskDetailLayer:initView()
 	localParams[99].__Name = 'Node_1#Image_5#item3';
 	localParams[89]:addChild(localParams[99]);
 
-	localParams[100] = ImageView:create(, 0);
+	localParams[100] = ImageView:create(nil, 0);
 	localParams[100]:setAnchorPoint(0.50, 0.50);
 	localParams[100]:setContentSize({width = 46.0, height = 46.0});
 	localParams[100]:setPosition(50.0, 50.0);
@@ -1236,7 +1233,7 @@ function RiskDetailLayer:initView()
 	localParams[101]:setFontSize(20);
 	localParams[101]:setString([[]]);
 	localParams[101]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[101]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[101]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[101]:setAnchorPoint(0.50, 0.50);
 	localParams[101]:setContentSize({width = 86.0, height = 27.0});
 	localParams[101]:setPosition(50.0, -10.0);
@@ -1272,7 +1269,7 @@ function RiskDetailLayer:initView()
 	localParams[104]:setString([[概率
 掉落]]);
 	localParams[104]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[104]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[104]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[104]:setAnchorPoint(0.50, 0.50);
 	localParams[104]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[104]:setContentSize({width = 45.0, height = 48.0});
@@ -1299,7 +1296,7 @@ function RiskDetailLayer:initView()
 	localParams[105].__Name = 'Node_1#Image_6#item1';
 	localParams[103]:addChild(localParams[105]);
 
-	localParams[106] = ImageView:create(, 0);
+	localParams[106] = ImageView:create(nil, 0);
 	localParams[106]:setAnchorPoint(0.50, 0.50);
 	localParams[106]:setContentSize({width = 46.0, height = 46.0});
 	localParams[106]:setPosition(50.0, 50.0);
@@ -1312,7 +1309,7 @@ function RiskDetailLayer:initView()
 	localParams[107]:setFontSize(20);
 	localParams[107]:setString([[]]);
 	localParams[107]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[107]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[107]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[107]:setAnchorPoint(0.50, 0.50);
 	localParams[107]:setContentSize({width = 86.0, height = 27.0});
 	localParams[107]:setPosition(50.0, -10.0);
@@ -1348,7 +1345,7 @@ function RiskDetailLayer:initView()
 	localParams[109].__Name = 'Node_1#Image_6#item2';
 	localParams[103]:addChild(localParams[109]);
 
-	localParams[110] = ImageView:create(, 0);
+	localParams[110] = ImageView:create(nil, 0);
 	localParams[110]:setAnchorPoint(0.50, 0.50);
 	localParams[110]:setContentSize({width = 46.0, height = 46.0});
 	localParams[110]:setPosition(50.0, 50.0);
@@ -1361,7 +1358,7 @@ function RiskDetailLayer:initView()
 	localParams[111]:setFontSize(20);
 	localParams[111]:setString([[]]);
 	localParams[111]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[111]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[111]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[111]:setAnchorPoint(0.50, 0.50);
 	localParams[111]:setContentSize({width = 86.0, height = 27.0});
 	localParams[111]:setPosition(50.0, -10.0);
@@ -1397,7 +1394,7 @@ function RiskDetailLayer:initView()
 	localParams[113].__Name = 'Node_1#Image_6#item3';
 	localParams[103]:addChild(localParams[113]);
 
-	localParams[114] = ImageView:create(, 0);
+	localParams[114] = ImageView:create(nil, 0);
 	localParams[114]:setAnchorPoint(0.50, 0.50);
 	localParams[114]:setContentSize({width = 46.0, height = 46.0});
 	localParams[114]:setPosition(50.0, 50.0);
@@ -1410,7 +1407,7 @@ function RiskDetailLayer:initView()
 	localParams[115]:setFontSize(20);
 	localParams[115]:setString([[]]);
 	localParams[115]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[115]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[115]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[115]:setAnchorPoint(0.50, 0.50);
 	localParams[115]:setContentSize({width = 86.0, height = 27.0});
 	localParams[115]:setPosition(50.0, -10.0);
@@ -1429,7 +1426,7 @@ function RiskDetailLayer:initView()
 	localParams[116].__Name = 'Node_1#Image_6#item3#number';
 	localParams[113]:addChild(localParams[116]);
 
-	localParams[117] = Node:create();
+	localParams[117] = Widget:create();
 	localParams[117]:setAnchorPoint(0.00, 0.00);
 	localParams[117]:setContentSize({width = 0.0, height = 0.0});
 	localParams[117]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), WinSize.height/2 + (-0.00 * ccx.scaleY));
@@ -1451,7 +1448,7 @@ function RiskDetailLayer:initView()
 	localParams[119]:setFontSize(20);
 	localParams[119]:setString([[灵魂突破三]]);
 	localParams[119]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[119]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[119]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[119]:setAnchorPoint(0.50, 0.50);
 	localParams[119]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[119]:setContentSize({width = 104.0, height = 22.0});
@@ -1491,7 +1488,7 @@ function RiskDetailLayer:initView()
 	localParams[121].__Name = 'Node_2#startMatch_btn';
 	localParams[117]:addChild(localParams[121]);
 
-	localParams[122] = Node:create();
+	localParams[122] = Widget:create();
 	localParams[122]:setAnchorPoint(0.00, 0.00);
 	localParams[122]:setScaleX(0.90);
 	localParams[122]:setScaleY(0.90);

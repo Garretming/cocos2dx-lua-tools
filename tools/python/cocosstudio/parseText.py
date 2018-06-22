@@ -54,17 +54,14 @@ def parse(node,array):
 
         OutlineColor = [255,255,255]
         if (array.get('OutlineColor')): 
-            if (array['OutlineColor'].get('R')):
-                OutlineColor[0] = array['OutlineColor']['R']
-            if (array['OutlineColor'].get('G')):
-                OutlineColor[1] = array['OutlineColor']['G']
-            if (array['OutlineColor'].get('B')):
-                OutlineColor[2] = array['OutlineColor']['B']
+            OutlineColor[0] = array['OutlineColor'].get('R', 255)
+            OutlineColor[1] = array['OutlineColor'].get('G', 255)
+            OutlineColor[2] = array['OutlineColor'].get('B', 255)
             
         if (isRichText):
-            string += "\t%s:setDefaultOutline({r = %d, g = %d, b = %d, a = 255}, %f);\n" % (node, OutlineColor[0], OutlineColor[1], OutlineColor[2], OutlineSize)
+            string += "\t%s:setDefaultOutline({r = %d, g = %d, b = %d, a = 255}, %.2f);\n" % (node, OutlineColor[0], OutlineColor[1], OutlineColor[2], OutlineSize)
         else:
-            string += "\t%s:enableOutline({r = %d, g = %d, b = %d, a = 255}, %f);\n" % (node, OutlineColor[0], OutlineColor[1], OutlineColor[2], OutlineSize)
+            string += "\t%s:enableOutline({r = %d, g = %d, b = %d, a = 255}, %.2f);\n" % (node, OutlineColor[0], OutlineColor[1], OutlineColor[2], OutlineSize)
 
 
 
@@ -79,13 +76,10 @@ def parse(node,array):
 
         ShadowColor = [255,255,255]
         if (array.get('ShadowColor') != None) :
-            if (array['ShadowColor'].get('R') != None):
-                ShadowColor[0] = array['ShadowColor']['R']
-            if (array['ShadowColor'].get('G') != None):
-                ShadowColor[1] = array['ShadowColor']['G']
-            if (array['ShadowColor'].get('B') != None):
-                ShadowColor[2] = array['ShadowColor']['B']
-    
+            ShadowColor[0] = array['ShadowColor'].get('R', 255)
+            ShadowColor[1] = array['ShadowColor'].get('G', 255)
+            ShadowColor[2] = array['ShadowColor'].get('B', 255)
+
         if (isRichText):
             string += "\t%s:setDefaultShadow({r = %d, g = %d, b = %d, a = 255}, {width = %f, height = %f});\n" % (node, ShadowColor[0], ShadowColor[1], ShadowColor[2], ShadowOffsetX, ShadowOffsetY)
         else:

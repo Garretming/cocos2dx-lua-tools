@@ -48,7 +48,7 @@ def parseAllNodes(array, parent):
     elif (classname == 'ImageViewObjectData'):
         nodeDataString += parseImageView.parse(node, array)
     elif (classname == 'SingleNodeObjectData'):
-        nodeDataString += "\t%s = Node:create();\n" % node
+        nodeDataString += "\t%s = Widget:create();\n" % node
     elif (classname == 'ParticleObjectData'):
         nodeDataString += "\t$node = ParticleSystemQuad:create(%s);\n"  % array['FileData']['Path']
     elif (classname == 'LoadingBarObjectData'):
@@ -58,9 +58,7 @@ def parseAllNodes(array, parent):
     elif (classname == 'TextBMFontObjectData'):
         nodeDataString += parseTextBMFont.parse(node, array)
     elif (classname == 'TextFieldObjectData'):
-        pass
         nodeDataString += parseInputView.parse(node, array)
-        # nodeDataString += parseTextAtlas(node, array)
     elif (classname == 'SliderObjectData'):
         nodeDataString += parseSlider.parse(node, array)
     elif (classname == 'ListViewObjectData'):
@@ -83,11 +81,11 @@ def parseAllNodes(array, parent):
     nodeDataString += "\tself.__children['%s'] = %s;\n" % (nodeName, node)
     nodeDataString += "\t%s.__children = self.__children;\n" % node
     nodeDataString += "\t%s.__Name = '%s';\n" % (node, nodeName)
-
+    if array.get('Name') == '__SELECTED_IMG':
+        nodeDataString += '\t%s:setSelectNode(%s);\n' % (parent[0], node)
     nodeDataString += "\t%s:addChild(%s);\n\n" % (parent[0], node)
 
-    if array.get('Name') == '__SELECTED_IMG':
-        pass
+
     if array.get('Children') != None:
         for value in array.get('Children'):
             nodeDataString += parseAllNodes(value, [node, parent[1]])
@@ -195,11 +193,8 @@ for filepath in files:
 -- Author: generation auto
 -- Brief：%sAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();

@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：EvaluateNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -58,7 +55,7 @@ function EvaluateNode:initView()
 	localParams[3]:setDefaultFontSize(20);
 	localParams[3]:setString([[西米高]]);
 	localParams[3]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[3]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[3]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[3]:setAnchorPoint(0.50, 0.50);
 	localParams[3]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[3]:setContentSize({width = 64.0, height = 22.0});
@@ -110,7 +107,7 @@ function EvaluateNode:initView()
 	localParams[7]:setString([[Text LabelText LabelText ]]);
 	localParams[7]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[7]:setTextAreaSize({width = 420, height = 25});
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[7]:setAnchorPoint(0.00, 0.50);
 	localParams[7]:setContentSize({width = 420.0, height = 25.0});
 	localParams[7]:setPosition(319.21, 20.0);
@@ -156,7 +153,7 @@ function EvaluateNode:initView()
 	localParams[11]:setDefaultFontSize(20);
 	localParams[11]:setString([[西米高]]);
 	localParams[11]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[11]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[11]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[11]:setAnchorPoint(0.50, 0.50);
 	localParams[11]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[11]:setContentSize({width = 64.0, height = 22.0});
@@ -208,7 +205,7 @@ function EvaluateNode:initView()
 	localParams[15]:setString([[Text LabelText LabelText ]]);
 	localParams[15]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[15]:setTextAreaSize({width = 420, height = 0});
-	localParams[15]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[15]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[15]:setAnchorPoint(0.00, 0.50);
 	localParams[15]:setContentSize({width = 420.0, height = 0.0});
 	localParams[15]:setPosition(319.21, 35.0);

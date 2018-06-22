@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：MonsterHandbookLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -45,7 +42,7 @@ function MonsterHandbookLayer:initView()
 	localParams[2]:setFontSize(20);
 	localParams[2]:setString([[收集：]]);
 	localParams[2]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[2]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[2]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[2]:setAnchorPoint(0.50, 0.50);
 	localParams[2]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[2]:setContentSize({width = 57.0, height = 24.0});
@@ -59,7 +56,7 @@ function MonsterHandbookLayer:initView()
 	localParams[3]:setFontSize(20);
 	localParams[3]:setString([[20/42]]);
 	localParams[3]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[3]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[3]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[3]:setAnchorPoint(0.00, 0.50);
 	localParams[3]:setContentSize({width = 61.0, height = 24.0});
 	localParams[3]:setPosition(105.0, 515.0);
@@ -130,7 +127,7 @@ function MonsterHandbookLayer:initView()
 	localParams[8].__Name = 'Image_1#close';
 	localParams[1]:addChild(localParams[8]);
 
-	localParams[9] = Node:create();
+	localParams[9] = Widget:create();
 	localParams[9]:setAnchorPoint(0.00, 0.00);
 	localParams[9]:setScaleX(0.90);
 	localParams[9]:setScaleY(0.90);

@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：RiskTaskNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -75,7 +72,7 @@ function RiskTaskNode:initView()
 	localParams[3].__Name = 'Button_1#Button_2';
 	localParams[1]:addChild(localParams[3]);
 
-	localParams[4] = Node:create();
+	localParams[4] = Widget:create();
 	localParams[4]:setAnchorPoint(0.00, 0.00);
 	localParams[4]:setScaleX(0.65);
 	localParams[4]:setScaleY(0.65);
@@ -95,7 +92,7 @@ function RiskTaskNode:initView()
 	localParams[5].__Name = 'Button_1#Button_2#uires_public_sheet_font_fontImg0236_3';
 	localParams[3]:addChild(localParams[5]);
 
-	localParams[6] = Node:create();
+	localParams[6] = Widget:create();
 	localParams[6]:setAnchorPoint(0.00, 0.00);
 	localParams[6]:setContentSize({width = 0.0, height = 0.0});
 	localParams[6]:setPosition(0.0, 0.0);
@@ -143,7 +140,7 @@ function RiskTaskNode:initView()
 	localParams[10]:setFontSize(20);
 	localParams[10]:setString([[]]);
 	localParams[10]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[10]:setAnchorPoint(0.50, 0.50);
 	localParams[10]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[10]:setContentSize({width = 103.0, height = 24.0});
@@ -157,7 +154,7 @@ function RiskTaskNode:initView()
 	localParams[11]:setDefaultFontSize(20);
 	localParams[11]:setString([[]]);
 	localParams[11]:setDefaultFontName('uires/public/ttf/jzy.ttf');
-	localParams[11]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[11]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[11]:setAnchorPoint(0.50, 0.50);
 	localParams[11]:setContentSize({width = 86.0, height = 27.0});
 	localParams[11]:setPosition(107.5, -17.07);

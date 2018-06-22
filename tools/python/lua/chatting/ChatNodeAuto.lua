@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：ChatNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -47,7 +44,7 @@ function ChatNode:initView()
 	localParams[2]:setFontSize(20);
 	localParams[2]:setString([[12:00:00]]);
 	localParams[2]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[2]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[2]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[2]:setAnchorPoint(0.50, 1.00);
 	localParams[2]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[2]:setContentSize({width = 84.0, height = 24.0});
@@ -81,7 +78,7 @@ function ChatNode:initView()
 	localParams[5]:setFontSize(26);
 	localParams[5]:setString([[LV:25]]);
 	localParams[5]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[5]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[5]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[5]:setAnchorPoint(0.00, 0.50);
 	localParams[5]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[5]:setContentSize({width = 69.0, height = 30.0});
@@ -95,7 +92,7 @@ function ChatNode:initView()
 	localParams[6]:setFontSize(20);
 	localParams[6]:setString([[大鸟]]);
 	localParams[6]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[6]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[6]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[6]:setAnchorPoint(1.00, 0.50);
 	localParams[6]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[6]:setContentSize({width = 44.0, height = 24.0});
@@ -154,7 +151,7 @@ function ChatNode:initView()
 	localParams[11]:setFontSize(20);
 	localParams[11]:setString([[12:00:00]]);
 	localParams[11]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[11]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[11]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[11]:setAnchorPoint(0.50, 1.00);
 	localParams[11]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[11]:setContentSize({width = 84.0, height = 24.0});
@@ -195,7 +192,7 @@ function ChatNode:initView()
 	localParams[14]:setFontSize(26);
 	localParams[14]:setString([[LV:25]]);
 	localParams[14]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[14]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[14]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[14]:setAnchorPoint(0.00, 0.50);
 	localParams[14]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[14]:setContentSize({width = 69.0, height = 30.0});
@@ -209,7 +206,7 @@ function ChatNode:initView()
 	localParams[15]:setFontSize(20);
 	localParams[15]:setString([[大鸟]]);
 	localParams[15]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[15]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[15]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[15]:setAnchorPoint(0.00, 1.00);
 	localParams[15]:setContentSize({width = 44.0, height = 24.0});
 	localParams[15]:setPosition(118.0, 92.0);

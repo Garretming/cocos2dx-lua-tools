@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：RiskMainLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -193,7 +190,7 @@ function RiskMainLayer:initView()
 	localParams[13].__Name = '__FULL_LAYER#help_btn';
 	localParams[8]:addChild(localParams[13]);
 
-	localParams[14] = Node:create();
+	localParams[14] = Widget:create();
 	localParams[14]:setAnchorPoint(0.00, 0.00);
 	localParams[14]:setScaleX(0.90);
 	localParams[14]:setScaleY(0.90);
@@ -217,7 +214,7 @@ function RiskMainLayer:initView()
 	localParams[16]:setFontSize(20);
 	localParams[16]:setString([[999999]]);
 	localParams[16]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[16]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[16]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[16]:setAnchorPoint(1.00, 0.50);
 	localParams[16]:setContentSize({width = 75.0, height = 22.0});
 	localParams[16]:setPosition(141.77, localParams[15]:getContentSize().height - 18.98);
@@ -312,7 +309,7 @@ function RiskMainLayer:initView()
 	localParams[24]:setFontSize(20);
 	localParams[24]:setString([[999999]]);
 	localParams[24]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[24]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[24]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[24]:setAnchorPoint(1.00, 0.50);
 	localParams[24]:setContentSize({width = 75.0, height = 22.0});
 	localParams[24]:setPosition(143.96, 30.61);

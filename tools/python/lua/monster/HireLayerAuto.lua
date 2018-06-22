@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：HireLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -64,7 +61,7 @@ function HireLayer:initView()
 	localParams[4]:setFontSize(28);
 	localParams[4]:setString([[作死的大鸟]]);
 	localParams[4]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[4]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[4]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[4]:setContentSize({width = 143.0, height = 30.0});
@@ -278,7 +275,7 @@ function HireLayer:initView()
 	localParams[25]:setDefaultFontSize(20);
 	localParams[25]:setString([[占领据点暴风城可解锁]]);
 	localParams[25]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[25]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[25]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[25]:setAnchorPoint(0.50, 0.50);
 	localParams[25]:setContentSize({width = 204.0, height = 22.0});
 	localParams[25]:setPosition(217.26, 284.56);
@@ -291,7 +288,7 @@ function HireLayer:initView()
 	localParams[26]:setDefaultFontSize(20);
 	localParams[26]:setString([[解锁后，每日可进行雇佣。]]);
 	localParams[26]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[26]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[26]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[26]:setAnchorPoint(0.50, 0.50);
 	localParams[26]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[26]:setContentSize({width = 234.0, height = 22.0});
@@ -314,7 +311,7 @@ function HireLayer:initView()
 	localParams[28]:setFontSize(20);
 	localParams[28]:setString([[当前数量：]]);
 	localParams[28]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[28]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[28]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[28]:setAnchorPoint(0.00, 0.50);
 	localParams[28]:setContentSize({width = 96.0, height = 22.0});
 	localParams[28]:setPosition(127.6, 285.24);
@@ -327,7 +324,7 @@ function HireLayer:initView()
 	localParams[29]:setFontSize(20);
 	localParams[29]:setString([[666]]);
 	localParams[29]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[29]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[29]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[29]:setAnchorPoint(1.00, 0.50);
 	localParams[29]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[29]:setContentSize({width = 40.0, height = 22.0});
@@ -341,7 +338,7 @@ function HireLayer:initView()
 	localParams[30]:setFontSize(20);
 	localParams[30]:setString([[今日可雇佣：]]);
 	localParams[30]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[30]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[30]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[30]:setAnchorPoint(0.00, 0.50);
 	localParams[30]:setContentSize({width = 116.0, height = 22.0});
 	localParams[30]:setPosition(-3.92, -22.64);
@@ -354,7 +351,7 @@ function HireLayer:initView()
 	localParams[31]:setDefaultFontSize(20);
 	localParams[31]:setString([[9999]]);
 	localParams[31]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[31]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[31]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[31]:setAnchorPoint(1.00, 0.50);
 	localParams[31]:setContentSize({width = 44.0, height = 24.0});
 	localParams[31]:setPosition(196.01, 11.0);
@@ -397,7 +394,7 @@ function HireLayer:initView()
 	localParams[35]:setFontSize(24);
 	localParams[35]:setString([[6456413]]);
 	localParams[35]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[35]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[35]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[35]:setAnchorPoint(1.00, 0.50);
 	localParams[35]:setContentSize({width = 107.0, height = 26.0});
 	localParams[35]:setPosition(275.74, 18.36);
@@ -431,7 +428,7 @@ function HireLayer:initView()
 	localParams[38]:setFontSize(24);
 	localParams[38]:setString([[13]]);
 	localParams[38]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[38]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[38]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[38]:setAnchorPoint(1.00, 0.50);
 	localParams[38]:setContentSize({width = 32.0, height = 26.0});
 	localParams[38]:setPosition(316.74, 18.36);
@@ -456,7 +453,7 @@ function HireLayer:initView()
 	localParams[39].__Name = 'under_img#plus_btn';
 	localParams[1]:addChild(localParams[39]);
 
-	localParams[40] = Node:create();
+	localParams[40] = Widget:create();
 	localParams[40]:setAnchorPoint(0.00, 0.00);
 	localParams[40]:setScaleX(0.90);
 	localParams[40]:setScaleY(0.90);
@@ -483,7 +480,7 @@ function HireLayer:initView()
 	localParams[41].__Name = 'under_img#reduce_btn';
 	localParams[1]:addChild(localParams[41]);
 
-	localParams[42] = Node:create();
+	localParams[42] = Widget:create();
 	localParams[42]:setAnchorPoint(0.00, 0.00);
 	localParams[42]:setScaleX(0.90);
 	localParams[42]:setScaleY(0.90);
@@ -523,7 +520,7 @@ function HireLayer:initView()
 	localParams[44].__Name = 'under_img#hire_btn';
 	localParams[1]:addChild(localParams[44]);
 
-	localParams[45] = Node:create();
+	localParams[45] = Widget:create();
 	localParams[45]:setAnchorPoint(0.00, 0.00);
 	localParams[45]:setScaleX(0.90);
 	localParams[45]:setScaleY(0.90);
@@ -558,7 +555,7 @@ function HireLayer:initView()
 	localParams[47].__Name = 'under_img#assess_btn';
 	localParams[1]:addChild(localParams[47]);
 
-	localParams[48] = Node:create();
+	localParams[48] = Widget:create();
 	localParams[48]:setAnchorPoint(0.00, 0.00);
 	localParams[48]:setScaleX(0.90);
 	localParams[48]:setScaleY(0.90);

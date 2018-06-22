@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：EvaluateLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -76,7 +73,7 @@ function EvaluateLayer:initView()
 	localParams[4]:setBackGroundColor({r = 150, g = 150, b = 255});
 	localParams[4]:setBackGroundColorOpacity(0);
 	localParams[4]:setAnchorPoint(0.00, 0.00);
-	localParams[4]:onClick(handler(self, self._onListView));
+	localParams[4]:setEventCallback(handler(self, self._onListView));
 	localParams[4]:setTouchEnabled(true);
 	localParams[4]:setContentSize({width = 850.0, height = 320.0});
 	localParams[4]:setPosition(0.0, 0.0);
@@ -120,7 +117,7 @@ function EvaluateLayer:initView()
 	localParams[7].__Name = 'bg_img#close_btn';
 	localParams[1]:addChild(localParams[7]);
 
-	localParams[8] = Node:create();
+	localParams[8] = Widget:create();
 	localParams[8]:setAnchorPoint(0.00, 0.00);
 	localParams[8]:setScaleX(0.90);
 	localParams[8]:setScaleY(0.90);
@@ -147,9 +144,7 @@ function EvaluateLayer:initView()
 	localParams[10]:setFontSize(14);
 	localParams[10]:setPlaceholderFontSize(14);
 	localParams[10]:setPlaceHolder([[请您留下对佣兵的评价(最多40字)]]);
-	localParams[10]:setMaxLengthEnabled(true);
 	localParams[10]:setMaxLength(40);
-	localParams[10]:setPasswordEnabled(false);
 	localParams[10]:setAnchorPoint(0.00, 0.50);
 	localParams[10]:registerScriptEditBoxHandler(handler(self, self._onComment));
 	localParams[10]:setTouchEnabled(true);
@@ -174,7 +169,7 @@ function EvaluateLayer:initView()
 	localParams[11].__Name = 'bg_img#evaluate_btn';
 	localParams[1]:addChild(localParams[11]);
 
-	localParams[12] = Node:create();
+	localParams[12] = Widget:create();
 	localParams[12]:setAnchorPoint(0.00, 0.00);
 	localParams[12]:setScaleX(0.90);
 	localParams[12]:setScaleY(0.90);
@@ -398,7 +393,7 @@ function EvaluateLayer:initView()
 	localParams[34]:setFontSize(20);
 	localParams[34]:setString([[作死的大鸟]]);
 	localParams[34]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[34]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[34]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[34]:setAnchorPoint(0.50, 0.50);
 	localParams[34]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[34]:setContentSize({width = 103.0, height = 22.0});
@@ -480,6 +475,22 @@ function EvaluateLayer:_onEvaluate(sender)
     end
     if self.onEvaluate then
         return self:onEvaluate(sender);
+    end
+end
+
+
+--@callback:('count', listView)                              --总共cell数量
+--@callback:('size', listView, row)                          --每个cell的尺寸
+--@callback:('delay', listView, row, column, index)          --每个cell上item延时创建的时间
+--@callback:('add', listView, row, column, index, cell)      --添加每个item
+--@callback:('start', listView, row, nil, nil, cell)         --开始点击cell
+--@callback:('end', listView, row, nil, nil, cell)           --结束点击cell
+function EvaluateLayer:_onListView(eventName, listView, row, column, index, cell)
+    if self.m_ClickDelegate and self.m_ClickDelegate.onListView then
+        return self.m_ClickDelegate:onListView(eventName, listView, row, column, index, cell);
+    end
+    if self.onListView then
+        return self:onListView(eventName, listView, row, column, index, cell);
     end
 end
 

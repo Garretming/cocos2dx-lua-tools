@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：MonsterNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -53,6 +50,7 @@ function MonsterNode:initView()
 	self.__children['m_btn#__SELECTED_IMG'] = localParams[2];
 	localParams[2].__children = self.__children;
 	localParams[2].__Name = 'm_btn#__SELECTED_IMG';
+	localParams[1]:setSelectNode(localParams[2]);
 	localParams[1]:addChild(localParams[2]);
 
 	localParams[3] = ImageView:create('uires/public/sheet_common/btn0043.png', 1);
@@ -68,7 +66,7 @@ function MonsterNode:initView()
 	localParams[4]:setFontSize(24);
 	localParams[4]:setString([[9]]);
 	localParams[4]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[4]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[4]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[4]:setAnchorPoint(0.50, 0.50);
 	localParams[4]:setContentSize({width = 19.0, height = 28.0});
 	localParams[4]:setPosition(17.65, 19.0);
@@ -99,7 +97,7 @@ function MonsterNode:initView()
 	localParams[7]:setFontSize(20);
 	localParams[7]:setString([[9]]);
 	localParams[7]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[7]:setAnchorPoint(0.50, 0.50);
 	localParams[7]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[7]:setContentSize({width = 16.0, height = 24.0});
@@ -113,7 +111,7 @@ function MonsterNode:initView()
 	localParams[8]:setFontSize(20);
 	localParams[8]:setString([[99999]]);
 	localParams[8]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[8]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[8]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[8]:setAnchorPoint(1.00, 0.50);
 	localParams[8]:setVisible(false);
 	localParams[8]:setContentSize({width = 64.0, height = 24.0});

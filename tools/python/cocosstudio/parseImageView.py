@@ -5,7 +5,7 @@ def parse(node, array, imageType = 'image'):
     filename = "'%s'" % array['FileData']['Path']
     type = 1
     if (array['FileData']['Type'] == 'Default'):
-        filename = ''
+        filename = 'nil'
     if (array['FileData']['Plist'] == ''):
         type = 0
 

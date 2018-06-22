@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：RuleDeclarationLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -81,7 +78,7 @@ function RuleDeclarationLayer:initView()
 	localParams[5]:setFontSize(24);
 	localParams[5]:setString([[规则说明]]);
 	localParams[5]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[5]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[5]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[5]:setContentSize({width = 100.0, height = 26.0});
@@ -96,7 +93,7 @@ function RuleDeclarationLayer:initView()
 	localParams[6]:setString([[床前明月光，大鸟喝米汤。喝了一整缸，尿满了裤裆。]]);
 	localParams[6]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[6]:setTextAreaSize({width = 570, height = 410});
-	localParams[6]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[6]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[6]:setAnchorPoint(0.50, 0.50);
 	localParams[6]:setContentSize({width = 570.0, height = 410.0});
 	localParams[6]:setPosition(345.0, 270.0);
@@ -122,7 +119,7 @@ function RuleDeclarationLayer:initView()
 	localParams[7].__Name = 'bg_img#close_btn';
 	localParams[1]:addChild(localParams[7]);
 
-	localParams[8] = Node:create();
+	localParams[8] = Widget:create();
 	localParams[8]:setAnchorPoint(0.00, 0.00);
 	localParams[8]:setScaleX(0.90);
 	localParams[8]:setScaleY(0.90);

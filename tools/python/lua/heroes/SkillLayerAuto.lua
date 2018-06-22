@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：SkillLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -77,9 +74,10 @@ function SkillLayer:initView()
 	self.__children['mainNodeUnder_img#Button_1#__SELECTED_IMG'] = localParams[4];
 	localParams[4].__children = self.__children;
 	localParams[4].__Name = 'mainNodeUnder_img#Button_1#__SELECTED_IMG';
+	localParams[3]:setSelectNode(localParams[4]);
 	localParams[3]:addChild(localParams[4]);
 
-	localParams[5] = ImageView:create(, 0);
+	localParams[5] = ImageView:create(nil, 0);
 	localParams[5]:setAnchorPoint(0.50, 0.50);
 	localParams[5]:setContentSize({width = 46.0, height = 46.0});
 	localParams[5]:setPosition(59.0, 59.5);
@@ -92,7 +90,7 @@ function SkillLayer:initView()
 	localParams[6]:setDefaultFontSize(20);
 	localParams[6]:setString([[能量倾泻]]);
 	localParams[6]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[6]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[6]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[6]:setAnchorPoint(0.50, 0.50);
 	localParams[6]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[6]:setContentSize({width = 84.0, height = 22.0});
@@ -111,7 +109,7 @@ function SkillLayer:initView()
 	localParams[7].__Name = 'mainNodeUnder_img#Button_1#expBg_sprite';
 	localParams[3]:addChild(localParams[7]);
 
-	localParams[8] = LoadingBar:create(''uires/public/sheet_other/other0067.png'', 1, 66.00);
+	localParams[8] = LoadingBar:create('uires/public/sheet_other/other0067.png', 1, 66.00);
 	localParams[8]:setAnchorPoint(0.50, 0.50);
 	localParams[8]:setContentSize({width = 111.0, height = 19.0});
 	localParams[8]:setPosition(63.72, -38.08);
@@ -133,7 +131,7 @@ function SkillLayer:initView()
 	localParams[10]:setDefaultFontSize(20);
 	localParams[10]:setString([[5/20]]);
 	localParams[10]:setDefaultFontName('uires/public/ttf/jzy.ttf');
-	localParams[10]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[10]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[10]:setAnchorPoint(0.50, 0.50);
 	localParams[10]:setContentSize({width = 45.0, height = 25.0});
 	localParams[10]:setPosition(63.0, -38.0);
@@ -184,9 +182,10 @@ function SkillLayer:initView()
 	self.__children['mainNodeUnder_img#Button_2#__SELECTED_IMG'] = localParams[14];
 	localParams[14].__children = self.__children;
 	localParams[14].__Name = 'mainNodeUnder_img#Button_2#__SELECTED_IMG';
+	localParams[13]:setSelectNode(localParams[14]);
 	localParams[13]:addChild(localParams[14]);
 
-	localParams[15] = ImageView:create(, 0);
+	localParams[15] = ImageView:create(nil, 0);
 	localParams[15]:setAnchorPoint(0.50, 0.50);
 	localParams[15]:setContentSize({width = 46.0, height = 46.0});
 	localParams[15]:setPosition(59.0, 59.5);
@@ -199,7 +198,7 @@ function SkillLayer:initView()
 	localParams[16]:setDefaultFontSize(20);
 	localParams[16]:setString([[能量倾泻]]);
 	localParams[16]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[16]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[16]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[16]:setAnchorPoint(0.50, 0.50);
 	localParams[16]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[16]:setContentSize({width = 84.0, height = 22.0});
@@ -218,7 +217,7 @@ function SkillLayer:initView()
 	localParams[17].__Name = 'mainNodeUnder_img#Button_2#expBg_sprite';
 	localParams[13]:addChild(localParams[17]);
 
-	localParams[18] = LoadingBar:create(''uires/public/sheet_other/other0067.png'', 1, 79.00);
+	localParams[18] = LoadingBar:create('uires/public/sheet_other/other0067.png', 1, 79.00);
 	localParams[18]:setAnchorPoint(0.50, 0.50);
 	localParams[18]:setContentSize({width = 111.0, height = 19.0});
 	localParams[18]:setPosition(63.72, -38.08);
@@ -240,7 +239,7 @@ function SkillLayer:initView()
 	localParams[20]:setDefaultFontSize(20);
 	localParams[20]:setString([[5/20]]);
 	localParams[20]:setDefaultFontName('uires/public/ttf/jzy.ttf');
-	localParams[20]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[20]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[20]:setAnchorPoint(0.50, 0.50);
 	localParams[20]:setContentSize({width = 45.0, height = 25.0});
 	localParams[20]:setPosition(63.0, -38.0);
@@ -291,9 +290,10 @@ function SkillLayer:initView()
 	self.__children['mainNodeUnder_img#Button_3#__SELECTED_IMG'] = localParams[24];
 	localParams[24].__children = self.__children;
 	localParams[24].__Name = 'mainNodeUnder_img#Button_3#__SELECTED_IMG';
+	localParams[23]:setSelectNode(localParams[24]);
 	localParams[23]:addChild(localParams[24]);
 
-	localParams[25] = ImageView:create(, 0);
+	localParams[25] = ImageView:create(nil, 0);
 	localParams[25]:setAnchorPoint(0.50, 0.50);
 	localParams[25]:setContentSize({width = 46.0, height = 46.0});
 	localParams[25]:setPosition(59.0, 59.5);
@@ -306,7 +306,7 @@ function SkillLayer:initView()
 	localParams[26]:setDefaultFontSize(20);
 	localParams[26]:setString([[能量倾泻]]);
 	localParams[26]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[26]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[26]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[26]:setAnchorPoint(0.50, 0.50);
 	localParams[26]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[26]:setContentSize({width = 84.0, height = 22.0});
@@ -325,7 +325,7 @@ function SkillLayer:initView()
 	localParams[27].__Name = 'mainNodeUnder_img#Button_3#expBg_sprite';
 	localParams[23]:addChild(localParams[27]);
 
-	localParams[28] = LoadingBar:create(''uires/public/sheet_other/other0067.png'', 1, 100.00);
+	localParams[28] = LoadingBar:create('uires/public/sheet_other/other0067.png', 1, 100.00);
 	localParams[28]:setAnchorPoint(0.50, 0.50);
 	localParams[28]:setContentSize({width = 111.0, height = 19.0});
 	localParams[28]:setPosition(63.72, -38.08);
@@ -347,7 +347,7 @@ function SkillLayer:initView()
 	localParams[30]:setDefaultFontSize(20);
 	localParams[30]:setString([[5/20]]);
 	localParams[30]:setDefaultFontName('uires/public/ttf/jzy.ttf');
-	localParams[30]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[30]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[30]:setAnchorPoint(0.50, 0.50);
 	localParams[30]:setContentSize({width = 45.0, height = 25.0});
 	localParams[30]:setPosition(63.0, -38.0);
@@ -398,9 +398,10 @@ function SkillLayer:initView()
 	self.__children['mainNodeUnder_img#Button_4#__SELECTED_IMG'] = localParams[34];
 	localParams[34].__children = self.__children;
 	localParams[34].__Name = 'mainNodeUnder_img#Button_4#__SELECTED_IMG';
+	localParams[33]:setSelectNode(localParams[34]);
 	localParams[33]:addChild(localParams[34]);
 
-	localParams[35] = ImageView:create(, 0);
+	localParams[35] = ImageView:create(nil, 0);
 	localParams[35]:setAnchorPoint(0.50, 0.50);
 	localParams[35]:setContentSize({width = 46.0, height = 46.0});
 	localParams[35]:setPosition(59.0, 59.5);
@@ -413,7 +414,7 @@ function SkillLayer:initView()
 	localParams[36]:setDefaultFontSize(20);
 	localParams[36]:setString([[能量倾泻]]);
 	localParams[36]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[36]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[36]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[36]:setAnchorPoint(0.50, 0.50);
 	localParams[36]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[36]:setContentSize({width = 84.0, height = 22.0});
@@ -432,7 +433,7 @@ function SkillLayer:initView()
 	localParams[37].__Name = 'mainNodeUnder_img#Button_4#expBg_sprite';
 	localParams[33]:addChild(localParams[37]);
 
-	localParams[38] = LoadingBar:create(''uires/public/sheet_other/other0067.png'', 1, 86.00);
+	localParams[38] = LoadingBar:create('uires/public/sheet_other/other0067.png', 1, 86.00);
 	localParams[38]:setAnchorPoint(0.50, 0.50);
 	localParams[38]:setContentSize({width = 111.0, height = 19.0});
 	localParams[38]:setPosition(63.72, -38.08);
@@ -454,7 +455,7 @@ function SkillLayer:initView()
 	localParams[40]:setDefaultFontSize(20);
 	localParams[40]:setString([[5/20]]);
 	localParams[40]:setDefaultFontName('uires/public/ttf/jzy.ttf');
-	localParams[40]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[40]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[40]:setAnchorPoint(0.50, 0.50);
 	localParams[40]:setContentSize({width = 45.0, height = 25.0});
 	localParams[40]:setPosition(63.0, -38.0);
@@ -505,9 +506,10 @@ function SkillLayer:initView()
 	self.__children['mainNodeUnder_img#Button_5#__SELECTED_IMG'] = localParams[44];
 	localParams[44].__children = self.__children;
 	localParams[44].__Name = 'mainNodeUnder_img#Button_5#__SELECTED_IMG';
+	localParams[43]:setSelectNode(localParams[44]);
 	localParams[43]:addChild(localParams[44]);
 
-	localParams[45] = ImageView:create(, 0);
+	localParams[45] = ImageView:create(nil, 0);
 	localParams[45]:setAnchorPoint(0.50, 0.50);
 	localParams[45]:setContentSize({width = 46.0, height = 46.0});
 	localParams[45]:setPosition(59.0, 59.5);
@@ -520,7 +522,7 @@ function SkillLayer:initView()
 	localParams[46]:setDefaultFontSize(20);
 	localParams[46]:setString([[能量倾泻]]);
 	localParams[46]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[46]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[46]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[46]:setAnchorPoint(0.50, 0.50);
 	localParams[46]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[46]:setContentSize({width = 84.0, height = 22.0});
@@ -539,7 +541,7 @@ function SkillLayer:initView()
 	localParams[47].__Name = 'mainNodeUnder_img#Button_5#expBg_sprite';
 	localParams[43]:addChild(localParams[47]);
 
-	localParams[48] = LoadingBar:create(''uires/public/sheet_other/other0067.png'', 1, 39.00);
+	localParams[48] = LoadingBar:create('uires/public/sheet_other/other0067.png', 1, 39.00);
 	localParams[48]:setAnchorPoint(0.50, 0.50);
 	localParams[48]:setContentSize({width = 111.0, height = 19.0});
 	localParams[48]:setPosition(63.72, -38.08);
@@ -561,7 +563,7 @@ function SkillLayer:initView()
 	localParams[50]:setDefaultFontSize(20);
 	localParams[50]:setString([[5/20]]);
 	localParams[50]:setDefaultFontName('uires/public/ttf/jzy.ttf');
-	localParams[50]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[50]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[50]:setAnchorPoint(0.50, 0.50);
 	localParams[50]:setContentSize({width = 45.0, height = 25.0});
 	localParams[50]:setPosition(63.0, -38.0);
@@ -612,9 +614,10 @@ function SkillLayer:initView()
 	self.__children['mainNodeUnder_img#Button_6#__SELECTED_IMG'] = localParams[54];
 	localParams[54].__children = self.__children;
 	localParams[54].__Name = 'mainNodeUnder_img#Button_6#__SELECTED_IMG';
+	localParams[53]:setSelectNode(localParams[54]);
 	localParams[53]:addChild(localParams[54]);
 
-	localParams[55] = ImageView:create(, 0);
+	localParams[55] = ImageView:create(nil, 0);
 	localParams[55]:setAnchorPoint(0.50, 0.50);
 	localParams[55]:setContentSize({width = 46.0, height = 46.0});
 	localParams[55]:setPosition(59.0, 59.5);
@@ -627,7 +630,7 @@ function SkillLayer:initView()
 	localParams[56]:setDefaultFontSize(20);
 	localParams[56]:setString([[能量倾泻]]);
 	localParams[56]:setDefaultFontName('uires/public/ttf/jtcs.TTF');
-	localParams[56]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[56]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[56]:setAnchorPoint(0.50, 0.50);
 	localParams[56]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[56]:setContentSize({width = 84.0, height = 22.0});
@@ -646,7 +649,7 @@ function SkillLayer:initView()
 	localParams[57].__Name = 'mainNodeUnder_img#Button_6#expBg_sprite';
 	localParams[53]:addChild(localParams[57]);
 
-	localParams[58] = LoadingBar:create(''uires/public/sheet_other/other0067.png'', 1, 63.00);
+	localParams[58] = LoadingBar:create('uires/public/sheet_other/other0067.png', 1, 63.00);
 	localParams[58]:setAnchorPoint(0.50, 0.50);
 	localParams[58]:setContentSize({width = 111.0, height = 19.0});
 	localParams[58]:setPosition(63.72, -38.08);
@@ -668,7 +671,7 @@ function SkillLayer:initView()
 	localParams[60]:setDefaultFontSize(20);
 	localParams[60]:setString([[5/20]]);
 	localParams[60]:setDefaultFontName('uires/public/ttf/jzy.ttf');
-	localParams[60]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[60]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[60]:setAnchorPoint(0.50, 0.50);
 	localParams[60]:setContentSize({width = 45.0, height = 25.0});
 	localParams[60]:setPosition(63.0, -38.0);

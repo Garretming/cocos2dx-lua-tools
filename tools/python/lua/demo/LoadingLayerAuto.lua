@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：LoadingLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -29,7 +26,7 @@ end
 function LoadingLayer:initView()
     self.__LAYER_NAME = 'demo.LoadingLayer';
     local localParams = {};
-	localParams[1] = LoadingBar:create(''uires/public/sheet_other/other0015.png'', 1, 0.00);
+	localParams[1] = LoadingBar:create('uires/public/sheet_other/other0015.png', 1, 0.00);
 	localParams[1]:setAnchorPoint(0.50, 0.50);
 	localParams[1]:setContentSize({width = 611.0, height = 16.0});
 	localParams[1]:setPosition(350.0, 600.0);
@@ -38,7 +35,7 @@ function LoadingLayer:initView()
 	localParams[1].__Name = 'loading1';
 	self:addChild(localParams[1]);
 
-	localParams[2] = LoadingBar:create(''uires/public/sheet_other/other0015.png'', 1, 0.00);
+	localParams[2] = LoadingBar:create('uires/public/sheet_other/other0015.png', 1, 0.00);
 	localParams[2]:setDirection(1);
 	localParams[2]:setAnchorPoint(0.50, 0.50);
 	localParams[2]:setContentSize({width = 611.0, height = 16.0});

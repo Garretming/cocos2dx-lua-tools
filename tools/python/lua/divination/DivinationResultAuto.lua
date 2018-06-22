@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：DivinationResultAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -51,7 +48,7 @@ function DivinationResult:initView()
 	localParams[2].__Name = 'title';
 	self:addChild(localParams[2]);
 
-	localParams[3] = Node:create();
+	localParams[3] = Widget:create();
 	localParams[3]:setAnchorPoint(0.00, 0.00);
 	localParams[3]:setContentSize({width = 0.0, height = 0.0});
 	localParams[3]:setPosition(WinSize.width/2 + (-0.00 * ccx.scaleX), WinSize.height/2 + (-0.00 * ccx.scaleY));
@@ -103,7 +100,7 @@ function DivinationResult:initView()
 	localParams[7]:setFontSize(20);
 	localParams[7]:setString([[500]]);
 	localParams[7]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[7]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[7]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[7]:setAnchorPoint(0.00, 1.00);
 	localParams[7]:setContentSize({width = 41.0, height = 24.0});
 	localParams[7]:setPosition(123.09, 24.96);
@@ -196,7 +193,7 @@ function DivinationResult:initView()
 	localParams[15]:setFontSize(20);
 	localParams[15]:setString([[1]]);
 	localParams[15]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[15]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[15]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[15]:setAnchorPoint(0.50, 0.50);
 	localParams[15]:setContentSize({width = 14.0, height = 24.0});
 	localParams[15]:setPosition(113.42, -25.0);
@@ -205,7 +202,7 @@ function DivinationResult:initView()
 	localParams[15].__Name = 'again#price_txt';
 	localParams[12]:addChild(localParams[15]);
 
-	localParams[16] = Node:create();
+	localParams[16] = Widget:create();
 	localParams[16]:setAnchorPoint(0.00, 0.00);
 	localParams[16]:setScaleX(0.90);
 	localParams[16]:setScaleY(0.90);
@@ -243,7 +240,7 @@ function DivinationResult:initView()
 	localParams[18].__Name = 'sure_btn#font';
 	localParams[17]:addChild(localParams[18]);
 
-	localParams[19] = Node:create();
+	localParams[19] = Widget:create();
 	localParams[19]:setAnchorPoint(0.00, 0.00);
 	localParams[19]:setScaleX(0.90);
 	localParams[19]:setScaleY(0.90);

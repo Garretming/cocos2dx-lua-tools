@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：ShopLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -119,7 +116,7 @@ function ShopLayer:initView()
 	localParams[9]:setFontSize(20);
 	localParams[9]:setString([[999999]]);
 	localParams[9]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[9]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[9]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[9]:setAnchorPoint(1.00, 0.50);
 	localParams[9]:setContentSize({width = 75.0, height = 22.0});
 	localParams[9]:setPosition(143.96, 31.61);
@@ -155,7 +152,7 @@ function ShopLayer:initView()
 	localParams[12]:setFontSize(20);
 	localParams[12]:setString([[999999]]);
 	localParams[12]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[12]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[12]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[12]:setAnchorPoint(1.00, 0.50);
 	localParams[12]:setContentSize({width = 75.0, height = 22.0});
 	localParams[12]:setPosition(141.77, localParams[11]:getContentSize().height - 18.98);
@@ -204,7 +201,7 @@ function ShopLayer:initView()
 	localParams[15].__Name = '__FULL_LAYER#help_btn';
 	localParams[2]:addChild(localParams[15]);
 
-	localParams[16] = Node:create();
+	localParams[16] = Widget:create();
 	localParams[16]:setAnchorPoint(0.00, 0.00);
 	localParams[16]:setScaleX(0.90);
 	localParams[16]:setScaleY(0.90);

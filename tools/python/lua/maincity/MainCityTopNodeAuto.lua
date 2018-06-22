@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：MainCityTopNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -68,7 +65,7 @@ function MainCityTopNode:initView()
 	localParams[3].__Name = 'Image_3#mail';
 	localParams[2]:addChild(localParams[3]);
 
-	localParams[4] = Node:create();
+	localParams[4] = Widget:create();
 	localParams[4]:setAnchorPoint(0.00, 0.00);
 	localParams[4]:setScaleX(0.90);
 	localParams[4]:setScaleY(0.90);
@@ -104,7 +101,7 @@ function MainCityTopNode:initView()
 	localParams[6].__Name = 'Image_3#announce';
 	localParams[2]:addChild(localParams[6]);
 
-	localParams[7] = Node:create();
+	localParams[7] = Widget:create();
 	localParams[7]:setAnchorPoint(0.00, 0.00);
 	localParams[7]:setScaleX(0.90);
 	localParams[7]:setScaleY(0.90);
@@ -142,7 +139,7 @@ function MainCityTopNode:initView()
 	localParams[10].__Name = 'left#exp#uires_maincity_sheet_other0010_7';
 	localParams[9]:addChild(localParams[10]);
 
-	localParams[11] = LoadingBar:create(''uires/public/sheet_other/other0082.png'', 1, 100.00);
+	localParams[11] = LoadingBar:create('uires/public/sheet_other/other0082.png', 1, 100.00);
 	localParams[11]:setAnchorPoint(0.50, 0.50);
 	localParams[11]:setContentSize({width = 151.0, height = 14.0});
 	localParams[11]:setPosition(76.99, 9.0);
@@ -167,7 +164,7 @@ function MainCityTopNode:initView()
 	localParams[13]:setFontSize(14);
 	localParams[13]:setString([[LV:1]]);
 	localParams[13]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[13]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[13]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[13]:setAnchorPoint(1.00, 0.50);
 	localParams[13]:setTextColor({r = 255, g = 150, b = 0});
 	localParams[13]:setContentSize({width = 29.0, height = 18.0});
@@ -181,7 +178,7 @@ function MainCityTopNode:initView()
 	localParams[14]:setFontSize(14);
 	localParams[14]:setString([[阿啊啊啊啊]]);
 	localParams[14]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[14]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[14]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[14]:setAnchorPoint(0.00, 0.50);
 	localParams[14]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[14]:setContentSize({width = 75.0, height = 18.0});
@@ -209,7 +206,7 @@ function MainCityTopNode:initView()
 	localParams[15].__Name = 'left#head';
 	localParams[8]:addChild(localParams[15]);
 
-	localParams[16] = Node:create();
+	localParams[16] = Widget:create();
 	localParams[16]:setAnchorPoint(0.00, 0.00);
 	localParams[16]:setScaleX(0.65);
 	localParams[16]:setScaleY(0.65);
@@ -264,7 +261,7 @@ function MainCityTopNode:initView()
 	localParams[21]:setFontSize(20);
 	localParams[21]:setString([[999999]]);
 	localParams[21]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[21]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[21]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[21]:setAnchorPoint(1.00, 0.50);
 	localParams[21]:setContentSize({width = 75.0, height = 22.0});
 	localParams[21]:setPosition(143.96, 30.61);
@@ -315,7 +312,7 @@ function MainCityTopNode:initView()
 	localParams[25]:setFontSize(20);
 	localParams[25]:setString([[999999]]);
 	localParams[25]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[25]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[25]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[25]:setAnchorPoint(1.00, 0.50);
 	localParams[25]:setContentSize({width = 75.0, height = 22.0});
 	localParams[25]:setPosition(141.77, localParams[24]:getContentSize().height - 18.98);

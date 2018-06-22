@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：LadderItemNodeAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -46,7 +43,7 @@ function LadderItemNode:initView()
 	localParams[1].__Name = 'item_btn';
 	self:addChild(localParams[1]);
 
-	localParams[2] = Node:create();
+	localParams[2] = Widget:create();
 	localParams[2]:setAnchorPoint(0.00, 0.00);
 	localParams[2]:setScaleX(0.98);
 	localParams[2]:setScaleY(0.95);
@@ -92,7 +89,7 @@ function LadderItemNode:initView()
 	localParams[6]:setFontSize(20);
 	localParams[6]:setString([[最强王者]]);
 	localParams[6]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[6]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[6]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[6]:setAnchorPoint(0.50, 0.50);
 	localParams[6]:setTextColor({r = 240, g = 200, b = 60});
 	localParams[6]:setContentSize({width = 84.0, height = 22.0});
@@ -117,7 +114,7 @@ function LadderItemNode:initView()
 	localParams[8]:setFontSize(20);
 	localParams[8]:setString([[x6]]);
 	localParams[8]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[8]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[8]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[8]:setAnchorPoint(0.50, 0.50);
 	localParams[8]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[8]:setContentSize({width = 25.0, height = 22.0});
@@ -127,7 +124,7 @@ function LadderItemNode:initView()
 	localParams[8].__Name = 'item_btn#under_1#count_txt';
 	localParams[5]:addChild(localParams[8]);
 
-	localParams[9] = ImageView:create(, 0);
+	localParams[9] = ImageView:create(nil, 0);
 	localParams[9]:setAnchorPoint(0.50, 0.50);
 	localParams[9]:setScaleX(0.75);
 	localParams[9]:setScaleY(0.75);
@@ -142,7 +139,7 @@ function LadderItemNode:initView()
 	localParams[10]:setFontSize(22);
 	localParams[10]:setString([[胜率：]]);
 	localParams[10]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[10]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[10]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[10]:setAnchorPoint(1.00, 0.50);
 	localParams[10]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[10]:setContentSize({width = 57.0, height = 29.0});
@@ -156,7 +153,7 @@ function LadderItemNode:initView()
 	localParams[11]:setFontSize(22);
 	localParams[11]:setString([[50.00%]]);
 	localParams[11]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[11]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[11]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[11]:setAnchorPoint(0.00, 0.50);
 	localParams[11]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[11]:setContentSize({width = 75.0, height = 29.0});
@@ -170,7 +167,7 @@ function LadderItemNode:initView()
 	localParams[12]:setFontSize(22);
 	localParams[12]:setString([[LV.25]]);
 	localParams[12]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[12]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[12]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[12]:setAnchorPoint(0.50, 0.50);
 	localParams[12]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[12]:setContentSize({width = 59.0, height = 26.0});
@@ -184,7 +181,7 @@ function LadderItemNode:initView()
 	localParams[13]:setFontSize(22);
 	localParams[13]:setString([[大鸟大鸟大鸟]]);
 	localParams[13]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[13]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[13]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[13]:setAnchorPoint(0.00, 0.50);
 	localParams[13]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[13]:setContentSize({width = 136.0, height = 26.0});

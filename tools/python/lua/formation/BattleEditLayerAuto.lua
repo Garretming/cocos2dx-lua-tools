@@ -2,11 +2,8 @@
 -- Author: generation auto
 -- Brief：BattleEditLayerAuto
 -- 
-local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = 
-    cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
-local Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox = 
-    ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox;
-local Sprite, Node, ProgressTimer = cc.Sprite, cc.Node, cc.ProgressTimer;
+local cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring = cc, ccx, class, pairs, error, ipairs, table, type, print, select, assert, require, string, tostring;
+local RichText, Widget, Scale9Sprite, Layout, ScrollView, PageView, ListView, ImageView, Text, TextAtlas, TextBMFont, Button, LoadingBar, CheckBox, EditBox = ccui.RichText, ccui.Widget, cc.Scale9Sprite, ccui.Layout, ccui.ScrollView, ccui.PageView, ccui.ListView, ccui.ImageView, ccui.Text, ccui.TextAtlas, ccui.TextBMFont, ccui.Button, ccui.LoadingBar, ccui.CheckBox, ccui.EditBox;
 
 
 local WinSize = cc.Director:getInstance():getWinSize();
@@ -260,7 +257,7 @@ function BattleEditLayer:initView()
 	localParams[16].__Name = 'skill_img#use_skill_bg2';
 	localParams[14]:addChild(localParams[16]);
 
-	localParams[17] = ImageView:create(, 0);
+	localParams[17] = ImageView:create(nil, 0);
 	localParams[17]:setAnchorPoint(0.50, 0.50);
 	localParams[17]:setScaleX(0.85);
 	localParams[17]:setScaleY(0.85);
@@ -306,7 +303,7 @@ function BattleEditLayer:initView()
 	localParams[20]:setString([[]]);
 	localParams[20]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[20]:setTextAreaSize({width = 180, height = 69});
-	localParams[20]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[20]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[20]:setAnchorPoint(0.00, 0.50);
 	localParams[20]:setContentSize({width = 180.0, height = 69.0});
 	localParams[20]:setPosition(localParams[14]:getContentSize().width - 408.00, 39.5);
@@ -320,7 +317,7 @@ function BattleEditLayer:initView()
 	localParams[21]:setString([[]]);
 	localParams[21]:setFontName('uires/public/ttf/jzy.ttf');
 	localParams[21]:setTextAreaSize({width = 180, height = 69});
-	localParams[21]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[21]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[21]:setAnchorPoint(0.50, 0.50);
 	localParams[21]:setContentSize({width = 180.0, height = 69.0});
 	localParams[21]:setPosition(317.0, 39.5);
@@ -333,7 +330,7 @@ function BattleEditLayer:initView()
 	localParams[22]:setFontSize(16);
 	localParams[22]:setString([[]]);
 	localParams[22]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[22]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[22]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[22]:setAnchorPoint(0.50, 0.50);
 	localParams[22]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[22]:setContentSize({width = 0.0, height = 0.0});
@@ -343,7 +340,7 @@ function BattleEditLayer:initView()
 	localParams[22].__Name = 'skill_img#skill_level2';
 	localParams[14]:addChild(localParams[22]);
 
-	localParams[23] = ImageView:create(, 0);
+	localParams[23] = ImageView:create(nil, 0);
 	localParams[23]:setAnchorPoint(0.50, 0.50);
 	localParams[23]:setScaleX(0.85);
 	localParams[23]:setScaleY(0.85);
@@ -358,7 +355,7 @@ function BattleEditLayer:initView()
 	localParams[24]:setFontSize(16);
 	localParams[24]:setString([[]]);
 	localParams[24]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[24]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[24]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[24]:setAnchorPoint(0.50, 0.50);
 	localParams[24]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[24]:setContentSize({width = 0.0, height = 0.0});
@@ -372,7 +369,7 @@ function BattleEditLayer:initView()
 	localParams[25]:setFontSize(16);
 	localParams[25]:setString([[]]);
 	localParams[25]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[25]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[25]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[25]:setAnchorPoint(0.50, 0.50);
 	localParams[25]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[25]:setContentSize({width = 0.0, height = 0.0});
@@ -397,7 +394,7 @@ function BattleEditLayer:initView()
 	localParams[27]:setFontSize(24);
 	localParams[27]:setString([[]]);
 	localParams[27]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[27]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[27]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[27]:setAnchorPoint(0.50, 0.50);
 	localParams[27]:setContentSize({width = 0.0, height = 0.0});
 	localParams[27]:setPosition(19.0, 20.0);
@@ -410,7 +407,7 @@ function BattleEditLayer:initView()
 	localParams[28]:setFontSize(16);
 	localParams[28]:setString([[]]);
 	localParams[28]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[28]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[28]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[28]:setAnchorPoint(0.50, 0.50);
 	localParams[28]:setTextColor({r = 255, g = 140, b = 0});
 	localParams[28]:setContentSize({width = 0.0, height = 0.0});
@@ -435,7 +432,7 @@ function BattleEditLayer:initView()
 	localParams[30]:setFontSize(24);
 	localParams[30]:setString([[]]);
 	localParams[30]:setFontName('uires/public/ttf/BRITANIC.TTF');
-	localParams[30]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 2.000000);
+	localParams[30]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 2.00);
 	localParams[30]:setAnchorPoint(0.50, 0.50);
 	localParams[30]:setContentSize({width = 0.0, height = 0.0});
 	localParams[30]:setPosition(19.0, 20.0);
@@ -460,7 +457,7 @@ function BattleEditLayer:initView()
 	localParams[32]:setFontSize(20);
 	localParams[32]:setString([[攻  击：]]);
 	localParams[32]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[32]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[32]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[32]:setAnchorPoint(0.50, 0.50);
 	localParams[32]:setContentSize({width = 76.0, height = 22.0});
 	localParams[32]:setPosition(49.45, 149.8);
@@ -473,7 +470,7 @@ function BattleEditLayer:initView()
 	localParams[33]:setFontSize(20);
 	localParams[33]:setString([[护  甲：]]);
 	localParams[33]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[33]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[33]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[33]:setAnchorPoint(0.50, 0.50);
 	localParams[33]:setContentSize({width = 76.0, height = 22.0});
 	localParams[33]:setPosition(49.65, 117.29);
@@ -486,7 +483,7 @@ function BattleEditLayer:initView()
 	localParams[34]:setFontSize(20);
 	localParams[34]:setString([[血  量：]]);
 	localParams[34]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[34]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[34]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[34]:setAnchorPoint(0.50, 0.50);
 	localParams[34]:setContentSize({width = 76.0, height = 22.0});
 	localParams[34]:setPosition(49.38, 84.55);
@@ -499,7 +496,7 @@ function BattleEditLayer:initView()
 	localParams[35]:setFontSize(20);
 	localParams[35]:setString([[速  度：]]);
 	localParams[35]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[35]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[35]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[35]:setAnchorPoint(0.50, 0.50);
 	localParams[35]:setContentSize({width = 76.0, height = 22.0});
 	localParams[35]:setPosition(49.3, 52.77);
@@ -512,7 +509,7 @@ function BattleEditLayer:initView()
 	localParams[36]:setFontSize(20);
 	localParams[36]:setString([[0]]);
 	localParams[36]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[36]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[36]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[36]:setAnchorPoint(1.00, 0.50);
 	localParams[36]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[36]:setContentSize({width = 15.0, height = 25.0});
@@ -526,7 +523,7 @@ function BattleEditLayer:initView()
 	localParams[37]:setFontSize(20);
 	localParams[37]:setString([[0]]);
 	localParams[37]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[37]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[37]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[37]:setAnchorPoint(1.00, 0.50);
 	localParams[37]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[37]:setContentSize({width = 15.0, height = 25.0});
@@ -540,7 +537,7 @@ function BattleEditLayer:initView()
 	localParams[38]:setFontSize(20);
 	localParams[38]:setString([[0]]);
 	localParams[38]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[38]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[38]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[38]:setAnchorPoint(1.00, 0.50);
 	localParams[38]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[38]:setContentSize({width = 15.0, height = 25.0});
@@ -554,7 +551,7 @@ function BattleEditLayer:initView()
 	localParams[39]:setFontSize(20);
 	localParams[39]:setString([[0]]);
 	localParams[39]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[39]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[39]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[39]:setAnchorPoint(1.00, 0.50);
 	localParams[39]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[39]:setContentSize({width = 15.0, height = 25.0});
@@ -568,7 +565,7 @@ function BattleEditLayer:initView()
 	localParams[40]:setFontSize(20);
 	localParams[40]:setString([[智  慧：]]);
 	localParams[40]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[40]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[40]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[40]:setAnchorPoint(0.50, 0.50);
 	localParams[40]:setContentSize({width = 76.0, height = 22.0});
 	localParams[40]:setPosition(49.3, 22.77);
@@ -581,7 +578,7 @@ function BattleEditLayer:initView()
 	localParams[41]:setFontSize(20);
 	localParams[41]:setString([[0]]);
 	localParams[41]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[41]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[41]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[41]:setAnchorPoint(1.00, 0.50);
 	localParams[41]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[41]:setContentSize({width = 15.0, height = 25.0});
@@ -608,7 +605,7 @@ function BattleEditLayer:initView()
 	localParams[42].__Name = 'amend_btn';
 	self:addChild(localParams[42]);
 
-	localParams[43] = Node:create();
+	localParams[43] = Widget:create();
 	localParams[43]:setAnchorPoint(0.00, 0.00);
 	localParams[43]:setScaleX(0.90);
 	localParams[43]:setScaleY(0.90);
@@ -628,7 +625,7 @@ function BattleEditLayer:initView()
 	localParams[44].__Name = 'head_bg';
 	self:addChild(localParams[44]);
 
-	localParams[45] = ImageView:create(, 0);
+	localParams[45] = ImageView:create(nil, 0);
 	localParams[45]:setAnchorPoint(0.50, 0.50);
 	localParams[45]:setContentSize({width = 46.0, height = 46.0});
 	localParams[45]:setPosition(53.96, 55.62);
@@ -637,7 +634,7 @@ function BattleEditLayer:initView()
 	localParams[45].__Name = 'head_bg#head';
 	localParams[44]:addChild(localParams[45]);
 
-	localParams[46] = ImageView:create(, 0);
+	localParams[46] = ImageView:create(nil, 0);
 	localParams[46]:setAnchorPoint(0.50, 0.50);
 	localParams[46]:setScaleX(0.70);
 	localParams[46]:setScaleY(0.70);
@@ -689,7 +686,7 @@ function BattleEditLayer:initView()
 	localParams[50]:setFontSize(20);
 	localParams[50]:setString([[灵魂突破]]);
 	localParams[50]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[50]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[50]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[50]:setAnchorPoint(0.50, 0.50);
 	localParams[50]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[50]:setContentSize({width = 84.0, height = 22.0});
@@ -753,7 +750,7 @@ function BattleEditLayer:initView()
 	localParams[55].__Name = 'battle_edit#fight_btn#font1';
 	localParams[54]:addChild(localParams[55]);
 
-	localParams[56] = Node:create();
+	localParams[56] = Widget:create();
 	localParams[56]:setAnchorPoint(0.00, 0.00);
 	localParams[56]:setScaleX(0.90);
 	localParams[56]:setScaleY(0.90);
@@ -793,7 +790,7 @@ function BattleEditLayer:initView()
 	localParams[59]:setFontSize(20);
 	localParams[59]:setString([[灵魂突破]]);
 	localParams[59]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[59]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[59]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[59]:setAnchorPoint(0.50, 0.50);
 	localParams[59]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[59]:setContentSize({width = 84.0, height = 22.0});
@@ -859,7 +856,7 @@ function BattleEditLayer:initView()
 	localParams[65]:setFontSize(20);
 	localParams[65]:setString([[灵魂突破]]);
 	localParams[65]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[65]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[65]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[65]:setAnchorPoint(0.50, 0.50);
 	localParams[65]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[65]:setContentSize({width = 84.0, height = 22.0});
@@ -925,7 +922,7 @@ function BattleEditLayer:initView()
 	localParams[71]:setFontSize(20);
 	localParams[71]:setString([[灵魂突破]]);
 	localParams[71]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[71]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[71]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[71]:setAnchorPoint(0.50, 0.50);
 	localParams[71]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[71]:setContentSize({width = 84.0, height = 22.0});
@@ -991,7 +988,7 @@ function BattleEditLayer:initView()
 	localParams[77]:setFontSize(20);
 	localParams[77]:setString([[灵魂突破]]);
 	localParams[77]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[77]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[77]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[77]:setAnchorPoint(0.50, 0.50);
 	localParams[77]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[77]:setContentSize({width = 84.0, height = 22.0});
@@ -1057,7 +1054,7 @@ function BattleEditLayer:initView()
 	localParams[83]:setFontSize(20);
 	localParams[83]:setString([[灵魂突破]]);
 	localParams[83]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[83]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[83]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[83]:setAnchorPoint(0.50, 0.50);
 	localParams[83]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[83]:setContentSize({width = 84.0, height = 22.0});
@@ -1158,7 +1155,7 @@ function BattleEditLayer:initView()
 	localParams[91].__Name = 'help_btn';
 	self:addChild(localParams[91]);
 
-	localParams[92] = Node:create();
+	localParams[92] = Widget:create();
 	localParams[92]:setAnchorPoint(0.00, 0.00);
 	localParams[92]:setScaleX(0.90);
 	localParams[92]:setScaleY(0.90);
@@ -1181,7 +1178,7 @@ function BattleEditLayer:initView()
 	localParams[93].__Name = 'm_message_bg';
 	self:addChild(localParams[93]);
 
-	localParams[94] = Node:create();
+	localParams[94] = Widget:create();
 	localParams[94]:setAnchorPoint(0.00, 0.00);
 	localParams[94]:setContentSize({width = 0.0, height = 0.0});
 	localParams[94]:setPosition(0.0, 360.0);
@@ -1194,7 +1191,7 @@ function BattleEditLayer:initView()
 	localParams[95]:setFontSize(24);
 	localParams[95]:setString([[重甲奇兵]]);
 	localParams[95]:setFontName('uires/public/ttf/jtcs.TTF');
-	localParams[95]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[95]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[95]:setAnchorPoint(0.50, 0.50);
 	localParams[95]:setTextColor({r = 255, g = 240, b = 155});
 	localParams[95]:setContentSize({width = 100.0, height = 26.0});
@@ -1208,7 +1205,7 @@ function BattleEditLayer:initView()
 	localParams[96]:setFontSize(20);
 	localParams[96]:setString([[攻  击:]]);
 	localParams[96]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[96]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[96]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[96]:setAnchorPoint(0.00, 0.50);
 	localParams[96]:setContentSize({width = 58.0, height = 25.0});
 	localParams[96]:setPosition(13.23, -60.31);
@@ -1222,7 +1219,7 @@ function BattleEditLayer:initView()
 	localParams[97]:setString([[d]]);
 	localParams[97]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[97]:setTextAreaSize({width = 240, height = 0});
-	localParams[97]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[97]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[97]:setAnchorPoint(0.00, 1.00);
 	localParams[97]:setContentSize({width = 240.0, height = 0.0});
 	localParams[97]:setPosition(15.0, -110.0);
@@ -1235,7 +1232,7 @@ function BattleEditLayer:initView()
 	localParams[98]:setFontSize(20);
 	localParams[98]:setString([[血  量:]]);
 	localParams[98]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[98]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[98]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[98]:setAnchorPoint(0.00, 0.50);
 	localParams[98]:setContentSize({width = 58.0, height = 25.0});
 	localParams[98]:setPosition(13.23, -87.5);
@@ -1248,7 +1245,7 @@ function BattleEditLayer:initView()
 	localParams[99]:setFontSize(20);
 	localParams[99]:setString([[护  甲:]]);
 	localParams[99]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[99]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[99]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[99]:setAnchorPoint(0.00, 0.50);
 	localParams[99]:setContentSize({width = 58.0, height = 25.0});
 	localParams[99]:setPosition(135.97, -60.31);
@@ -1261,7 +1258,7 @@ function BattleEditLayer:initView()
 	localParams[100]:setFontSize(20);
 	localParams[100]:setString([[速  度:]]);
 	localParams[100]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[100]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[100]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[100]:setAnchorPoint(0.00, 0.50);
 	localParams[100]:setContentSize({width = 58.0, height = 25.0});
 	localParams[100]:setPosition(135.97, -87.5);
@@ -1274,7 +1271,7 @@ function BattleEditLayer:initView()
 	localParams[101]:setFontSize(20);
 	localParams[101]:setString([[99999]]);
 	localParams[101]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[101]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[101]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[101]:setAnchorPoint(0.00, 0.50);
 	localParams[101]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[101]:setContentSize({width = 58.0, height = 25.0});
@@ -1288,7 +1285,7 @@ function BattleEditLayer:initView()
 	localParams[102]:setFontSize(20);
 	localParams[102]:setString([[99999]]);
 	localParams[102]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[102]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[102]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[102]:setAnchorPoint(0.00, 0.39);
 	localParams[102]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[102]:setContentSize({width = 58.0, height = 25.0});
@@ -1302,7 +1299,7 @@ function BattleEditLayer:initView()
 	localParams[103]:setFontSize(20);
 	localParams[103]:setString([[99999]]);
 	localParams[103]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[103]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[103]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[103]:setAnchorPoint(0.00, 0.50);
 	localParams[103]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[103]:setContentSize({width = 58.0, height = 25.0});
@@ -1316,7 +1313,7 @@ function BattleEditLayer:initView()
 	localParams[104]:setFontSize(20);
 	localParams[104]:setString([[99999]]);
 	localParams[104]:setFontName('uires/public/ttf/jzy.ttf');
-	localParams[104]:enableOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[104]:enableOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[104]:setAnchorPoint(0.00, 0.50);
 	localParams[104]:setTextColor({r = 80, g = 255, b = 0});
 	localParams[104]:setContentSize({width = 58.0, height = 25.0});
@@ -1331,7 +1328,7 @@ function BattleEditLayer:initView()
 	localParams[105]:setString([[]]);
 	localParams[105]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[105]:setTextAreaSize({width = 240, height = 0});
-	localParams[105]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[105]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[105]:setAnchorPoint(0.00, 1.00);
 	localParams[105]:setContentSize({width = 240.0, height = 0.0});
 	localParams[105]:setPosition(15.0, -227.94);
@@ -1345,7 +1342,7 @@ function BattleEditLayer:initView()
 	localParams[106]:setString([[]]);
 	localParams[106]:setDefaultFontName('uires/public/ttf/jzy.ttf');
 	localParams[106]:setTextAreaSize({width = 240, height = 0});
-	localParams[106]:setDefaultOutline({r = 50, g = 25, b = 255, a = 255}, 1.000000);
+	localParams[106]:setDefaultOutline({r = 50, g = 25, b = 0, a = 255}, 1.00);
 	localParams[106]:setAnchorPoint(0.00, 1.00);
 	localParams[106]:setContentSize({width = 240.0, height = 0.0});
 	localParams[106]:setPosition(15.0, -338.34);
