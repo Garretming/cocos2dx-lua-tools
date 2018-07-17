@@ -21,7 +21,6 @@ function DetailsLayer:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(true);
-
 end
 
 function DetailsLayer:initView()

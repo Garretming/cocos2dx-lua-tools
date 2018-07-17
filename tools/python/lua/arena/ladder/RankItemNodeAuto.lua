@@ -21,7 +21,6 @@ function RankItemNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function RankItemNode:initView()

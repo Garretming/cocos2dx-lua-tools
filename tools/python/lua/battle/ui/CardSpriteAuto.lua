@@ -21,7 +21,6 @@ function CardSprite:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function CardSprite:initView()

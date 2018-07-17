@@ -22,7 +22,6 @@ function DetailsLayer:ctor(...)
 	self:loadImageSync();
 	self:setBackgroundOpacity(150);
 	self:setTouchEnabled(true);
-
 end
 
 function DetailsLayer:initView()

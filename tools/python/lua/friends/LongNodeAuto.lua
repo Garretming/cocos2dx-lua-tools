@@ -21,7 +21,6 @@ function LongNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function LongNode:initView()

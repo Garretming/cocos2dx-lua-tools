@@ -20,7 +20,6 @@ function ScrollViewLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function ScrollViewLayer:initView()

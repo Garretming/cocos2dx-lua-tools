@@ -20,7 +20,6 @@ function AreanLoading:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function AreanLoading:initView()

@@ -21,7 +21,6 @@ function ChattingLayer:ctor(...)
 
 	self:setBackgroundOpacity(150);
 	self:setTouchEnabled(true);
-
 end
 
 function ChattingLayer:initView()

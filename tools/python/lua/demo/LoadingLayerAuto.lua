@@ -20,7 +20,6 @@ function LoadingLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function LoadingLayer:initView()

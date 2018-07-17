@@ -21,7 +21,6 @@ function PackageNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function PackageNode:initView()

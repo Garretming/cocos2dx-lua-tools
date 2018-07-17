@@ -21,7 +21,6 @@ function HandBookNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function HandBookNode:initView()

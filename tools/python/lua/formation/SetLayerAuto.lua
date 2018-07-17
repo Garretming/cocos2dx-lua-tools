@@ -20,7 +20,6 @@ function SetLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function SetLayer:initView()

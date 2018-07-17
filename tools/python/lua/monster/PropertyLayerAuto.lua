@@ -21,7 +21,6 @@ function PropertyLayer:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(true);
-
 end
 
 function PropertyLayer:initView()

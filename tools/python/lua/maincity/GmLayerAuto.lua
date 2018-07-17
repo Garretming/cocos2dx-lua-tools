@@ -20,7 +20,6 @@ function GmLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function GmLayer:initView()

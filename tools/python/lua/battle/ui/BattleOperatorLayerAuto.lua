@@ -20,7 +20,6 @@ function BattleOperatorLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function BattleOperatorLayer:initView()

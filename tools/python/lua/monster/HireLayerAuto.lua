@@ -21,7 +21,6 @@ function HireLayer:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(true);
-
 end
 
 function HireLayer:initView()

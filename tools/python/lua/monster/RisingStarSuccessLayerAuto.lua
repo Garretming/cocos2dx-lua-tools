@@ -21,7 +21,6 @@ function RisingStarSuccessLayer:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(true);
-
 end
 
 function RisingStarSuccessLayer:initView()

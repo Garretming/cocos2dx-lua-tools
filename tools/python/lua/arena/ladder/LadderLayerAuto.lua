@@ -20,7 +20,6 @@ function LadderLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function LadderLayer:initView()

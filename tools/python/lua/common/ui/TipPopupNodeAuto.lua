@@ -21,7 +21,6 @@ function TipPopupNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function TipPopupNode:initView()

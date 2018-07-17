@@ -21,7 +21,6 @@ function TaskNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function TaskNode:initView()

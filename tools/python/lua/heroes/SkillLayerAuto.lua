@@ -21,8 +21,6 @@ function SkillLayer:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-	self:setContentSize(WinSize);
-
 end
 
 function SkillLayer:initView()

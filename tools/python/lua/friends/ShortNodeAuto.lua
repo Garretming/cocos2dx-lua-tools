@@ -21,7 +21,6 @@ function ShortNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function ShortNode:initView()

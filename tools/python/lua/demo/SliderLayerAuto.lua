@@ -20,7 +20,6 @@ function SliderLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function SliderLayer:initView()

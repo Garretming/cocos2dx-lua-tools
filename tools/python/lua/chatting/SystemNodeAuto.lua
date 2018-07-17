@@ -21,7 +21,6 @@ function SystemNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function SystemNode:initView()

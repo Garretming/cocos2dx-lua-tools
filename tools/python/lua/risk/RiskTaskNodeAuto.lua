@@ -21,7 +21,6 @@ function RiskTaskNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function RiskTaskNode:initView()

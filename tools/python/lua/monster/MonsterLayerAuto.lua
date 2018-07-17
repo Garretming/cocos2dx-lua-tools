@@ -20,7 +20,6 @@ function MonsterLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function MonsterLayer:initView()

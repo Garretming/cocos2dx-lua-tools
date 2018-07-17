@@ -21,7 +21,6 @@ function BattleResultLayer:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(true);
-
 end
 
 function BattleResultLayer:initView()

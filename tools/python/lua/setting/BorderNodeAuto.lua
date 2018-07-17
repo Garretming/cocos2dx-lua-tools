@@ -21,7 +21,6 @@ function BorderNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function BorderNode:initView()

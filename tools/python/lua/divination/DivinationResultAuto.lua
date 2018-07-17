@@ -20,7 +20,6 @@ function DivinationResult:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function DivinationResult:initView()

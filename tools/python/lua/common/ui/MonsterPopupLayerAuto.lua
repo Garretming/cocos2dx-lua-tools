@@ -20,7 +20,6 @@ function MonsterPopupLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function MonsterPopupLayer:initView()

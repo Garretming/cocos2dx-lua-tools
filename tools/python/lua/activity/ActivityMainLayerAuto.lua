@@ -22,7 +22,6 @@ function ActivityMainLayer:ctor(...)
 	self:loadImageSync();
 	self:setBackgroundOpacity(200);
 	self:setTouchEnabled(true);
-
 end
 
 function ActivityMainLayer:initView()

@@ -21,7 +21,6 @@ function HeadNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function HeadNode:initView()

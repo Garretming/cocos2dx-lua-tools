@@ -20,7 +20,6 @@ function TabMenuLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function TabMenuLayer:initView()

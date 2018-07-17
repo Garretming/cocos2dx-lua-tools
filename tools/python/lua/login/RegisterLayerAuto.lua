@@ -21,8 +21,6 @@ function RegisterLayer:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-	self:setContentSize(WinSize);
-
 end
 
 function RegisterLayer:initView()

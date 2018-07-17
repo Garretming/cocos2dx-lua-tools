@@ -20,7 +20,6 @@ function ChangeProLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function ChangeProLayer:initView()

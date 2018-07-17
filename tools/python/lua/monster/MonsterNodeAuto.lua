@@ -21,7 +21,6 @@ function MonsterNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function MonsterNode:initView()

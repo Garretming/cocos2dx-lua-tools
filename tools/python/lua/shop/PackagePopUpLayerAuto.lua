@@ -22,7 +22,6 @@ function PackagePopUpLayer:ctor(...)
 	self:loadImageSync();
 	self:setBackgroundOpacity(150);
 	self:setTouchEnabled(true);
-
 end
 
 function PackagePopUpLayer:initView()

@@ -20,8 +20,6 @@ function GoldLayer:ctor(...)
     end
 
 	self:setTouchEnabled(false);
-	self:setContentSize(WinSize);
-
 end
 
 function GoldLayer:initView()

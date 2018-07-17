@@ -20,7 +20,6 @@ function TableViewLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function TableViewLayer:initView()

@@ -21,7 +21,6 @@ function EmailItemNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function EmailItemNode:initView()

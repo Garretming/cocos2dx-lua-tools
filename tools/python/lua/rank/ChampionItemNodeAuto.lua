@@ -21,7 +21,6 @@ function ChampionItemNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function ChampionItemNode:initView()

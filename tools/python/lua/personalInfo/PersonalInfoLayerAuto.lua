@@ -21,7 +21,6 @@ function PersonalInfoLayer:ctor(...)
 
 	self:setBackgroundOpacity(150);
 	self:setTouchEnabled(true);
-
 end
 
 function PersonalInfoLayer:initView()

@@ -21,7 +21,6 @@ function EvaluateNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function EvaluateNode:initView()

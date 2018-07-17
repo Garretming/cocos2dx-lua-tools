@@ -21,7 +21,6 @@ function EquipItemNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function EquipItemNode:initView()

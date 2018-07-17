@@ -21,7 +21,6 @@ function SkillItemNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function SkillItemNode:initView()

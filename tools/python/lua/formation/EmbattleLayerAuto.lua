@@ -21,7 +21,6 @@ function EmbattleLayer:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(true);
-
 end
 
 function EmbattleLayer:initView()

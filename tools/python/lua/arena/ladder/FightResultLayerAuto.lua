@@ -22,7 +22,6 @@ function FightResultLayer:ctor(...)
 	self:loadImageSync();
 	self:setBackgroundOpacity(200);
 	self:setTouchEnabled(true);
-
 end
 
 function FightResultLayer:initView()

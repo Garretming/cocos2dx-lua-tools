@@ -20,7 +20,6 @@ function DivinationLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function DivinationLayer:initView()

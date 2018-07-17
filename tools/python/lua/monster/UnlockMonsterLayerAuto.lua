@@ -20,7 +20,6 @@ function UnlockMonsterLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function UnlockMonsterLayer:initView()

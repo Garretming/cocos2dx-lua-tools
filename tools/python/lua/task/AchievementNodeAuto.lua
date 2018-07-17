@@ -21,7 +21,6 @@ function AchievementNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function AchievementNode:initView()

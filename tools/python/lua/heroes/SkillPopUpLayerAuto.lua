@@ -22,7 +22,6 @@ function SkillPopUpLayer:ctor(...)
 	self:loadImageSync();
 	self:setBackgroundOpacity(150);
 	self:setTouchEnabled(true);
-
 end
 
 function SkillPopUpLayer:initView()

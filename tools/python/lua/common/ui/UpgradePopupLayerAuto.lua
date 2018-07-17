@@ -21,7 +21,6 @@ function UpgradePopupLayer:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(true);
-
 end
 
 function UpgradePopupLayer:initView()

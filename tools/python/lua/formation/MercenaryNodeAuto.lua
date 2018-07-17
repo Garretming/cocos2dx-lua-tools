@@ -21,7 +21,6 @@ function MercenaryNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function MercenaryNode:initView()

@@ -21,7 +21,6 @@ function InstructionLayer:ctor(...)
 
 	self:setBackgroundOpacity(150);
 	self:setTouchEnabled(true);
-
 end
 
 function InstructionLayer:initView()

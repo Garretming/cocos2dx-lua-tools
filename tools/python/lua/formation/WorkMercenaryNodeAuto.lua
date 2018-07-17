@@ -21,7 +21,6 @@ function WorkMercenaryNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function WorkMercenaryNode:initView()

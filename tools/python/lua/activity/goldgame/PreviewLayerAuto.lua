@@ -21,7 +21,6 @@ function PreviewLayer:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(true);
-
 end
 
 function PreviewLayer:initView()

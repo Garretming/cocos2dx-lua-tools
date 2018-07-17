@@ -21,7 +21,6 @@ function ChatNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function ChatNode:initView()

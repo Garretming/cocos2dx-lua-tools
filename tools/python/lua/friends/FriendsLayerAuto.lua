@@ -22,7 +22,6 @@ function FriendsLayer:ctor(...)
 	self:loadImageSync();
 	self:setBackgroundOpacity(150);
 	self:setTouchEnabled(true);
-
 end
 
 function FriendsLayer:initView()

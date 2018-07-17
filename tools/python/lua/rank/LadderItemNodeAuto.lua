@@ -21,7 +21,6 @@ function LadderItemNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function LadderItemNode:initView()

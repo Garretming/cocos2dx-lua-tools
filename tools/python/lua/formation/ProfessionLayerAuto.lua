@@ -20,7 +20,6 @@ function ProfessionLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function ProfessionLayer:initView()

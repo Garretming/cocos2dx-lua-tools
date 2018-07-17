@@ -20,7 +20,6 @@ function RiskMainLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function RiskMainLayer:initView()

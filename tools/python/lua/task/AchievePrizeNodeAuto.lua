@@ -21,7 +21,6 @@ function AchievePrizeNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function AchievePrizeNode:initView()

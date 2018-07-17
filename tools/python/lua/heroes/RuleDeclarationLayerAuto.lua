@@ -21,7 +21,6 @@ function RuleDeclarationLayer:ctor(...)
 
 	self:setBackgroundOpacity(150);
 	self:setTouchEnabled(true);
-
 end
 
 function RuleDeclarationLayer:initView()

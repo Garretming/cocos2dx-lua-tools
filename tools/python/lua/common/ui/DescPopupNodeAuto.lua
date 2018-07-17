@@ -21,7 +21,6 @@ function DescPopupNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function DescPopupNode:initView()

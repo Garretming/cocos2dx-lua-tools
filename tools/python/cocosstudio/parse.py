@@ -41,6 +41,8 @@ def parseAllNodes(array, parent):
     node = "localParams[%d]" % GUID
     classname = array['ctype']
     nodeDataString = ''
+    # if  array.get('UserData', '').lower().find('scrollviewmap') >= 0:
+    #     classname = 'mapnode'
     if (classname == 'SpriteObjectData'): 
         nodeDataString += parseImageView.parse(node, array, 'sprite')
     elif (classname == 'TextObjectData'):
@@ -224,12 +226,12 @@ function %s:ctor(...)
         uiString += "\tself:setBackgroundOpacity(%d);\n" % (maskOpacity)
     
     if classType == 'basenode' or classType1 == 'basenode':
-        uiString += "\tself:setTouchEnabled(false);\n"
+        uiString += "\tself:setTouchEnabled(false);"
     elif classType == 'baselayer':
-        uiString += "\tself:setTouchEnabled(true);\n"
+        uiString += "\tself:setTouchEnabled(true);"
     
-    if classType1 == 'basenode':
-        uiString += "\tself:setContentSize(WinSize);\n"
+    # if classType1 == 'basenode':
+    #     uiString += "\tself:setContentSize(WinSize);\n"
     
     uiString += '''
 end

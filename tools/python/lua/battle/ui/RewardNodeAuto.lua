@@ -21,7 +21,6 @@ function RewardNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function RewardNode:initView()

@@ -21,7 +21,6 @@ function EformationLayer:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(true);
-
 end
 
 function EformationLayer:initView()

@@ -22,7 +22,6 @@ function CheckPopupLayer:ctor(...)
 	self:loadImageSync();
 	self:setBackgroundOpacity(200);
 	self:setTouchEnabled(true);
-
 end
 
 function CheckPopupLayer:initView()

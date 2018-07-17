@@ -20,7 +20,6 @@ function CallbackLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function CallbackLayer:initView()

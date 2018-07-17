@@ -20,7 +20,6 @@ function BattleEditLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function BattleEditLayer:initView()

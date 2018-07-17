@@ -22,7 +22,6 @@ function AchievePrizeLayer:ctor(...)
 	self:loadImageSync();
 	self:setBackgroundOpacity(150);
 	self:setTouchEnabled(true);
-
 end
 
 function AchievePrizeLayer:initView()

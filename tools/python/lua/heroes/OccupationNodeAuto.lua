@@ -21,7 +21,6 @@ function OccupationNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function OccupationNode:initView()

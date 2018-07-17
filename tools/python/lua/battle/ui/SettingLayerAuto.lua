@@ -21,7 +21,6 @@ function SettingLayer:ctor(...)
 
 	self:setBackgroundOpacity(150);
 	self:setTouchEnabled(true);
-
 end
 
 function SettingLayer:initView()

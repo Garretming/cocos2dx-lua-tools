@@ -20,7 +20,6 @@ function VoiceLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function VoiceLayer:initView()

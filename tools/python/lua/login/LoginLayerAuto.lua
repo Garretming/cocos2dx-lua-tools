@@ -20,7 +20,6 @@ function LoginLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function LoginLayer:initView()

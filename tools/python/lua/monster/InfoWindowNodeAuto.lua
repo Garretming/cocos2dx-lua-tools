@@ -21,7 +21,6 @@ function InfoWindowNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function InfoWindowNode:initView()

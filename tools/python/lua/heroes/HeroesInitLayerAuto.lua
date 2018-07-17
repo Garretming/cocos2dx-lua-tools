@@ -20,7 +20,6 @@ function HeroesInitLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function HeroesInitLayer:initView()

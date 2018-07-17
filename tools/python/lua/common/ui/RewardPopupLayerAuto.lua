@@ -21,7 +21,6 @@ function RewardPopupLayer:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(true);
-
 end
 
 function RewardPopupLayer:initView()

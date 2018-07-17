@@ -22,7 +22,6 @@ function ExchangeLayer:ctor(...)
 	self:loadImageSync();
 	self:setBackgroundOpacity(150);
 	self:setTouchEnabled(true);
-
 end
 
 function ExchangeLayer:initView()

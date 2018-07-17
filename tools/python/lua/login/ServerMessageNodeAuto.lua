@@ -21,7 +21,6 @@ function ServerMessageNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function ServerMessageNode:initView()

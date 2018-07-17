@@ -21,7 +21,6 @@ function SurePopupLayer:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(true);
-
 end
 
 function SurePopupLayer:initView()

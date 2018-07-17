@@ -20,7 +20,6 @@ function PageViewLayer:ctor(...)
     end
 
 	self:setTouchEnabled(true);
-
 end
 
 function PageViewLayer:initView()

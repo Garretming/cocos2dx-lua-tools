@@ -21,7 +21,6 @@ function ReportItemNode:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(false);
-
 end
 
 function ReportItemNode:initView()

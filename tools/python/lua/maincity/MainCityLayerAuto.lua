@@ -21,7 +21,6 @@ function MainCityLayer:ctor(...)
 
 	self:loadImageSync();
 	self:setTouchEnabled(true);
-
 end
 
 function MainCityLayer:initView()
