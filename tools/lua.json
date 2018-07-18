@@ -1,0 +1,1017 @@
+{
+/*
+	// Place your snippets for Lua here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+
+	"xx.ui:Bind": {
+		"prefix": "xx.ui.bind",
+		"body": [
+			"xx.ui:Bind($btn_node,{\n\tcallback = handler(self, $function_name)\n});",
+		],
+		"description": "xx.ui:Bind"
+	},
+
+	"xx.event.Manager:addEventListener": {
+		"prefix": "xx.event.Manager:addEventListener",
+		"body": [
+			"xx.event.Manager:addEventListener($event_name, self, handler(self, $function_name));",
+		],
+		"description": "xx.event.Manager:addEventListener"
+	},
+
+	"xx.event.Manager:dispatchEvent": {
+		"prefix": "xx.event.Manager:dispatchEvent",
+		"body": [
+			"xx.event.Manager:dispatchEvent($event_name);",
+		],
+		"description": "xx.event.Manager:dispatchEvent"
+	},
+
+	"xx.tool.IsNull": {
+		"prefix": "xx.tool.IsNull",
+		"body": [
+			"xx.tool.IsNull($object);",
+		],
+		"description": "xx.tool.IsNull"
+	},
+
+	"xx.tool.IsFileExist": {
+		"prefix": "xx.tool.IsFileExist",
+		"body": [
+			"xx.tool.IsFileExist($path);",
+		],
+		"description": "xx.tool.IsFileExist"
+	},
+	
+	"xx.csv:IniCommonFont": {
+		"prefix": "xx.csv:IniCommonFont",
+		"body": [
+			"xx.csv:IniCommonFont($key)",
+		],
+		"description": "xx.csv:IniCommonFont"
+	},
+	
+
+	"getInnerContainer":{
+		"prefix": "getInnerContainer",
+		"body": [
+			"getInnerContainer()",
+		],
+		"description": "getInnerContainer"
+	},
+
+	"getInnerContainerSize":{
+		"prefix": "getInnerContainerSize",
+		"body": [
+			"getInnerContainerSize()",
+		],
+		"description": "getInnerContainerSize"
+	},
+
+	"setInnerContainerSize":{
+		"prefix": "setInnerContainerSize",
+		"body": [
+			"setInnerContainerSize($size);",
+		],
+		"description": "setInnerContainerSize"
+	},
+
+	"xx.ui:ShowFloatBox":{
+		"prefix": "xx.ui:ShowFloatBox",
+		"body": [
+			"xx.ui:ShowFloatBox($text);",
+		],
+		"description": "xx.ui:ShowFloatBox"
+	},
+
+	"GetUIResourcePath":{
+		"prefix": "GetUIResourcePath",
+		"body": [
+			"xx.ui:GetUIResourcePath($filename, $path);",
+		],
+		"description": "xx.ui:GetUIResourcePath"
+	},
+
+	
+
+
+	"xx.ui:CreateTouchGroup": {
+		"prefix": "xx.ui:CreateTouchGroup",
+		"body": [
+			"xx.ui:CreateTouchGroup($object);",
+		],
+		"description": "xx.ui:CreateTouchGroup"
+	},
+
+	"xx.ui:LoadCCSUI": {
+		"prefix": "xx.ui:LoadCCSUI",
+		"body": [
+			"xx.ui:LoadCCSUI($jsonname, {\n\ttouchGroup = $object\n});",
+		],
+		"description": "xx.ui:LoadCCSUI"
+	},
+
+
+	"UIHelper:seekWidgetByName": {
+		"prefix": "UIHelper:seekWidgetByName",
+		"body": [
+			"UIHelper:seekWidgetByName($rootNode, $name);",
+		],
+		"description": "UIHelper:seekWidgetByName"
+	},
+
+	"UIHelper:seekWidgetByPath": {
+		"prefix": "UIHelper:seekWidgetByPath",
+		"body": [
+			"UIHelper:seekWidgetByPath($rootNode, $path);",
+		],
+		"description": "UIHelper:seekWidgetByPath"
+	},
+
+	"xx.net.HttpClient:Send": {
+		"prefix": "xx.net.HttpClient:Send",
+		"body": [
+			"xx.net.HttpClient:Send($url, $method, $param);",
+		],
+		"description": "发送网络请求"
+	},
+
+	"xx.ui.Window": {
+		"prefix": "xx.ui.Window",
+		"body": [
+			"xx.ui.Window",
+		],
+		"description": "xx.ui.Window"
+	},
+
+	"xx.cscene.BaseScene": {
+		"prefix": "xx.cscene.BaseScene",
+		"body": [
+			"xx.cscene.BaseScene",
+		],
+		"description": "xx.cscene.BaseScene"
+	},
+
+	"xx.tool.FbUtil": {
+		"prefix": "xx.tool.FbUtil",
+		"body": [
+			"xx.tool.FbUtil",
+		],
+		"description": "xx.tool.FbUtil"
+	},
+
+	"Lang": {
+		"prefix": "Lang",
+		"body": [
+			"xx.ui:Lang($key, {$list})",
+		],
+		"description": "xx.ui:Lang"
+	},
+
+	"reorderNodesPositionX": {
+		"prefix": "reorderNodesPositionX",
+		"body": [
+			"xx.ui:reorderNodesPositionX($list)",
+		],
+		"description": "xx.ui:reorderNodesPositionX"
+	},
+	
+	"formula": {
+		"prefix": "formula",
+		"body": [
+			"local Formula = require('app.config.formula')",
+		],
+		"description": "local Formula = require('app.config.formula')"
+	},
+
+	"diamond": {
+		"prefix": "diamond",
+		"body": [
+			"xx.cache.UserData.Diamond",
+		],
+		"description": "xx.cache.UserData.Diamond"
+	},
+
+	"basemanager": {
+		"prefix": "basemanager",
+		"body": [
+			"xx.manager.BaseManager",
+		],
+		"description": "xx.manager.BaseManager"
+	},
+
+	"TalkToDesigner": {
+		"prefix": "TalkToDesigner",
+		"body": [
+			"TalkToDesigner($text)",
+		],
+		"description": "TalkToDesigner"
+	},
+	
+
+	"enterFormation": {
+		"prefix": "enterFormation",
+		"body": [
+			"xx.manager.FormationManager:enterFormation($fbId, $bigFbId, $list, $enemyFormation, $backScene, $sceneType);",
+		],
+		"description": "xx.manager.FormationManager:enterFormation"
+	},
+	
+
+	//cocos2dx
+	"setScale9Enabled": {
+		"prefix": "setScale9Enabled",
+		"body": [
+			"setScale9Enabled($bValue);",
+		],
+		"description": "ccui.ImageView.setScale9Enabled"
+	},
+	
+	"loadTextureNormal": {
+		"prefix": "loadTextureNormal",
+		"body": [
+			"loadTextureNormal($filename, $type);",
+		],
+		"description": "ccui.Button.loadTextureNormal"
+	},
+	
+	"loadTexturePressed": {
+		"prefix": "loadTexturePressed",
+		"body": [
+			"loadTexturePressed($filename, $type);",
+		],
+		"description": "ccui.Button.loadTexturePressed"
+	},
+
+	"loadTextureDisabled": {
+		"prefix": "loadTextureDisabled",
+		"body": [
+			"loadTextureDisabled($filename, $type);",
+		],
+		"description": "ccui.Button.loadTextureDisabled"
+	},
+
+	"loadTexture": {
+		"prefix": "loadTexture",
+		"body": [
+			"loadTexture($filename, $type);",
+		],
+		"description": "ccui.ImageView.loadTexture"
+	},
+
+	"setTitleFontSize": {
+		"prefix": "setTitleFontSize",
+		"body": [
+			"setTitleFontSize($fontSize);",
+		],
+		"description": "ccui.Button.setTitleFontSize"
+	},
+
+	"setTitleColor": {
+		"prefix": "setTitleColor",
+		"body": [
+			"setTitleColor({r = $r, g = $g, b = $b});",
+		],
+		"description": "ccui.Button.setTitleColor"
+	},
+
+	"setTitleText": {
+		"prefix": "setTitleText",
+		"body": [
+			"setTitleText($text);",
+		],
+		"description": "ccui.Button.setTitleText"
+	},
+	
+
+	"setTouchEnabled": {
+		"prefix": "setTouchEnabled",
+		"body": [
+			"setTouchEnabled($bValue);",
+		],
+		"description": "ccui.Widget.setTouchEnabled"
+	},
+	
+	"setContentSize": {
+		"prefix": "setContentSize",
+		"body": [
+			"setContentSize({width = $width, height = $height});",
+		],
+		"description": "ccui.Widget.setContentSize"
+	},
+	
+	"setAnchorPoint": {
+		"prefix": "setAnchorPoint",
+		"body": [
+			"setAnchorPoint($x, $y);",
+		],
+		"description": "ccui.Widget.setAnchorPoint"
+	},
+	
+
+	"setPosition": {
+		"prefix": "setPosition",
+		"body": [
+			"setPosition($x, $y);",
+		],
+		"description": "ccui.Widget.setPosition"
+	},
+
+
+	"setScaleX": {
+		"prefix": "setScaleX",
+		"body": [
+			"setScaleX($x);",
+		],
+		"description": "ccui.Widget.setScaleX"
+	},
+
+
+	"setScaleY": {
+		"prefix": "setScaleY",
+		"body": [
+			"setScaleY($y);",
+		],
+		"description": "ccui.Widget.setScaleY"
+	},
+
+	"setScale": {
+		"prefix": "setScale",
+		"body": [
+			"setScale($value);",
+		],
+		"description": "ccui.Widget.setScale"
+	},
+
+
+	"getRendererNormal": {
+		"prefix": "getRendererNormal",
+		"body": [
+			"getRendererNormal();",
+		],
+		"description": "ccui.Button.getRendererNormal"
+	},
+
+	"getRendererClicked": {
+		"prefix": "getRendererClicked",
+		"body": [
+			"getRendererClicked();",
+		],
+		"description": "ccui.Button.getRendererClicked"
+	},
+
+	"getRendererDisabled": {
+		"prefix": "getRendererDisabled",
+		"body": [
+			"getRendererDisabled();",
+		],
+		"description": "ccui.Button.getRendererDisabled"
+	},
+
+	
+	"normal": {
+		"prefix": "normal",
+		"body": [
+			"normal();",
+		],
+		"description": "gamecore.ui.WidgetEx.normal"
+	},
+
+	"select": {
+		"prefix": "select",
+		"body": [
+			"select();",
+		],
+		"description": "gamecore.ui.WidgetEx.select"
+	},
+
+	"setSelectNode": {
+		"prefix": "setSelectNode",
+		"body": [
+			"setSelectNode($node);",
+		],
+		"description": "gamecore.ui.WidgetEx.setSelectNode"
+	},
+	
+
+	"disabled": {
+		"prefix": "disabled",
+		"body": [
+			"disabled();",
+		],
+		"description": "gamecore.ui.WidgetEx.disabled"
+	},
+
+	"containsPoint": {
+		"prefix": "containsPoint",
+		"body": [
+			"containsPoint($point);",
+		],
+		"description": "gamecore.ui.WidgetEx.containsPoint"
+	},
+
+	"setClickParam": {
+		"prefix": "setClickParam",
+		"body": [
+			"setClickParam({$name});--scale,hideNormal,began,moved,cancelled,moveStay",
+		],
+		"description": "gamecore.ui.WidgetEx.setClickParam"
+	},
+
+	"onClick": {
+		"prefix": "onClick",
+		"body": [
+			"onClick($callback);--eventName, target, point",
+		],
+		"description": "gamecore.ui.WidgetEx.onClick"
+	},
+
+	
+	"EVENT_TOUCH_BEGAN": {
+		"prefix": "touch",
+		"body": [
+			"cc.Handler.EVENT_TOUCH_BEGAN",
+		],
+		"description": "cc.Handler.EVENT_TOUCH_BEGAN"
+	},
+
+	"EVENT_TOUCH_MOVED": {
+		"prefix": "touch",
+		"body": [
+			"cc.Handler.EVENT_TOUCH_MOVED",
+		],
+		"description": "cc.Handler.EVENT_TOUCH_MOVED"
+	},
+
+	"EVENT_TOUCH_CANCELLED": {
+		"prefix": "touch",
+		"body": [
+			"cc.Handler.EVENT_TOUCH_CANCELLED",
+		],
+		"description": "cc.Handler.EVENT_TOUCH_CANCELLED"
+	},
+
+
+	"EVENT_TOUCH_ENDED": {
+		"prefix": "touch",
+		"body": [
+			"cc.Handler.EVENT_TOUCH_ENDED",
+		],
+		"description": "cc.Handler.EVENT_TOUCH_ENDED"
+	},
+
+
+	"ListView-setEventCallbackTip": {
+		"prefix": "setEventCallbackTip",
+		"body": [
+			"--[[",
+			"@callback:('count', listView)                              --总共cell数量",
+			"@callback:('size', listView, row)                          --每个cell的尺寸",
+			"@callback:('delay', listView, row, column, index)          --每个cell上item延时创建的时间",
+			"@callback:('add', listView, row, column, index, cell)      --添加每个item",
+			"@callback:('start', listView, row, nil, nil, cell)         --开始点击cell",
+			"@callback:('end', listView, row, nil, nil, cell)           --结束点击cell",
+			"@example",
+			"listView:setEventCallback(function(eventName, listView, row, column, index, cell)",
+			"    if eventName == 'count' then",
+			"        return 30;",
+			"    elseif eventName == 'size' then",
+			"        return {width = 200, height = 40};",
+			"    elseif eventName == 'delay' then",
+			"        if listView:getNode(key) then",
+			"            return 0;",
+			"        end",
+			"        return 0.05;",
+			"    elseif eventName == 'add' then",
+			"        local node = listView:getNode(key);",
+			"        if not node then",
+			"            node = ccui.ImageView:create(filename, 0);",
+			"            listView:addNode(node, key);",
+			"        end",
+			"        node:removeFromParent();",
+			"        node:setPosition(x, y)",
+			"        cell:addChild(node)",
+			"    elseif eventName == 'start' then",
+			"    elseif eventName == 'end' then",
+			"    end",
+			"-- ]]",
+
+		],
+		"description": "gamecore.ListViewEx.setEventCallbackTip"
+	},
+
+	"PageView-setEventCallbackTip": {
+		"prefix": "setEventCallbackTip",
+		"body": [
+			"--[[",
+			"@callback:('count', pageView)                              --总共页数",
+			"@callback:('size', pageView, pageIndex)                    --每一页的尺寸",
+			"@callback:('items', pageView, pageIndex)                   --每一页item个数",
+			"@callback:('delay', pageView, pageIndex, index)            --每一页item延时创建的时间",
+			"@callback:('add', pageView, pageIndex, index, cell)        --添加每个item",
+			"@example",
+			"pageView:setEventCallback(function(eventName, pageView, pageIndex, index, cell)",
+			"    if eventName == 'count' then",
+			"        return 30;",
+			"    elseif eventName == 'size' then",
+			"        return {width = 200, height = 40};",
+			"    elseif eventName == 'items' then",
+			"        return 10",
+			"    elseif eventName == 'delay' then",  
+			"        if listView:getNode(key) then",
+			"            return 0;",
+			"        end",
+			"        return 0.05;",
+			"    elseif eventName == 'add' then",
+			"        local node = listView:getNode(key);",
+			"        if not node then",
+			"            node = ccui.ImageView:create(filename, 0);",
+			"            listView:addNode(node, key);",
+			"        end",
+			"        node:removeFromParent();",
+			"        node:setPosition(x, y)",
+			"        cell:addChild(node)",
+			"    end",
+			"-- ]]",
+
+		],
+		"description": "gamecore.PageView.setEventCallbackTip"
+	},
+
+	"gotoPageIndex": {
+		"prefix": "gotoPageIndex",
+		"body": [
+			"gotoPageIndex($pageIndex, $time);",
+		],
+		"description": "gamecore.PageView.gotoPageIndex"
+	},
+
+	
+	"setEventCallback": {
+		"prefix": "setEventCallback",
+		"body": [
+			"setEventCallback($callback);",
+		],
+		"description": "gamecore.ListViewEx.setEventCallback"
+	},
+
+	"ScrollView-top": {
+		"prefix": "setTopPadding",
+		"body": [
+			"setTopPadding($length);",
+		],
+		"description": "gamecore.ScrollViewEx.setTopPadding(@@设置顶部边距)"
+	},
+
+	"ListView-top": {
+		"prefix": "setTopPadding",
+		"body": [
+			"setTopPadding($length);",
+		],
+		"description": "gamecore.ListViewEx.setTopPadding(@@设置顶部边距)"
+	},
+
+	"ScrollView-Bottom": {
+		"prefix": "setBottomPadding",
+		"body": [
+			"setBottomPadding($length);",
+		],
+		"description": "gamecore.ScrollViewEx.setBottomPadding(@@设置底部边距)"
+	},
+
+	"ListView-Bottom": {
+		"prefix": "setBottomPadding",
+		"body": [
+			"setBottomPadding($length);",
+		],
+		"description": "gamecore.ListViewEx.setBottomPadding(@@设置底部边距)"
+	},
+
+	"ScrollView-Left": {
+		"prefix": "setLeftPadding",
+		"body": [
+			"setLeftPadding($length);",
+		],
+		"description": "gamecore.ScrollViewEx.setLeftPadding(@@设置左边边距)"
+	},
+
+	"ListView-Left": {
+		"prefix": "setLeftPadding",
+		"body": [
+			"setLeftPadding($length);",
+		],
+		"description": "gamecore.ListViewEx.setLeftPadding(@@设置左边边距)"
+	},
+
+	"ScrollView-Right": {
+		"prefix": "setRightPadding",
+		"body": [
+			"setRightPadding($length);",
+		],
+		"description": "gamecore.ScrollViewEx.setRightPadding(@@设置右边边距)"
+	},
+
+	"ListView-Right": {
+		"prefix": "setRightPadding",
+		"body": [
+			"setRightPadding($length);",
+		],
+		"description": "gamecore.ListViewEx.setRightPadding(@@设置右边边距)"
+	},
+
+	"ScrollViewMap-create": {
+		"prefix": "ScrollViewMap",
+		"body": [
+			"gamecore.ui.ScrollViewMap:create($type, $size);",
+		],
+		"description": "gamecore.ScrollViewMap.create@@type:BOTH,FIX_WIDTH,FIX_HEIGHT"
+	},
+	
+
+
+	"ScrollView-ItemsMargin": {
+		"prefix": "setItemsMargin",
+		"body": [
+			"setItemsMargin($length);",
+		],
+		"description": "gamecore.ScrollViewEx.setItemsMargin(@@设置内容cell间距)"
+	},
+
+	"ListView-ItemsMargin": {
+		"prefix": "setItemsMargin",
+		"body": [
+			"setItemsMargin($length);",
+		],
+		"description": "gamecore.ListViewEx.setItemsMargin(@@设置内容cell间距)"
+	},
+
+	"ListView-setColumn": {
+		"prefix": "setColumn",
+		"body": [
+			"setColumn($length);",
+		],
+		"description": "gamecore.ListViewEx.setColumn(@@设置每个cell有多少列)"
+	},
+
+	"ListView-setDirection": {
+		"prefix": "setDirection",
+		"body": [
+			"setDirection($direction);",
+		],
+		"description": "gamecore.ListViewEx.setDirection(None:0, VERTICAL:1, HORIZONTAL:2, BOTH:3)"
+	},
+	
+	"ignoreContentAdaptWithSize": {
+		"prefix": "ignoreContentAdaptWithSize",
+		"body": [
+			"ignoreContentAdaptWithSize($bValue);",
+		],
+		"description": "ccui.RichText.ignoreContentAdaptWithSize(@@true 不适配宽度，只有一行，false:适配宽度)"
+	},
+
+	"ListView-addNode": {
+		"prefix": "addNode",
+		"body": [
+			"addNode($node, $key);",
+		],
+		"description": "gamecore.ListViewEx.addNode"
+	},
+
+
+	"ListView-getNode": {
+		"prefix": "getNode",
+		"body": [
+			"getNode($key);",
+		],
+		"description": "gamecore.ListViewEx.getNode"
+	},
+
+
+	"ListView-removeNode": {
+		"prefix": "removeNode",
+		"body": [
+			"removeNode($key);",
+		],
+		"description": "gamecore.ListViewEx.removeNode"
+	},
+
+	//tabmenu
+	"TabMenu-create": {
+		"prefix": "tabmenu",
+		"body": [
+			"gamecore.ui.TabMenu:create();",
+		],
+		"description": "gamecore.ui.TabMenu"
+	},
+
+	"TabMenu-select": {
+		"prefix": "select",
+		"body": [
+			"select($index);",
+		],
+		"description": "TabMenu:select"
+	},
+
+	"TabMenu-select1": {
+		"prefix": "select",
+		"body": [
+			"select($button);",
+		],
+		"description": "TabMenu:select"
+	},
+
+	"TabMenu-addNode": {
+		"prefix": "addNode",
+		"body": [
+			"addNode($node, $index);",
+		],
+		"description": "TabMenu:addNode"
+	},
+
+	"onEditBoxCallback": {
+		"prefix": "onEditBoxCallback",
+		"body": [
+			"onEditBoxCallback($callback);--eventName[began,return,changed], text, editBox",
+		],
+		"description": "ccui.EditBox:onEditBoxCallback(侦听EditBox)"
+	},
+
+	"setInputMode": {
+		"prefix": "setInputMode",
+		"body": [
+			"setInputMode($type);",
+		],
+		"description": "ccui.EditBox:setInputMode[ANY:0, EMAIL_ADDRESS:1, NUMERIC:2, PHONE_NUMBER:3, URL:4, DECIMAL:5, SINGLE_LINE:6]"
+	},
+
+
+	"setInputFlag": {
+		"prefix": "setInputFlag",
+		"body": [
+			"setInputFlag($type);",
+		],
+		"description": "ccui.EditBox:setInputFlag[PASSWORD:0, SENSITIVE:1, INITIAL_CAPS_WORD:2, INITIAL_CAPS_SENTENCE:3, INITIAL_CAPS_ALL_CHARACTERS:4, LOWERCASE_ALL_CHARACTERS:5]"
+	},
+
+
+	"setReturnType": {
+		"prefix": "setReturnType",
+		"body": [
+			"setReturnType($type);",
+		],
+		"description": "ccui.EditBox:setReturnType[DEFAULT:0, DONE:1, SEND:2, SEARCH:3, GO:4, NEXT:5]"
+	},
+
+	"editbox-setFontSize": {
+		"prefix": "setFontSize",
+		"body": [
+			"setFontSize($size);",
+		],
+		"description": "ccui.EditBox:setFontSize"
+	},
+
+	"editbox-setFontName": {
+		"prefix": "setFontName",
+		"body": [
+			"setFontName($fontName);",
+		],
+		"description": "ccui.EditBox:setFontName(只支持系统字体)"
+	},
+
+	"editbox-setPlaceholderFontSize": {
+		"prefix": "setPlaceholderFontSize",
+		"body": [
+			"setPlaceholderFontSize($size);",
+		],
+		"description": "ccui.EditBox:setPlaceholderFontSize"
+	},
+
+	"editbox-setPlaceholderFontName": {
+		"prefix": "setPlaceholderFontName",
+		"body": [
+			"setPlaceholderFontName($fontName);",
+		],
+		"description": "ccui.EditBox:setPlaceholderFontName(只支持系统字体)"
+	},
+
+	"editbox-setPlaceholderFontColor": {
+		"prefix": "setPlaceholderFontColor",
+		"body": [
+			"setPlaceholderFontColor($color);",
+		],
+		"description": "ccui.EditBox:setPlaceholderFontColor(支持color3B,color4B)"
+	},
+
+	"editbox-setFontColor": {
+		"prefix": "setFontColor",
+		"body": [
+			"setFontColor($color);",
+		],
+		"description": "ccui.EditBox:setFontColor(支持color3B,color4B)"
+	},
+
+	
+	"editbox-setMaxLength": {
+		"prefix": "setMaxLength",
+		"body": [
+			"setMaxLength($length);",
+		],
+		"description": "ccui.EditBox:setMaxLength(最大长度限制)"
+	},
+	
+	"editbox-setPlaceHolder": {
+		"prefix": "setPlaceHolder",
+		"body": [
+			"setPlaceHolder($string);",
+		],
+		"description": "ccui.EditBox:setPlaceHolder(设置placeHolder文本)"
+	},
+	
+	"editbox-setTextHorizontalAlignment": {
+		"prefix": "setTextHorizontalAlignment",
+		"body": [
+			"setTextHorizontalAlignment($type);",
+		],
+		"description": "ccui.EditBox:setTextHorizontalAlignment(LEFT:0,CENTER:1,RIGHT:2)"
+	},
+	
+	
+	"gamecore.ui.GameRecord": {
+		"prefix": "gamecore.ui",
+		"body": [
+			"gamecore.ui.GameRecord",
+		],
+		"description": "gamecore.ui.GameRecord"
+	},
+
+	"gamecore.ui.SceneMgr": {
+		"prefix": "gamecore.ui",
+		"body": [
+			"gamecore.ui.SceneMgr",
+		],
+		"description": "gamecore.ui.SceneMgr"
+	},
+
+	"gamecore.net.NetWork": {
+		"prefix": "gamecore.net",
+		"body": [
+			"gamecore.net.NetWork",
+		],
+		"description": "gamecore.net.NetWork"
+	},
+	
+	"gamecore.ui.Crypto": {
+		"prefix": "gamecore.ui",
+		"body": [
+			"gamecore.ui.Crypto",
+		],
+		"description": "gamecore.ui.Crypto"
+	},
+
+
+
+	"encryptXXTEA": {
+		"prefix": "Crypto",
+		"body": [
+			"encryptXXTEA($text, $len)",
+		],
+		"description": "Crypto:encryptXXTEA"
+	},
+
+	"decryptXXTEA": {
+		"prefix": "Crypto",
+		"body": [
+			"decryptXXTEA($text, $len)",
+		],
+		"description": "Crypto:decryptXXTEA"
+	},
+	
+	"encodeBase64": {
+		"prefix": "Crypto",
+		"body": [
+			"encodeBase64($text, $len)",
+		],
+		"description": "Crypto:encodeBase64"
+	},
+
+	"decodeBase64": {
+		"prefix": "Crypto",
+		"body": [
+			"decodeBase64($text, $len)",
+		],
+		"description": "Crypto:decodeBase64"
+	},
+	
+
+	"md5": {
+		"prefix": "Crypto",
+		"body": [
+			"md5($text, $len)",
+		],
+		"description": "Crypto:md5"
+	},
+	
+	"md5file": {
+		"prefix": "Crypto",
+		"body": [
+			"md5file($filename)",
+		],
+		"description": "Crypto:md5file"
+	},
+
+	
+	"addLayer": {
+		"prefix": "SceneMgr",
+		"body": [
+			"addLayer($layer, $param)",
+		],
+		"description": "SceneMgr:addLayer[param:{z, name}]"
+	},
+
+	"removeTopLayer": {
+		"prefix": "SceneMgr",
+		"body": [
+			"removeTopLayer()",
+		],
+		"description": "SceneMgr:removeTopLayer"
+	},
+
+	"getTopLayer": {
+		"prefix": "SceneMgr",
+		"body": [
+			"getTopLayer()",
+		],
+		"description": "SceneMgr:getTopLayer"
+	},
+
+	"removeLayer": {
+		"prefix": "SceneMgr",
+		"body": [
+			"removeLayer($layer)",
+		],
+		"description": "SceneMgr:removeLayer"
+	},
+
+	"removeLayerByName": {
+		"prefix": "SceneMgr",
+		"body": [
+			"removeLayerByName($name)",
+		],
+		"description": "SceneMgr:removeLayerByName"
+	},
+
+	"setLayerName": {
+		"prefix": "SceneMgr",
+		"body": [
+			"setLayerName($layer, $name)",
+		],
+		"description": "SceneMgr:setLayerName"
+	},
+	
+	"getLayerByName": {
+		"prefix": "SceneMgr",
+		"body": [
+			"getLayerByName($name)",
+		],
+		"description": "SceneMgr:getLayerByName"
+	},
+
+	"getCurrentScene": {
+		"prefix": "SceneMgr",
+		"body": [
+			"getCurrentScene()",
+		],
+		"description": "SceneMgr:getCurrentScene"
+	},
+
+	"setCurrentSceneName": {
+		"prefix": "SceneMgr",
+		"body": [
+			"setCurrentSceneName($name)",
+		],
+		"description": "SceneMgr:setCurrentSceneName"
+	},
+	
+	
+	"getCurrentSceneName": {
+		"prefix": "SceneMgr",
+		"body": [
+			"getCurrentSceneName()",
+		],
+		"description": "SceneMgr:getCurrentSceneName"
+	},
+	
+	
+}
